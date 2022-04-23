@@ -52,13 +52,13 @@ class Node {
     // 6:- return the value of node removed.
   
     ///====================================================
-    // traverse() { // for printing element.
-    //   let current = this.head;
-    //   while (current) {
-    //     console.log(current.val);
-    //     current = current.next;
-    //   }
-    // }
+    traverse() { // for printing element.
+      let current = this.head;
+      while (current) {
+        console.log(current.val);
+        current = current.next;
+      }
+    }
     //======================================================
   }
   let list = new SinglyLinkedList();
