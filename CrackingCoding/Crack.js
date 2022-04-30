@@ -550,3 +550,17 @@ let res = findUnique(arr);
 console.log(res); // 3
 */
 //======================================================
+console.log('Sandep');
+
+function adding(nums) {
+  let sum = 0;
+  let arr = [];
+  for (let i = 0; i < nums.length; i++) {
+    sum = sum + nums[i];
+    arr.push(sum);
+  }
+  return arr;
+}
+let nums = [1, 2, 3, 4, 5];
+let res = adding(nums);
+console.log(res);
