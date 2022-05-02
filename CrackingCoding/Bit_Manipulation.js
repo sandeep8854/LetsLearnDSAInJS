@@ -14,7 +14,7 @@
 //=========================================================
 //console.log(`Welcome to Bit Manipulation`);
 //==========================================================
-
+/*
 function remob(s) {
   s = s.split(' ');
   let ans = [];
@@ -431,3 +431,83 @@ console.log(res1);
 // 7
 
 //=======================================================================
+// All Repeating Except Two
+//=====================================
+// Mast question.
+//  You are given an array of number.
+// you have to find 2 non repeating number in an array.
+// all repeating numbers number are repeating even numbers of time.
+
+// arr=[23,27,23,17,17,37]
+// o/p = 27,37
+
+function uniXOR(arr) {
+  let unique = 0;
+  for (let i = 0; i < arr.length; i++) {
+    unique = unique ^ arr[i];
+  }
+  return unique;
+}
+let arr = [36, 50, 24, 56, 36, 24, 42, 50];
+let res1 = uniXOR(arr);
+console.log(res1);
+*/
+// every repeating number will be cancel out exept non repeating number.
+// then take non repeating number find like as
+//  56 -  1  1  1  0  0  0
+//  42-   1  0  1  0  1  0
+//-----------------------------
+//xor     0  1  0  0  1  0 -----value will be in decimal 18.
+//------------------------------
+//
+// 36 -  1 0 0 1 0 0       bit of second is off
+// 50 -  1 1 0 0 1* 0       bit of second is on
+// 24 -  0 1 1 0 0 0       bit of second is off
+// 56 -  1 1 1 0 0 0       bit of second is off
+// 36 -  1 0 0 1 0 0       bit of second is off
+// 24 -  0 1 1 0 0 0       bit of second is off
+// 42 -  1 0 1 0 1* 0       bit of second is on
+// 50 -  1 1 0 0 1* 0       bit of second is on
+//----------------------------
+//       0 1 0 0 1 0 -----18
+//------------------------------
+//  56-  1 1 1 0 0 0
+//  42-  1 0 1 0 1 0
+// -----------------------
+//       0 1 0 0 1  0
+//       0 0 0 0 1* 0  -- right most set bit  (find the rmsb)
+// ------------------------
+//
+//       0 1 0 0 1 0 --18     it is all number of xor and 56 and 42 of also xor.
+//----------------------------
+//       0 0 0 0 1 0  -- right set bit mask*
+
+function allrepeatingExecptTwo(arr) {
+  // find x and b value which are not cancelled
+  let xxorY = 0;
+  for (let i = 0; i < arr.length; i++) {
+    xxorY = xxorY ^ arr[i];
+  }
+
+  // find the right most set bit;
+  let rmsb = xxorY & -xxorY;
+
+  let x = 0;
+  let y = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if ((arr[i] & rmsb) == 0) {
+      x = x ^ arr[i];
+    } else {
+      y = y ^ arr[i];
+    }
+  }
+  if (x < y) {
+    console.log(x);
+    console.log(y);
+  } else {
+    console.log(y);
+    console.log(x);
+  }
+}
+let arr = [36, 50, 24, 56, 36, 24, 42, 50];
+allrepeatingExecptTwo(arr);
