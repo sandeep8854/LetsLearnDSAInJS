@@ -14,7 +14,7 @@
 //=========================================================
 //console.log(`Welcome to Bit Manipulation`);
 //==========================================================
-/*
+
 function remob(s) {
   s = s.split(' ');
   let ans = [];
@@ -91,7 +91,7 @@ point 3-    a ^ a= 0   // any number with a xor with same number he give zero(0)
 
 let a = 100;
 console.log(a ^ 1); //101
-/*
+
 console.log(a ^ 2); //102
 
 console.log(a ^ 9); //109
@@ -368,7 +368,7 @@ console.log('Find the Right most set bit:- ' + result);
 // Find the Right most set bit:- 5
 
 //=======================================================================
-*/
+
 // JOSEPHUS SPECIALS
 
 //  given a circle number kill every after the survivals
@@ -396,6 +396,38 @@ function josephusCircleAlgo(num) {
   let l = num - heighestPowOf2;
   return 2 * l + 1;
 }
-let num = 23;
-let res = josephusCircleAlgo(num);
-console.log(res);
+let num1 = 8;
+let res2 = josephusCircleAlgo(num);
+console.log(res2);
+
+//==============================================================================
+// find the unique element of given array.
+//condition , no need required extra space, no need extra running time
+// i means O(1) time complexity required. it mandatroty.
+
+// Rule Number:- 1 xor is associative property
+// x^y^z= x^(y^Z)
+//        (x^Y)^z  that is called  associative property
+
+// X^y=y^x  that is called commudative property.
+//               2 xor is commudative property.
+//   A ^ 1 = A
+//   A ^ 0 = A  Very Important properties...
+//   A ^ A=  0  is also
+
+// given an array find unique element.
+
+
+function uniXOR(arr) {
+  let unique = 0;
+  for (let i = 0; i < arr.length; i++) {
+    unique = unique ^ arr[i];
+  }
+  return unique;
+}
+let arr1 = [2, 7, 8, 3, 8, 3, 2];
+let res1 = uniXOR(arr1);
+console.log(res1);
+// 7
+
+//=======================================================================
