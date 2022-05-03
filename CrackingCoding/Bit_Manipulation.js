@@ -451,7 +451,7 @@ function uniXOR(arr) {
 let arr = [36, 50, 24, 56, 36, 24, 42, 50];
 let res1 = uniXOR(arr);
 console.log(res1);
-*/
+
 // every repeating number will be cancel out exept non repeating number.
 // then take non repeating number find like as
 //  56 -  1  1  1  0  0  0
@@ -511,3 +511,102 @@ function allrepeatingExecptTwo(arr) {
 }
 let arr = [36, 50, 24, 56, 36, 24, 42, 50];
 allrepeatingExecptTwo(arr);
+*/
+//=============================================================================
+
+// Question :--- One Repeating and One Missing.
+//-----------------------------------------------------
+// 1- You are given an array of length n containing number from 1 to n.
+// 2- One number is present twice in array and one is missing.
+// 3- You have find these two number.
+//   (i) - one, which are repeating.
+//   (ii)- one , which are missing.
+
+// Example :-  |*    |*---------these number are repeating.
+//    arr=[3,6,2,5,1,2,7];
+//   temp=[1,2,3,4,5,6,7];
+// arr[i]  = 1
+// temp[i] = 1
+// they will cancel out each to other.
+
+// arr[i]  = 2
+// arr[i] = 2
+// they will cancel out each to other.
+
+// arr[i]  = 3
+// temp[i] = 3
+// they will cancel out each to other.
+
+// arr[i]  = 5
+// temp[i] = 5
+// they will cancel out each to other.
+
+// arr[i]  = 6
+// temp[i] = 6
+// they will cancel out each to other.
+
+// arr[i]  = 7
+// temp[i] = 7
+// they will cancel out each to other.
+//------------------------------------------------------------
+// remaining element will be there like as :- 2 and 4
+//---------------------------------------------------------------
+
+function oneRepeatingOneMissing(arr) {
+  let xor = 0;
+  for (let i = 0; i < arr.length; i++) {
+    xor = xor ^ arr[i];
+  }
+  // console.log(xor);
+  // console.log('Xor All Array:- ' + xor.toString(2));
+  // let xor_1;
+  // for (let i = 1; i <= arr.length; i++) {
+  //   xor_1 = xor_1 ^ i;
+  // }
+  // console.log(xor_1);
+  for (let i = 1; i <= arr.length; i++) {
+    xor ^= i;
+  }
+  let rmsb = xor & -xor;
+  // console.log(rmsb);
+  // console.log(rmsb.toString(2));
+
+  let x = 0;
+  let y = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if ((arr[i] & rmsb) == 0) {
+      x = x ^ arr[i];
+    } else {
+      y = y ^ arr[i];
+    }
+  }
+
+  for (let i = 1; i <= arr.length; i++) {
+    if (i & (rmsb == 0)) {
+      x = x ^ i;
+    } else {
+      y = y ^ i;
+    }
+  }
+  console.log(x); //4
+  console.log(y); //2
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == x) {
+      console.log(`Missing Number:-  ${y}`);
+      console.log(`Repeating Number:- ${x}`);
+      break;
+    } else if (arr[i] == y) {
+      console.log(`Missing Number:-  ${x}`);
+      console.log(`Repeating Number:- ${y}`);
+      break;
+    }
+  }
+}
+
+let arr = [3, 6, 2, 5, 1, 2, 7];
+oneRepeatingOneMissing(arr);
+
+//================================================================
+// Question Number :- find the missing number?
+// given number find missing number.
