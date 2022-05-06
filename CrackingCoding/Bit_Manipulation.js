@@ -511,7 +511,7 @@ function allrepeatingExecptTwo(arr) {
 }
 let arr = [36, 50, 24, 56, 36, 24, 42, 50];
 allrepeatingExecptTwo(arr);
-*/
+
 //=============================================================================
 
 // Question :--- One Repeating and One Missing.
@@ -606,7 +606,35 @@ function oneRepeatingOneMissing(arr) {
 
 let arr = [3, 6, 2, 5, 1, 2, 7];
 oneRepeatingOneMissing(arr);
-
+*/
 //================================================================
-// Question Number :- find the missing number?
-// given number find missing number.
+// All repeating Three times Execpt one.
+// 1- all number occures three times except one.
+// 2- You have to find the eleemnt that occuures onces.
+//Example:- arr=[51,57,51,57,63,38,57,63,63,51];
+// O/P- 38.
+
+function allReetingThreeTimesExceptOne(arr) {
+  let threeN = Number.MAX_VALUE;
+  // console.log(threeN);
+  let threeN_Plus1 = 0;
+  let threeN_Plus2 = 0;
+  for (let i = 0; i < arr.length; i++) {
+    let commonBetWeen_ThreeN = arr[i] & threeN;
+    let commonBetWeen_ThreeN_Plus1 = arr[i] & threeN_Plus1;
+    let commonBetWeen_ThreeN_Plus2 = arr[i] & threeN_Plus2;
+
+    threeN = threeN & ~commonBetWeen_ThreeN;
+    threeN_Plus1 = threeN_Plus1 | commonBetWeen_ThreeN;
+
+    threeN_Plus1 = threeN_Plus1 & ~commonBetWeen_ThreeN_Plus1;
+    threeN_Plus2 = threeN_Plus2 | commonBetWeen_ThreeN_Plus1;
+
+    threeN_Plus2 = threeN_Plus2 & ~commonBetWeen_ThreeN_Plus2;
+    threeN = threeN | commonBetWeen_ThreeN_Plus2;
+  }
+  console.log(threeN_Plus1);
+}
+let arr = [10, 20, 30, 40, , 10, 20, 20, 10, 30, 30];
+allReetingThreeTimesExceptOne(arr);
+//console.log(`Common Number Among are :- ${result}`);
