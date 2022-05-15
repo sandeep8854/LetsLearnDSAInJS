@@ -25,14 +25,9 @@ function find(key) {
 
 // function showAll() {
 //   for (let i = 0; i < this.data_store.key; i++) {
-//     console.log(data_store[i] + ' ');
+//     console.log(this.data_store[i] + ' ');
 //   }
 // }
-function showAll() {
-  for (var key in Object.keys(this.data_store)) {
-    print(key + ' -> ' + this.data_store[key]);
-  }
-}
 
 let pbook = new Dictionary();
 pbook.add('Sandeep', '8112912494');
