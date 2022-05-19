@@ -308,5 +308,106 @@ let n = 5;
 let p = 4;
 let re = drawing(n, p);
 console.log(re);
+
+// console.log(Math.trunc(5 - 4) / 2);
+
+//======================================================================
+
+
+//======================================================================
+// let str = 'UDDDUDDUDDDUUDUDD';
+// let len = str.length;
+// console.log(len);
+// for (let i = 0; i < len; i++) {
+//   console.log(str[i] + ' ');
+// }
+
+//======================================================================================
+
+let max = Number.MAX_VALUE;
+console.log(max);
+
+
+console.log('Sandeep');
+let n = 5;
+let p = 4;
+let pagesCountfromFront = Math.floor(n / 2);
+let totalTargetPagefromFront = Math.floor(p / 2);
+let exactPagefromback = pagesCountfromFront - totalTargetPagefromFront;
+console.log(Math.min(totalTargetPagefromFront, exactPagefromback));
+
+//
+
+//========================================================================================
+
+function contingValue(howmanyStep, str) {
+  let altitude = 0;
+  let vallyCount = 0;
+
+  for (let i = 0; i < howmanyStep; i++) {
+    let ch = str.charAt(i);
+    // console.log(ch);
+    if (ch == 'U') {
+      altitude++;
+      if (altitude == 0) {
+        vallyCount++;
+      }
+    } else {
+      // D  downword value..
+      altitude--;
+    }
+  }
+  return vallyCount;
+}
+
+let howmanyStep = 8;
+let str = 'UDDDUDUU';
+let res = contingValue(howmanyStep, str);
+console.log(res);
+
+
+//========================================================================================
+
+function elcetonicsShoping(keyboard, drive, budget) {
+  let sum = 0;
+  let maximum = 0;
+  for (let i = 0; i < keyboard.length; i++) {
+    for (let j = 0; j < drive.length; j++) {
+      sum = keyboard[i] + drive[j];
+      if (sum >= maximum && sum <= budget) {
+        maximum = sum;
+      }
+    }
+  }
+  if (maximum == 0) {
+    return -1;
+  }
+  return maximum;
+}
+
+let keyboard = [40, 50, 60];
+let drive = [5, 8, 12];
+let budget = 60;
+console.log(elcetonicsShoping(keyboard, drive, budget));
+
 */
-console.log(Math.trunc(5 - 4) / 2);
+
+//==============================================================================
+
+function catAcatBmouseC(x, y, z) {
+  let catA = Math.abs(z - x); //4-2==2
+  let catB = Math.abs(z - y); // 4-5==-1
+  if (catA > catB) {
+    console.log('Cat B');
+  } else if (catA < catB) {
+    console.log('CatA');
+  } else {
+    console.log('Mouse C');
+  }
+}
+let x = 2;
+let y = 5;
+let z = 4;
+catAcatBmouseC(x, y, z);
+
+//===========================================================================
