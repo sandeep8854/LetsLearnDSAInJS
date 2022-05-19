@@ -390,7 +390,7 @@ let drive = [5, 8, 12];
 let budget = 60;
 console.log(elcetonicsShoping(keyboard, drive, budget));
 
-*/
+
 
 //==============================================================================
 
@@ -411,3 +411,98 @@ let z = 4;
 catAcatBmouseC(x, y, z);
 
 //===========================================================================
+
+function pickingNumber(arr) {
+  let conditionNumber = 1;
+  let sum = 0;
+  let arr1 = [];
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      sum = Math.abs(arr[i] - arr[j]);
+      if (sum <= 1) {
+        arr1[i] = arr[j];
+      }
+    }
+  }
+  console.log(arr1);
+  console.log(arr1.length);
+}
+let arr = [4, 6, 5, 3, 3, 1];
+pickingNumber(arr);
+
+//================================================================
+function pickArr(arr) {
+  let frequency = [101]; // he is a empty array but length has 101 only..
+  let result = Number.MIN_VALUE; // taking minimum value througth javascript engine. when has already have min
+  // number ..
+  for (let i = 0; i < arr.length; i++) {
+    let index = arr[i];
+    frequency[index] = frequency[index] + 1;
+    ////frequency[index]=frequency[index]+1;
+  }
+  for (let i = 1; i <= 100; i++) {
+    result = Math.max(result, frequency[i] + frequency[i - 1]);
+  }
+  console.log(result);
+}
+let arr = [4, 6, 5, 3, 3, 1];
+pickArr(arr);
+
+//=====================================================================
+
+function pickArr(arr) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  let position = 0;
+  let count = 1;
+  let max = 0;
+
+  //==============================================
+  for (let i = 1; i < arr.length; i++) {
+    let difference = arr[i] - arr[position];
+    if (difference <= 1) {
+      count++;
+    }
+    //================================
+    else {
+      if (count > max) {
+        max = count;
+      }
+      position = i;
+      count = 1;
+    }
+  }
+  //============================================
+
+  if (count > max) {
+    max = count;
+  }
+  //======================================
+  return max;
+}
+
+let arr = [4, 6, 5, 3, 3, 1];
+let res = pickArr(arr);
+console.log(res);
+
+
+
+//==============================================================================
+function harder(arr, k) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  // console.log(arr);
+  let max = arr[arr.length - 1];
+  // console.log(max);
+
+  console.log(Math.max(0, max - k));
+}
+
+let arr = [1, 6, 3, 5, 2];
+let k = 4;
+harder(arr, k);
+
+*/
+//====================================================================
