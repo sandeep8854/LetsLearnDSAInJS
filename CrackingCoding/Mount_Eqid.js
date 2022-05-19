@@ -504,5 +504,53 @@ let arr = [1, 6, 3, 5, 2];
 let k = 4;
 harder(arr, k);
 
-*/
+
 //====================================================================
+
+function desinePDF(h, word) {
+  let arr = [];
+  let len = word.length;
+
+  for (let i = 0; i < h.length; i++) {
+    let charVal = word.charCodeAt(i);
+    let vl = charVal - 96;
+    if (Number.isInteger(vl)) {
+      let store = h[vl];
+
+      arr.push(store);
+    }
+  }
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  let bigger = arr[arr.length - 1];
+  console.log(bigger * len);
+}
+
+let h = [
+  1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+];
+let word = 'abc';
+desinePDF(h, word);
+
+//=========================================================================================
+
+let word = 'torn';
+//let i = 0;
+let asci = word.charCodeAt(0) - 96;
+
+//let ch = word.charAt(i);
+//console.log(ch); // t
+*/
+
+//=================================================================================
+function utopian(n) {
+  let countCy = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 == 0) {
+    }
+  }
+}
+
+let n = 5;
+utopian(n);
