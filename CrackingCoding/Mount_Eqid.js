@@ -541,7 +541,7 @@ let asci = word.charCodeAt(0) - 96;
 
 //let ch = word.charAt(i);
 //console.log(ch); // t
-*/
+
 
 //=================================================================================
 function utopian(n) {
@@ -554,3 +554,159 @@ function utopian(n) {
 
 let n = 5;
 utopian(n);
+
+//=================================================================================
+
+//
+// let  n =5;
+// let newArr=[n];
+// for(int jj=0; jj< n; jj++){
+//     arr[jj] = in.nextInt();
+//     let sum = 1;
+//     for (let i = 0; i < arr[jj]; i++) {
+//         sum = i % 2 == 0 ? sum * 2 : sum + 1;
+//     }
+//    console.log(sum);
+
+//=============================================================================
+
+let n = 8;
+// let newArray = [n];
+// console.log(newArray.length);
+
+let h = 1;
+for (let i = 1; i <= n; i++) {
+  if (i % 2 != 0) {
+    h = h * 2;
+  } else {
+    h++;
+  }
+}
+console.log(h);
+
+let count=0;
+		let countless=0;
+		for(let i=0;i<arr.length;i++)
+		{
+			if(arr[i]<=0)
+			{
+				countless++;
+			}
+			else
+			{
+				count++;
+			}
+		}
+		if(countless==k)  //class is canceled
+		console.log("NO");
+	else{
+    console.log("YES");
+  }	
+//=============================================================================
+
+function angreeProfessor(attendance, k) {
+  let arriveOnTime = 0;
+  let arriveOnLate = 0;
+  for (let i = 0; i < attendance.length; i++) {
+    if (attendance[i] <= 0) {
+      arriveOnTime++;
+    } else {
+      arriveOnLate++;
+    }
+  }
+  // console.log(arriveOnTime);
+  // console.log(arriveOnLate);
+  if (k == arriveOnTime) {
+    console.log('YES');
+  } 
+  if(arriveOnLate<k){
+    console.log("NO");
+  }
+}
+let attendance = [-2, -1, 0, 1, 2];
+let k = 3;
+angreeProfessor(attendance, k);
+
+
+
+function angree(a, k) {
+  let present = 0;
+  let n = a.length;
+  if (k > n) {
+    return 'YES';
+  } else {
+    for (let i = 0; i < a.length; i++) {
+      if (a[i] <= 0) {
+        present++;
+      }
+    }
+    if (present < k) {
+      return 'YES';
+    } else {
+      return 'NO';
+    }
+  }
+}
+let a = [-2, -1, 0, 1, 2];
+let k = 3;
+let res = angree(a, k);
+console.log(res);
+
+
+//=================================================================================
+
+function beautifulDay(starting, ending, divisor) {
+  let reverse = 0;
+  let lastDigit = 0;
+  let beautiful = 0;
+  for (let i = starting; i <= ending; i++) {
+    reverse = Number(String(i).split('').reverse().join(''));
+    // while (i != 0) {
+    //   lastDigit = i % 10;
+    //   reverse = reverse * 10 + lastDigit;
+    //   i = Math.floor(i / 10);
+    // }
+    // lastDigit = 0;
+    //  rev = Number(String(num).split('').reverse().join(''));
+    let task = Math.abs(i - reverse);
+    if (task % divisor == 0) {
+      beautiful++;
+    }
+    reverse = 0;
+  }
+  console.log(beautiful);
+}
+let starting = 20;
+let ending = 23;
+let divisor = 6;
+beautifulDay(starting, ending, divisor);
+
+//==================================================================
+// function reverseNum(num) {
+//   let rev = 0;
+//   while (num != 0) {
+//     let lastDigit = num % 10;
+//     rev = rev * 10 + lastDigit;
+//     num = Math.floor(num / 10);
+//   }
+//   console.log(rev);
+// }
+// let num = 27;
+// reverseNum(num);
+
+//==================================================================
+// let n = 142;
+// console.log(n % 10); // 2
+//=============================================
+
+
+
+let i = 427;
+let reverse = 0;
+reverse = Number(String(i).split('').reverse().join(''));
+console.log(reverse);
+*/
+//=============================================================
+
+//
+//
