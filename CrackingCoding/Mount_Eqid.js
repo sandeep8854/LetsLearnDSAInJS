@@ -705,8 +705,115 @@ let i = 427;
 let reverse = 0;
 reverse = Number(String(i).split('').reverse().join(''));
 console.log(reverse);
-*/
+
 //=============================================================
 
 //
 //
+let n = 5;
+let like = 0;
+let share = 5;
+let likeCount = 0;
+for (let i = n; i >= 1; i--) {
+  like = Math.floor(share / 2);
+  likeCount = likeCount + like;
+  share = like * 3;
+}
+console.log(likeCount);
+
+
+function advert(n) {
+  let like = 0;
+  let share = 5;
+  let likeCount = 0;
+  for (let i = n; i >= 1; i--) {
+    like = Math.floor(share / 2);
+    likeCount = likeCount + like;
+    share = like * 3;
+  }
+  console.log(likeCount);
+}
+let n = 5;
+advert(n);
+
+
+
+//==============================================================
+let reminder = m % n;
+if ((reminder + s - 1) % n == 0) {
+  console.log(s);
+} else console.log((reminder + s - 1) % n);
+
+
+
+//=================================================================
+let arr=[0,0,1,0,0,1,1,0];
+let k=2;
+let energy = 100;
+let currentCloud = 0;
+do {
+  currentCloud = (currentCloud + k) % arr.length;
+  energy--;
+  if (arr[currentCloud] == 1) {
+    energy -= 2;
+  }
+} while (currentCloud != 0);
+console.log(energy);
+
+//=====================================================
+
+
+function digit(n) {
+  let count = 0;
+  while (n != 0) {
+    n = Math.floor(n / 10);
+    count++;
+  }
+  console.log(count);
+}
+let num = 145236;
+digit(num);
+
+
+int count=0;
+int num=n;
+while(n>0)
+{
+    int reminder=n%10;
+    if(reminder!=0 && num % reminder==0)
+    count++;
+    n/=10;
+}
+return count;
+
+//===========================================================
+//console.log(Math.floor(105 / 10));
+function facttt(n) {
+  var bigInt = BigInt(n);
+  var factorial = 1n;
+  for (let i = 0n; i < bigInt; i++) {
+    factorial *= bigInt - i;
+  }
+  console.log(String(factorial));
+}
+
+let n = 45;
+facttt(n);
+
+
+*/
+//===========================================================
+function cloud(arr) {
+  let count = -1;
+  for (let i = 0; i < arr.length; ) {
+    if (i + 2 < arr.length && arr[i] == 0) {
+      i = i + 2;
+    } else {
+      i = i + 1;
+    }
+    count++;
+  }
+  console.log(count);
+}
+let arr = [0, 1, 0, 0, 0, 1, 0];
+cloud(arr);
