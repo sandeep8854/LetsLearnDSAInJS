@@ -1350,8 +1350,7 @@ function canies(ratings) {
   let sum = 0;
   let left2right = new Array(ratings.length);
   let right2left = new Array(ratings.length);
-  // Arrays.fill(left2right, 1);
-  // Arrays.fill(right2left, 1);
+ 
   for (let i = 0; i < left2right.length; i++) {
     left2right[i] = 1;
   }
@@ -1393,4 +1392,279 @@ console.log(jim_AND_Order(order, prep));
 
 //============================================================
 
+
+// let strrr = 'aaab';
+// let remoingLastString = strrr.slice(0, strrr.length - 1);
+// console.log('remoingLast Charcter ' + remoingLastString);
+// let strrr = 'aaab';
+// let L = strrr.length;
+// console.log(L);
+// for (let i = 0; i < strrr.length; i++) {
+//   let temp = strrr.slice(1, i);
+//   console.log(temp);
+//   console.log('REmovb ' + i);
+//   break;
+// }
+// let stt = 'aaab';
+// for (let i = 0; i < stt.length; i++) {
+//   let remvinf = stt.substring(i + 1);
+//   console.log('After Remving ' + remvinf);
+//   console.log(i);
+//   console.log('===========================');
+// }
+
+//console.log(' after Remving String  ' + remvinf);
+
+function reverseeee(remo) {
+  let st = '';
+  for (let i = remo.length - 1; i >= 0; i--) {
+    st = st + remo.charAt(i);
+  }
+  return st;
+}
+
+// let str1 = 'Appdivided';
+// let removefirst = str1.slice(0);
+// console.log('Removeing Character ' + removefirst);
+
+function find_index(str) {
+  let rev = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    rev = rev + str.charAt(i);
+  }
+  //console.log(rev);
+  if (rev == str) {
+    console.log('-1');
+  } else {
+    //   let remov = '';
+    for (let i = 0; i < str.length; i++) {
+      let remo = str.substring(i + 1);
+      let tempVari = reverseeee(remo);
+      if (tempVari == remo) {
+        console.log(i);
+        break;
+      }
+    }
+  }
+}
+let str = 'aaab';
+find_index(str);
+
+//=============================================================
+function tackung(s) {
+  let L = s.length;
+  let i, j, a, b;
+  for (i = 0, j = L - 1; i < L; i++, j--) {
+    if (s.charAt(i) != s.charAt(j)) break;
+  }
+  if (i > j) return -1;
+
+  for (a = i + 1, b = j; a < j && b > i + 1; a++, b--) {
+    if (s.charAt(a) != s.charAt(b)) {
+      // console.log(' tack ' + j);
+      return j;
+    }
+  }
+  // console.log(' tuck ' + i);
+  return i;
+}
+
+let s = 'aaab';
+let res = tackung(s);
+console.log(res);
+
+
+//======================================================================
+
+var arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+function counter(x) {
+  var count = 0,
+    temp = [];
+  x = x.split('');
+  console.log(x);
+  for (var i = 0, len = x.length; i < len; i++) {
+    if (x[i] == "a") {
+      count++;
+    }
+  }
+  return count;
+}
+var a = "aabbddd";
+console.log(counter(a));
+
+//=========================================================================
+
+function freq(str) {
+  // there are three condition will be happends, like as
+  //1- all frequency is same print YES.
+  //2- all are same but one frequency is one print YES
+  //3-  all frequency are same only one is higher by one. print YES
+
+  let arr = [];
+  let newArr = [];
+  str.split('').forEach(function (val) {
+    arr[val] ? arr[val]++ : (arr[val] = 1);
+  });
+  // console.log(arr);
+  for (let key in arr) {
+    // console.log(arr[key] + ' ');
+    newArr.push(arr[key]);
+  }
+  // console.log(newArr);
+  newArr.sort(function (a, b) {
+    return a - b;
+  });
+  //console.log(newArr); //  1,1,2,2,3
+  let L = newArr.length;
+  if (L == 1) return 'YES';
+  let first = newArr[0];
+  let second = newArr[1];
+  let secondLast = newArr[newArr.length - 2];
+  let last = newArr[newArr.length - 1];
+
+  //1- all frequency is same print YES.
+
+  if (first == last) return 'YES';
+
+  //2- all are same but one frequency is one print YES
+
+  if (first == 1 && second == last) return 'YES';
+
+  //3-  all frequency are same only one is higher by one. print YES
+  if (first == second && second == secondLast && secondLast == last - 1)
+    return 'YES';
+
+  //other wise
+  return 'NO';
+}
+
+//=== task operation value.
+let str = 'aaabbdcee';
+freq(str);
+
+//==========================================================================
+let arr = [14, 25, 46, 78, 94, 65, 32, 78, 14, 25, 34];
+arr.forEach(function (val, i) {
+  console.log(i + ' : ' + val);
+});
+
+function arr_(arr) {
+  let newArr = [];
+  arr.forEach(function (val) {
+    newArr[val] ? newArr[val]++ : (newArr[val] = 1);
+  });
+  console.log(newArr);
+}
+let arr = [
+  12, 24, 6, 5, 35, 35, 44, 16, 24, 24, 24, 35, 35, 5, 5, 5, 6, 6, 6, 24, 24,
+  24, 24, 16, 16, 16,
+];
+arr_(arr);
+
+//====================================================================================
+
+function sherlockAndValidString(str) {
+  let newArr = [];
+  let arr = [];
+  str.split('').forEach(function (val) {
+    arr[val] ? arr[val]++ : (arr[val] = 1);
+  });
+  console.log(arr);
+  //============================================================================
+  for (let Tension in arr) {
+    // use of in loop only work with key not values
+    // that means in loop work with only key, but of loop wor with key and values i measn
+    // of loop work with object.
+    // console.log(arr[key] + ' ');
+    newArr.push(arr[Tension]);
+  }
+  console.log(newArr);
+
+  //==========================================================================
+  for (let key of Object.keys(arr)) {
+    // that is of loop in javascript program
+    // console.log(arr[key] + ' ');
+    newArr.push(arr[key]);
+  }
+  console.log(newArr);
+  //================================================================
+}
+let str = 'abcdeedcbae';
+sherlockAndValidString(str);
+
+//=======================================================================
+
+function modified(t1, t2, n) {
+  let result = 0;
+  for (let i = 1; i <= n; i++) {
+    result = t1 + Math.pow(t2, 2);
+    t2 = result;
+    t1 = result;
+  }
+  console.log(result);
+}
+let t1 = 0;
+let t2 = 1;
+let n = 6;
+modified(t1, t2, n);
+
+// console.log(Math.pow(2, 5));
+
+// console.log(0 + Math.pow(2, 1));
+// console.log('Power of 7:-  ' + Math.pow(2, 7));
+
+//=======================================================================================
+
+
+function climbingLeaderboard(scores, alice) {
+  let result = [];
+  let uniqueScores = [...new Set(scores)];
+  for (const score of alice) {
+    if (score >= uniqueScores[0]) {
+      result.push(1);
+    } else if (score < uniqueScores[uniqueScores.length - 1]) {
+      result.push(uniqueScores.length + 1);
+    } else {
+      result.push(rankBinarySearch(score, uniqueScores));
+    }
+  }
+  console.log(result);
+}
+function rankBinarySearch(score, uniqueScores) {
+  let start = 0;
+  let end = uniqueScores.length - 1;
+  while (true) {
+    let mid = Math.floor((start + end) / 2);
+    // base cases
+    if (uniqueScores[mid] === score) {
+      return mid + 1;
+    } else if (uniqueScores[mid] > score && uniqueScores[mid + 1] < score) {
+      return mid + 2;
+    } else if (uniqueScores[mid] < score && uniqueScores[mid - 1 > score]) {
+      return mid - 1;
+    }
+    // recursion
+    if (score < uniqueScores[mid]) {
+      start = mid + 1;
+    } else {
+      end = mid - 1;
+    }
+  }
+}
+let score = [100, 100, 50, 40, 40, 20, 10];
+let alice = [5, 25, 50, 120];
+climbingLeaderboard(score, alice);
+
 */
+
+function rotateArray(arr, d) {
+  while (d) {
+    arr.push(arr.shift());
+    d--;
+  }
+  console.log(arr);
+}
+let arr = [1, 2, 3, 4, 5];
+let d = 3;
+rotateArray(arr, d);
