@@ -1617,6 +1617,20 @@ modified(t1, t2, n);
 //=======================================================================================
 
 
+//===============================================================
+function rotateArray(arr, d) {
+  while (d) {
+    arr.push(arr.shift());
+    d--;
+  }
+  console.log(arr);
+}
+let arr = [1, 2, 3, 4, 5];
+let d = 3;
+rotateArray(arr, d);
+
+//===============================================================
+
 function climbingLeaderboard(scores, alice) {
   let result = [];
   let uniqueScores = [...new Set(scores)];
@@ -1629,7 +1643,7 @@ function climbingLeaderboard(scores, alice) {
       result.push(rankBinarySearch(score, uniqueScores));
     }
   }
-  console.log(result);
+  return result;
 }
 function rankBinarySearch(score, uniqueScores) {
   let start = 0;
@@ -1654,17 +1668,282 @@ function rankBinarySearch(score, uniqueScores) {
 }
 let score = [100, 100, 50, 40, 40, 20, 10];
 let alice = [5, 25, 50, 120];
-climbingLeaderboard(score, alice);
+let res = climbingLeaderboard(score, alice);
+console.log(res);
 
-*/
+//=======================================================================
 
-function rotateArray(arr, d) {
-  while (d) {
-    arr.push(arr.shift());
-    d--;
+
+function fibonacii(n) {
+  let n1 = 0;
+  let n2 = 1;
+  let nextItem;
+
+  for (let i = 1; i <= n; i++) {
+    console.log(n1);
+    nextItem = n1 + n2;
+    n1 = n2;
+    n2 = nextItem;
   }
-  console.log(arr);
 }
-let arr = [1, 2, 3, 4, 5];
-let d = 3;
-rotateArray(arr, d);
+let n = 5;
+fibonacii(n);
+
+//==================================
+function fibo(n) {
+  if (n < 2) {
+    return n;
+  } else {
+    return fibo(n - 1) + fibo(n - 2);
+  }
+}
+let n = 5;
+if (n <= 0) {
+  console.log('Enter positive Number ? ');
+} else {
+  for (let i = 0; i <= n; i++) {
+    console.log(fibo(i));
+  }
+}
+
+//=========================================================
+
+function facto(num) {
+  if (num == 0) {
+    return 1;
+  } else {
+    return num * facto(num - 1);
+  }
+}
+let num = 5;
+console.log(facto(num));
+
+
+//======================================================
+//        Leetcode :- -----
+//-------------------------------
+// Question :-1 Two Sum
+
+function two_sum(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    let find = target - arr[i];
+    let index = arr.indexOf(find);
+    if (index != -1 && index !== i) {
+      return [i, index];
+    }
+  }
+}
+let arr = [3, 2, 4];
+let target = 6;
+console.log(two_sum(arr, target));
+
+
+//======================================================
+
+// Window Sliding Technique:----
+//---------------------------------------
+// Given an array of integers of size ‘n’, Our aim is to calculate the maximum sum of ‘k’
+//consecutive elements in the array. means continous element .
+//----------------------------------------------------
+// example :- arr=[100, 200, 300, 400];
+// let k=2;
+// O/p  700.
+//-------------------------------------------------
+// example :- arr=[1, 4, 2, 10, 23, 3, 1, 0, 20];
+// let k=4;
+// O/p =39;
+//---------------------------------------------------
+
+function max_Sum(arr, k) {
+  let sum = 0;
+  let max = 0;
+  for (let i = 0; i < k; i++) {
+    sum += arr[i];
+    max = sum;
+  }
+
+  for (let i = k; i < arr.length; i++) {
+    sum = sum + arr[i] - arr[i - k];
+    if (sum > max) {
+      max = sum;
+    }
+  }
+  return max;
+}
+let arr = [100, 200, 300, 400];
+//[1, 4, 2, 10, 2, 3, 1, 0, 20];
+let k = 2;
+console.log(max_Sum(arr, k));
+
+//========================================================================
+// count longest non-repeting string ..
+function longest(str) {
+  let n = str.length;
+  let longNonReptingString = '';
+  let result = 0;
+  for (let i = 0; i < n; i++) {
+    let visited = new Array(256);
+    for (let j = i; j < n; j++) {
+      if (visited[str.charCodeAt(j)] == true) break;
+      else {
+        //   longNonReptingString += str[i];
+        result = Math.max(result, j - i + 1);
+        visited[str.charCodeAt(j)] = true;
+      }
+    }
+  }
+  return result;
+  // return longNonReptingString;
+}
+
+let str = 'abcabcbb';
+console.log(longest(str));
+//====================================================
+
+// let publi = 'freecodeCamp';
+// let res = publi[0].toUpperCase() + publi.substring(1);
+
+// console.log(res);
+
+//===========================================================
+
+
+//==================================================
+let str = 'abccbc';
+let myArr = new Array(str.length);
+
+for (let i = 0; i < str.length; i++) {
+  myArr[i] = new Array(str.length);
+}
+//console.log(myArr);
+
+myArr[0][0] = 'a';
+myArr[0][1] = 'b';
+myArr[0][2] = 'c';
+myArr[0][3] = 'd';
+myArr[0][4] = 'e';
+myArr[0][5] = 'f';
+myArr[1][0] = 'g';
+myArr[1][1] = 'h';
+
+for (let i = 0; i < str.length; i++) {
+  for (let j = 0; j < str.length; j++) {
+    console.log(myArr[i][j] + ' ');
+  }
+}
+//=================================================
+
+let str = 'abccbc';
+let myArr = new Array(str.length);
+for (let i = 0; i < str.length; i++) {
+  myArr[i] = new Array(str.length);
+}
+
+//let num = 1;
+for (let i = 0; i < str.length; i++) {
+  for (let j = 0; j < str.length; j++) {
+    myArr[i][j] = true;
+    // num += 1;
+  }
+}
+console.log(myArr);
+
+// for (let i = 0; i < str.length; i++) {
+//   for (let j = 0; j < str.length; j++) {
+//     console.log(myArr[i][j] + ' ');
+//   }
+// }
+
+//====================================================================
+// count number of palindrome in subsrting---
+function countPalindrome(str) {
+  let dp = new Array(str.length);
+  let count = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    dp[i] = new Array(str.length);
+  }
+  for (let gap = 0; gap < str.length; gap++) {
+    for (let i = 0, j = gap; i < dp.length; i++, j++) {
+      if (gap == 0) {
+        dp[i][j] = true;
+      } else if (gap == 1) {
+        if (str.charAt(i) == str.charAt(j)) {
+          dp[i][j] = true;
+        } else {
+          dp[i][j] = false;
+        }
+      } else {
+        if (str.charAt(i) == str.charAt(j) && dp[i + 1][j - 1] == true) {
+          dp[i][j] = true;
+        } else {
+          dp[i][j] = false;
+        }
+      }
+      if (dp[i][j] == true) {
+        count++;
+      }
+    }
+  } // gap loop end.
+  // console.log(dp);
+  console.log(count);
+}
+
+let str = 'abccbc';
+countPalindrome(str);
+
+//=====================================================================================
+// explanations:--- str "abccbc"
+//        i=0    i=1     i=2 |  i=3  | i=4   |i=5
+//       |-----|------|------|-------|-------|--------|
+// i=0   |  a  | ab   | abc  | abcc  |abccb  |abccbc  |
+//       |-----|------|------|-------|-------|--------|
+//i=1    |     | b    |  bc  | bcc   |bccb   |bccbc   |
+//       |-----|------|------|-------|-------|--------|
+//i=2    |     |      | c    | cc    |ccb    |ccbc    |
+//-      |-----|------|------|-------|-------|--------|
+//i=3    |     |      |      | c     |cb     |cbc     |
+//       |-----|------|------|-------|-------|--------|
+//i=4    |     |      |      |       | b     | bc     |
+//       |-----|------|------|-------|-------|--------|
+//i=5    |     |      |      |       |       | c      |
+//- -----------|------|------|-------|-------|--------|
+*/
+//=====================================================================================
+// longest palindrome substring count.
+
+function longestPalindrome(str) {
+  let dp = new Array(str.length);
+  for (let i = 0; i < str.length; i++) {
+    dp[i] = new Array(str.length);
+  }
+  let len = 0;
+  for (let gap = 0; gap < str.length; gap++) {
+    for (let i = 0, j = gap; j < str.length; i++, j++) {
+      if (gap == 0) {
+        dp[i][j] = true;
+      } else if (gap == 1) {
+        if (str.charAt(i) == str.charAt(j)) {
+          dp[i][j] = true;
+        } else {
+          dp[i][j] = false;
+        }
+      } else {
+        if (str.charAt(i) == str.charAt(j) && dp[i + 1][j - 1] == true) {
+          dp[i][j] = true;
+        } else {
+          dp[i][j] = false;
+        }
+      }
+      if (dp[i][j] == true) {
+        len = gap + 1;
+      }
+    }
+  }
+  console.log(len);
+}
+
+let str = 'abdcbcdbdcbbc';
+longestPalindrome(str);
+
+//==========================================================================
