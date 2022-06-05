@@ -1894,7 +1894,7 @@ countPalindrome(str);
 
 //=====================================================================================
 // explanations:--- str "abccbc"
-//        i=0    i=1     i=2 |  i=3  | i=4   |i=5
+//        j=0    j=1     j=2 |  j=3  | j=4   |=5
 //       |-----|------|------|-------|-------|--------|
 // i=0   |  a  | ab   | abc  | abcc  |abccb  |abccbc  |
 //       |-----|------|------|-------|-------|--------|
@@ -1907,8 +1907,8 @@ countPalindrome(str);
 //i=4    |     |      |      |       | b     | bc     |
 //       |-----|------|------|-------|-------|--------|
 //i=5    |     |      |      |       |       | c      |
-//- -----------|------|------|-------|-------|--------|
-*/
+//- -----|-----|------|------|-------|-------|--------|
+
 //=====================================================================================
 // longest palindrome substring count.
 
@@ -1947,3 +1947,31 @@ let str = 'abdcbcdbdcbbc';
 longestPalindrome(str);
 
 //==========================================================================
+*/
+// count longest palindrome substring in given string.
+
+function count_longest_palindrome_substring(str) {
+  let dp = new Array(str.length);
+  for (let i = 0; i < str.length; i++) {
+    dp[i] = new Array(str.length);
+  }
+  for (let gap = 0; gap < str.length; gap++) {
+    for (let i = 0, j = gap; j < dp.length; i++, j++) {
+      if (gap == 0) {
+        dp[i][j] = 1;
+      } else if (gap == 1) {
+        dp[i][j] = str.charAt(i) == str.charAt(j) ? 2 : 1;
+      } else {
+        if (str.charAt(i) == str.charAt(j)) {
+          dp[i][j] = 2 + dp[i + 1][j - 1];
+        } else {
+          dp[i][j] = Math.max(dp[i][j - 1], dp[i + 1][j]);
+        }
+      }
+    }
+  }
+  console.log('Longest Palindrome Substring will be:- ' + dp[0][dp.length - 1]);
+}
+
+let str = 'abkccbc';
+count_longest_palindrome_substring(str);
