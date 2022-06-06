@@ -1947,7 +1947,7 @@ let str = 'abdcbcdbdcbbc';
 longestPalindrome(str);
 
 //==========================================================================
-*/
+
 // count longest palindrome substring in given string.
 
 function count_longest_palindrome_substring(str) {
@@ -1975,3 +1975,279 @@ function count_longest_palindrome_substring(str) {
 
 let str = 'abkccbc';
 count_longest_palindrome_substring(str);
+
+//====================================================================================
+//====================================================================================
+//   Time and space complexcity.
+//------------------------------------
+// Question :- 1
+// given a proble find out time complexcity and space complexcity.
+
+function sumArr(arr, n) {
+  let sum = 0; //-------------------------------- 1
+  for (let i = 0; i < arr.length; i++) {
+    //     1       n+1            n          //-- n+1
+    sum = sum + arr[i]; //----------------------- n
+  }
+  return sum; //--------------------------------- 1
+}
+//  1+n+1+n+1 = 2n+3 => f(n)=2n+3
+// if we write what is degree og polynomial
+// o(n)   --time complexcity.
+//-----------------------------------------------------
+//What is space complexcity
+// arr-----  n
+//sum-----   1
+// i---------1
+//  total of n+1+1 ==> n+2
+//  s(n)==> O(n)-- space complexcity...
+
+//==============================================================================
+
+
+// Question:- 02
+// given a problem find out time complexcity and space complexcity.
+
+// given a 3*3 matrix
+
+function matrix_Sum(a, b, n) {
+  for (let i = 0; i < n; i++) {
+    //----------------- n+1
+    for (let j = 0; j < n; j++) {
+      //--------------- n*(n+1)
+      c[i][j] = a[i][j] + b[i][j]; //-------------- n*n
+    }
+  }
+}
+// n+1+(n^2+n)+n^2
+// 2n^2+2n+1
+// degree of polynomials
+// O(n^2)   time complexity....
+
+// space complpexcity..
+//--a-----------n^2
+//--b-----------n^2
+//--c-----------n^2
+//--n-----------1
+//--i-----------1
+//--j-----------1
+//   n^2+n^2+n^2+1+1+1
+//  3n^2+3
+//  O(n^2)  in degree of polynomials..
+// then we can say time and space complexcity both are O(n^2)
+//time complexcity ----- O(n^2)
+//space complexcity------O(n^2)
+
+//===========================================================================
+
+function multiplication(max1, max2) {
+  let res = new Array(max1.length);
+  for (let i = 0; i < res.length; i++) {
+    res[i] = new Array(max1.length);
+  }
+  for (let i = 0; i < max1.length; i++) {
+    //------------n+1
+    for (let j = 0; j < max1.length; j++) {
+      //----------n*(n+1)
+      res[i][j] = 0; //---------------------------------n*n
+      for (let k = 0; k < max1.length; k++) {
+        //-------n*n*(n+1)
+        res[i][j] += max1[i][k] * max2[k][j]; //--------n*n*n
+      }
+    }
+  }
+  console.log(res);
+}
+let max1 = [
+  [1, 2],
+  [3, 4],
+];
+let max2 = [
+  [1, 1],
+  [1, 1],
+];
+multiplication(max1, max2);
+
+// n+1 + n*(n+1) + n*n + n*n(n+1)+ n*n*n
+//n + 1 + n^2 + 1 + n^2 + n(n^2 + n) + n^3 +n^3 + n^2
+//n+1 + n^2 +1 + n^2 + n^3 + n^2 + n^3
+//2n^3 + 3n^2 + n+1
+//f(n) = O(n^3)   based of polinomial degree
+//time complexcity will be order of O(n^3)
+//
+//space complexcity
+// matrix1 = n^2
+//matrix2 = n^2
+// i = j = k =1
+//space complexcity will be 2n^2+3
+//degree of polinomial f(n) = O(n^2)
+
+//======================================================================
+
+for (let i = 0; i < n; i++) {
+  //--- n+1
+  statement; // n
+}
+
+// time complexcity will be :- n+1+n==> 2n+1
+// talking about degree of polynomial will be f(n)=O(n)
+
+//=======================================================================
+
+for(let i=n;i>0;i--){ // n+1
+  statement; // n
+}
+
+// n+(n+1)==>2n+1
+// f(n)=O(n) will be time complexcity...
+
+//=========================================================================
+
+for (let i = 1; i < n; i = i + 2) {
+  statement; // n/2
+}
+
+// f(n) = (n/2)
+// if we talking abont degree of palinnomial will be O(n) time complexcity.
+
+//==========================================================================
+
+for (let i = 1; i < n; i = i + 20) {
+  statement; // n/20
+}
+//f(n)=(n/20)
+// O(n)
+
+//=======================================================================
+
+
+for (let i = 1; i < n; i++) {
+  //  n+1
+  for (let j = 0; j < n; j++) {
+    // n(n+1)
+    statement; //n*n
+  }
+}
+// n+1+n^2+n+n^2
+// 2n^2+2n+1
+
+// f(n)=2n^2+2n+1
+//f(n)=O(n^2)
+
+//========================================================================
+
+for (let i = 0; i < n; i++) {
+  for (let j = 0; j < i; j++) {
+    statement;
+  }
+}
+//   i     j     no.OfTimes
+//   0     0
+//        statement will not execute.
+// ---------------------------------------------
+//   1     0
+//       statement 1
+//        not execute.
+//------------------------------------------------
+//   2     0
+//      statement
+//       statement
+//      not execute.
+//-------------------------------------------------
+//  3      0
+//       statement
+//       statement
+//       statement
+//      not execute
+//-------------------------------------------------
+//  4       0
+//        statement
+//        statement
+//        statement
+//        statement
+//       Not execute
+
+//
+// total number of executin time will be 1+2+3+4+5+6==>n(n+1)/2
+//  n(n+1)/2
+// f(n)=n^2+n/2
+// what is degree of palinnomial besed on degree
+// then f(n)=O(n^2)  time complexcity...
+
+//==========================================================================
+
+let p = 0;
+for (let i = 1; p <= n; i++) {
+  p = p + i;
+}
+//  i         p
+//  1        0+1=1
+//  2        1+2=3
+//  3        1+2+3
+//  4        1+2+3+4
+//  5        1+2+3+4+5
+//  '
+//  '
+//  '
+//  '
+//  '
+//  '
+//  k       1+2+3+4+5+6+7+8+k
+// when loop will be stoped
+// assume that p>n the lop will be stop
+//         p > n
+//         p=k(k+1)/2
+//        k(k+1)/2 > n
+//       k^2 > n
+//        k> root(n)
+//    O(root(n) ==> time complexcity.
+//==========================================================================
+
+
+for (let i = 1; i < n; i = i * 2) {
+  Statement;
+}
+
+//        i
+//      -----------------------
+//       1
+//       1*2=2
+//       2*2=4
+//       2^2*2=8
+//       2^3*2=16
+//       2^4*2=32
+//       .
+//       .
+//       .
+//       2^k
+
+// assume that  i >= n
+//              i = 2^k
+//              2^k>=n
+//              2^k=n
+//   k=(log Base2 n)
+//f(n)=O(log Base2 n) == time complexcity.
+
+//=========================================================================
+
+// some other method how to calculate time complexcity and space complexcity.
+//
+//  for(let i=1;i<n;i++){
+//     statement
+//    }
+//  i== 1+1+1+1+1+1+1+1+==n
+//   k=n
+// degree of palinomial  O(n).
+//==========================================================================
+for (let i = 1; i < n; i = i * 2) {
+  statement;
+}
+
+// i=1*2*2*2*2*2*2*2===n
+//   2^k=n
+// k=(logBase2 n)
+
+// f(n) = (logBase2 n)
+
+//============================================================================
+*/
