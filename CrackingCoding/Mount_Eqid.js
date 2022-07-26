@@ -1,18 +1,18 @@
 'use strict';
-//count triplet given array...
+//count triplet given bay...
 /*
-function triplet(arr) {
+function triplet(b) {
   let count = 0;
-  let N = arr.length;
+  let N = b.length;
   // console.log(N);
-  arr.sort(function (a, b) {
+  b.sort(function (a, b) {
     return a - b;
   });
-  console.log(arr, target);
+  console.log(b, target);
   for (let i = 0; i < N; i++) {
     for (let j = i + 1; j < N; j++) {
       for (let k = j + 1; k < N; k++) {
-        if (arr[i] + arr[j] + arr[k] == target) {
+        if (b[i] + b[j] + b[k] == target) {
           count++;
         }
       }
@@ -20,10 +20,10 @@ function triplet(arr) {
   }
   return count;
 }
-let arr = [1, 0, 2, 6, 3, 9];
+let b = [1, 0, 2, 6, 3, 9];
 let target = 11;
-let res = triplet(arr);
-console.log(res);
+let a = triplet(b);
+console.log(a);
 
 
 //===========================================================================================
@@ -42,13 +42,13 @@ let str = 'arise';
 // console.log(code - 96); // 19
 
 //============================================================
-for (let i = 0; i < parseInt(str.length / 2); i++) {
+for (let i = 0; i < parselet(str.length / 2); i++) {
   let left = str.charCodeAt(i);
   lefthand = lefthand + (left - 96);
 }
 //console.log(lefthand);
 //===============================================================
-for (let i = parseInt(str.length / 2); i < str.length; i++) {
+for (let i = parselet(str.length / 2); i < str.length; i++) {
   let right = str.charCodeAt(i);
   rightHand = rightHand + (right - 96);
 }
@@ -69,10 +69,10 @@ if (str.length % 2 == 1) {
 
 // let len = spllting.length;
 // console.log(len);
-// lefthand = parseInt(len / 2);
+// lefthand = parselet(len / 2);
 // console.log(lefthand);
 
-//for (let i = 0; i < parseInt(len / 2); i++) {}
+//for (let i = 0; i < parselet(len / 2); i++) {}
 
 
 
@@ -80,12 +80,12 @@ function balancedString(str) {
   let lefthand = 0;
   let rightHand = 0;
 
-  for (let i = 0; i < parseInt(str.length / 2); i++) {
+  for (let i = 0; i < parselet(str.length / 2); i++) {
     let left = str.charCodeAt(i);
     lefthand = lefthand + (left - 96);
   }
 
-  for (let i = parseInt(str.length / 2); i < str.length; i++) {
+  for (let i = parselet(str.length / 2); i < str.length; i++) {
     let right = str.charCodeAt(i);
     rightHand = rightHand + (right - 96);
   }
@@ -150,29 +150,29 @@ billSplit(bill, k, Bcharge);
 
 //===========================================================================
 
-function sett(arr) {
-  let myset = new Set(arr);
+function sett(b) {
+  let myset = new Set(b);
   console.log(myset.size - 1);
 
   // console.log(myset);
 }
-let arr = [1, 2, 1, 2, 1, 3, 2];
-sett(arr);
+let b = [1, 2, 1, 2, 1, 3, 2];
+sett(b);
 
 
 //=========================================================
-// function countPair(arr) {
+// function countPair(b) {
 //   let set = new Set();
 
-//   arr.sort(function (a, b) {
+//   b.sort(function (a, b) {
 //     return a - b;
 //   });
-//   console.log(arr);
+//   console.log(b);
 //   let ij = 0;
 //   let j = 0;
 //   var count = 1;
-//   while (arr.length < 0) {
-//     if (arr[i] == arr[ij + 1]) {
+//   while (b.length < 0) {
+//     if (b[i] == b[ij + 1]) {
 //       count++;
 //       i++;
 //       ij++;
@@ -185,13 +185,13 @@ sett(arr);
 //   console.log(set);
 // }
 
-// let arr = [1, 1, 3, 1, 2, 1, 3, 3, 3, 3];
-// //let arr = [10, 20, 20, 10, 10, 30, 50, 10, 20];
-// countPair(arr);
+// let b = [1, 1, 3, 1, 2, 1, 3, 3, 3, 3];
+// //let b = [10, 20, 20, 10, 10, 30, 50, 10, 20];
+// countPair(b);
 
-// for (let i = 0; i < arr.length - 1; i++) {
-//   for (let j = i + 1; j < arr.length; j++) {
-//     if (arr[i] == arr[j]) {
+// for (let i = 0; i < b.length - 1; i++) {
+//   for (let j = i + 1; j < b.length; j++) {
+//     if (b[i] == b[j]) {
 //       count++;
 //     }
 //   }
@@ -213,11 +213,11 @@ sett(arr);
 // let xy = 4;
 // let i = 2;
 // console.log(Math.floor(xy / i) + ' : count '); //3
-// function pairCount(arr) {
-//   arr.sort(function (a, b) {
+// function pairCount(b) {
+//   b.sort(function (a, b) {
 //     return a - b;
 //   });
-//   let len = arr.length;
+//   let len = b.length;
 //   let set = new Set();
 
 //   let count = 1;
@@ -225,7 +225,7 @@ sett(arr);
 //   let j = 0;
 
 //   while (len > 0) {
-//     if (arr[i] == arr[j + 1]) {
+//     if (b[i] == b[j + 1]) {
 //       count++;
 //       i++;
 //       j++;
@@ -238,12 +238,12 @@ sett(arr);
 //   console.log(set);
 // }
 
-// let arr = [1, 1, 3, 1, 2, 1, 3, 3, 3, 3];
-// pairCount(arr);
+// let b = [1, 1, 3, 1, 2, 1, 3, 3, 3, 3];
+// pairCount(b);
 
 //=========================================================
 
-// function pairSocks(arr) {
+// function pairSocks(b) {
 //   let count = 0;
 //   let set = new Set();
 //   set.add(1);
@@ -252,14 +252,14 @@ sett(arr);
 //   console.log(set);
 //   console.log(set.dele_mentte(2));
 // }
-// let arr = [1, 1, 3, 1, 2, 1, 3, 3, 3, 3];
-// pairSocks(arr);
+// let b = [1, 1, 3, 1, 2, 1, 3, 3, 3, 3];
+// pairSocks(b);
 
 //=================================================================
-function pairSocks(arr) {
+function pairSocks(b) {
   let pairCount = 0;
   let searchele_ment = new Set();
-  for (let sock of arr) {
+  for (let sock of b) {
     if (searchele_ment.has(sock)) {
       pairCount++;
       searchele_ment.dele_mentte(sock);
@@ -270,9 +270,9 @@ function pairSocks(arr) {
   return pairCount;
 }
 
-let arr = [1, 1, 3, 1, 2, 1, 3, 3, 3, 3];
-let res = pairSocks(arr);
-console.log(res);
+let b = [1, 1, 3, 1, 2, 1, 3, 3, 3, 3];
+let a = pairSocks(b);
+console.log(a);
 
 //===========================================================================
 
@@ -281,8 +281,8 @@ let p = 2;
 let pagesCountfromFront = n / 2;
 let totalTargetPagefromFront = p / 2;
 let exactPagefromback = pagesCountfromFront - totalTargetPagefromFront;
-let ress = Math.min(totalTargetPagefromFront, exactPagefromback);
-console.log(ress);
+let as = Math.min(totalTargetPagefromFront, exactPagefromback);
+console.log(as);
 
 //========================================================================
 
@@ -362,8 +362,8 @@ function contingValue(howmanyStep, str) {
 
 let howmanyStep = 8;
 let str = 'UDDDUDUU';
-let res = contingValue(howmanyStep, str);
-console.log(res);
+let a = contingValue(howmanyStep, str);
+console.log(a);
 
 
 //========================================================================================
@@ -412,46 +412,46 @@ catAcatBmouseC(x, y, z);
 
 //===========================================================================
 
-function pickingNumber(arr) {
+function pickingNumber(b) {
   let conditionNumber = 1;
   let sum = 0;
-  let arr1 = [];
-  for (let i = 0; i < arr.length - 1; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      sum = Math.abs(arr[i] - arr[j]);
+  let b1 = [];
+  for (let i = 0; i < b.length - 1; i++) {
+    for (let j = i + 1; j < b.length; j++) {
+      sum = Math.abs(b[i] - b[j]);
       if (sum <= 1) {
-        arr1[i] = arr[j];
+        b1[i] = b[j];
       }
     }
   }
-  console.log(arr1);
-  console.log(arr1.length);
+  console.log(b1);
+  console.log(b1.length);
 }
-let arr = [4, 6, 5, 3, 3, 1];
-pickingNumber(arr);
+let b = [4, 6, 5, 3, 3, 1];
+pickingNumber(b);
 
 //================================================================
-function pickArr(arr) {
-  let frequency = [101]; // he is a empty array but length has 101 only..
-  let result = Number.MIN_VALUE; // taking minimum value througth javascript engine. when has already have min
+function pickb(b) {
+  let frequency = [101]; // he is a empty bay but length has 101 only..
+  let ault = Number.MIN_VALUE; // taking minimum value througth javascript engine. when has already have min
   // number ..
-  for (let i = 0; i < arr.length; i++) {
-    let index = arr[i];
+  for (let i = 0; i < b.length; i++) {
+    let index = b[i];
     frequency[index] = frequency[index] + 1;
     ////frequency[index]=frequency[index]+1;
   }
   for (let i = 1; i <= 100; i++) {
-    result = Math.max(result, frequency[i] + frequency[i - 1]);
+    ault = Math.max(ault, frequency[i] + frequency[i - 1]);
   }
-  console.log(result);
+  console.log(ault);
 }
-let arr = [4, 6, 5, 3, 3, 1];
-pickArr(arr);
+let b = [4, 6, 5, 3, 3, 1];
+pickb(b);
 
 //=====================================================================
 
-function pickArr(arr) {
-  arr.sort(function (a, b) {
+function pickb(b) {
+  b.sort(function (a, b) {
     return a - b;
   });
   let position = 0;
@@ -459,8 +459,8 @@ function pickArr(arr) {
   let max = 0;
 
   //==============================================
-  for (let i = 1; i < arr.length; i++) {
-    let difference = arr[i] - arr[position];
+  for (let i = 1; i < b.length; i++) {
+    let difference = b[i] - b[position];
     if (difference <= 1) {
       count++;
     }
@@ -482,48 +482,48 @@ function pickArr(arr) {
   return max;
 }
 
-let arr = [4, 6, 5, 3, 3, 1];
-let res = pickArr(arr);
-console.log(res);
+let b = [4, 6, 5, 3, 3, 1];
+let a = pickb(b);
+console.log(a);
 
 
 
 //==============================================================================
-function harder(arr, k) {
-  arr.sort(function (a, b) {
+function harder(b, k) {
+  b.sort(function (a, b) {
     return a - b;
   });
-  // console.log(arr);
-  let max = arr[arr.length - 1];
+  // console.log(b);
+  let max = b[b.length - 1];
   // console.log(max);
 
   console.log(Math.max(0, max - k));
 }
 
-let arr = [1, 6, 3, 5, 2];
+let b = [1, 6, 3, 5, 2];
 let k = 4;
-harder(arr, k);
+harder(b, k);
 
 
 //====================================================================
 
 function desinePDF(h, word) {
-  let arr = [];
+  let b = [];
   let len = word.length;
 
   for (let i = 0; i < h.length; i++) {
     let charVal = word.charCodeAt(i);
     let vl = charVal - 96;
-    if (Number.isInteger(vl)) {
+    if (Number.isleteger(vl)) {
       let store = h[vl];
 
-      arr.push(store);
+      b.push(store);
     }
   }
-  arr.sort(function (a, b) {
+  b.sort(function (a, b) {
     return a - b;
   });
-  let bigger = arr[arr.length - 1];
+  let bigger = b[b.length - 1];
   console.log(bigger * len);
 }
 
@@ -559,11 +559,11 @@ utopian(n);
 
 //
 // let  n =5;
-// let newArr=[n];
-// for(int jj=0; jj< n; jj++){
-//     arr[jj] = in.nextInt();
+// let newb=[n];
+// for(let jj=0; jj< n; jj++){
+//     b[jj] = in.nextlet();
 //     let sum = 1;
-//     for (let i = 0; i < arr[jj]; i++) {
+//     for (let i = 0; i < b[jj]; i++) {
 //         sum = i % 2 == 0 ? sum * 2 : sum + 1;
 //     }
 //    console.log(sum);
@@ -571,8 +571,8 @@ utopian(n);
 //=============================================================================
 
 let n = 8;
-// let newArray = [n];
-// console.log(newArray.length);
+// let newbay = [n];
+// console.log(newbay.length);
 
 let h = 1;
 for (let i = 1; i <= n; i++) {
@@ -586,9 +586,9 @@ console.log(h);
 
 let count=0;
 		let countless=0;
-		for(let i=0;i<arr.length;i++)
+		for(let i=0;i<b.length;i++)
 		{
-			if(arr[i]<=0)
+			if(b[i]<=0)
 			{
 				countless++;
 			}
@@ -605,21 +605,21 @@ let count=0;
 //=============================================================================
 
 function angreeProfessor(attendance, k) {
-  let arriveOnTime = 0;
-  let arriveOnLate = 0;
+  let biveOnTime = 0;
+  let biveOnLate = 0;
   for (let i = 0; i < attendance.length; i++) {
     if (attendance[i] <= 0) {
-      arriveOnTime++;
+      biveOnTime++;
     } else {
-      arriveOnLate++;
+      biveOnLate++;
     }
   }
-  // console.log(arriveOnTime);
-  // console.log(arriveOnLate);
-  if (k == arriveOnTime) {
+  // console.log(biveOnTime);
+  // console.log(biveOnLate);
+  if (k == biveOnTime) {
     console.log('YES');
   } 
-  if(arriveOnLate<k){
+  if(biveOnLate<k){
     console.log("NO");
   }
 }
@@ -630,17 +630,17 @@ angreeProfessor(attendance, k);
 
 
 function angree(a, k) {
-  let present = 0;
+  let paent = 0;
   let n = a.length;
   if (k > n) {
     return 'YES';
   } else {
     for (let i = 0; i < a.length; i++) {
       if (a[i] <= 0) {
-        present++;
+        paent++;
       }
     }
-    if (present < k) {
+    if (paent < k) {
       return 'YES';
     } else {
       return 'NO';
@@ -649,8 +649,8 @@ function angree(a, k) {
 }
 let a = [-2, -1, 0, 1, 2];
 let k = 3;
-let res = angree(a, k);
-console.log(res);
+let a = angree(a, k);
+console.log(a);
 
 
 //=================================================================================
@@ -747,14 +747,14 @@ if ((reminder + s - 1) % n == 0) {
 
 
 //=================================================================
-let arr=[0,0,1,0,0,1,1,0];
+let b=[0,0,1,0,0,1,1,0];
 let k=2;
 let energy = 100;
 let currentCloud = 0;
 do {
-  currentCloud = (currentCloud + k) % arr.length;
+  currentCloud = (currentCloud + k) % b.length;
   energy--;
-  if (arr[currentCloud] == 1) {
+  if (b[currentCloud] == 1) {
     energy -= 2;
   }
 } while (currentCloud != 0);
@@ -775,11 +775,11 @@ let num = 145236;
 digit(num);
 
 
-int count=0;
-int num=n;
+let count=0;
+let num=n;
 while(n>0)
 {
-    int reminder=n%10;
+    let reminder=n%10;
     if(reminder!=0 && num % reminder==0)
     count++;
     n/=10;
@@ -789,10 +789,10 @@ return count;
 //===========================================================
 //console.log(Math.floor(105 / 10));
 function facttt(n) {
-  var bigInt = BigInt(n);
+  var biglet = Biglet(n);
   var factorial = 1n;
-  for (let i = 0n; i < bigInt; i++) {
-    factorial *= bigInt - i;
+  for (let i = 0n; i < biglet; i++) {
+    factorial *= biglet - i;
   }
   console.log(String(factorial));
 }
@@ -801,10 +801,10 @@ let n = 10;
 facttt(n);
 
 //===========================================================
-// function cloud(arr) {
+// function cloud(b) {
 //   let count = -1;
-//   for (let i = 0; i < arr.length; ) {
-//     if (i + 2 < arr.length && arr[i] == 0) {
+//   for (let i = 0; i < b.length; ) {
+//     if (i + 2 < b.length && b[i] == 0) {
 //       i = i + 2;
 //     } else {
 //       i = i + 1;
@@ -813,14 +813,14 @@ facttt(n);
 //   }
 //   console.log(count);
 // }
-// let arr = [0, 1, 0, 0, 0, 1, 0];
-// cloud(arr);
+// let b = [0, 1, 0, 0, 0, 1, 0];
+// cloud(b);
 
 
 
 // let  len=p.length;
 //         let  inum=0;
-//         let result=new Array(len);
+//         let ault=new bay(len);
 //         for(let i=1;i<=len;i++)
 //         {
 //             for(let j=0;j<len;j++)
@@ -839,35 +839,35 @@ facttt(n);
 //                     break;
 //                 }
 //             }
-//             result[i-1]=inum;
+//             ault[i-1]=inum;
 //         }
-//         console.log(result);
+//         console.log(ault);
 
-function equation(arr) {
-  let res = [];
+function equation(b) {
+  let a = [];
   let x = 1;
   let y = 0;
-  while (x <= arr.length) {
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] == x) {
+  while (x <= b.length) {
+    for (let i = 0; i < b.length; i++) {
+      if (b[i] == x) {
         y = i + 1;
         break;
       }
     }
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] == y) {
+    for (let i = 0; i < b.length; i++) {
+      if (b[i] == y) {
         y = i + 1;
         break;
       }
     }
-    res[x - 1] = y;
+    a[x - 1] = y;
     x++;
   }
-  return res;
+  return a;
 }
-let arr = [5, 2, 1, 3, 4];
-let ress = equation(arr);
-console.log(ress);
+let b = [5, 2, 1, 3, 4];
+let as = equation(b);
+console.log(as);
 
 
 //=========================================================================
@@ -979,8 +979,8 @@ deliver(prep, order);
 
 //     n = Math.floor(n / 2);
 //   }
-//   let res = Math.pow(2, ans);
-//   console.log(res);
+//   let a = Math.pow(2, ans);
+//   console.log(a);
 // }
 // let n = 10;
 // xorSum(n);
@@ -990,10 +990,10 @@ deliver(prep, order);
 
 function greatXor(n) {
   let count = 0;
-  let xorRES = 0;
+  let xora = 0;
   for (let i = 1; i < n; i++) {
-    xorRES = i ^ n;
-    if (xorRES > n) count++;
+    xora = i ^ n;
+    if (xora > n) count++;
   }
   console.log(count);
 }
@@ -1042,35 +1042,35 @@ findPowerOfTwo(n);
 
 
 
-function sansaXOR(arr) {
+function sansaXOR(b) {
   let xor = 0;
-  let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    xor = arr[i];
-    newArr.push(xor);
+  let newb = [];
+  for (let i = 0; i < b.length; i++) {
+    xor = b[i];
+    newb.push(xor);
   }
-  //console.log(newArr);
+  //console.log(newb);
   // let j = 1;
-  for (let i = 0, j = 1; i < arr.length && j < arr.length; i++) {
-    let xor1 = arr[i] ^ arr[j];
-    newArr.push(xor1);
+  for (let i = 0, j = 1; i < b.length && j < b.length; i++) {
+    let xor1 = b[i] ^ b[j];
+    newb.push(xor1);
     j++;
   }
-  // console.log(newArr);
+  // console.log(newb);
   let suumm = 0;
-  for (let i = 0; i < arr.length; i++) {
-    suumm = suumm ^ arr[i];
+  for (let i = 0; i < b.length; i++) {
+    suumm = suumm ^ b[i];
   }
-  newArr.push(suumm);
-  // console.log(newArr);
-  let res = 0;
-  for (let i = 0; i < newArr.length; i++) {
-    res = res ^ newArr[i];
+  newb.push(suumm);
+  // console.log(newb);
+  let a = 0;
+  for (let i = 0; i < newb.length; i++) {
+    a = a ^ newb[i];
   }
-  console.log(res);
+  console.log(a);
 }
-let arr = [3, 4, 5];
-sansaXOR(arr);
+let b = [3, 4, 5];
+sansaXOR(b);
 
 
 //=====================================================================
@@ -1111,40 +1111,40 @@ console.log(1 << 3);
 //================================================================================
 
 
-function sansaXOR(arr) {
-  let newArray = [];
-  let len = arr.length;
+function sansaXOR(b) {
+  let newbay = [];
+  let len = b.length;
   let x = 0;
   if (len % 2 == 0) {
     return 0;
   } else {
     for (let i = 0; i < len; i += 2) {
-      x ^= arr[i];
+      x ^= b[i];
     }
   }
   return x;
 }
 
-let arr = [3, 4, 5];
-let re = sansaXOR(arr);
+let b = [3, 4, 5];
+let re = sansaXOR(b);
 console.log(re);
 
 //console.log(98 ^ 12); // 110
-function sansaXOR_(arr1) {
-  let len = arr1.length;
+function sansaXOR_(b1) {
+  let len = b1.length;
   let x = 0;
   if (len % 2 == 0) {
     return 0;
   } else {
     for (let i = 0; i < len; i += 2) {
-      x = x ^ arr1[i];
+      x = x ^ b1[i];
     }
   }
   return x;
 }
 
-let arr1 = [98, 74, 12];
-let reas = sansaXOR_(arr1);
+let b1 = [98, 74, 12];
+let reas = sansaXOR_(b1);
 console.log('Sansa XOR:- ' + reas);
 
 //==========================================================================
@@ -1187,7 +1187,7 @@ function msbPos(n) {
 // Function to find Bit-wise & of all
 // numbers from x to y.
 function andOperator(x, y) {
-  let res = 0; // Initialize result
+  let a = 0; // Initialize ault
 
   while (x > 0 && y > 0) {
     // Find positions of MSB in x and y
@@ -1197,16 +1197,16 @@ function andOperator(x, y) {
     // If positions are not same, return
     if (msb_p1 != msb_p2) break;
 
-    // Add 2^msb_p1 to result
+    // Add 2^msb_p1 to ault
     let msb_val = 1 << msb_p1;
-    res = res + msb_val;
+    a = a + msb_val;
 
     // subtract 2^msb_p1 from x and y.
     x = x - msb_val;
     y = y - msb_val;
   }
 
-  return res;
+  return a;
 }
 
 // Driver Code
@@ -1262,21 +1262,21 @@ console.log(andOperator(x, y));
 
 //===================================================
 
-function candy(arr) {
-  let one = arr[0];
-  let newArray = [];
+function candy(b) {
+  let one = b[0];
+  let newbay = [];
 
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > one) {
-      newArray.push(i + 1);
+  for (let i = 1; i < b.length; i++) {
+    if (b[i] > one) {
+      newbay.push(i + 1);
     } else {
       one++;
     }
   }
 }
 
-let arr = [4, 6, 4, 5, 6, 2];
-candy(arr);
+let b = [4, 6, 4, 5, 6, 2];
+candy(b);
 
 
 
@@ -1289,15 +1289,15 @@ function sherlockANDCoast(B) {
   console.log(maxVar + ' == ' + maxOne);
 }
 
-let arr = [10, 1, 10, 1, 10];
-sherlockANDCoast(arr);
+let b = [10, 1, 10, 1, 10];
+sherlockANDCoast(b);
 
-let gfg = new Array(26);
+let gfg = new bay(26);
 
 for (let i = 0; i < gfg.length; i++) {
-  gfg[i] = new Array(26);
+  gfg[i] = new bay(26);
 }
-//initializing array
+//initializing bay
 let h = 0;
 for (let i = 0; i < gfg.length; i++) {
   for (let j = 0; j < gfg.length; j++) {
@@ -1305,7 +1305,7 @@ for (let i = 0; i < gfg.length; i++) {
   }
 }
 
-// for printing the ele_mentment
+// for prleting the ele_mentment
 
 for (let i = 0; i < gfg.length; i++) {
   for (let j = 0; j < gfg.length; j++) {
@@ -1315,41 +1315,41 @@ for (let i = 0; i < gfg.length; i++) {
 
 
 function greadFunction(grid) {
-  let newArr = [];
+  let newb = [];
   //console.log(grid.length); // 3
   for (let i = 0; i < grid.length; i++) {
     let text = grid[i].split('').sort();
-    newArr.push(text);
+    newb.push(text);
   }
 
-  let col = newArr[0].length;
+  let col = newb[0].length;
   // console.log(col);  // 3
-  for (let i = 0; i < newArr.length - 1; i++) {
+  for (let i = 0; i < newb.length - 1; i++) {
     for (let j = 0; j < col; j++) {
-      if (newArr[i][j] > newArr[i + 1][j]) {
+      if (newb[i][j] > newb[i + 1][j]) {
         console.log('NO');
       }
     }
   }
   console.log('YES');
 }
-//let newArr = [];
+//let newb = [];
 let grid = ['abc', 'ade', 'efg'];
 greadFunction(grid);
 
 // let g = ['adb'];
-// let arr = [];
+// let b = [];
 // let text = g[0].split('').sort();
-// arr.push(text);
-// console.log(arr);
+// b.push(text);
+// console.log(b);
 
 //
 //========================================================================
 
 function canies(ratings) {
   let sum = 0;
-  let left2right = new Array(ratings.length);
-  let right2left = new Array(ratings.length);
+  let left2right = new bay(ratings.length);
+  let right2left = new bay(ratings.length);
  
   for (let i = 0; i < left2right.length; i++) {
     left2right[i] = 1;
@@ -1373,8 +1373,8 @@ function canies(ratings) {
   return sum;
 }
 
-let arr = [2, 4, 3, 5, 2, 6, 4, 5];
-console.log(canies(arr));
+let b = [2, 4, 3, 5, 2, 6, 4, 5];
+console.log(canies(b));
 
 //===============================================================================
 
@@ -1470,13 +1470,13 @@ function tackung(s) {
 }
 
 let s = 'aaab';
-let res = tackung(s);
-console.log(res);
+let a = tackung(s);
+console.log(a);
 
 
 //======================================================================
 
-var arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var b = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 function counter(x) {
   var count = 0,
@@ -1497,41 +1497,41 @@ console.log(counter(a));
 
 function freq(str) {
   // there are three condition will be happends, like as
-  //1- all frequency is same print YES.
-  //2- all are same but one frequency is one print YES
-  //3-  all frequency are same only one is higher by one. print YES
+  //1- all frequency is same prlet YES.
+  //2- all are same but one frequency is one prlet YES
+  //3-  all frequency are same only one is higher by one. prlet YES
 
-  let arr = [];
-  let newArr = [];
+  let b = [];
+  let newb = [];
   str.split('').forEach(function (val) {
-    arr[val] ? arr[val]++ : (arr[val] = 1);
+    b[val] ? b[val]++ : (b[val] = 1);
   });
-  // console.log(arr);
-  for (let key in arr) {
-    // console.log(arr[key] + ' ');
-    newArr.push(arr[key]);
+  // console.log(b);
+  for (let key in b) {
+    // console.log(b[key] + ' ');
+    newb.push(b[key]);
   }
-  // console.log(newArr);
-  newArr.sort(function (a, b) {
+  // console.log(newb);
+  newb.sort(function (a, b) {
     return a - b;
   });
-  //console.log(newArr); //  1,1,2,2,3
-  let L = newArr.length;
+  //console.log(newb); //  1,1,2,2,3
+  let L = newb.length;
   if (L == 1) return 'YES';
-  let first = newArr[0];
-  let second = newArr[1];
-  let secondLast = newArr[newArr.length - 2];
-  let last = newArr[newArr.length - 1];
+  let first = newb[0];
+  let second = newb[1];
+  let secondLast = newb[newb.length - 2];
+  let last = newb[newb.length - 1];
 
-  //1- all frequency is same print YES.
+  //1- all frequency is same prlet YES.
 
   if (first == last) return 'YES';
 
-  //2- all are same but one frequency is one print YES
+  //2- all are same but one frequency is one prlet YES
 
   if (first == 1 && second == last) return 'YES';
 
-  //3-  all frequency are same only one is higher by one. print YES
+  //3-  all frequency are same only one is higher by one. prlet YES
   if (first == second && second == secondLast && secondLast == last - 1)
     return 'YES';
 
@@ -1544,50 +1544,50 @@ let str = 'aaabbdcee';
 freq(str);
 
 //==========================================================================
-let arr = [14, 25, 46, 78, 94, 65, 32, 78, 14, 25, 34];
-arr.forEach(function (val, i) {
+let b = [14, 25, 46, 78, 94, 65, 32, 78, 14, 25, 34];
+b.forEach(function (val, i) {
   console.log(i + ' : ' + val);
 });
 
-function arr_(arr) {
-  let newArr = [];
-  arr.forEach(function (val) {
-    newArr[val] ? newArr[val]++ : (newArr[val] = 1);
+function b_(b) {
+  let newb = [];
+  b.forEach(function (val) {
+    newb[val] ? newb[val]++ : (newb[val] = 1);
   });
-  console.log(newArr);
+  console.log(newb);
 }
-let arr = [
+let b = [
   12, 24, 6, 5, 35, 35, 44, 16, 24, 24, 24, 35, 35, 5, 5, 5, 6, 6, 6, 24, 24,
   24, 24, 16, 16, 16,
 ];
-arr_(arr);
+b_(b);
 
 //====================================================================================
 
 function sherlockAndValidString(str) {
-  let newArr = [];
-  let arr = [];
+  let newb = [];
+  let b = [];
   str.split('').forEach(function (val) {
-    arr[val] ? arr[val]++ : (arr[val] = 1);
+    b[val] ? b[val]++ : (b[val] = 1);
   });
-  console.log(arr);
+  console.log(b);
   //============================================================================
-  for (let Tension in arr) {
+  for (let Tension in b) {
     // use of in loop only work with key not values
     // that means in loop work with only key, but of loop wor with key and values i measn
     // of loop work with object.
-    // console.log(arr[key] + ' ');
-    newArr.push(arr[Tension]);
+    // console.log(b[key] + ' ');
+    newb.push(b[Tension]);
   }
-  console.log(newArr);
+  console.log(newb);
 
   //==========================================================================
-  for (let key of Object.keys(arr)) {
+  for (let key of Object.keys(b)) {
     // that is of loop in javascript program
-    // console.log(arr[key] + ' ');
-    newArr.push(arr[key]);
+    // console.log(b[key] + ' ');
+    newb.push(b[key]);
   }
-  console.log(newArr);
+  console.log(newb);
   //================================================================
 }
 let str = 'abcdeedcbae';
@@ -1596,13 +1596,13 @@ sherlockAndValidString(str);
 //=======================================================================
 
 function modified(t1, t2, n) {
-  let result = 0;
+  let ault = 0;
   for (let i = 1; i <= n; i++) {
-    result = t1 + Math.pow(t2, 2);
-    t2 = result;
-    t1 = result;
+    ault = t1 + Math.pow(t2, 2);
+    t2 = ault;
+    t1 = ault;
   }
-  console.log(result);
+  console.log(ault);
 }
 let t1 = 0;
 let t2 = 1;
@@ -1618,48 +1618,48 @@ modified(t1, t2, n);
 
 
 //===============================================================
-function rotateArray(arr, d) {
+function rotatebay(b, d) {
   while (d) {
-    arr.push(arr.shift());
+    b.push(b.shift());
     d--;
   }
-  console.log(arr);
+  console.log(b);
 }
-let arr = [1, 2, 3, 4, 5];
+let b = [1, 2, 3, 4, 5];
 let d = 3;
-rotateArray(arr, d);
+rotatebay(b, d);
 
 //===============================================================
 
-function climbingLeaderboard(scores, alice) {
-  let result = [];
-  let uniqueScores = [...new Set(scores)];
+function climbingLeaderboard(scoa, alice) {
+  let ault = [];
+  let uniqueScoa = [...new Set(scoa)];
   for (const score of alice) {
-    if (score >= uniqueScores[0]) {
-      result.push(1);
-    } else if (score < uniqueScores[uniqueScores.length - 1]) {
-      result.push(uniqueScores.length + 1);
+    if (score >= uniqueScoa[0]) {
+      ault.push(1);
+    } else if (score < uniqueScoa[uniqueScoa.length - 1]) {
+      ault.push(uniqueScoa.length + 1);
     } else {
-      result.push(rankBinarySearch(score, uniqueScores));
+      ault.push(rankBinarySearch(score, uniqueScoa));
     }
   }
-  return result;
+  return ault;
 }
-function rankBinarySearch(score, uniqueScores) {
+function rankBinarySearch(score, uniqueScoa) {
   let start = 0;
-  let end = uniqueScores.length - 1;
+  let end = uniqueScoa.length - 1;
   while (true) {
     let mid = Math.floor((start + end) / 2);
     // base cases
-    if (uniqueScores[mid] === score) {
+    if (uniqueScoa[mid] === score) {
       return mid + 1;
-    } else if (uniqueScores[mid] > score && uniqueScores[mid + 1] < score) {
+    } else if (uniqueScoa[mid] > score && uniqueScoa[mid + 1] < score) {
       return mid + 2;
-    } else if (uniqueScores[mid] < score && uniqueScores[mid - 1 > score]) {
+    } else if (uniqueScoa[mid] < score && uniqueScoa[mid - 1 > score]) {
       return mid - 1;
     }
     // recursion
-    if (score < uniqueScores[mid]) {
+    if (score < uniqueScoa[mid]) {
       start = mid + 1;
     } else {
       end = mid - 1;
@@ -1668,8 +1668,8 @@ function rankBinarySearch(score, uniqueScores) {
 }
 let score = [100, 100, 50, 40, 40, 20, 10];
 let alice = [5, 25, 50, 120];
-let res = climbingLeaderboard(score, alice);
-console.log(res);
+let a = climbingLeaderboard(score, alice);
+console.log(a);
 
 //=======================================================================
 
@@ -1722,57 +1722,57 @@ console.log(facto(num));
 
 // Window Sliding Technique:----
 //---------------------------------------
-// Given an array of integers of size ‘n’, Our aim is to calculate the maximum sum of ‘k’
-//consecutive ele_mentments in the array. means continous ele_mentment .
+// Given an bay of letegers of size ‘n’, Our aim is to calculate the maximum sum of ‘k’
+//consecutive ele_mentments in the bay. means continous ele_mentment .
 //----------------------------------------------------
-// example :- arr=[100, 200, 300, 400];
+// example :- b=[100, 200, 300, 400];
 // let k=2;
 // O/p  700.
 //-------------------------------------------------
-// example :- arr=[1, 4, 2, 10, 23, 3, 1, 0, 20];
+// example :- b=[1, 4, 2, 10, 23, 3, 1, 0, 20];
 // let k=4;
 // O/p =39;
 //---------------------------------------------------
 
-function max_Sum(arr, k) {
+function max_Sum(b, k) {
   let sum = 0;
   let max = 0;
   for (let i = 0; i < k; i++) {
-    sum += arr[i];
+    sum += b[i];
     max = sum;
   }
 
-  for (let i = k; i < arr.length; i++) {
-    sum = sum + arr[i] - arr[i - k];
+  for (let i = k; i < b.length; i++) {
+    sum = sum + b[i] - b[i - k];
     if (sum > max) {
       max = sum;
     }
   }
   return max;
 }
-let arr = [100, 200, 300, 400];
+let b = [100, 200, 300, 400];
 //[1, 4, 2, 10, 2, 3, 1, 0, 20];
 let k = 2;
-console.log(max_Sum(arr, k));
+console.log(max_Sum(b, k));
 
 //========================================================================
 // count longest non-repeting string ..
 function longest(str) {
   let n = str.length;
   let longNonReptingString = '';
-  let result = 0;
+  let ault = 0;
   for (let i = 0; i < n; i++) {
-    let visited = new Array(256);
+    let visited = new bay(256);
     for (let j = i; j < n; j++) {
       if (visited[str.charCodeAt(j)] == true) break;
       else {
         //   longNonReptingString += str[i];
-        result = Math.max(result, j - i + 1);
+        ault = Math.max(ault, j - i + 1);
         visited[str.charCodeAt(j)] = true;
       }
     }
   }
-  return result;
+  return ault;
   // return longNonReptingString;
 }
 
@@ -1781,67 +1781,67 @@ console.log(longest(str));
 //====================================================
 
 // let publi = 'freecodeCamp';
-// let res = publi[0].toUpperCase() + publi.substring(1);
+// let a = publi[0].toUpperCase() + publi.substring(1);
 
-// console.log(res);
+// console.log(a);
 
 //===========================================================
 
 
 //==================================================
 let str = 'abccbc';
-let myArr = new Array(str.length);
+let myb = new bay(str.length);
 
 for (let i = 0; i < str.length; i++) {
-  myArr[i] = new Array(str.length);
+  myb[i] = new bay(str.length);
 }
-//console.log(myArr);
+//console.log(myb);
 
-myArr[0][0] = 'a';
-myArr[0][1] = 'b';
-myArr[0][2] = 'c';
-myArr[0][3] = 'd';
-myArr[0][4] = 'e';
-myArr[0][5] = 'f';
-myArr[1][0] = 'g';
-myArr[1][1] = 'h';
+myb[0][0] = 'a';
+myb[0][1] = 'b';
+myb[0][2] = 'c';
+myb[0][3] = 'd';
+myb[0][4] = 'e';
+myb[0][5] = 'f';
+myb[1][0] = 'g';
+myb[1][1] = 'h';
 
 for (let i = 0; i < str.length; i++) {
   for (let j = 0; j < str.length; j++) {
-    console.log(myArr[i][j] + ' ');
+    console.log(myb[i][j] + ' ');
   }
 }
 //=================================================
 
 let str = 'abccbc';
-let myArr = new Array(str.length);
+let myb = new bay(str.length);
 for (let i = 0; i < str.length; i++) {
-  myArr[i] = new Array(str.length);
+  myb[i] = new bay(str.length);
 }
 
 //let num = 1;
 for (let i = 0; i < str.length; i++) {
   for (let j = 0; j < str.length; j++) {
-    myArr[i][j] = true;
+    myb[i][j] = true;
     // num += 1;
   }
 }
-console.log(myArr);
+console.log(myb);
 
 // for (let i = 0; i < str.length; i++) {
 //   for (let j = 0; j < str.length; j++) {
-//     console.log(myArr[i][j] + ' ');
+//     console.log(myb[i][j] + ' ');
 //   }
 // }
 
 //====================================================================
 // count number of palindrome in subsrting---
 function countPalindrome(str) {
-  let dp = new Array(str.length);
+  let dp = new bay(str.length);
   let count = 0;
 
   for (let i = 0; i < str.length; i++) {
-    dp[i] = new Array(str.length);
+    dp[i] = new bay(str.length);
   }
   for (let gap = 0; gap < str.length; gap++) {
     for (let i = 0, j = gap; i < dp.length; i++, j++) {
@@ -1893,9 +1893,9 @@ countPalindrome(str);
 // longest palindrome substring count.
 
 function longestPalindrome(str) {
-  let dp = new Array(str.length);
+  let dp = new bay(str.length);
   for (let i = 0; i < str.length; i++) {
-    dp[i] = new Array(str.length);
+    dp[i] = new bay(str.length);
   }
   let len = 0;
   for (let gap = 0; gap < str.length; gap++) {
@@ -1931,9 +1931,9 @@ longestPalindrome(str);
 // count longest palindrome substring in given string.
 
 function count_longest_palindrome_substring(str) {
-  let dp = new Array(str.length);
+  let dp = new bay(str.length);
   for (let i = 0; i < str.length; i++) {
-    dp[i] = new Array(str.length);
+    dp[i] = new bay(str.length);
   }
   for (let gap = 0; gap < str.length; gap++) {
     for (let i = 0, j = gap; j < dp.length; i++, j++) {
@@ -1963,11 +1963,11 @@ count_longest_palindrome_substring(str);
 // Question :- 1
 // given a proble find out time complexcity and space complexcity.
 
-function sumArr(arr, n) {
+function sumb(b, n) {
   let sum = 0; //-------------------------------- 1
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < b.length; i++) {
     //     1       n+1            n          //-- n+1
-    sum = sum + arr[i]; //----------------------- n
+    sum = sum + b[i]; //----------------------- n
   }
   return sum; //--------------------------------- 1
 }
@@ -1976,7 +1976,7 @@ function sumArr(arr, n) {
 // o(n)   --time complexcity.
 //-----------------------------------------------------
 //What is space complexcity
-// arr-----  n
+// b-----  n
 //sum-----   1
 // i---------1
 //  total of n+1+1 ==> n+2
@@ -2021,22 +2021,22 @@ function matrix_Sum(a, b, n) {
 //===========================================================================
 
 function multiplication(max1, max2) {
-  let res = new Array(max1.length);
-  for (let i = 0; i < res.length; i++) {
-    res[i] = new Array(max1.length);
+  let a = new bay(max1.length);
+  for (let i = 0; i < a.length; i++) {
+    a[i] = new bay(max1.length);
   }
   for (let i = 0; i < max1.length; i++) {
     //------------n+1
     for (let j = 0; j < max1.length; j++) {
       //----------n*(n+1)
-      res[i][j] = 0; //---------------------------------n*n
+      a[i][j] = 0; //---------------------------------n*n
       for (let k = 0; k < max1.length; k++) {
         //-------n*n*(n+1)
-        res[i][j] += max1[i][k] * max2[k][j]; //--------n*n*n
+        a[i][j] += max1[i][k] * max2[k][j]; //--------n*n*n
       }
     }
   }
-  console.log(res);
+  console.log(a);
 }
 let max1 = [
   [1, 2],
@@ -2333,18 +2333,18 @@ while (i < n) {  // n+1
 //-------------------------------
 // Question :-1 Two Sum
 
-function two_sum(arr, target) {
-  for (let i = 0; i < arr.length; i++) {
-    let find = target - arr[i];
-    let index = arr.indexOf(find);
+function two_sum(b, target) {
+  for (let i = 0; i < b.length; i++) {
+    let find = target - b[i];
+    let index = b.indexOf(find);
     if (index != -1 && index !== i) {
       return [i, index];
     }
   }
 }
-let arr = [3, 2, 4];
+let b = [3, 2, 4];
 let target = 6;
-console.log(two_sum(arr, target));
+console.log(two_sum(b, target));
 
 //==================================================================
 
@@ -2373,8 +2373,8 @@ function happy_Number(n) {
 }
 
 let n = 13;
-let res = happy_Number(n);
-if (res == true) {
+let a = happy_Number(n);
+if (a == true) {
   console.log('true');
 } else {
   console.log('false');
@@ -2386,19 +2386,19 @@ if (res == true) {
 // console.log(parseFloat(n)); // 12345
 
 // let x = -5432100;
-// let res = Math.sign(x);
-// console.log(res); // -1
+// let a = Math.sign(x);
+// console.log(a); // -1
 // let nu = 12345;
-// let ress = nu * res;
-// console.log(ress);
+// let as = nu * a;
+// console.log(as);
 
 //=================================
 
 function reverse_Number(n) {
   let tostr = n.toString();
   let spli = tostr.split('');
-  let res = spli.reverse();
-  let joi = res.join('');
+  let a = spli.reverse();
+  let joi = a.join('');
   let parsefloat = parseFloat(joi);
   // console.log(parsefloat);
   let math = parsefloat * Math.sign(n); // original values of number.
@@ -2434,7 +2434,7 @@ primeNumber(num);
 
 //==============================================================================
 function primeNumber(starting, ending) {
-  let arr = [];
+  let b = [];
 
   for (let i = starting; i <= ending; i++) {
     let flag = 0;
@@ -2445,10 +2445,10 @@ function primeNumber(starting, ending) {
       }
     }
     if (i > 1 && flag == 0) {
-      arr.push(i);
+      b.push(i);
     }
   }
-  console.log(arr + '');
+  console.log(b + '');
 }
 let starting = 2;
 let ending = 50;
@@ -2458,12 +2458,12 @@ primeNumber(starting, ending);
 //   let l = str.length;
 //   let temp = str.charAt(0);
 //   let temp2 = str.charAt(l - 1);
-//   let result = 0;
+//   let ault = 0;
 //   if (l <= 10) {
 //     console.log(str);
 //   } else {
-//     result = l - 2;
-//     let t = temp + result;
+//     ault = l - 2;
+//     let t = temp + ault;
 //     let re = t + temp2;
 //     console.log(re);
 //   }
@@ -2473,22 +2473,22 @@ primeNumber(starting, ending);
 
 //========================================================================
 
-function birthdayCakeCandies(arr) {
+function birthdayCakeCandies(b) {
   let xor = 0;
-  arr.sort(function (a, b) {
+  b.sort(function (a, b) {
     return a - b;
   });
-  let maxiM = arr[arr.length - 1];
-  for (let i = 0; i < arr.length; i++) {
-    if ((maxiM ^ arr[i]) == 0) {
+  let maxiM = b[b.length - 1];
+  for (let i = 0; i < b.length; i++) {
+    if ((maxiM ^ b[i]) == 0) {
       xor++;
     }
   }
   console.log('count ' + xor);
 }
 
-let arr = [3, 2, 1, 3, 3];
-birthdayCakeCandies(arr);
+let b = [3, 2, 1, 3, 3];
+birthdayCakeCandies(b);
 
 //
 // let x = 5;
@@ -2524,14 +2524,14 @@ function timeFormat(s) {
     if (hour == '12') {
       return hour + ':' + minutes + ':' + second;
     } else {
-      return parseInt(hour) + 12 + ':' + minutes + ':' + second;
+      return parselet(hour) + 12 + ':' + minutes + ':' + second;
     }
   }
 }
 //
 let s = '12:00:11PM';
-let res = timeFormat(s);
-console.log(res);
+let a = timeFormat(s);
+console.log(a);
 // console.log('hour ' + time[0]);
 
 // console.log('minutes ' + time[1]);
@@ -2543,22 +2543,22 @@ console.log(res);
 //=============================================================================
 
 
-function sherlockArray(arr) {
+function sherlockbay(b) {
   let sum = 0;
-  for (let x of arr) {
+  for (let x of b) {
     sum += x;
   }
   let x = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (2 * x == sum - arr[i]) {
+  for (let i = 0; i < b.length; i++) {
+    if (2 * x == sum - b[i]) {
       return 'YES';
     }
-    x = x + arr[i];
+    x = x + b[i];
   }
   return 'NO';
 }
-let arr = [1, 2, 3];
-console.log(sherlockArray(arr));
+let b = [1, 2, 3];
+console.log(sherlockbay(b));
 
 
 //=================================================================
@@ -2582,7 +2582,7 @@ console.log(sherlockArray(arr));
 // 				}
 // 	}
 // }
-// System.out.println(fine);
+// System.out.prletln(fine);
 function libraryFine(
   yourDate,
   YourMonth,
@@ -2605,10 +2605,10 @@ console.log(
 //=================================================================================
 
 function extraLongFactorial(n) {
-  let bigint = BigInt(n);
+  let biglet = Biglet(n);
   let facto = 1n;
-  for (let i = 0n; i < bigint; i++) {
-    facto *= bigint - i;
+  for (let i = 0n; i < biglet; i++) {
+    facto *= biglet - i;
   }
   console.log(String(facto));
 }
@@ -2630,16 +2630,16 @@ function appendAndDele_ment(s, t, k) {
     add = Math.floor(k / 2);
   }
 
-  let result = '';
+  let ault = '';
   for (let i = 0; i <= dele_ment; i++) {
-    result = result + s.charAt(i);
+    ault = ault + s.charAt(i);
   }
-  // console.log(result);
+  // console.log(ault);
   for (let i = dele_ment + 1; i < s.length; i++) {
-    result = result + t.charAt(i);
+    ault = ault + t.charAt(i);
   }
-  console.log(result);
-  if (result == t) {
+  console.log(ault);
+  if (ault == t) {
     return 'Yes';
   } else {
     return 'No';
@@ -2651,135 +2651,135 @@ let k = 9;
 console.log(appendAndDele_ment(s, t, k));
 
 //===================================================================
-// function countSquareRoot(a, b) {
+// function countsquare_uareRoot(a, b) {
 //   let count = 0;
 //   // for (let i = a; i <= b; i++) {
-//   //   if (Number.isInteger(Math.sqrt(i))) {
+//   //   if (Number.isleteger(Math.square_rt(i))) {
 //   //     count++;
 //   //   }
 //   // }
 //   // console.log(count);
 
-//   let rs = Number.isInteger(Math.sqrt(a)); // he give time out..
+//   let rs = Number.isleteger(Math.square_rt(a)); // he give time out..
 //   console.log(rs);  // think different opproach may he will give the true value .
-//   console.log(Math.floor(Math.sqrt(b)));// then test casees will be passeses.
+//   console.log(Math.floor(Math.square_rt(b)));// then test casees will be passeses.
 // }
 // let a = 24;
 // let b = 49;
-// countSquareRoot(a, b);
+// countsquare_uareRoot(a, b);
 
-function countSquareRoot(a, b) {
-  let squareOf_A = Math.floor(Math.sqrt(a));
-  console.log('Square of A value : - ' + squareOf_A);
+function countsquare_uareRoot(a, b) {
+  let square_uareOf_A = Math.floor(Math.square_rt(a));
+  console.log('square_uare of A value : - ' + square_uareOf_A);
   //
-  let squareOf_B = Math.floor(Math.sqrt(b));
-  console.log('square of B value : - ' + squareOf_B);
+  let square_uareOf_B = Math.floor(Math.square_rt(b));
+  console.log('square_uare of B value : - ' + square_uareOf_B);
   //
-  let result = squareOf_B - squareOf_A;
+  let ault = square_uareOf_B - square_uareOf_A;
   //
-  if (squareOf_A * squareOf_A >= a) {
-    result++;
+  if (square_uareOf_A * square_uareOf_A >= a) {
+    ault++;
   }
-  return result;
+  return ault;
 }
 let a = 24;
 let b = 49;
-console.log('Number of square within the  number : - ' + countSquareRoot(a, b));
+console.log('Number of square_uare within the  number : - ' + countsquare_uareRoot(a, b));
 
 //=====================================================================================
 
-function cut_The_Sticks(arr) {
-  arr.sort(function (a, b) {
+function cut_The_Sticks(b) {
+  b.sort(function (a, b) {
     return a - b;
   });
-  // console.log(arr);
+  // console.log(b);
   let minNum = Number.MAX_VALUE;
-  let newArr = [];
-  let result = [];
-  let minVal = minFunction(arr);
-  for (let i = 0; i < arr.length; i++) {
-    let tempLen = arr.length;
-    result.push(tempLen);
-    let res = arr[i] - minVal;
-    newArr.push(res);
+  let newb = [];
+  let ault = [];
+  let minVal = minFunction(b);
+  for (let i = 0; i < b.length; i++) {
+    let tempLen = b.length;
+    ault.push(tempLen);
+    let a = b[i] - minVal;
+    newb.push(a);
   }
-  // for (let i = 0; i < arr.length; i++) {
-  //   // if (arr[i] < minNum) {
-  //   //   minNum = arr[i];
+  // for (let i = 0; i < b.length; i++) {
+  //   // if (b[i] < minNum) {
+  //   //   minNum = b[i];
   //   // }
   // }
   // console.log(minNum);
 }
-let arr = [5, 4, 4, 2, 2, 8];
-cut_The_Sticks(arr);
+let b = [5, 4, 4, 2, 2, 8];
+cut_The_Sticks(b);
 
-function minFunction(arr) {
+function minFunction(b) {
   let min = Number.MAX_VALUE;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < min) {
-      min = arr[i];
+  for (let i = 0; i < b.length; i++) {
+    if (b[i] < min) {
+      min = b[i];
     }
   }
   return min;
 }
 
-int tempSum=-1;
+let tempSum=-1;
 		while(tempSum!=0)
 		{
-			int min=Integer.MAX_VALUE;
-			for(int i=0;i<arr.length;i++)
+			let min=leteger.MAX_VALUE;
+			for(let i=0;i<b.length;i++)
 			{
-				if(min>=arr[i]&&arr[i]!=0)
+				if(min>=b[i]&&b[i]!=0)
 				{
-					min=arr[i];
+					min=b[i];
 				}
 			}
-			int count=0;
+			let count=0;
 			tempSum=0;
-			for(int i=0;i<arr.length;i++)
+			for(let i=0;i<b.length;i++)
 			{
-				if(arr[i]>=min)
+				if(b[i]>=min)
 				{
-					arr[i]=arr[i]-min;
+					b[i]=b[i]-min;
 					count++;
 				}
-				tempSum=tempSum+arr[i];
+				tempSum=tempSum+b[i];
 			}
-			System.out.println(count);
+			System.out.prletln(count);
 		}	
 //==========================================================================
 
 
-function cut_And_Strick(arr) {
-  let newArraySa = [];
+function cut_And_Strick(b) {
+  let newbaySa = [];
   let tempSum = -1;
   while (tempSum != 0) {
     let min = Number.MAX_VALUE;
-    for (let i = 0; i < arr.length; i++) {
-      if (min >= arr[i] && arr[i] != 0) {
-        min = arr[i];
+    for (let i = 0; i < b.length; i++) {
+      if (min >= b[i] && b[i] != 0) {
+        min = b[i];
       }
     }
     let count = 0;
     tempSum = 0;
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] >= min) {
-        arr[i] = arr[i] - min;
+    for (let i = 0; i < b.length; i++) {
+      if (b[i] >= min) {
+        b[i] = b[i] - min;
         count++;
       }
-      tempSum = tempSum + arr[i];
+      tempSum = tempSum + b[i];
     }
     // console.log(count);
-    newArraySa.push(count);
+    newbaySa.push(count);
   }
-  // console.log(newArraySa);
-  for (let i = 0; i < newArraySa.length; i++) {
-    console.log(newArraySa[i] + ' ');
+  // console.log(newbaySa);
+  for (let i = 0; i < newbaySa.length; i++) {
+    console.log(newbaySa[i] + ' ');
   }
 }
 
-let arr = [1, 2, 3, 4, 3, 3, 2, 1];
-cut_And_Strick(arr);
+let b = [1, 2, 3, 4, 3, 3, 2, 1];
+cut_And_Strick(b);
 
 //==================================================================
 //console.log(Number.MAX_VALUE); //1.7976931348623157e+308
@@ -2800,70 +2800,70 @@ cut_And_Strick(arr);
 
 //=============================================================================
 
-function cutting_Eadge(arr) {
-  let resultArr = [];
+function cutting_Eadge(b) {
+  let aultb = [];
   let min = Number.MAX_VALUE;
   let tempSum = -1;
   while (tempSum != 0) {
-    for (let i = 0; i < arr.length; i++) {
-      if (min >= arr[i] && arr[i] != 0) {
-        min = arr[i];
+    for (let i = 0; i < b.length; i++) {
+      if (min >= b[i] && b[i] != 0) {
+        min = b[i];
       }
     }
     let count = 0;
     tempSum = 0;
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] >= min) {
-        arr[i] = arr[i] - min;
+    for (let i = 0; i < b.length; i++) {
+      if (b[i] >= min) {
+        b[i] = b[i] - min;
         count++;
       }
-      tempSum += arr[i];
+      tempSum += b[i];
     }
-    resultArr.push(count);
+    aultb.push(count);
   }
-  return resultArr;
+  return aultb;
 }
-let arr = [1, 2, 3, 4, 3, 3, 2, 1];
-console.log(cutting_Eadge(arr));
+let b = [1, 2, 3, 4, 3, 3, 2, 1];
+console.log(cutting_Eadge(b));
 
 //===============================================================================
 
-function rotatele_mentft(arr, d) {
+function rotatele_mentft(b, d) {
   while (d > 0) {
-    let shi = arr.shift();
-    arr.push(shi);
+    let shi = b.shift();
+    b.push(shi);
     d--;
   }
-  console.log(arr);
+  console.log(b);
 }
-let arr = [1, 2, 3, 4, 5];
+let b = [1, 2, 3, 4, 5];
 let d = 4;
-rotatele_mentft(arr, d);
+rotatele_mentft(b, d);
 
 
 //===============================================================================
 
 function funnyString(str) {
-  let originalStingArr = [];
-  let reverseStringArr = [];
+  let originalStingb = [];
+  let reverseStringb = [];
 
   for (let i = 0; i < str.length; i++) {
     let utfVal = str.charCodeAt(i);
-    originalStingArr.push(utfVal);
+    originalStingb.push(utfVal);
   }
 
   for (let i = str.length - 1; i >= 0; i--) {
     let revUtf = str.charCodeAt(i);
-    reverseStringArr.push(revUtf);
+    reverseStringb.push(revUtf);
   }
-  // console.log(originalStingArr);
-  // console.log(reverseStringArr);
+  // console.log(originalStingb);
+  // console.log(reverseStringb);
 
   let asciiCode = [];
   let revAsciiCode = [];
-  for (let i = 0; i < originalStingArr.length - 1; i++) {
-    let dif = Math.abs(originalStingArr[i] - originalStingArr[i + 1]);
-    let diff2 = Math.abs(reverseStringArr[i] - reverseStringArr[i + 1]);
+  for (let i = 0; i < originalStingb.length - 1; i++) {
+    let dif = Math.abs(originalStingb[i] - originalStingb[i + 1]);
+    let diff2 = Math.abs(reverseStringb[i] - reverseStringb[i + 1]);
     asciiCode.push(dif);
     revAsciiCode.push(diff2);
   }
@@ -2880,27 +2880,27 @@ function funnyString(str) {
 let str = 'ivvkx';
 funnyString(str);
 
-// function temp(arr) {
+// function temp(b) {
 //   let asciiCode = [];
-//   for (let i = 0; i < arr.length - 1; i++) {
-//     let diff = Math.abs(arr[i] - arr[i + 1]);
+//   for (let i = 0; i < b.length - 1; i++) {
+//     let diff = Math.abs(b[i] - b[i + 1]);
 //     asciiCode.push(diff);
 //   }
 //   console.log(asciiCode);
 // }
-// let arr = [108, 109, 110, 111, 112];
-// temp(arr);
+// let b = [108, 109, 110, 111, 112];
+// temp(b);
 
-// let arr1 = [1, 2, 3, 4, 5];
-// let arr2 = [1, 2, 4, 5, 6];
-// let arr3 = [1, 2, 3, 4, 5];
-// let arrStr = arr1.join();
-// console.log(arrStr);
+// let b1 = [1, 2, 3, 4, 5];
+// let b2 = [1, 2, 4, 5, 6];
+// let b3 = [1, 2, 3, 4, 5];
+// let bStr = b1.join();
+// console.log(bStr);
 
-// let arrstr2 = arr3.join();
-// console.log(arrstr2);
+// let bstr2 = b3.join();
+// console.log(bstr2);
 
-// if (arrStr == arrstr2) {
+// if (bStr == bstr2) {
 //   console.log('It is equal');
 // } else {
 //   console.log('Not equal');
@@ -2909,33 +2909,33 @@ funnyString(str);
 
 //========================================================================
 
-function median(arr) {
-  arr.sort(function (a, b) {
+function median(b) {
+  b.sort(function (a, b) {
     return a - b;
   });
-  // console.log(arr);
-  if (arr.length % 2 == 0) {
-    let div = Math.floor(arr.length / 2);
-    console.log((arr[div - 1] + arr[div]) / 2);
+  // console.log(b);
+  if (b.length % 2 == 0) {
+    let div = Math.floor(b.length / 2);
+    console.log((b[div - 1] + b[div]) / 2);
   } else {
-    let res = Math.floor(arr.length / 2);
-    console.log(arr[res]);
+    let a = Math.floor(b.length / 2);
+    console.log(b[a]);
   }
 }
-let arr = [5, 3, 1, 2, 4];
-median(arr);
+let b = [5, 3, 1, 2, 4];
+median(b);
 
 
 //============================================================================
-function lonelyInteger(arr) {
+function lonelyleteger(b) {
   let xor = 0;
-  for (let x of arr) {
+  for (let x of b) {
     xor ^= x;
   }
-  console.log('Lonely Integer will be :-' + xor);
+  console.log('Lonely leteger will be :-' + xor);
 }
-let arr = [1, 1, 4, 4, 5, 6, 6, 7, 7, 8, 8];
-lonelyInteger(arr);
+let b = [1, 1, 4, 4, 5, 6, 6, 7, 7, 8, 8];
+lonelyleteger(b);
 
 //=============================================================================
 
@@ -2953,15 +2953,15 @@ camalCase(s);
 
 //============================================================================
 
-function markAndToys(arr, k) {
-  arr.sort(function (a, b) {
+function markAndToys(b, k) {
+  b.sort(function (a, b) {
     return a - b;
   });
   let sum = 0;
   let count = -1;
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < b.length; i++) {
     if (sum <= k) {
-      sum = sum + arr[i];
+      sum = sum + b[i];
       count++;
     } else {
       break;
@@ -2969,9 +2969,9 @@ function markAndToys(arr, k) {
   }
   console.log(count);
 }
-let arr = [1, 2, 3, 4];
+let b = [1, 2, 3, 4];
 let k = 7;
-markAndToys(arr, k);
+markAndToys(b, k);
 
 //====================================================================================
 
@@ -2993,14 +2993,14 @@ ceaserCypher(str, k);
 function maximam_Xor(low, high) {
   // let xor = 0;
   let max_Value_ = 0;
-  let res = 0;
+  let a = 0;
   let max = -Infinity;
   for (let i = low; i <= high; i++) {
     for (let j = low; j <= high; j++) {
       let xor = i ^ j;
-      res = Math.max(xor, max_Value_);
-      if (res > max) {
-        max = res;
+      a = Math.max(xor, max_Value_);
+      if (a > max) {
+        max = a;
       }
     }
   }
@@ -3014,13 +3014,13 @@ maximam_Xor(lowerBound, uperBound);
 
 //===================================================================================
 
-function findMax_And_Min_Value(arr) {
-  let len = arr.length;
+function findMax_And_Min_Value(b) {
+  let len = b.length;
   let max = -Infinity;
 
   while (len--) {
-    if (arr[len] > max) {
-      max = arr[len];
+    if (b[len] > max) {
+      max = b[len];
     }
   }
 
@@ -3028,35 +3028,35 @@ function findMax_And_Min_Value(arr) {
 
   let min = Infinity;
   while (len--) {
-    if (arr[len] < min) {
-      min = arr[len];
+    if (b[len] < min) {
+      min = b[len];
     }
   }
   console.log('Max Value will be :- ' + max);
   console.log('Min Value Will be :- ' + min);
 }
 
-let arr = [10, 14, 15, 35, 98, 17, 3, 45, 86, 12, 14, 15];
-findMax_And_Min_Value(arr);
+let b = [10, 14, 15, 35, 98, 17, 3, 45, 86, 12, 14, 15];
+findMax_And_Min_Value(b);
 
 //==================================================================
 
-function min_abs_Diff(arr) {
-  arr.sort(function (a, b) {
+function min_abs_Diff(b) {
+  b.sort(function (a, b) {
     return a - b;
   });
   let min = Infinity;
-  for (let i = 1; i < arr.length; i++) {
-    let prev = arr[i - 1];
-    let curr = arr[i];
+  for (let i = 1; i < b.length; i++) {
+    let prev = b[i - 1];
+    let curr = b[i];
     let diff = Math.abs(prev - curr);
     min = Math.min(diff, min);
   }
 
   console.log('Min diff will be :- ' + min);
 }
-let arr = [1, -3, 71, 68, 17];
-min_abs_Diff(arr);
+let b = [1, -3, 71, 68, 17];
+min_abs_Diff(b);
 
 
 //==================================================================
@@ -3113,7 +3113,7 @@ function priyanka_And_Toys(weight) {
   for (let i = 0; i < weight.length; i++) {
     let compare = weight[i] + 4;
     if (compare < sum) {
-      sum = sum + arr[i];
+      sum = sum + b[i];
     } else {
       container++;
     }
@@ -3126,9 +3126,9 @@ priyanka_And_Toys(weight);
 
 //====================================================================
 
-function sansa_XOR(arr, current_Index) {
-  let len = arr.length;
-  let newArr = [];
+function sansa_XOR(b, current_Index) {
+  let len = b.length;
+  let newb = [];
   let xor = 0;
   // let current_Index = 0;
   if (current_Index == len) {
@@ -3136,27 +3136,27 @@ function sansa_XOR(arr, current_Index) {
   }
 
   for (let i = current_Index; i < len; i++) {
-    let result = arr[i];
-    // console.log(result);
-    xor = xor ^ result;
+    let ault = b[i];
+    // console.log(ault);
+    xor = xor ^ ault;
   }
 
-  sansa_XOR(arr, current_Index + 1);
-  //  console.log(newArr);
-  //  console.log(newArr);
+  sansa_XOR(b, current_Index + 1);
+  //  console.log(newb);
+  //  console.log(newb);
   console.log(xor);
 }
-let arr = [1, 2, 3];
+let b = [1, 2, 3];
 let current_Index = 0;
-sansa_XOR(arr, current_Index);
+sansa_XOR(b, current_Index);
 
 // wrong answer---
 
 //======================================================================
 
-function sansa_(arr) {
-  let n = arr.length;
-  let newArr = [];
+function sansa_(b) {
+  let n = b.length;
+  let newb = [];
   let xor = 0;
   for (let i = 0; i < n; i++) {
     //This loop will sele_mentct start ele_mentment
@@ -3169,22 +3169,22 @@ function sansa_(arr) {
       for (
         let k = i;
         k <= j;
-        k++ ///////////////// //This loop will print ele_mentment from start to end
+        k++ ///////////////// //This loop will prlet ele_mentment from start to end
       ) {
-        //  console.log(arr[k]);
-        newArr.push(arr[k]);
+        //  console.log(b[k]);
+        newb.push(b[k]);
       }
       console.log('\n');
     }
   }
-  for (let i = 0; i < newArr.length; i++) {
-    xor = xor ^ newArr[i];
+  for (let i = 0; i < newb.length; i++) {
+    xor = xor ^ newb[i];
   }
   console.log(xor);
-  // console.log(newArr);
+  // console.log(newb);
 }
-let arr = [1, 2, 3];
-sansa_(arr);
+let b = [1, 2, 3];
+sansa_(b);
 //wrorng answer------
 
 //=========================================================================
@@ -3214,7 +3214,7 @@ function sumXor(n) {
   if (n == 0) {
     count = 0;
   }
-  // let ress = Math.pow(2, count);
+  // let as = Math.pow(2, count);
   console.log(2 ** count);
 }
 let n = 4;
@@ -3298,24 +3298,24 @@ find_Digit(n);
 //----------------------
 //----------------------
 
-function fair_Rotations(arr) {
+function fair_Rotations(b) {
   let bread_Count = 0;
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] % 2 != 0) {
-      arr[i] = arr[i] + 1;
-      arr[i + 1] = arr[i + 1] + 1;
+  for (let i = 0; i < b.length - 1; i++) {
+    if (b[i] % 2 != 0) {
+      b[i] = b[i] + 1;
+      b[i + 1] = b[i + 1] + 1;
       bread_Count = bread_Count + 2;
     }
   }
-  if (arr[arr.length - 1] % 2 != 0) {
+  if (b[b.length - 1] % 2 != 0) {
     console.log('NO');
   } else {
     console.log(bread_Count);
   }
 }
 
-let arr = [2, 3, 4, 5, 6];
-fair_Rotations(arr);
+let b = [2, 3, 4, 5, 6];
+fair_Rotations(b);
 
 //===================================================================
 
@@ -3328,8 +3328,8 @@ fair_Rotations(arr);
 //     return val_A.length - val_B.length;
 //   });
 // }
-// let arr = [31415926535897932384626433832795, 1, 3, 10, 3, 5];
-// big_Sorting(arr);
+// let b = [31415926535897932384626433832795, 1, 3, 10, 3, 5];
+// big_Sorting(b);
 //========================================================================
 
 function sum_VS_XOR(n) {
@@ -3367,7 +3367,7 @@ sum_VS_XOR(n);
 //  0   0    0
 // --------------
 // we can say if you hava 1 then you can make a zero only one ways
-// result will be  1*
+// ault will be  1*
 // next - in case of 0 the we can make a zero two ways
 //  1*2=2
 //
@@ -3387,38 +3387,38 @@ sum_VS_XOR(n);
 // 1--> callled as setbit =  1 setbit are there.
 
 //================================================================
-// question :- find the missing ele_mentment in given array.
+// question :- find the missing ele_mentment in given bay.
 
-function missing_Number(arr) {
-  let len = arr.length + 1;
+function missing_Number(b) {
+  let len = b.length + 1;
   let xor_Temp = 0;
   for (let i = 1; i <= len; i++) {
     xor_Temp ^= i;
   }
   //   console.log(xor_Temp); // 1
 
-  for (let i = 0; i < arr.length; i++) {
-    xor_Temp = xor_Temp ^ arr[i];
+  for (let i = 0; i < b.length; i++) {
+    xor_Temp = xor_Temp ^ b[i];
   }
   console.log(xor_Temp); // answer missing number is 3
 }
-let arr = [1, 2, 3, 4, 5, 6, 7, 9];
-missing_Number(arr);
+let b = [1, 2, 3, 4, 5, 6, 7, 9];
+missing_Number(b);
 
 
 //==========================================================================
 // Day-6 . Saturday--
 //-----------------------------------------
 // sansa xor --
-// given an array to find subarray of every ele_mentment of xor, and determine the values
+// given an bay to find subbay of every ele_mentment of xor, and determine the values
 // of every ele_mentment xor..
 
-// given an array
-// let arr=[1,2,3];
-// what is subarray of the array.
+// given an bay
+// let b=[1,2,3];
+// what is subbay of the bay.
 // like as [1],[2],[3],[1,2],[2,3],[1,2,3];
 
-// we write one more type with wothout array.
+// we write one more type with wothout bay.
 //--------------------------------------------------
 //     1 /
 //     2 /
@@ -3426,15 +3426,15 @@ missing_Number(arr);
 //    / 1, 2 /
 //   /  2, 3 /
 //     1, 2 /, 3
-// then you find the only 1 and 3 ele_mentment in given all subarray.
+// then you find the only 1 and 3 ele_mentment in given all subbay.
 // 1 and 3 ele_mentment will be remainig.
-// arr=[1,2,3];
+// b=[1,2,3];
 //      |   |
 // we can say index of ele_mentment 0 and 2 will be remaining.
 // so we can say if index%2==0 then take the xor , other wise take don't
 //---------------------------------------------------------------------
-// supose we take an array with even length of array.
-// let arr=[1,2,3,4]; then we can write all subarray of the array ele_mentment.
+// supose we take an bay with even length of bay.
+// let b=[1,2,3,4]; then we can write all subbay of the bay ele_mentment.
 // like as --
 //     1 /
 //     2 /
@@ -3447,7 +3447,7 @@ missing_Number(arr);
 //     2/,  3,  4/
 //     1/,  2/,  3/,  4/
 //
-// we can say if array length of even then every ele_mentment will be cancel out.
+// we can say if bay length of even then every ele_mentment will be cancel out.
 // no ele_mentment will be remaining.
 //
 //-----------------------------------------------------------------------------------
@@ -3516,11 +3516,11 @@ string_Constrction(str);
 //==========================================================================
 
 function palindrome_index(str) {
-  // let resv = '';
+  // let av = '';
   // for (let i = str.length - 1; i >= 0; i--) {
-  //   resv += str.charAt(i);
+  //   av += str.charAt(i);
   // }
-  // if (str == resv) {
+  // if (str == av) {
   //   console.log('-1');
   // } else {
   //   while(i)
@@ -3606,8 +3606,8 @@ function is_Palindrome(str) {
 // console.log(str.slice(0, 3)); //abc
 
 // let str = 'peednas';
-// let res = str.split('').reverse().join('');
-// console.log(res);
+// let a = str.split('').reverse().join('');
+// console.log(a);
 // let str = 'abcd';
 // console.log(str.slice(0 + 1)); // bcd
 // console.log(str.slice(0, 0)); // noting
@@ -3671,24 +3671,24 @@ palindrome_Index(s);
 //---------------------------
 
 function string_Constrctions(str) {
-  let newArr = [];
+  let newb = [];
   let set = new Set(str);
   for (let set_ele_mentment of set) {
-    newArr.push(set_ele_mentment);
+    newb.push(set_ele_mentment);
   }
 
-  console.log(newArr);
-  console.log(newArr.length);
+  console.log(newb);
+  console.log(newb.length);
 }
 
 let str = 'abcd';
 string_Constrctions(str);
-for(int i=0;i<chapter;i++)
+for(let i=0;i<chapter;i++)
 		{
-			System.out.println("Enter Number of problem in chapter ?  ? ");
-			int chapterProblem=sc.nextInt();
-			int pgnumber=numberOFPages+1;
-			for(int j=1;j<=chapterProblem;j++)
+			System.out.prletln("Enter Number of problem in chapter ?  ? ");
+			let chapterProblem=sc.nextlet();
+			let pgnumber=numberOFPages+1;
+			for(let j=1;j<=chapterProblem;j++)
 			{
 				if(j==pgnumber)
 					spacialProblem++;
@@ -3699,18 +3699,18 @@ for(int i=0;i<chapter;i++)
 			}
 			numberOFPages=pgnumber;	
 		}
-		System.out.println(spacialProblem);
+		System.out.prletln(spacialProblem);
 
 //=======================================================================
 
 
-function sandeep_WorkBook(chapter, k, arr) {
+function sandeep_WorkBook(chapter, k, b) {
   let page = 1;
   let chapter_in_Running = 1;
   let spacial_Problem = 0;
   let starting_page = 1;
 
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < b.length; i++) {
     if (k == chapter_in_Running) {
       spacial_Problem++;
     } else {
@@ -3732,13 +3732,13 @@ sandeep_WorkBook(
 
 //===================================================================
 
-function sandeep_Book(arr, n_of_chapter, k) {
+function sandeep_Book(b, n_of_chapter, k) {
   let spacial_page = 0;
   let boundary_check = 0;
   let page_Number = 1;
   for (let i = 1; i <= n_of_chapter; i++) {
     //for chapter
-    for (let j = 1; j <= arr[i]; j++) {
+    for (let j = 1; j <= b[i]; j++) {
       // for question.
       if (j <= k * boundary_check) {
         if (j == page_Number) spacial_page++;
@@ -3753,10 +3753,10 @@ function sandeep_Book(arr, n_of_chapter, k) {
   }
   console.log(spacial_page);
 }
-let arr = [4, 2, 6, 1, 10];
+let b = [4, 2, 6, 1, 10];
 let n_of_chapter = 5;
 let k = 3;
-sandeep_Book(arr, n_of_chapter, k);
+sandeep_Book(b, n_of_chapter, k);
 
 //=============================================================================
 function flipping_Bits(number) {
@@ -3791,9 +3791,9 @@ function flipping_Bits(number) {
     }
   }
   console.log(flip); // 11111111111111111111111111110110
-  // console.log(parseInt(toString(flip, 2)));
-  let decimal = parseInt(flip, 2);
-  // parseInt(binary,radix); // may be radix will be any think may be decimal hexa,ocatal anything
+  // console.log(parselet(toString(flip, 2)));
+  let decimal = parselet(flip, 2);
+  // parselet(binary,radix); // may be radix will be any think may be decimal hexa,ocatal anything
   // will be there he will change as your requirement.
   console.log(decimal);
 }
@@ -3802,7 +3802,7 @@ flipping_Bits(n);
 
 //========================================================
 // let bin = '1001';
-// let decimal = parseInt(bin, 2);
+// let decimal = parselet(bin, 2);
 // console.log(decimal);
 //====================================================
 // let n = 9;
@@ -3870,61 +3870,61 @@ flipping_Bits(n);
 //=========================================================================
 
 
-function missing_Number(arr, actal_Arr) {
-  let result = [];
-  for (let i = 0; i < arr.length; ) {
-    for (let j = 0; j < actal_Arr.length; ) {
-      if (arr[i] == actal_Arr[j]) {
+function missing_Number(b, actal_b) {
+  let ault = [];
+  for (let i = 0; i < b.length; ) {
+    for (let j = 0; j < actal_b.length; ) {
+      if (b[i] == actal_b[j]) {
         j++;
       } else {
-        // result.push(actal_Arr[j]);
+        // ault.push(actal_b[j]);
         j++;
         i++;
       }
     }
   }
-  result.sort(function (a, b) {
+  ault.sort(function (a, b) {
     return a - b;
   });
-  console.log(result);
+  console.log(ault);
 }
-let arr = [7, 2, 5, 3, 5, 3];
-let actal_Arr = [7, 2, 5, 4, 6, 3, 5, 3];
-missing_Number(arr, actal_Arr);
+let b = [7, 2, 5, 3, 5, 3];
+let actal_b = [7, 2, 5, 4, 6, 3, 5, 3];
+missing_Number(b, actal_b);
 
 //============================================================
-// function missing_Number(arr, actal_Arr) {
-//   // arr.sort(function (a, b) {
+// function missing_Number(b, actal_b) {
+//   // b.sort(function (a, b) {
 //   //   return a - b;
 //   // });
-//   // actal_Arr.sort(function (a, b) {
+//   // actal_b.sort(function (a, b) {
 //   //   return a - b;
 //   // });
-//   // console.log(arr);
-//   // console.log(actal_Arr);
-//   let set1 = new Set(arr);
-//   let set2 = new Set(actal_Arr);
+//   // console.log(b);
+//   // console.log(actal_b);
+//   let set1 = new Set(b);
+//   let set2 = new Set(actal_b);
 //   console.log(set1);
 //   console.log(set2);
 // }
-// let arr = [7, 2, 5, 3, 5, 3];
-// let actal_Arr = [7, 2, 5, 4, 6, 3, 5, 3];
-// missing_Number(arr, actal_Arr);
+// let b = [7, 2, 5, 3, 5, 3];
+// let actal_b = [7, 2, 5, 4, 6, 3, 5, 3];
+// missing_Number(b, actal_b);
 
 
 
 //===================================================================
-function missing_Number(arr, actal_Arr) {
-  arr.sort(function (a, b) {
+function missing_Number(b, actal_b) {
+  b.sort(function (a, b) {
     return a - b;
   });
 
-  actal_Arr.sort(function (a, b) {
+  actal_b.sort(function (a, b) {
     return a - b;
   });
 
-  let set_1 = new Set(arr);
-  let set_2 = new Set(actal_Arr);
+  let set_1 = new Set(b);
+  let set_2 = new Set(actal_b);
   console.log(set_1);
   console.log(set_2);
 
@@ -3940,18 +3940,18 @@ function missing_Number(arr, actal_Arr) {
   }
   console.log('Set' + _difference);
 }
-let arr = [203, 204, 205, 206, 207, 208, 203, 204, 205, 206];
-let actal_Arr = [
+let b = [203, 204, 205, 206, 207, 208, 203, 204, 205, 206];
+let actal_b = [
   203, 204, 204, 205, 206, 207, 205, 208, 203, 206, 205, 206, 204,
 ];
-missing_Number(arr, actal_Arr);
+missing_Number(b, actal_b);
 
 //========================================================
-// let arr_1 = [2, 3, 5, 7];
+// let b_1 = [2, 3, 5, 7];
 // let new_Set = new Set();
-// let arr_2 = [2, 3, 4, 5, 6, 7];
-// let set_1 = new Set(arr_1);
-// let set_2 = new Set(arr_2);
+// let b_2 = [2, 3, 4, 5, 6, 7];
+// let set_1 = new Set(b_1);
+// let set_2 = new Set(b_2);
 // for (let ele_ment_1 of set_1) {
 //   console.log(ele_ment_1);
 // }
@@ -3985,8 +3985,8 @@ missing_Number(arr, actal_Arr);
 //=============================================================
 
 
-function missing_Number(arr, brr) {
-  arr.sort(function (a, b) {
+function missing_Number(b, brr) {
+  b.sort(function (a, b) {
     return a - b;
   });
 
@@ -3994,11 +3994,11 @@ function missing_Number(arr, brr) {
     return a - b;
   });
   let diff_1 = new Set();
-  for (let i = 0; i < arr.length; i++) {
-    if (diff_1.has(arr[i])) {
-      diff_1.delete(arr[i]);
+  for (let i = 0; i < b.length; i++) {
+    if (diff_1.has(b[i])) {
+      diff_1.delete(b[i]);
     } else {
-      diff_1.add(arr[i]);
+      diff_1.add(b[i]);
     }
   }
   //  console.log(diff_1);
@@ -4024,9 +4024,9 @@ function missing_Number(arr, brr) {
   console.log(diff_3);
 }
 
-let arr = [203, 204, 205, 206, 207, 208, 203, 204, 205, 206];
+let b = [203, 204, 205, 206, 207, 208, 203, 204, 205, 206];
 let brr = [203, 204, 204, 205, 206, 207, 205, 208, 203, 206, 205, 206, 204];
-missing_Number(arr, brr);
+missing_Number(b, brr);
 
 //===================================================================================
 // DAY-10, 14-07-2022
@@ -4034,12 +4034,12 @@ missing_Number(arr, brr);
 //==================================================================================
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
-function frequencyFind(arr) {
-  // let visited = Array.from({ length: arr.length }, (_, i) => false);
-  // let again_visited = Array.from({ length: arr.length }, i => false);
+function frequencyFind(b) {
+  // let visited = bay.from({ length: b.length }, (_, i) => false);
+  // let again_visited = bay.from({ length: b.length }, i => false);
 
   let count = []; // it is object type.
-  arr.forEach(element => {
+  b.forEach(element => {
     count[element] ? count[element]++ : (count[element] = 1);
   });
   console.log(count);
@@ -4078,38 +4078,38 @@ function frequencyFind(arr) {
   //   }
   // }
 }
-let arr = [7, 2, 5, 3, 5, 3];
-frequencyFind(arr);
+let b = [7, 2, 5, 3, 5, 3];
+frequencyFind(b);
 //===============================================================================
 
-function missing_Number(arr, brr) {
+function missing_Number(b, brr) {
   let count_1 = []; // object
   brr.forEach(ele => {
     count_1[ele] ? count_1[ele]++ : (count_1[ele] = 1);
   });
   console.log(count_1);
   let count_2 = [];
-  arr.forEach(elem => {
+  b.forEach(elem => {
     count_2[elem] ? count_2[elem]++ : (count_2[elem] = 1);
   });
   console.log(count_2);
-  let res = [];
+  let a = [];
 }
 
-let arr = [203, 204, 205, 206, 207, 208, 203, 204, 205, 206];
+let b = [203, 204, 205, 206, 207, 208, 203, 204, 205, 206];
 let brr = [203, 204, 204, 205, 206, 207, 205, 208, 203, 206, 205, 206, 204];
-missing_Number(arr, brr);
+missing_Number(b, brr);
 
 //===============================================================================
-function unknown_Array(arr, brr) {
-  arr.sort(function (a, b) {
+function unknown_bay(b, brr) {
+  b.sort(function (a, b) {
     return a - b;
   });
   brr.sort(function (a, b) {
     return a - b;
   });
 
-  for (let ele of arr) {
+  for (let ele of b) {
     if (brr.includes(ele)) {
       brr.splice(brr.indexOf(ele), 1);
       //brr.splice(brr.indexOf(ele),1);
@@ -4119,12 +4119,12 @@ function unknown_Array(arr, brr) {
     return a - b;
   });
   let set = new Set(sorttedOrder);
-  let res = Array.from(set); // nice properties.
-  console.log(res);
+  let a = bay.from(set); // nice properties.
+  console.log(a);
 }
-let arr = [203, 204, 205, 206, 207, 208, 203, 204, 205, 206];
+let b = [203, 204, 205, 206, 207, 208, 203, 204, 205, 206];
 let brr = [203, 204, 204, 205, 206, 207, 205, 208, 203, 206, 205, 206, 204];
-unknown_Array(arr, brr);
+unknown_bay(b, brr);
 
 //=======================================================================================
 //sherlock valid string:---
@@ -4164,28 +4164,28 @@ unknown_Array(arr, brr);
 // frequency=[2,2,2,3,2];
 // after sorting
 // freqency = [2,2,2,2,3];
-*/
+
 function sandeepValidString(str) {
   let frequency_ = [];
-  let newArr = [];
+  let newb = [];
   str.split('').forEach(element => {
     frequency_[element] ? frequency_[element]++ : (frequency_[element] = 1);
   });
   //  console.log(frequency_);
   for (let ele in frequency_) {
-    newArr.push(frequency_[ele]);
+    newb.push(frequency_[ele]);
   }
-  // console.log(newArr);
+  // console.log(newb);
 
-  newArr.sort(function (a, b) {
+  newb.sort(function (a, b) {
     return a - b;
   });
 
-  let len = newArr.length;
-  let first = newArr[0];
-  let second = newArr[1];
-  let secondLast = newArr[newArr.length - 2];
-  let last = newArr[newArr.length - 1];
+  let len = newb.length;
+  let first = newb[0];
+  let second = newb[1];
+  let secondLast = newb[newb.length - 2];
+  let last = newb[newb.length - 1];
 
   if (len == 1) {
     console.log('YES');
@@ -4215,14 +4215,14 @@ function twoStrings(s1, s2) {
   let set2 = new Set(s2);
   // console.log(set1);
   // console.log(set2);
-  let result = [];
+  let ault = [];
   for (let i of set2) {
     if (set1.has(i)) {
-      result.push(i);
+      ault.push(i);
     }
   }
-  // console.log(result);
-  if (result.length === 0) {
+  // console.log(ault);
+  if (ault.length === 0) {
     console.log('NO');
   } else {
     console.log('YES');
@@ -4233,3 +4233,1590 @@ let s2 = 'cat';
 twoStrings(s1, s2);
 
 //===========================================================================
+
+function time_in_word() {
+  let word = [
+    '',
+    'one',
+    'two',
+    'three',
+    'four',
+    'five',
+    'six',
+    'seven',
+    'eight',
+    'nine',
+    'ten',
+    'eleven',
+    'twelve',
+    'thirteen',
+    'forteen',
+    'fivteen',
+    'sixteen',
+    'seventeen',
+    'eighteen',
+    'nineteen',
+    'twenty',
+    'twenty one',
+    'twenty two',
+    'twenty three',
+    'twenty four',
+    'twenty five',
+    'twenty six',
+    'twenty seven',
+    'twenty eight',
+    'twenty nine',
+  ];
+  let ault = '';
+  if (m == 0) {
+    ault = ault + word[h] + " o' clock ";
+  } else if (m == 1) {
+    ault = ault + word[m] + ' minute past ' + word[h];
+  } else if (m == 10) {
+    ault = ault + word[m] + ' minute past ' + word[h];
+  }
+  // console.log(ault);
+  else if (m == 15) {
+    ault = ault + 'quarter past ' + word[h];
+  }
+  // console.log(ault);
+  else if (m == 30) {
+    ault = ault + 'half past ' + word[h];
+  } else if (m == 40) {
+    ault = ault + word[60 - m] + ' minutes to ' + word[h + 1];
+  }
+  // console.log(ault);
+  else if (m == 45) {
+    ault = ault + 'quarter to ' + word[h + 1];
+  }
+  // console.log(ault);
+  else if (m == 47) {
+    ault = ault + word[60 - m] + ' minutes to ' + word[h + 1];
+  }
+  // console.log(ault);
+  else if (m == 28) {
+    ault = ault + word[m] + ' minutes past ' + word[h];
+  }
+  //console.log(ault);
+  else if (m < 30) {
+    ault = ault + word[m] + ' minutes past ' + word[h];
+  } else {
+    ault = ault + word[60 - m] + ' minutes to ' + word[h + 1];
+  }
+  console.log(ault);
+}
+
+let h = 5;
+let m = 30;
+time_in_word(h, m);
+
+//==================================================================================
+function encription_(str1) {
+  let without_space = '';
+
+  for (let i = 0; i < str1.length; i++) {
+    if (str1[i] != ' ') {
+      without_space = without_space + str1[i];
+    }
+  }
+  console.log(Math.ceil(Math.sqrt(str1.length)));
+
+  console.log(without_space);
+  console.log(without_space.length);
+  let square_ = Math.sqrt(without_space.length);
+  console.log(square_);
+  let row = Math.floor(square_);
+  console.log(row);
+  let column = Math.ceil(square_);
+  console.log(column);
+  let ault = '';
+  let b = [];
+  if (row * column < str1.length) {
+    row++;
+  }
+  console.log(row);
+  console.log(column);
+}
+// let str1 =
+//   'if man was meant to stay on the ground god would have given us roots';
+//let str1 = 'haveaniceday';
+let str1 = 'chillout';
+encription_(str1);
+
+//================================================================================
+
+let row = 2;
+let col = 3;
+let matrix = new bay(row);
+//console.log(matrix);
+for (let i = 0; i < row; i++) {
+  // how ,many times row will be run.
+  matrix[i] = new bay(col); // here nuumber of column are created in first row
+}
+console.log(matrix);
+
+//===================================================================================
+function encription_(str1) {
+  let without_space = '';
+
+  for (let i = 0; i < str1.length; i++) {
+    if (str1[i] != ' ') {
+      without_space = without_space + str1[i];
+    }
+  }
+  // console.log(Math.ceil(Math.sqrt(str1.length)));
+
+  //  console.log(without_space);
+  // console.log(without_space.length);
+  let square_ = Math.sqrt(without_space.length);
+  // console.log(square_);
+  let row = Math.floor(square_);
+  //  console.log(row);
+  let column = Math.ceil(square_);
+  //  console.log(column);
+  // let ault = '';
+  // let b = [];
+  if (row * column < without_space.length) {
+    row++;
+  }
+  // create an empty matrix in which are given number of row and number of colmun
+
+  let my_Matrix = new bay(row);
+  for (let i = 0; i < row; i++) {
+    my_Matrix[i] = new bay(column);
+  }
+  // console.log(my_Matrix); // empty matrix has been created.
+  //next step you have to put all values in matrix.
+
+  // put all the string value in martix coraponnding  row and column
+
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < column; j++) {
+      my_Matrix[i][j] = without_space[k];
+      k++;
+    }
+  }
+  // console.log(my_Matrix);
+
+  let ault = '';
+  for (let i = 0; i < column; i++) {
+    for (let j = 0; j < row; j++) {
+      let cha = my_Matrix[j][i];
+      if (cha) {
+        ault = ault + cha;
+      }
+    }
+    ault = ault + ' ';
+  }
+  console.log(ault);
+}
+let str1 =
+  'if man was meant to stay on the ground god would have given us roots';
+//let str1 = 'haveaniceday';
+// let str1 = 'chillout';
+encription_(str1);
+
+// let row = 3;
+// let col = 4;
+// let mat = new bay(row);
+// for (let i = 0; i < row; i++) {
+//   mat[i] = new bay(col);
+// }
+// console.log(mat);
+
+//==================================================================================
+
+function greedy_Florist(b, no_of_friends) {
+  b.sort(function (a, b) {
+    return b - a;
+  });
+  // console.log(b);
+  let ault_1 = 0;
+
+  if (b.length == no_of_friends || b.length < no_of_friends) {
+    for (let i = 0; i < b.length; i++) {
+      ault_1 += b[i];
+    }
+  }
+  //console.log(ault_1);
+  else {
+    for (let i = 0; i < b.length; i++) {
+      ault_1 = ault_1 + Math.floor(i / no_of_friends + 1) * b[i];
+    }
+  }
+  console.log(ault_1);
+}
+
+let b = [6, 7, 8, 9, 5, 4, 3, 2, 1];
+let no_of_friends = 3;
+greedy_Florist(b, no_of_friends);
+
+//===================================================================================
+// explantion:--
+//           1- who will take 112 position values
+//           (i) 119 will take the position.
+//            (ii) 108 will take the position.
+//            (iii) 60 may be take the position.
+//-----------------------------------------------------
+//           2- who will take 42 position
+//          (i) 83 may be take the position.
+//          (ii) 114 will take the position.
+//          (iii) 98 may be take the position values
+//--------------------------------------------------------
+//          3- who will take 56 position
+//         (i) 49 may be take the position.
+//         (ii) 15 may be take the position.
+//         (iii) 43 amy be take the position.
+//------------------------------------------------------------------
+//         4- who does take 115 position values.
+//        (i) 110 may be take the position.
+//        (ii) 78 may be take the position.
+//        (iii) 56 may be take the position.
+//======================================================================
+function flipping_matrix(row, col) {
+  let matrix = new bay(row);
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new bay(col);
+  }
+  //console.log(matrix);
+  let k = 0;
+  let b = [
+    112, 42, 83, 119, 56, 115, 56, 49, 15, 78, 101, 43, 62, 98, 114, 108,
+  ];
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = b[k];
+      k++;
+    }
+  }
+  let n = row / 2;
+
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      let max_1 = Math.max(matrix[i][j], matrix[i][2 * n - j - 1]);
+      let max_2 = Math.max(
+        matrix[2 * n - i - 1][j],
+        matrix[2 * n - i - 1][2 * n - j - 1]
+      );
+      sum = sum + Math.max(max_1, max_2);
+    }
+  }
+  console.log(sum);
+}
+let row = 4;
+let col = 4;
+flipping_matrix(row, col);
+
+//===============================================================================
+function counter_Games(n) {
+  let isItPowerOf2 = checking(n);
+  while (n == 1) {
+    if (isItPowerOf2 == true) {
+      n = Math.floor(n / 2);
+      checking(n);
+    }
+  }
+}
+let n = 7;
+counter_Games(n);
+//=======================================================================
+//----------------------------------------------------------------
+// let find the frequency of bay brr.
+// let freq = [];
+// brr.forEach(ele => {
+//   freq[ele] ? freq[ele]++ : (freq[ele] = 1);
+// });
+
+// for (let a_ele of b) {
+//   if(a_ele==Object.keys(freq)){
+//       Object.values(freq)=Object.values(freq)-1;
+//   }
+// }
+// console.log(freq);
+//----------------------------------------------------------------
+// for (let key of Object.keys(freq)) {
+//   console.log(key);
+// }
+
+// for (let val of Object.values(freq)) {
+//   console.log(val);
+// }
+
+//-----------------------------------------------------------------
+function missWorld(b, brr) {
+  b.sort(function (a, b) {
+    return a - b;
+  });
+  brr.sort(function (a, b) {
+    return a - b;
+  });
+  let j = 0;
+  for (let i = 0; i < brr.length; ) {
+    for (j = 0; j < b.length; ) {
+      if (brr[i] == b[j]) {
+        brr[i] = -1;
+        i++;
+        j++;
+        break;
+      }
+    }
+  }
+
+  // console.log(brr);
+  // let set = new Set(brr);
+  // console.log(set);
+  let newb = [];
+  for (let i = 0; i < brr.length; i++) {
+    if (brr[i] != -1) {
+      newb.push(brr[i]);
+    }
+  }
+  console.log(newb);
+}
+//let b = [11, 4, 11, 7, 13, 4, 12, 11, 10, 14];
+//let brr = [11, 4, 11, 7, 3, 7, 10, 13, 4, 8, 12, 11, 10, 14, 12];
+let b = [203, 204, 205, 206, 207, 208, 203, 204, 205, 206];
+let brr = [203, 204, 204, 205, 206, 207, 205, 208, 203, 206, 205, 206, 204];
+missWorld(b, brr);
+
+//=================================================================
+function checking(num) {
+  let count = 0;
+  while (n > 0) {
+    if ((n & 1) == 1) {
+      count++; // if n&1 == 1 keep incrementing count
+      // variable
+    }
+    //   n = n >> 1; // keep dividing n by 2 using right
+    // shift operator
+    n = Math.floor(n / 2);
+  }
+  if (count == 1) {
+    // // if count = 1 only then it is power of 2  // return true;
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//========================================================================
+
+
+//===============================================================================
+
+function miss_(b, brr) {
+  let freq_b = [];
+  //----------------------------------------------------                  |
+  // for (let ele of brr) {                                               |
+  //   if (!freq_b.hasOwnProperty(ele)) {                               |
+  //     freq_b[ele] = 1;                                               |
+  //   } else {                                                           |
+  //     freq_b[ele]++;                                                 |
+  //   }                                                                  |
+  // }                                                                    |
+  // //---------------------------------------------------------          |
+  // brr.forEach(ele => {                                                 |
+  //   freq_b[ele] ? freq_b[ele]++ : (freq_b[ele] = 1);
+  // });
+
+  //------------------------------------------------------------          |
+  for (let index = 0; index < brr.length; index++) {
+    // |
+    {
+      let ele = brr[index]; //
+      if (freq_b[ele]) {
+        //
+        freq_b[ele] = freq_b[ele] + 1; //
+      } else {
+        freq_b[ele] = 1;
+      }
+    }
+  }
+
+  //--------------------------------------------------------
+  for (let ele of b) {   // 
+    freq_b[ele]--;
+  }
+  let missingEle = [];
+  for (let key in freq_b) {
+    if (freq_b[key] != 0) {
+      missingEle.push(key);
+    }
+  }
+  console.log(missingEle);
+}
+
+let b = [7, 2, 5, 3, 5, 3];
+let brr = [7, 2, 5, 4, 6, 3, 5, 3];
+miss_(b, brr);
+                               ^
+                               ^
+                               ^
+                               ^
+                               ^
+//=============================================================================================|
+//=============================================================================================|
+//=============================================================================================|
+//=============================================================================================|
+Difference for..in and for..of:                                                                |
+Both for..in and for..of are looping constructs which are used to iterate over data structua.|
+ The only difference between them is the entities they iterate over:                           |
+                                                                                               |
+for..in iterates over all enumerable property keys of an object                                |
+for..of iterates over the values of an iterable object. Examples of iterable                   |
+objects are bays, strings, and NodeLists.                                                    |
+                                                                                               |
+//=============================================================================================|
+//=============================================================================================|
+//=============================================================================================|
+//=============================================================================================|
+//=============================================================================================|
+//=============================================================================================|
+                                      ^
+                                      ^
+                                      ^
+                                      ^
+                                      ^
+function game_(n) {
+  let turn_Count_Louise_Richard = 0;
+  while (n != 1) {
+    if ((n & (n - 1)) == 0) {
+      n = Math.floor(n / 2);
+      turn_Count_Louise_Richard++;
+      // it is power of 2
+    } else {
+      // it is not power of 2
+      let log_ = Math.floor(Math.log2(n));
+      let p = 2 ** log_;
+      n = n - p;
+      turn_Count_Louise_Richard++;
+    }
+  }
+  //   console.log('louisecont ' + turn_Count_Louise_Richard);
+  if (turn_Count_Louise_Richard % 2 == 0) {
+    console.log('Richard');
+  } else {
+    console.log('Louise');
+  }
+}
+let n = 132;
+game_(n);
+// try to in the office it is mandtrary to solve with your own method..
+//------------------------------------------------------------------------------------
+// console.log(5 % 2 ? 'sandeep' : 'Prajapati');
+// first he give odd number and then he give even number.
+//------------------------------------------------------------------------------------
+
+// console.log(typeof str);
+// let letegers_ = parselet(str);
+// console.log(letegers_);
+// let n = 5;
+// console.log(String(n).charAt(0) == n);
+// helper(n);
+// let total = 0;
+// for (let i = 0; i < str.length; i++) {
+//   total = total + parselet(str[i]);
+// }
+// if()
+// function helpher(n) {
+//   if (n < 10) {
+//     return n;
+//   }
+//   let lastDigit = n % 10;
+//   let remianing_number = Math.floor(n / 10);
+//   return helpher(lastDigit + helpher(remianing_number));
+//}
+function recursive_Call_Digit_Sum(num, k) {
+  let no = 0;
+  let n = num.repeat(k);
+  // let n_ = parselet(n);
+  // console.log(n_);
+  for (let i = 0; i < n.length; i++) {
+    no += parselet(n[i]);
+  }
+
+  let ault = helpher(no);
+  console.log(ault);
+}
+let num = '148';
+let k = 3;
+recursive_Call_Digit_Sum(num, k);
+
+function helpher(n) {
+  if (n <= 9) {
+    return n;
+  }
+  let sum = 0;
+  while (n != 0) {
+    sum += n % 10;
+    n = Math.floor(n / 10);
+  }
+  return helpher(sum);
+}
+
+//===========================================================================
+
+function max_min(b, k) {
+  let min = Number.MAX_VALUE;
+  for (let i = 0; i + (k - 1) < b.length; i++) {
+    let diff = Math.abs(b[i] - b[i + (k - 1)]);
+    if (diff < min) {
+      min = diff;
+    }
+  }
+  console.log(min);
+}
+let b = [1, 2, 1, 1, 2];
+let k = 2;
+max_min(b, k);
+
+//=============================================================================
+function making_Anagram(s1, s2) {
+  let split_1 = s1.split('');
+  let split_2 = s2.split('');
+  let freq = [];
+  for (let i = 0; i < split_1.length; i++) {
+    let cha = split_1[i];
+    if (freq[cha]) {
+      freq[cha] = freq[cha] + 1;
+    } else {
+      freq[cha] = 1;
+    }
+  }
+  console.log(freq);
+  let freq_1 = [];
+  for (let i = 0; i < split_2.length; i++) {
+    let cha = split_2[i];
+    if (freq_1[cha]) {
+      freq_1[cha] = freq_1[cha] + 1;
+    } else {
+      freq_1[cha] = 1;
+    }
+  }
+  console.log(freq_1);
+  let count_ = 0;
+  for (let el in split_2) {
+    if (freq[el]) {
+      // freq[chb] = freq[chb] - 1;
+      let a = Math.floor(freq[el] - freq_1[el]);
+      count = count + a;
+    } else if (el) {
+      count++;
+    } else {
+      freq[chb] = 1;
+    }
+  }
+  // console.log(count);
+
+  console.log(freq);
+  let b = [];
+  for (let ele in freq) {
+    b.push(freq[ele]);
+  }
+  let count = 0;
+  for (let i = 0; i < b.length; i++) {
+    if (b[i] % 2 != 0) {
+      count++;
+    }
+  }
+  // console.log(count);
+}
+let s1 = 'absdjkvuahdakejfnfauhdsaavasdlkj';
+let s2 = 'djfladfhiawasdkjvalskufhafablsdkashlahdfa';
+making_Anagram(s1, s2);
+//-----------------------------------------------------------------------------
+//
+
+function task_(a1, a2) {
+  let count = 0;
+  for (let i = 0; i < a1.length; i++) {
+    let diff = Math.abs(a1[i] - a2[i]);
+    count = count + diff;
+  }
+  // console.log(count);
+}
+let a1 = [0, 0, 1, 1, 1];
+let a2 = [1, 1, 1, 0, 0];
+task_(a1, a2);
+//=================================================================================
+
+function making_Anagram_(s1_, s2_) {
+  let bay_1 = new bay(26);
+  let bay_2 = new bay(26);
+  let count = 0;
+  let split_1 = s1_.split('');
+  let split_2 = s2_.split('');
+  let alpha = 'abcdefghijklmnopqrstuvwxyz';
+  for (let i = 0; i < split_1.length; i++) {
+    let el = split_1[i];
+    if (bay_1[el]) {
+      bay_1[el] = bay_1[el] + 1;
+    } else {
+      bay_1[el] = 1;
+    }
+  }
+
+  for (let i = 0; i < alpha.length; i++) {
+    if (!bay_1[alpha[i]]) {
+      bay_1[alpha[i]] = 0;
+    }
+  }
+  // console.log(bay_1);
+  let teamp_1 = [];
+  for (let ell in bay_1) {
+    teamp_1.push(bay_1[ell]);
+  }
+  console.log('value ' + teamp_1);
+
+  for (let i = 0; i < split_2.length; i++) {
+    let el = split_2[i];
+    if (bay_2[el]) {
+      bay_2[el] = bay_2[el] + 1;
+    } else {
+      bay_2[el] = 1;
+    }
+  }
+
+  for (let i = 0; i < alpha.length; i++) {
+    if (!bay_2[alpha[i]]) {
+      bay_2[alpha[i]] = 0;
+    }
+  }
+
+  let teamp_2 = [];
+  for (let ell in bay_2) {
+    teamp_2.push(bay_2[ell]);
+  }
+  console.log(teamp_2);
+
+  for (let i = 0; i < 26; i++) {
+    let dif = Math.abs(teamp_1[i] - teamp_2[i]);
+    count = count + dif;
+  }
+  // console.log(count);
+}
+
+let s1_ = 'cde';
+let s2_ = 'abc';
+making_Anagram_(s1_, s2_);
+
+//====================================================================================
+function making_Anagram_(s1, s2) {
+  let map = [];
+  let count = 0;
+  for (let i = 0; i < s1.length; i++) {
+    if (!map[s1[i]]) {
+      map[s1[i]] = 1;
+    } else {
+      map[s1[i]]++;
+    }
+  }
+  // console.log(map);
+
+  for (let i = 0; i < s2.length; i++) {
+    if (map[s2[i]]) {
+      map[s2[i]]--;
+    } else {
+      count++;
+    }
+  }
+  // console.log(map);
+  // console.log(count);
+  for (let kee in map) {
+    count = count + map[kee];
+  }
+  // console.log(count);
+}
+let s1 = 'cde';
+let s2 = 'abc';
+making_Anagram_(s1, s2);
+
+//====================================================================================
+
+function orgaining_container_ball(row, col) {
+  let b = [1, 4, 2, 3];
+  let matrix_ = new bay(row);
+  for (let i = 0; i < row; i++) {
+    matrix_[i] = new bay(col);
+  }
+  // console.log(matrix_);
+
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix_[i][j] = b[k];
+      k++;
+    }
+  }
+  let row_bay = [];
+  let col_bay = [];
+  let sum = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      sum = sum + matrix_[i][j];
+    }
+    row_bay.push(sum);
+    sum = 0;
+  }
+  // console.log(row_bay);
+  let sum_2 = 0;
+  for (let j = 0; j < col; j++) {
+    for (let i = 0; i < row; i++) {
+      sum_2 = sum_2 + matrix_[i][j];
+    }
+    col_bay.push(sum_2);
+    sum_2 = 0;
+  }
+  //console.log(col_bay);
+
+  row_bay.sort(function (a, b) {
+    return a - b;
+  });
+  col_bay.sort(function (a, b) {
+    return a - b;
+  });
+
+  if (row_bay.join() == col_bay.join()) {
+    //  console.log('Possible');
+  } else {
+    // console.log('Impossible');
+  }
+}
+
+let row = 2;
+let col = 2;
+orgaining_container_ball(row, col);
+//===================================================================================
+function making_anna(a1, a2) {
+  if (a1.join() == a2.join()) {
+    //    console.log('equal');
+  } else {
+    //  console.log('Not equal');
+  }
+}
+let a1 = [4, 5, 3];
+let a2 = [4, 5, 3];
+making_anna(a1, a2);
+
+//=====================================================================================
+function fairRations(b) {
+  let bread_Count = 0;
+  for (let i = 0; i < b.length - 1; i++) {
+    if (b[i] % 2 != 0) {
+      b[i] = b[i] + 1;
+      b[i + 1] = b[i + 1] + 1;
+      bread_Count = bread_Count + 2;
+    }
+  }
+  if (b[b.length - 1] % 2 != 0) {
+    // console.log('NO');
+    return 'NO';
+  } else {
+    // console.log(bread_Count);
+    // console.log(bread_Count);
+  }
+}
+
+let b = [4, 5, 6, 7];
+fairRations(b);
+
+//=================================================
+
+function frequency_Count(b) {
+  let map = [];
+  for (let i = 0; i < b.length; i++) {
+    let ele = b[i];
+    if (map[ele]) {
+      map[ele] = map[ele] + 1;
+    } else {
+      map[ele] = 1;
+    }
+  }
+  // console.log(map);
+}
+let b_1 = [7, 2, 5, 3, 5, 3, 7];
+frequency_Count(b_1);
+
+//==========================================================
+
+function the_Grid_Search(row_1, col_1, row_2, col_2) {
+  let b_1 = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+  ];
+  let matrix_1 = new bay(row_1);
+  for (let i = 0; i < row_1; i++) {
+    matrix_1[i] = new bay(col_1);
+  }
+  let k1 = 0;
+  for (let i = 0; i < row_1; i++) {
+    for (let j = 0; j < col_1; j++) {
+      matrix_1[i][j] = b_1[k1];
+      k1++;
+    }
+  }
+  console.log(matrix_1);
+
+  let b_2 = [8, 7, 6, 5, 4, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+
+  let matrix_2 = new bay(row_2);
+  for (let i = 0; i < row_2; i++) {
+    matrix_2[i] = new bay(col_2);
+  }
+
+  let k2 = 0;
+  for (let i = 0; i < row_2; i++) {
+    for (let j = 0; j < col_2; j++) {
+      matrix_2[i][j] = b_2[k2];
+      k2++;
+    }
+  }
+  console.log(matrix_2);
+  a;
+}
+
+let row_1 = 5;
+let col_1 = 10;
+let row_2 = 3;
+let col_2 = 6;
+the_Grid_Search(row_1, col_1, row_2, col_2);
+
+//================================================================================
+
+
+function gaming_bay(b) {
+  let count = 0;
+  // while (b.length) {
+  //  b.splice(b.indexOf(Math.max(...b)));
+  let index = 0;
+  let val = 0;
+  while (b.length) {
+    index = b.indexOf(Math.max(...b));
+    val = b.splice(index);
+    count++;
+  }
+  console.log(count);
+  let max = Number.MIN_VALUE;
+  // let index = b.indexOf(Math.max(...b));
+  // let a = b.splice(index, b[index]);
+  // console.log(a);
+  // console.log(b);
+  //  count++;
+  // }
+  //console.log(index);
+}
+let b = [2, 3, 5, 4, 1];
+gaming_bay(b);
+
+//==================================================================================
+
+function suffix_Sum_Func(b) {
+  let n = b.length;
+  let suffix_b = new bay(n);
+
+  suffix_b[n - 1] = b[n - 1];
+  for (let i = n - 2; i >= 0; i--) {
+    suffix_b[i] = suffix_b[i + 1] + b[i];
+  }
+  console.log('suffix' + suffix_b);
+
+  let prefix_b = new bay(n);
+  prefix_b[0] = b[0];
+  for (let i = 1; i < b.length; i++) {
+    prefix_b[i] = prefix_b[i - 1] + b[i];
+  }
+  console.log('prefix' + prefix_b);
+  // let max = Number.MIN_VALUE;
+  let flag = false;
+  for (let i = 0; i < b.length; i++) {
+    if (prefix_b[i] == suffix_b[i]) {
+      flag = true;
+    }
+  }
+
+  if (flag == true) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+}
+
+let b = [1, 2, 3];
+suffix_Sum_Func(b);
+
+//=====================================================================================
+function orders_Burger(row, col) {
+  let b = [8, 1, 4, 2, 5, 6, 3, 1, 4, 3];
+  let order_Matrix = new bay(row);
+  for (let i = 0; i < row; i++) {
+    order_Matrix[i] = new bay(col);
+  }
+  //  console.log(order_Matrix);
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      order_Matrix[i][j] = b[k];
+      k++;
+    }
+  }
+  let ault_b = new Map();
+  // let ault_b = [];
+  // let map;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      ault_b.set(i + 1, order_Matrix[i][j] + order_Matrix[i][j + 1]);
+      //let order_prep =
+      j = +2;
+    }
+  }
+  // console.log(ault_b);
+  // console.log(typeof ault_b);
+  let newb = [];
+  let get_value = ault_b.values();
+  for (let el of get_value) {
+    newb.push(el);
+  }
+  //console.log(newb);
+  let sorted = [...newb];
+
+  sorted.sort(function (a, b) {
+    return a - b;
+  });
+
+  console.log(sorted);
+  console.log(newb);
+  let j = 0;
+  let indexb = [];
+  for (let i of newb) {
+    indexb.push(sorted.indexOf(i) + 1);
+  }
+  console.log(indexb);
+}
+
+// console.log(sorted);
+// for (let i = 0; i < sorted.length; i++) {
+//   console.log(sorted[i] * 2);
+// }
+// console.log(newb);
+let row = 5;
+let col = 2;
+orders_Burger(row, col);
+
+//==============================================================================
+
+function order(order_prep_time_bay, temp_sort) {
+  let ault_As_index = [];
+  for (let el of order_prep_time_bay) {
+    ault_As_index.push(temp_sort.indexOf(el) + 1);
+  }
+  console.log(ault_As_index);
+}
+
+let order_prep_time_bay = [9, 6, 11, 4, 7];
+let temp_sort = [4, 6, 7, 9, 11];
+order(order_prep_time_bay, temp_sort);
+//=================================================================================
+
+function orders_Burger(row, col) {
+  let b = [8, 1, 4, 2, 5, 6, 3, 1, 4, 3];
+  let order_Matrix = new bay(row);
+  for (let i = 0; i < row; i++) {
+    order_Matrix[i] = new bay(col);
+  }
+  //  console.log(order_Matrix);
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      order_Matrix[i][j] = b[k];
+      k++;
+    }
+  }
+
+  console.log(order_Matrix.length);
+
+  let ault_b = [];
+  for (let i = 0; i < order_Matrix.length; i++) {
+    ault_b.push({
+      orderTime: order_Matrix[i][0] + order_Matrix[i][1],
+      index: i + 1,
+    });
+  }
+  console.log(ault_b);
+
+  ault_b.sort((a, b) => a.orderTime - b.orderTime);
+  console.log(ault_b);
+
+  let a = [];
+  for (let el of ault_b) {
+    a.push(el.index);
+  }
+  console.log(a);
+}
+
+let row = 5;
+let col = 2;
+orders_Burger(row, col);
+
+//==================================================================================
+
+function permuting_Two_bay(b, brr) {
+  b.sort(function (a, b) {
+    return a - b;
+  });
+  brr.sort(function (a, b) {
+    return b - a;
+  });
+
+  let flagSandeep = true;
+  for (let i = 0; i < b.length; i++) {
+    let add = b[i] + brr[i];
+    if (add >= k) {
+      continue;
+    } else {
+      flagSandeep = false;
+    }
+  }
+  if (flagSandeep == true) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+}
+
+let b = [2, 1, 3];
+let brr = [7, 8, 9];
+let k = 5;
+permuting_Two_bay(b, brr, k);
+
+
+//=================================================================================
+
+function closet_Number(b) {
+  b.sort(function (a, b) {
+    return a - b;
+  });
+
+  // let a = [];
+  // for (let i = 0; i < b.length - 1; i++) {
+  //   for (let j = i + 1; j < b.length; j++) {
+  //     a.push(b[i]);
+  //     a.push(b[j]);
+  //   }
+  // }
+  let result = [];
+  let min = Number.MAX_VALUE;
+  for (let i = 0; i < b.length - 1; i++) {
+    let diff = Math.abs(b[i] - b[i + 1]);
+    if (min > diff || min == diff) {
+      min = diff;
+      result.push(b[i], b[i + 1]);
+      i = i + 2;
+    }
+  }
+  console.log(result);
+}
+
+let b = [
+  -20, -3916237, -357920, -3620601, 7374819, -7330761, 30, 6246457, -6461594,
+  266854,
+];
+closet_Number(b);
+
+//===================================================================================
+
+
+function closedNumber(b) {
+  b.sort(function (a, b) {
+    return a - b;
+  });
+
+  let result = [];
+  let min = Number.MAX_VALUE; // b[b.length-1];
+  for (let i = 0; i < b.length - 1; i++) {
+    let diff = b[i + 1] - b[i];
+    if (min > diff) {
+      min = diff;
+      result = [];
+      result.push(b[i], b[i + 1]);
+    } else if (min === diff) {
+      result.push(b[i], b[i + 1]);
+    }
+  }
+  console.log(result);
+}
+let b = [
+  -20, -3916237, -357920, -3620601, 7374819, -7330761, 30, 6246457, -6461594,
+  266854,
+];
+closedNumber(b);
+
+//=================================================================================
+
+function stange_Counter(time) {
+  // given an time find the values.
+  let value = 3;
+  let time_start = 1;
+  let time_end = 3;
+  let result = 0;
+  while (1) {
+    if (time_start <= time && time <= time_end) {
+      let position = time - time_start;
+      console.log(value - position);
+      break;
+    } else {
+      time_start = time_end + 1;
+      value *= 2;
+      time_end = time_end + value;
+    }
+  }
+}
+
+let time = 4;
+stange_Counter(time);
+
+//================================================================================
+
+// lets learn insertion sort.
+function testing_insertion_sort(b) {
+  let n = b.length;
+  for (let i = 1; i < n; i++) {
+    let temp = b[i];
+    let j = i;
+    while (j > 0 && b[j - 1] >= temp) {
+      b[j] = b[j - 1];
+      j--;
+      prlet_(b);
+    }
+    b[j] = temp;
+  }
+  prlet_(b);
+}
+
+let b = [2, 4, 6, 8, 3];
+testing_insertion_sort(b);
+
+function prlet_(b) {
+  let sandeep = '';
+  for (let i = 0; i < b.length; i++) {
+    sandeep = sandeep + b[i] + ' ';
+  }
+  console.log(sandeep);
+}
+
+//==========================================================================================
+
+function insertion_sort_II(b) {
+  let n = b.length;
+  for (let i = 1; i < n; i++) {
+    let temp = b[i];
+    let j = i;
+    while (j >= 1 && b[j - 1] > temp) {
+      b[j] = b[j - 1];
+      j--;
+    }
+    b[j] = temp;
+    prlet_(b);
+  }
+
+}
+let b = [1, 4, 3, 5, 6, 2];
+insertion_sort_II(b);
+
+function prlet_(b) {
+  let prletsandeep = '';
+  for (let i = 0; i < b.length; i++) {
+    prletsandeep = prletsandeep + b[i] + ' ';
+  }
+  console.log(prletsandeep);
+}
+
+//================================================================================
+function insertion_sort_(b) {
+  let n = b.length;
+  for (let i = 1; i < n; i++) {
+    let temp = b[i];
+    let j = i;
+    while (j > 0 && b[j - 1] > temp) {
+      b[j] = b[j - 1];
+      j--;
+    }
+    b[j] = temp;
+  }
+  console.log(b);
+}
+
+let b = [1, 4, 3, 5, 6, 2];
+insertion_sort_(b);
+
+//================================================================================
+function ruunnig_time_of_algorithms(b) {
+  let n = b.length;
+  for (let i = 1; i < n; i++) {
+    let temp = b[i];
+    let j = i;
+    while (j > 0 && b[j - 1] > temp) {
+      b[j] = b[j - 1];
+      j--;
+    }
+    b[j] = temp;
+  }
+  console.log(b);
+}
+
+let b = [1, 4, 3, 5, 6, 2];
+ruunnig_time_of_algorithms(b);
+
+//======================================================================
+function count_shift_operation(b) {
+  let n = b.length;
+  let shiftCount = 0;
+  for (let i = 1; i < n; i++) {
+    let temp = b[i];
+    let j = i;
+    while (j > 0 && b[j - 1] > temp) {
+      b[j] = b[j - 1];
+      j--;
+      shiftCount++;
+    }
+    b[j] = temp;
+  }
+  console.log(shiftCount);
+}
+
+//let b = [4, 3, 2, 1];
+let b = [1, 1, 2, 2, 3, 3, 5, 5, 7, 7, 9, 9];
+count_shift_operation(b);
+
+//=====================================================================
+
+
+function quick_Partition_sort(b) {
+  let left = [];
+  let right = [];
+  let pivote = b[0];
+  for (let i = 1; i < b.length; i++) {
+    if (b[i] > pivote) {
+      right.push(b[i]);
+    } else if (b[i] < pivote) {
+      left.push(b[i]);
+    }
+  }
+  //3 2
+  //5 7
+  //4
+  let res = [];
+  for (let i = 0; i < left.length; i++) {
+    res.push(left[i]);
+  }
+  res.push(pivote);
+  for (let i = 0; i < right.length; i++) {
+    res.push(right[i]);
+  }
+  console.log(res);
+}
+
+let b = [4, 5, 3, 7, 2];
+quick_Partition_sort(b);
+
+//====================================================================
+
+function counting_sort_1(b) {
+  let l = b.length;
+  let result = new Map();
+  for (let i = 0; i < b.length; i++) {
+    let ele = b[i];
+    if (result[ele]) {
+      result[ele]++;
+    } else {
+      result[ele] = 1;
+    }
+  }
+  let sandeb = [];
+  console.log(result);
+  for (let el of Object.values(result)) {
+    sandeb.push(el);
+  }
+  sandeb.sort(function (a, b) {
+    return a - b;
+  });
+  console.log(sandeb);
+}
+
+let b = [1, 0, 1, 3, 2, 1];
+counting_sort_1(b);
+
+//====================================================================================
+// ---------------------------IMPORTANT------------------------------------------------
+function counting_sort_1(b) {
+  let frequency = new bay(20).fill(0);
+  for (let el of b) {
+    frequency[el]++;
+    // if (frequency[el]) {
+    //   frequency[el]++;
+    // } else {
+    //   frequency[el] = 1;
+    // }
+  }
+  console.log(frequency);
+}
+
+let b = [1, 1, 3, 2, 1];
+counting_sort_1(b);
+
+//========================================================================================
+
+
+function counting_sort(b) {
+  let L = b.length;
+  //find the Maximum and Minimum value in this bay;
+  let max = b[0];
+  let min = b[0];
+  //bay to be sorted in this bay is necessary
+  let aux = new bay(b.length);
+
+  for (let i = 0; i < L; i++) {
+    if (b[i] < min) min = b[i];
+    else if (b[i] > max) max = b[i];
+  }
+  //frequency of bay
+  let count = new bay(max - min + 1);
+  for (let i = 0; i < b.length; i++) {
+    count[b[i] - min]++;
+  }
+  count[0]--;
+  for (let i = 1; i < count.length; i++) {
+    count[i] = count[i] + count[i - 1];
+  }
+
+  for (let i = b.length - 1; i >= 0; i--) {
+    aux[count[b[i] - min]--] = b[i];
+  }
+  console.log(aux);
+}
+
+let b = [1, 1, 3, 2, 1];
+counting_sort(b);
+
+//=====================================================================================
+function toturial(b, v) {
+  for (let i = 0; i < b.length; i++) {
+    if (b[i] == v) {
+      console.log(i);
+      break;
+    }
+  }
+}
+let b = [1, 2, 3];
+let v = 3;
+toturial(b, v);
+
+//==================================================================================
+function sales_By_Match(b) {
+  let frequency = new Map();
+  for (let i = 0; i < b.length; i++) {
+    let ele = b[i];
+    if (frequency[ele]) {
+      frequency[ele]++;
+    } else {
+      frequency[ele] = 1;
+    }
+  }
+  console.log(frequency);
+  let res = [];
+  for (let i of Object.values(frequency)) {
+    res.push(i);
+  }
+
+  let count = 0;
+  for (let i = 0; i < res.length; i++) {
+    if (res[i] > 1) {
+      let r = Math.floor(res[i] / 2);
+      count = count + r;
+    }
+  }
+  console.log(count);
+}
+
+let b = [1, 2, 1, 2, 1, 3, 2];
+sales_By_Match(b);
+
+//======================================================================================
+
+function Breaking_the_Records(b) {
+  let maxCount = 0;
+  let minCount = 0;
+  let max = b[0];
+  let min = b[0];
+  for (let i = 1; i < b.length; i++) {
+    if (b[i] == max) {
+      continue;
+    } else if (b[i] == min) {
+      continue;
+    } else if (b[i] < min) {
+      minCount++;
+      min = b[i];
+    } else if (b[i] > max) {
+      maxCount++;
+      max = b[i];
+    }
+  }
+  console.log(maxCount);
+  console.log(minCount);
+}
+
+let b = [10, 5, 20, 20, 4, 5, 2, 25, 1];
+Breaking_the_Records(b);
+
+//=======================================================================================
+
+function number_line_jumps(x1, v1, x2, v2) {
+  //explanation:--
+  //   speed=distance/time
+  //   distance=speed*time
+  //   we can say 1 juumps --1 seconds
+  //   we can say    2 jumps ---2 seconds
+  //   we can say    3 jumps ---3 seconds
+  //   we can say    4 jumps ---4 seconds
+  // distance=(v1*j)+x1  // (v1--number of jumps also called as speed*j(time)+starting position.)
+  // distance=(v2*j)+x2
+  // x1+(v1*j)=x2+(v2*j)
+  // we have to find  j only , j is time.
+  //  x1+(v1*j)=x2+(v2*j)
+  //      (v1*j)-(v2*j)=x2-x1
+  //       (v1-v2)j=x2-x1
+  //---------------------------|
+  //   j= x2-x1/v1-v2          |
+  //---------------------------|
+  if (v1 < v2) {
+    console.log('NO');
+  }
+  if ((x2 - x1) % (v1 - v2) == 0) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+}
+
+let x1 = 0; // starting position kangbo first
+let v1 = 3; // number of jumps, kangaroo first
+let x2 = 4; // starting position kangaroo second.
+let v2 = 2; // number of jumps kangaroo second.
+number_line_jumps(x1, v1, x2, v2);
+
+//=======================================================================================
+
+// multiple of a bay:--[2,6]
+//   2----->> 2,4,6,8,10,12,14,16
+//   6----->> 6,12,18,24,30,36,42
+//-----------------------------------------------
+// factor of b bay:---[24,36]
+//    24---> 2,3,4,6,12,24
+//    36---> 2,3,4,6,9,12,18,36
+
+// find the common element:--- 6 , 12
+// only two element are common so print 2 is your anwser.
+
+function between_Two_Set(a, b) {
+  let resultLCM = gettingLCM(a); // 6
+  let resultGCD = gettingGCD(b); //12
+  let multiple_Count = 0;
+  let result = 0;
+  while (multiple_Count <= resultGCD) {
+    multiple_Count = multiple_Count + resultLCM;
+    if (resultGCD % multiple_Count == 0) {
+      result++;
+    }
+  }
+  console.log(result);
+}
+
+let a = [2, 6];
+let b = [24, 36];
+between_Two_Set(a, b);
+//----------------------------------------------
+//finding LCM
+function gcdd__(i, j) {
+  if (j == 0) return i;
+  return gcdd__(j, i % j);
+}
+
+function gettingLCM(a) {
+  let ans = a[0];
+  for (let i = 1; i < a.length; i++) {
+    ans = (a[i] * ans) / gcdd__(a[i], ans);
+  }
+  return ans;
+}
+//-----------------------------------------------------
+// finding GCD
+function gcdd_(i, j) {
+  if (i == 0) return j;
+  return gcdd_(j % i, i);
+}
+
+function gettingGCD(b) {
+  let ans = b[0];
+  for (let i = 1; i < b.length; i++) {
+    ans = gcdd_(b[i], ans);
+    if (ans == 1) return 1;
+  }
+  return ans;
+}
+//-------------------------------------------------------------------
+//===================================================================
+//function super_reducing_string(str) {
+  // let set = new Set(str);
+  // console.log(set);
+
+  // let s = str.split('');
+  // let freq = [];
+  // for (let i = 0; i < s.length; i++) {
+  //   let el = s[i];
+  //   if (freq[el]) {
+  //     freq[el]++;
+  //   } else {
+  //     freq[el] = 1;
+  //   }
+  // }
+  // console.log(freq);
+
+  // for (let ell in freq) {
+  //   freq[ell]--;
+  // }
+  // console.log(freq);
+// }
+
+// let str = 'aaabccddd';
+// super_reducing_string(str);
+//==================================================================================
+*/
+function super_reducing_string(str) {
+  let split = str.split('');
+  let stack = [];
+  for (let i = 0; i < split.length; i++) {
+    if (stack.length == 0) {
+      stack.push(split[i]);
+    } else if (split[i] == stack[stack.length - 1]) {
+      stack.pop();
+    } else if (split[i] != stack[stack.length - 1]) {
+      stack.push(split[i]);
+    }
+  }
+
+  if (stack.length == 0) {
+    console.log('Empty String');
+  } else {
+    let res = '';
+    for (let i = 0; i < stack.length; i++) {
+      res = res + stack[i];
+    }
+    console.log(res);
+  }
+}
+
+let str = 'aa';
+super_reducing_string(str);
+
+//============================================================================================
