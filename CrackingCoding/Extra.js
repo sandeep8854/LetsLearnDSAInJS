@@ -24,7 +24,7 @@ for (let i = res.length; i > 0; i--) {
   count++;
 }
 console.log(count);
-*/
+
 
 function adding(nums) {
   let sum = 0;
@@ -44,3 +44,41 @@ let res = adding(nums);
 console.log(res);
 
 //=================================================================
+*/
+//console.log('San');
+
+// let po = Math.pow(2); // base , exponential
+// console.log(po);
+
+// function task_(n) {
+//  console.log(n>>);
+//   // console.log(1 << nere_By_Power);
+// }
+// let n = 16;
+// task_(n);
+
+//=========================================================
+// function making_anna(a1, a2) {
+//   if (a1.join() == a2.join()) {
+//     console.log('equal');
+//   } else {
+//     console.log('Not equal');
+//   }
+// }
+// let a1 = [4, 5, 3];
+// let a2 = [4, 5, 3];
+// making_anna(a1, a2);
+
+// let delivery = [];
+// for (let i = 0; i < orders.length; i++) {
+//   delivery.push([orders[i][0] + orders[i][1], i + 1]);
+// }
+
+// delivery.sort((a, b) => a[0] - b[0]);
+// return delivery.map(value => value[1]);
+
+let s = '';
+for (let i = 1; i <= 11; i++) {
+  s = s + i + ' ';
+}
+console.log(s);

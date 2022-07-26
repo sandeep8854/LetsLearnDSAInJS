@@ -250,7 +250,7 @@ sett(arr);
 //   set.add(2);
 //   console.log(set.has(1));
 //   console.log(set);
-//   console.log(set.delete(2));
+//   console.log(set.dele_mentte(2));
 // }
 // let arr = [1, 1, 3, 1, 2, 1, 3, 3, 3, 3];
 // pairSocks(arr);
@@ -258,13 +258,13 @@ sett(arr);
 //=================================================================
 function pairSocks(arr) {
   let pairCount = 0;
-  let searchEle = new Set();
+  let searchele_ment = new Set();
   for (let sock of arr) {
-    if (searchEle.has(sock)) {
+    if (searchele_ment.has(sock)) {
       pairCount++;
-      searchEle.delete(sock);
+      searchele_ment.dele_mentte(sock);
     } else {
-      searchEle.add(sock);
+      searchele_ment.add(sock);
     }
   }
   return pairCount;
@@ -597,7 +597,7 @@ let count=0;
 				count++;
 			}
 		}
-		if(countless==k)  //class is canceled
+		if(countless==k)  //class is cancele_mentd
 		console.log("NO");
 	else{
     console.log("YES");
@@ -871,7 +871,7 @@ console.log(ress);
 
 
 //=========================================================================
-function appendAndDEle(s, t, k) {
+function appendAndDele_ment(s, t, k) {
   let del = 0;
   let dell;
   let add_ = 0;
@@ -900,7 +900,7 @@ function appendAndDEle(s, t, k) {
 let s = 'hackerhappy';
 let t = 'hackerrank';
 let k = 9;
-appendAndDEle(s, t, k);
+appendAndDele_ment(s, t, k);
 
 
 
@@ -1305,7 +1305,7 @@ for (let i = 0; i < gfg.length; i++) {
   }
 }
 
-// for printing the element
+// for printing the ele_mentment
 
 for (let i = 0; i < gfg.length; i++) {
   for (let j = 0; j < gfg.length; j++) {
@@ -1718,32 +1718,12 @@ function facto(num) {
 let num = 5;
 console.log(facto(num));
 
-
-//======================================================
-//        Leetcode :- -----
-//-------------------------------
-// Question :-1 Two Sum
-
-function two_sum(arr, target) {
-  for (let i = 0; i < arr.length; i++) {
-    let find = target - arr[i];
-    let index = arr.indexOf(find);
-    if (index != -1 && index !== i) {
-      return [i, index];
-    }
-  }
-}
-let arr = [3, 2, 4];
-let target = 6;
-console.log(two_sum(arr, target));
-
-
 //======================================================
 
 // Window Sliding Technique:----
 //---------------------------------------
 // Given an array of integers of size ‘n’, Our aim is to calculate the maximum sum of ‘k’
-//consecutive elements in the array. means continous element .
+//consecutive ele_mentments in the array. means continous ele_mentment .
 //----------------------------------------------------
 // example :- arr=[100, 200, 300, 400];
 // let k=2;
@@ -2250,4 +2230,2006 @@ for (let i = 1; i < n; i = i * 2) {
 // f(n) = (logBase2 n)
 
 //============================================================================
+
+for (let i = n; i >= 1; i--) {
+  statement;
+}
+
+//   i
+//--------
+//   n
+//
+//   n/2
+//
+//   n/2^2
+//
+//  n/2^3
+//
+//   n/2^k
+
+//  assume that  i < 1
+//              n/2^k < 1
+//              n/2^k =1
+//              n=2^k
+//             k=(logBase2 n) time complexcity
+
+
+
+//=========================================================
+
+for (let i = 0; i * i < n; i++) {
+  statement;
+}
+
+//   i * i < n 
+//   i * i >= n
+//   i^2 = n
+//   i= root n;
+
+// time complexcity  f(n)=O(root n)
+
+//=============================================================
+
+
+for (let i = 0; i < n; i++) {   // n
+  console.log('Sandeep');
+}
+for (let j = 0; j < n; j++) {  // n
+  console.log('Prajapati');
+}
+
+// n + n = 2n
+//  f(n) = O(n)  time complexcity.
+
+//==============================================================
+
+
+let p = 0;
+for (let i = 1; i > n; i = i * 2) {
+  //log n
+  p++;
+}
+
+for (let j = 1; j < p; j = j * 2) {
+  // log p
+  console.log('I am good');
+}
+
+// time complexcity = O(log log n)
+
+//==================================================================
+
+
+for (let i = 0; i < n; i++) {
+  // n
+  for (let j = 1; j < n; j = j * 2) {
+    // n*logn
+    console.log('Hello India...'); ///n*logn
+  }
+}
+
+//  n + nlogn + nlogn
+// 2n logn + n
+// f(n)= O(n logn)  time complexcity.
+//============================================================
+
+
+// Analysis of if and while loop
+//---------------------------------------
+let i = 0;      // 1
+while (i < n) {  // n+1
+  console.log('Sandeep'); //n
+  i++;  //n
+}
+
+// f(n) = 3n+1
+// f(n) = O(n) time complexcity
+
+//============================================================
+
+
+//======================================================
+//        Leetcode :- -----
+//-------------------------------
+// Question :-1 Two Sum
+
+function two_sum(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    let find = target - arr[i];
+    let index = arr.indexOf(find);
+    if (index != -1 && index !== i) {
+      return [i, index];
+    }
+  }
+}
+let arr = [3, 2, 4];
+let target = 6;
+console.log(two_sum(arr, target));
+
+//==================================================================
+
+
+function happy_Number(n) {
+  let newSet = new Set();
+  while (true) {
+    let sum = 0;
+    while (n != 0) {
+      let reminder = n % 10;
+      sum = sum + reminder * reminder;
+      n = Math.floor(n / 10);
+    }
+    if (sum == 1) {
+      return true;
+    } else {
+      n = sum;
+      sum = 0;
+      if (newSet.has(n)) {
+        return false;
+      } else {
+        newSet.add(n);
+      }
+    }
+  }
+}
+
+let n = 13;
+let res = happy_Number(n);
+if (res == true) {
+  console.log('true');
+} else {
+  console.log('false');
+}
+
+//====================================================================
+
+// let n = '0012345-';
+// console.log(parseFloat(n)); // 12345
+
+// let x = -5432100;
+// let res = Math.sign(x);
+// console.log(res); // -1
+// let nu = 12345;
+// let ress = nu * res;
+// console.log(ress);
+
+//=================================
+
+function reverse_Number(n) {
+  let tostr = n.toString();
+  let spli = tostr.split('');
+  let res = spli.reverse();
+  let joi = res.join('');
+  let parsefloat = parseFloat(joi);
+  // console.log(parsefloat);
+  let math = parsefloat * Math.sign(n); // original values of number.
+  return math;
+}
+let n = 1534236469;
+console.log(reverse_Number(n));
+
+//=======================================================================
+
+function primeNumber(num) {
+  let isPrime = true;
+
+  if (num == 1 || num < 1) {
+    console.log(num + ' is not prime number ..');
+  } else if (num > 1) {
+    for (let i = 2; i < num; i++) {
+      if (num % i == 0) {
+        isPrime = false;
+        break;
+      }
+    }
+
+    if (isPrime) {
+      console.log('number is prime number.');
+    } else {
+      console.log('number is not prime number.');
+    }
+  }
+}
+let num = 12;
+primeNumber(num);
+
+//==============================================================================
+function primeNumber(starting, ending) {
+  let arr = [];
+
+  for (let i = starting; i <= ending; i++) {
+    let flag = 0;
+    for (let j = 2; j < i; j++) {
+      if (i % j == 0) {
+        flag = 1;
+        break;
+      }
+    }
+    if (i > 1 && flag == 0) {
+      arr.push(i);
+    }
+  }
+  console.log(arr + '');
+}
+let starting = 2;
+let ending = 50;
+primeNumber(starting, ending);
+
+// function wayToLongWord(str) {
+//   let l = str.length;
+//   let temp = str.charAt(0);
+//   let temp2 = str.charAt(l - 1);
+//   let result = 0;
+//   if (l <= 10) {
+//     console.log(str);
+//   } else {
+//     result = l - 2;
+//     let t = temp + result;
+//     let re = t + temp2;
+//     console.log(re);
+//   }
+// }
+// let str = 'sandep';
+// wayToLongWord(str);
+
+//========================================================================
+
+function birthdayCakeCandies(arr) {
+  let xor = 0;
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  let maxiM = arr[arr.length - 1];
+  for (let i = 0; i < arr.length; i++) {
+    if ((maxiM ^ arr[i]) == 0) {
+      xor++;
+    }
+  }
+  console.log('count ' + xor);
+}
+
+let arr = [3, 2, 1, 3, 3];
+birthdayCakeCandies(arr);
+
+//
+// let x = 5;
+// let y = 5;
+// console.log('xor value :-' + (x ^ y));
+
+//==========================================================================
+
+
+function timeFormat(s) {
+  let time = s.split(':');
+
+  let hour = time[0];
+  console.log(hour);
+  // console.log(typeof hour);  // string.
+
+  let minutes = time[1];
+  console.log(minutes);
+
+  let second = time[2].substring(0, 2);
+  console.log(second);
+
+  let ampm = time[2].substring(2, 4);
+  console.log(ampm);
+
+  if (ampm == 'AM') {
+    if (hour == '12') {
+      return '00' + ':' + minutes + ':' + second;
+    } else {
+      return hour + ':' + minutes + ':' + second;
+    }
+  } else {
+    if (hour == '12') {
+      return hour + ':' + minutes + ':' + second;
+    } else {
+      return parseInt(hour) + 12 + ':' + minutes + ':' + second;
+    }
+  }
+}
+//
+let s = '12:00:11PM';
+let res = timeFormat(s);
+console.log(res);
+// console.log('hour ' + time[0]);
+
+// console.log('minutes ' + time[1]);
+
+// console.log('second ' + time[2].substring(0, 2));
+
+// console.log('AMPM ' + time[2].substring(2, 4));
+
+//=============================================================================
+
+
+function sherlockArray(arr) {
+  let sum = 0;
+  for (let x of arr) {
+    sum += x;
+  }
+  let x = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (2 * x == sum - arr[i]) {
+      return 'YES';
+    }
+    x = x + arr[i];
+  }
+  return 'NO';
+}
+let arr = [1, 2, 3];
+console.log(sherlockArray(arr));
+
+
+//=================================================================
+
+// let  fine=0;
+// 		if(ExpectedYear<returnedYear)
+// 		{
+// 			fine=10000;
+// 		}
+// 		else if(ExpectedYear==returnedYear)
+// 		{
+// 			if(ExpectedMonth<returnedMonth)
+// 			{
+// 				fine=(returnedMonth-ExpectedMonth)*500;
+// 			}
+// 			else if(ExpectedMonth==returnedMonth)
+// 			{
+// 				if(ExpectedDay<returnedDay)
+// 				{
+// 					fine=(returnedDay-ExpectedDay)*15;
+// 				}
+// 	}
+// }
+// System.out.println(fine);
+function libraryFine(
+  yourDate,
+  YourMonth,
+  yourYear,
+  issueDate,
+  issueMonth,
+  issueYear
+) {}
+
+let yourDate = 6;
+let YourMonth = 6;
+let yourYear = 2015;
+let issueDate = 9;
+let issueMonth = 6;
+let issueYear = 2015;
+console.log(
+  libraryFine(yourDate, YourMonth, yourYear, issueDate, issueMonth, issueYear)
+);
+
+//=================================================================================
+
+function extraLongFactorial(n) {
+  let bigint = BigInt(n);
+  let facto = 1n;
+  for (let i = 0n; i < bigint; i++) {
+    facto *= bigint - i;
+  }
+  console.log(String(facto));
+}
+let n = 10;
+extraLongFactorial(n);
+
+//===================================================================================
+
+function appendAndDele_ment(s, t, k) {
+  console.log(s.length);
+  console.log(t.length);
+  let dele_ment = 0;
+  let add = 0;
+  if (k % 2 == 0) {
+    dele_ment = k / 2;
+    add = k / 2;
+  } else {
+    dele_ment = Math.floor(k / 2) + 1;
+    add = Math.floor(k / 2);
+  }
+
+  let result = '';
+  for (let i = 0; i <= dele_ment; i++) {
+    result = result + s.charAt(i);
+  }
+  // console.log(result);
+  for (let i = dele_ment + 1; i < s.length; i++) {
+    result = result + t.charAt(i);
+  }
+  console.log(result);
+  if (result == t) {
+    return 'Yes';
+  } else {
+    return 'No';
+  }
+}
+let s = 'hackerhappy';
+let t = 'hackerrank';
+let k = 9;
+console.log(appendAndDele_ment(s, t, k));
+
+//===================================================================
+// function countSquareRoot(a, b) {
+//   let count = 0;
+//   // for (let i = a; i <= b; i++) {
+//   //   if (Number.isInteger(Math.sqrt(i))) {
+//   //     count++;
+//   //   }
+//   // }
+//   // console.log(count);
+
+//   let rs = Number.isInteger(Math.sqrt(a)); // he give time out..
+//   console.log(rs);  // think different opproach may he will give the true value .
+//   console.log(Math.floor(Math.sqrt(b)));// then test casees will be passeses.
+// }
+// let a = 24;
+// let b = 49;
+// countSquareRoot(a, b);
+
+function countSquareRoot(a, b) {
+  let squareOf_A = Math.floor(Math.sqrt(a));
+  console.log('Square of A value : - ' + squareOf_A);
+  //
+  let squareOf_B = Math.floor(Math.sqrt(b));
+  console.log('square of B value : - ' + squareOf_B);
+  //
+  let result = squareOf_B - squareOf_A;
+  //
+  if (squareOf_A * squareOf_A >= a) {
+    result++;
+  }
+  return result;
+}
+let a = 24;
+let b = 49;
+console.log('Number of square within the  number : - ' + countSquareRoot(a, b));
+
+//=====================================================================================
+
+function cut_The_Sticks(arr) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  // console.log(arr);
+  let minNum = Number.MAX_VALUE;
+  let newArr = [];
+  let result = [];
+  let minVal = minFunction(arr);
+  for (let i = 0; i < arr.length; i++) {
+    let tempLen = arr.length;
+    result.push(tempLen);
+    let res = arr[i] - minVal;
+    newArr.push(res);
+  }
+  // for (let i = 0; i < arr.length; i++) {
+  //   // if (arr[i] < minNum) {
+  //   //   minNum = arr[i];
+  //   // }
+  // }
+  // console.log(minNum);
+}
+let arr = [5, 4, 4, 2, 2, 8];
+cut_The_Sticks(arr);
+
+function minFunction(arr) {
+  let min = Number.MAX_VALUE;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+  return min;
+}
+
+int tempSum=-1;
+		while(tempSum!=0)
+		{
+			int min=Integer.MAX_VALUE;
+			for(int i=0;i<arr.length;i++)
+			{
+				if(min>=arr[i]&&arr[i]!=0)
+				{
+					min=arr[i];
+				}
+			}
+			int count=0;
+			tempSum=0;
+			for(int i=0;i<arr.length;i++)
+			{
+				if(arr[i]>=min)
+				{
+					arr[i]=arr[i]-min;
+					count++;
+				}
+				tempSum=tempSum+arr[i];
+			}
+			System.out.println(count);
+		}	
+//==========================================================================
+
+
+function cut_And_Strick(arr) {
+  let newArraySa = [];
+  let tempSum = -1;
+  while (tempSum != 0) {
+    let min = Number.MAX_VALUE;
+    for (let i = 0; i < arr.length; i++) {
+      if (min >= arr[i] && arr[i] != 0) {
+        min = arr[i];
+      }
+    }
+    let count = 0;
+    tempSum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] >= min) {
+        arr[i] = arr[i] - min;
+        count++;
+      }
+      tempSum = tempSum + arr[i];
+    }
+    // console.log(count);
+    newArraySa.push(count);
+  }
+  // console.log(newArraySa);
+  for (let i = 0; i < newArraySa.length; i++) {
+    console.log(newArraySa[i] + ' ');
+  }
+}
+
+let arr = [1, 2, 3, 4, 3, 3, 2, 1];
+cut_And_Strick(arr);
+
+//==================================================================
+//console.log(Number.MAX_VALUE); //1.7976931348623157e+308
+//console.log(Number.MIN_VALUE); //5e-324
+
+// function findMin(a) {
+//   let min1 = Number.MAX_VALUE;
+//   for (let i = 0; i < a.length; i++) {
+//     if (min1 > a[i]) {
+//       min1 = a[i];
+//     }
+//   }
+//   console.log('Min Number :- ' + min1);
+// }
+// let a = [12, 45, 16, 21, 14, 8];
+// findMin(a);
+
+
+//=============================================================================
+
+function cutting_Eadge(arr) {
+  let resultArr = [];
+  let min = Number.MAX_VALUE;
+  let tempSum = -1;
+  while (tempSum != 0) {
+    for (let i = 0; i < arr.length; i++) {
+      if (min >= arr[i] && arr[i] != 0) {
+        min = arr[i];
+      }
+    }
+    let count = 0;
+    tempSum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] >= min) {
+        arr[i] = arr[i] - min;
+        count++;
+      }
+      tempSum += arr[i];
+    }
+    resultArr.push(count);
+  }
+  return resultArr;
+}
+let arr = [1, 2, 3, 4, 3, 3, 2, 1];
+console.log(cutting_Eadge(arr));
+
+//===============================================================================
+
+function rotatele_mentft(arr, d) {
+  while (d > 0) {
+    let shi = arr.shift();
+    arr.push(shi);
+    d--;
+  }
+  console.log(arr);
+}
+let arr = [1, 2, 3, 4, 5];
+let d = 4;
+rotatele_mentft(arr, d);
+
+
+//===============================================================================
+
+function funnyString(str) {
+  let originalStingArr = [];
+  let reverseStringArr = [];
+
+  for (let i = 0; i < str.length; i++) {
+    let utfVal = str.charCodeAt(i);
+    originalStingArr.push(utfVal);
+  }
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    let revUtf = str.charCodeAt(i);
+    reverseStringArr.push(revUtf);
+  }
+  // console.log(originalStingArr);
+  // console.log(reverseStringArr);
+
+  let asciiCode = [];
+  let revAsciiCode = [];
+  for (let i = 0; i < originalStingArr.length - 1; i++) {
+    let dif = Math.abs(originalStingArr[i] - originalStingArr[i + 1]);
+    let diff2 = Math.abs(reverseStringArr[i] - reverseStringArr[i + 1]);
+    asciiCode.push(dif);
+    revAsciiCode.push(diff2);
+  }
+
+  // console.log(asciiCode);
+  // console.log(revAsciiCode);
+
+  if (asciiCode.join() == revAsciiCode.join()) {
+    console.log('Funny');
+  } else {
+    console.log('Not Funny');
+  }
+}
+let str = 'ivvkx';
+funnyString(str);
+
+// function temp(arr) {
+//   let asciiCode = [];
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     let diff = Math.abs(arr[i] - arr[i + 1]);
+//     asciiCode.push(diff);
+//   }
+//   console.log(asciiCode);
+// }
+// let arr = [108, 109, 110, 111, 112];
+// temp(arr);
+
+// let arr1 = [1, 2, 3, 4, 5];
+// let arr2 = [1, 2, 4, 5, 6];
+// let arr3 = [1, 2, 3, 4, 5];
+// let arrStr = arr1.join();
+// console.log(arrStr);
+
+// let arrstr2 = arr3.join();
+// console.log(arrstr2);
+
+// if (arrStr == arrstr2) {
+//   console.log('It is equal');
+// } else {
+//   console.log('Not equal');
+// }
+
+
+//========================================================================
+
+function median(arr) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  // console.log(arr);
+  if (arr.length % 2 == 0) {
+    let div = Math.floor(arr.length / 2);
+    console.log((arr[div - 1] + arr[div]) / 2);
+  } else {
+    let res = Math.floor(arr.length / 2);
+    console.log(arr[res]);
+  }
+}
+let arr = [5, 3, 1, 2, 4];
+median(arr);
+
+
+//============================================================================
+function lonelyInteger(arr) {
+  let xor = 0;
+  for (let x of arr) {
+    xor ^= x;
+  }
+  console.log('Lonely Integer will be :-' + xor);
+}
+let arr = [1, 1, 4, 4, 5, 6, 6, 7, 7, 8, 8];
+lonelyInteger(arr);
+
+//=============================================================================
+
+function camalCase(s) {
+  let word_count = 1;
+  for (let i = 0; i < s.length; i++) {
+    if (s.charCodeAt(i) >= 65 && s.charCodeAt(i) <= 90) {
+      word_count++;
+    }
+  }
+  console.log(word_count);
+}
+let s = 'oneTwoThree';
+camalCase(s);
+
+//============================================================================
+
+function markAndToys(arr, k) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  let sum = 0;
+  let count = -1;
+  for (let i = 0; i < arr.length; i++) {
+    if (sum <= k) {
+      sum = sum + arr[i];
+      count++;
+    } else {
+      break;
+    }
+  }
+  console.log(count);
+}
+let arr = [1, 2, 3, 4];
+let k = 7;
+markAndToys(arr, k);
+
+//====================================================================================
+
+function ceaserCypher(str) {
+  let newStr = '';
+  for (let i = 1; i < str.length; i++) {
+    let ch = str.charAt(i);
+    newStr += ch;
+  }
+  console.log(newStr);
+}
+
+//let str = `There's-a-starman-waiting-in-the-sky`;
+let str = 'middle-Outz';
+let k = 2;
+ceaserCypher(str, k);
+
+//=================================================================================
+function maximam_Xor(low, high) {
+  // let xor = 0;
+  let max_Value_ = 0;
+  let res = 0;
+  let max = -Infinity;
+  for (let i = low; i <= high; i++) {
+    for (let j = low; j <= high; j++) {
+      let xor = i ^ j;
+      res = Math.max(xor, max_Value_);
+      if (res > max) {
+        max = res;
+      }
+    }
+  }
+  console.log(max);
+}
+
+let lowerBound = 10;
+let uperBound = 15;
+
+maximam_Xor(lowerBound, uperBound);
+
+//===================================================================================
+
+function findMax_And_Min_Value(arr) {
+  let len = arr.length;
+  let max = -Infinity;
+
+  while (len--) {
+    if (arr[len] > max) {
+      max = arr[len];
+    }
+  }
+
+  //============================================================
+
+  let min = Infinity;
+  while (len--) {
+    if (arr[len] < min) {
+      min = arr[len];
+    }
+  }
+  console.log('Max Value will be :- ' + max);
+  console.log('Min Value Will be :- ' + min);
+}
+
+let arr = [10, 14, 15, 35, 98, 17, 3, 45, 86, 12, 14, 15];
+findMax_And_Min_Value(arr);
+
+//==================================================================
+
+function min_abs_Diff(arr) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  let min = Infinity;
+  for (let i = 1; i < arr.length; i++) {
+    let prev = arr[i - 1];
+    let curr = arr[i];
+    let diff = Math.abs(prev - curr);
+    min = Math.min(diff, min);
+  }
+
+  console.log('Min diff will be :- ' + min);
+}
+let arr = [1, -3, 71, 68, 17];
+min_abs_Diff(arr);
+
+
+//==================================================================
+
+function beautifulDay_(sta_Day, end_Day, diviser_) {
+  let reves = 0;
+  let last_Digit = 0;
+  let beautiful = 0;
+  // let j = 0;
+  for (let i = sta_Day; i <= end_Day; i++) {
+    // while (i != 0) {
+    //   last_Digit = i % 10;
+    //   reves = reves * 10 + last_Digit;
+    //   i = Math.floor(i / 10);
+    // }
+    reves =
+      parseFloat(i.toString().split('').reverse().join('')) * Math.sign(i);
+    //   last_Digit = 0;
+    let diff = Math.abs(i - reves);
+    if (reves % diviser_ == 0) {
+      beautiful++;
+    }
+    reves = 0;
+  }
+  console.log(beautiful);
+}
+let sta_Day = 20;
+let end_Day = 23;
+let diviser_ = 6;
+beautifulDay_(sta_Day, end_Day, diviser_);
+
+// function revvvvv(num) {
+//   let rev = 0;
+//   let last_Digit = 0;
+//   while (num != 0) {
+//     last_Digit = num % 10;
+//     rev = rev * 10 + last_Digit;
+//     num = Math.floor(num / 10);
+//   }
+//   console.log(rev);
+// }
+// let num = 21;
+// revvvvv(num);
+
+//==============================================================
+
+function priyanka_And_Toys(weight) {
+  weight.sort(function (a, b) {
+    return a - b;
+  });
+
+  let sum = 0;
+  let container = 0;
+  for (let i = 0; i < weight.length; i++) {
+    let compare = weight[i] + 4;
+    if (compare < sum) {
+      sum = sum + arr[i];
+    } else {
+      container++;
+    }
+  }
+  console.log(container);
+}
+let weight = [1, 2, 3, 21, 7, 12, 14, 21];
+priyanka_And_Toys(weight);
+// Wrong Answer---
+
+//====================================================================
+
+function sansa_XOR(arr, current_Index) {
+  let len = arr.length;
+  let newArr = [];
+  let xor = 0;
+  // let current_Index = 0;
+  if (current_Index == len) {
+    return;
+  }
+
+  for (let i = current_Index; i < len; i++) {
+    let result = arr[i];
+    // console.log(result);
+    xor = xor ^ result;
+  }
+
+  sansa_XOR(arr, current_Index + 1);
+  //  console.log(newArr);
+  //  console.log(newArr);
+  console.log(xor);
+}
+let arr = [1, 2, 3];
+let current_Index = 0;
+sansa_XOR(arr, current_Index);
+
+// wrong answer---
+
+//======================================================================
+
+function sansa_(arr) {
+  let n = arr.length;
+  let newArr = [];
+  let xor = 0;
+  for (let i = 0; i < n; i++) {
+    //This loop will sele_mentct start ele_mentment
+
+    for (
+      let j = i;
+      j < n;
+      j++ //This loop will sele_mentct end ele_mentment
+    ) {
+      for (
+        let k = i;
+        k <= j;
+        k++ ///////////////// //This loop will print ele_mentment from start to end
+      ) {
+        //  console.log(arr[k]);
+        newArr.push(arr[k]);
+      }
+      console.log('\n');
+    }
+  }
+  for (let i = 0; i < newArr.length; i++) {
+    xor = xor ^ newArr[i];
+  }
+  console.log(xor);
+  // console.log(newArr);
+}
+let arr = [1, 2, 3];
+sansa_(arr);
+//wrorng answer------
+
+//=========================================================================
+
+function sum_vs_Xor(n) {
+  let count = 0;
+  for (let i = 0; i <= n - 1; i++) {
+    if ((n + i == n) ^ i) {
+      count++;
+    }
+  }
+  console.log(count);
+}
+let n = 4;
+sum_vs_Xor(n);
+
+//=========================================================================
+
+function sumXor(n) {
+  let count = 0;
+  let bin = n.toString(2);
+  for (let i = 0; i < bin.length; i++) {
+    if (bin[i] == 0) {
+      count++;
+    }
+  }
+  if (n == 0) {
+    count = 0;
+  }
+  // let ress = Math.pow(2, count);
+  console.log(2 ** count);
+}
+let n = 4;
+sumXor(n);
+
+//=======================================================
+// Day-4-----
+//-----------
+//=======================================================
+function pangram_Sandeep(str) {
+  let len = str.length;
+  let for_Comparing = 'abcdefghijklmnopqrstuvwxyz';
+  // console.log(len);
+  let without_space = '';
+  if (len < 26) {
+    return 'not pangram';
+  }
+  let small_Letter = str.toLowerCase();
+  for (let i = 0; i < small_Letter.length; i++) {
+    if (small_Letter[i] != ' ') {
+      without_space = without_space + small_Letter[i];
+    }
+  }
+  let count = 0;
+  for (let i = 0; i < without_space.length; i++) {
+    for (let j = 0; j < without_space.length; j++) {
+      if (for_Comparing.charAt(i) == without_space.charAt(j)) {
+        count++;
+        break;
+      }
+      // break;
+    }
+  }
+  console.log(count);
+  // console.log(without_space);
+  // console.log(for_Comparing);
+
+  // console.log(small_Letter);
+  // console.log(without_space);
+  //-----------------------------------------------------
+
+  // let doing_split = small_Letter.split(' ').join();
+  // console.log(doing_split);
+  // console.log(typeof doing_split); // string
+  // console.log(doing_split.length); //
+}
+
+let str = 'The quick brown fox jumps over the lasy dogs';
+pangram_Sandeep(str);
+
+//============================================
+// for (let i = 0; i < 5; i++) {
+//   for (let j = 0; j < 5; j++) {
+//     if (j == 2) {
+//       break;
+//     }
+//   }
+// }
+
+//========================================================================
+
+function find_Digit(n) {
+  let count = 0;
+  let temp_Num = n;
+  while (n != 0) {
+    let last_Digit = n % 10;
+    if (temp_Num % last_Digit == 0) {
+      count++;
+    }
+    n = Math.floor(n / 10);
+  }
+  console.log(count);
+}
+
+let n = 124;
+find_Digit(n);
+
+//============================================================================
+
+// Day-5 , Friday
+//----------------------
+//----------------------
+
+function fair_Rotations(arr) {
+  let bread_Count = 0;
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] % 2 != 0) {
+      arr[i] = arr[i] + 1;
+      arr[i + 1] = arr[i + 1] + 1;
+      bread_Count = bread_Count + 2;
+    }
+  }
+  if (arr[arr.length - 1] % 2 != 0) {
+    console.log('NO');
+  } else {
+    console.log(bread_Count);
+  }
+}
+
+let arr = [2, 3, 4, 5, 6];
+fair_Rotations(arr);
+
+//===================================================================
+
+// function big_Sorting(unsorted) {
+//   return unsorted.sort((val_A, val_B) => {
+//     if (val_A.length == val_B.length) {
+//       return val_A > val_B ? 1 : -1;
+//     }
+
+//     return val_A.length - val_B.length;
+//   });
+// }
+// let arr = [31415926535897932384626433832795, 1, 3, 10, 3, 5];
+// big_Sorting(arr);
+//========================================================================
+
+function sum_VS_XOR(n) {
+  let binNum = n.toString(2);
+  //  console.log(typeof binNum); // it is string. so we can iterate the througth the loop.
+  let len = binNum.length;
+  // console.log(len); // 3 [number of bit].
+  let unsetbit_Zero = 0;
+  let setbit_One = 0;
+  for (let i = 0; i < len; i++) {
+    if (binNum[i] % 2 == 0) {
+      unsetbit_Zero++;
+    } else {
+      setbit_One++;
+    }
+  }
+  if (n == 0) {
+    unsetbit_Zero = 0;
+  }
+
+  console.log(2 ** unsetbit_Zero);
+
+  // console.log(unsetbit_Zero); // 2
+  // console.log(setbit_One);  // 1
+}
+let n = 4;
+sum_VS_XOR(n);
+
+// Explanation:- 1 // formula is :-- A+B=A^B+A&B
+//  n=5
+// binary of 5 number
+//  1   0   1   // logic is here how many type you can make a zero
+//  0  0/1  0
+// --------------
+//  0   0    0
+// --------------
+// we can say if you hava 1 then you can make a zero only one ways
+// result will be  1*
+// next - in case of 0 the we can make a zero two ways
+//  1*2=2
+//
+// Explanation 02:--
+//  n=4
+//  binary of 4 number
+//  1   0    0   //  logic is here how many type you can make a zero
+//  0  0/1  0/1
+//---------------
+//  0   0    0
+//----------------
+//  1*2*2==4
+//  ----------------
+//
+// 1   0   0
+// 0--> called as unsetbit ==2 unsetbit are there
+// 1--> callled as setbit =  1 setbit are there.
+
+//================================================================
+// question :- find the missing ele_mentment in given array.
+
+function missing_Number(arr) {
+  let len = arr.length + 1;
+  let xor_Temp = 0;
+  for (let i = 1; i <= len; i++) {
+    xor_Temp ^= i;
+  }
+  //   console.log(xor_Temp); // 1
+
+  for (let i = 0; i < arr.length; i++) {
+    xor_Temp = xor_Temp ^ arr[i];
+  }
+  console.log(xor_Temp); // answer missing number is 3
+}
+let arr = [1, 2, 3, 4, 5, 6, 7, 9];
+missing_Number(arr);
+
+
+//==========================================================================
+// Day-6 . Saturday--
+//-----------------------------------------
+// sansa xor --
+// given an array to find subarray of every ele_mentment of xor, and determine the values
+// of every ele_mentment xor..
+
+// given an array
+// let arr=[1,2,3];
+// what is subarray of the array.
+// like as [1],[2],[3],[1,2],[2,3],[1,2,3];
+
+// we write one more type with wothout array.
+//--------------------------------------------------
+//     1 /
+//     2 /
+//     3 /
+//    / 1, 2 /
+//   /  2, 3 /
+//     1, 2 /, 3
+// then you find the only 1 and 3 ele_mentment in given all subarray.
+// 1 and 3 ele_mentment will be remainig.
+// arr=[1,2,3];
+//      |   |
+// we can say index of ele_mentment 0 and 2 will be remaining.
+// so we can say if index%2==0 then take the xor , other wise take don't
+//---------------------------------------------------------------------
+// supose we take an array with even length of array.
+// let arr=[1,2,3,4]; then we can write all subarray of the array ele_mentment.
+// like as --
+//     1 /
+//     2 /
+//     3/
+//     4/
+//  /  1,  2/
+//     2/,  3/
+//     3,  4/
+//     1/,  2/,  3/
+//     2/,  3,  4/
+//     1/,  2/,  3/,  4/
+//
+// we can say if array length of even then every ele_mentment will be cancel out.
+// no ele_mentment will be remaining.
+//
+//-----------------------------------------------------------------------------------
+
+function sandeep_Birthdays(
+  black_Ball,
+  white_Ball,
+  black_Ball_Cost,
+  white_Ball_Cost,
+  convertor_
+) {
+  let min_cost = 0;
+  if (black_Ball_Cost == white_Ball_Cost && black_Ball == white_Ball) {
+    min_cost = black_Ball * black_Ball_Cost + white_Ball * white_Ball_Cost;
+    console.log(min_cost);
+  }
+  // console.log(min_cost); // 20 testcase 1
+  else if (black_Ball_Cost < convertor_ && white_Ball_Cost < convertor_) {
+    min_cost = black_Ball * black_Ball_Cost + white_Ball * white_Ball_Cost;
+    console.log(min_cost);
+  }
+  // console.log(min_cost); // 37 testcase 2
+  else if (black_Ball_Cost > white_Ball_Cost + convertor_) {
+    black_Ball_Cost = white_Ball_Cost + convertor_;
+    min_cost = black_Ball * black_Ball_Cost + white_Ball * white_Ball_Cost;
+    console.log(min_cost);
+  } else if (white_Ball_Cost > black_Ball_Cost + convertor_) {
+    white_Ball_Cost = black_Ball_Cost + convertor_;
+    min_cost = black_Ball * black_Ball_Cost + white_Ball * white_Ball_Cost;
+    console.log(min_cost);
+  } else {
+    min_cost = black_Ball * black_Ball_Cost + white_Ball * white_Ball_Cost;
+    console.log(min_cost);
+  }
+}
+let black_Ball = 3;
+let white_Ball = 3;
+let black_Ball_Cost = 1;
+let white_Ball_Cost = 9;
+let convertor_ = 2;
+sandeep_Birthdays(
+  black_Ball,
+  white_Ball,
+  black_Ball_Cost,
+  white_Ball_Cost,
+  convertor_
+);
+
+//=====================================================================================
+
+function string_Constrction(str) {
+  let p = '';
+  let cost = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] != p[i]) {
+      p = p + str.charAt(i);
+      cost++;
+    }
+  }
+  console.log(cost);
+  // console.log('String will be ' + p);
+}
+let str = 'abab';
+string_Constrction(str);
+
+//==========================================================================
+
+function palindrome_index(str) {
+  // let resv = '';
+  // for (let i = str.length - 1; i >= 0; i--) {
+  //   resv += str.charAt(i);
+  // }
+  // if (str == resv) {
+  //   console.log('-1');
+  // } else {
+  //   while(i)
+  // }
+
+  let i = 0;
+  let j = str.length - 1;
+  while (i < j) {
+    if (str.charAt(i) != str.charAt(j)) {
+      if (palindromeindexBySandeep(str, i, j - 1)) {
+        console.log(j);
+      } else {
+        console.log(i);
+      }
+      break;
+    }
+    i++;
+    j--;
+  } // while closing
+  if (i >= j) {
+    console.log('-1');
+  }
+}
+
+let str = 'aaab';
+palindrome_index(str);
+
+function palindromeindexBySandeep(str, i, j) {
+  while (i < j) {
+    if (str.charAt(i++) != str.charAt(j--)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+//====================================================================
+
+
+function palindrome_index(str) {
+  for (let i = 0; i < str.length; i++) {
+    let new_String = str.slice(0, i) + str.slice(i + 1);
+    if (is_Palindrome(new_String)) {
+      console.log(i);
+      break;
+    }
+  }
+  console.log('-1');
+}
+let str = 'aaa';
+palindrome_index(str);
+
+function is_Palindrome(str) {
+  let reves = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    reves = reves + str.charAt(i);
+  }
+  if (reves == str) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//========================================================================
+
+// let str = 'abcdef';
+// let new_String = str.slice(0, 2) + str.slice(2 + 1);
+// console.log(new_String);
+
+// console.log(str.slice(-1)); //f
+// console.log(str.slice(-2)); //ef
+
+// console.log(str.slice(0)); // abcdef
+// console.log(str.slice(1)); // bcdef
+
+// console.log(str.slice(0, 0)); // nothing will happend.
+
+// console.log(str.slice(0, 1)); // a
+
+// console.log(str.slice(0, 2)); //ab
+
+// console.log(str.slice(0, 3)); //abc
+
+// let str = 'peednas';
+// let res = str.split('').reverse().join('');
+// console.log(res);
+// let str = 'abcd';
+// console.log(str.slice(0 + 1)); // bcd
+// console.log(str.slice(0, 0)); // noting
+//===========================================================================
+function palindrome_Index(str) {
+  // let count = -1;
+  let re = str.split('').reverse().join('');
+  if (re == str) {
+    console.log('-1');
+  } else {
+    let i = 0;
+    for (i = 0; i < str.length; i++) {
+      let new_string = str.slice(0, i) + str.slice(i + 1);
+      if (palindrome_(new_string)) {
+        console.log(i);
+        break;
+      }
+    }
+    //console.log('-1');
+    if (i > str.length - 1) {
+      console.log('-1');
+    }
+  }
+}
+let str = 'bcbc';
+palindrome_Index(str);
+
+function palindrome_(new_string) {
+  return new_string == new_string.split('').reverse().join('') ? true : false;
+}
+
+
+//=================================================================================
+
+function palindrome_Index(s) {
+  let index = -1;
+  let len = s.length;
+
+  if (len >= 1 && len <= 100005 && s !== s.split('').reverse().join('')) {
+    for (let i = 0; i < len; i++) {
+      if (s.charAt(i) != s.charAt(len - 1 - i)) {
+        let s1 = s.slice(0, i) + s.slice(i + 1);
+        let s2 = s.slice(0, len - 1 - i) + s.slice(len - 1 - i + 1);
+
+        if (s1 === s1.split('').reverse().join('')) {
+          index = i;
+        } else if (s2 === s2.split('').reverse().join('')) {
+          index = len - 1 - i;
+        }
+        break;
+      }
+    }
+  }
+  console.log(index);
+}
+let s = 'abcda';
+palindrome_Index(s);
+
+//=================================================================
+// Day- 8 , Monday.
+//---------------------------
+
+function string_Constrctions(str) {
+  let newArr = [];
+  let set = new Set(str);
+  for (let set_ele_mentment of set) {
+    newArr.push(set_ele_mentment);
+  }
+
+  console.log(newArr);
+  console.log(newArr.length);
+}
+
+let str = 'abcd';
+string_Constrctions(str);
+for(int i=0;i<chapter;i++)
+		{
+			System.out.println("Enter Number of problem in chapter ?  ? ");
+			int chapterProblem=sc.nextInt();
+			int pgnumber=numberOFPages+1;
+			for(int j=1;j<=chapterProblem;j++)
+			{
+				if(j==pgnumber)
+					spacialProblem++;
+				if(j%problem==0 && j<chapterProblem)
+				{
+					pgnumber++;
+				}
+			}
+			numberOFPages=pgnumber;	
+		}
+		System.out.println(spacialProblem);
+
+//=======================================================================
+
+
+function sandeep_WorkBook(chapter, k, arr) {
+  let page = 1;
+  let chapter_in_Running = 1;
+  let spacial_Problem = 0;
+  let starting_page = 1;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (k == chapter_in_Running) {
+      spacial_Problem++;
+    } else {
+      page++;
+      chapter_in_Running += k;
+    }
+  }
+  console.log(spacial_Problem);
+}
+
+let chapter = 5;
+let no_of_Problem_Can_hold_Each_Page = 3;
+let no_of_Problem_inEach_Chapter = [4, 2, 6, 1, 10];
+sandeep_WorkBook(
+  chapter,
+  no_of_Problem_Can_hold_Each_Page,
+  no_of_Problem_inEach_Chapter
+);
+
+//===================================================================
+
+function sandeep_Book(arr, n_of_chapter, k) {
+  let spacial_page = 0;
+  let boundary_check = 0;
+  let page_Number = 1;
+  for (let i = 1; i <= n_of_chapter; i++) {
+    //for chapter
+    for (let j = 1; j <= arr[i]; j++) {
+      // for question.
+      if (j <= k * boundary_check) {
+        if (j == page_Number) spacial_page++;
+      } else {
+        page_Number++;
+        if (j == page_Number) spacial_page++;
+        boundary_check++;
+      }
+    }
+    page_Number++;
+    boundary_check = 1;
+  }
+  console.log(spacial_page);
+}
+let arr = [4, 2, 6, 1, 10];
+let n_of_chapter = 5;
+let k = 3;
+sandeep_Book(arr, n_of_chapter, k);
+
+//=============================================================================
+function flipping_Bits(number) {
+  let binary = number.toString(2);
+  let len = binary.length;
+  console.log(binary);
+  let flipting = '';
+  let bit_32_ = '00000000000000000000000000000000';
+  console.log('Bit:- ' + bit_32_.length);
+  //  console.log(~binary.toString(2));
+  // for(let i=0;i<binary.length;i++){
+  //     if(binary[i]==0){
+
+  //     }
+  // let len = 32 - binary.length;
+  // console.log(len);
+  for (let i = 0; i < bit_32_.length - len; i++) {
+    flipting = flipting + bit_32_[i];
+  }
+  // console.log(flipting);
+  for (let i = 0; i < binary.length; i++) {
+    flipting = flipting + binary[i];
+  }
+  console.log(flipting);
+  console.log(typeof flipting);
+  let flip = '';
+  for (let i = 0; i < flipting.length; i++) {
+    if (flipting[i] === '0') {
+      flip = flip + '1';
+    } else {
+      flip = flip + '0';
+    }
+  }
+  console.log(flip); // 11111111111111111111111111110110
+  // console.log(parseInt(toString(flip, 2)));
+  let decimal = parseInt(flip, 2);
+  // parseInt(binary,radix); // may be radix will be any think may be decimal hexa,ocatal anything
+  // will be there he will change as your requirement.
+  console.log(decimal);
+}
+let n = 9;
+flipping_Bits(n);
+
+//========================================================
+// let bin = '1001';
+// let decimal = parseInt(bin, 2);
+// console.log(decimal);
+//====================================================
+// let n = 9;
+// let binary = n.toString(2);
+// console.log(binary); // 1001
+// let newStr = '';
+// for (let i = 0; i < binary.length; i++) {
+//   if (binary[i] === '0') {
+//     newStr = newStr + '1';
+//   } else {
+//     newStr = newStr + '0';
+//   }
+// }
+// console.log(newStr); // 0110
+
+//==========================================================
+// let n = 9;
+// let va = n.toString(2);
+// for (let i = 0; i < va.length; i++) {
+//   if (va[i] === '0') {
+//     va[i] = '1';
+//   } else {
+//     va[i] = 0;
+//   }
+// }
+// console.log('0'.repeat(2 - va.length) + va);
+
+//=========================================================
+
+// let n = 9;
+// let binary = n.toString(2);
+// console.log(binary);
+// //let newString = '';
+// // let i = 0;
+// // console.log(i ^ 1);
+// for (let i = 0; i < binary.length; i++) {
+//   binary[i] = binary[i] ^ 1;
+// }
+// console.log(binary);
+
+// for (let i = 0; i < binary.length; i++) {
+//   if (binary[i] === '0') {
+//     newString[i] = '1';
+//   } else {
+//     newString[i] = '0';
+//   }
+// }
+// console.log(newString);
+
+//===============================================================
+// Day -9, Monday // 12/07/2022
+//---------------------------------------------------------------
+// let bin = '1001';
+// let flip = '';
+// for (let i = 0; i < bin.length; i++) {
+//   if (bin[i] ^ (0 == 0)) {
+//     flip = flip + 1;
+//   } else {
+//     flip = flip + 0;
+//   }
+//   // console.log(flip);
+// }
+// console.log(flip);
+
+//=========================================================================
+
+
+function missing_Number(arr, actal_Arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; ) {
+    for (let j = 0; j < actal_Arr.length; ) {
+      if (arr[i] == actal_Arr[j]) {
+        j++;
+      } else {
+        // result.push(actal_Arr[j]);
+        j++;
+        i++;
+      }
+    }
+  }
+  result.sort(function (a, b) {
+    return a - b;
+  });
+  console.log(result);
+}
+let arr = [7, 2, 5, 3, 5, 3];
+let actal_Arr = [7, 2, 5, 4, 6, 3, 5, 3];
+missing_Number(arr, actal_Arr);
+
+//============================================================
+// function missing_Number(arr, actal_Arr) {
+//   // arr.sort(function (a, b) {
+//   //   return a - b;
+//   // });
+//   // actal_Arr.sort(function (a, b) {
+//   //   return a - b;
+//   // });
+//   // console.log(arr);
+//   // console.log(actal_Arr);
+//   let set1 = new Set(arr);
+//   let set2 = new Set(actal_Arr);
+//   console.log(set1);
+//   console.log(set2);
+// }
+// let arr = [7, 2, 5, 3, 5, 3];
+// let actal_Arr = [7, 2, 5, 4, 6, 3, 5, 3];
+// missing_Number(arr, actal_Arr);
+
+
+
+//===================================================================
+function missing_Number(arr, actal_Arr) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+
+  actal_Arr.sort(function (a, b) {
+    return a - b;
+  });
+
+  let set_1 = new Set(arr);
+  let set_2 = new Set(actal_Arr);
+  console.log(set_1);
+  console.log(set_2);
+
+  let _difference = new Set(set_1);
+  console.log(_difference);
+
+  for (let ele_ment of set_2) {
+    if (_difference.has(ele_ment)) {
+      _difference.delete(ele_ment);
+    } else {
+      _difference.add(ele_ment);
+    }
+  }
+  console.log('Set' + _difference);
+}
+let arr = [203, 204, 205, 206, 207, 208, 203, 204, 205, 206];
+let actal_Arr = [
+  203, 204, 204, 205, 206, 207, 205, 208, 203, 206, 205, 206, 204,
+];
+missing_Number(arr, actal_Arr);
+
+//========================================================
+// let arr_1 = [2, 3, 5, 7];
+// let new_Set = new Set();
+// let arr_2 = [2, 3, 4, 5, 6, 7];
+// let set_1 = new Set(arr_1);
+// let set_2 = new Set(arr_2);
+// for (let ele_ment_1 of set_1) {
+//   console.log(ele_ment_1);
+// }
+
+// console.log('===========================');
+// for (let ele_ment_2 of set_2) {
+//   console.log(ele_ment_2);
+//}
+// important Concept-------:-------
+//====================================================
+//====================================================
+//=====================================================
+//====================================================
+//===================================================
+//====================================================
+
+// const _difference = new Set(set_1);
+// for (const ele_mentm of set_2) {
+//   if (_difference.has(ele_mentm)) {
+//     _difference.delete(ele_mentm);
+//   } else {
+//     _difference.add(ele_mentm);
+//   }
+// }
+// // return _difference;
+// console.log(_difference);
+
+//========================================================
+//========================================================
+//===========================================================
+//=============================================================
+
+
+function missing_Number(arr, brr) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+
+  brr.sort(function (a, b) {
+    return a - b;
+  });
+  let diff_1 = new Set();
+  for (let i = 0; i < arr.length; i++) {
+    if (diff_1.has(arr[i])) {
+      diff_1.delete(arr[i]);
+    } else {
+      diff_1.add(arr[i]);
+    }
+  }
+  //  console.log(diff_1);
+  let diff_2 = new Set();
+  for (let i = 0; i < brr.length; i++) {
+    if (diff_2.has(brr[i])) {
+      diff_2.delete(brr[i]);
+    } else {
+      diff_2.add(brr[i]);
+    }
+  }
+  // console.log(diff_2)
+
+  let diff_3 = new Set(diff_1);
+  for (let ele_ment of diff_2) {
+    if (diff_3.has(ele_ment)) {
+      diff_3.delete(ele_ment);
+    } else {
+      diff_3.add(ele_ment);
+    }
+  }
+
+  console.log(diff_3);
+}
+
+let arr = [203, 204, 205, 206, 207, 208, 203, 204, 205, 206];
+let brr = [203, 204, 204, 205, 206, 207, 205, 208, 203, 206, 205, 206, 204];
+missing_Number(arr, brr);
+
+//===================================================================================
+// DAY-10, 14-07-2022
+// THRUSDAY
+//==================================================================================
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+function frequencyFind(arr) {
+  // let visited = Array.from({ length: arr.length }, (_, i) => false);
+  // let again_visited = Array.from({ length: arr.length }, i => false);
+
+  let count = []; // it is object type.
+  arr.forEach(element => {
+    count[element] ? count[element]++ : (count[element] = 1);
+  });
+  console.log(count);
+  //---------------------------------------------------------------
+  //Object.values(count).forEach(val => console.log(val));
+  for (let e of Object.values(count)) {
+    console.log(e);
+  }
+  // 1 2 2 1
+  //----------------------------------------------------------------
+
+  for (let ee of Object.keys(count)) {
+    console.log(ee);
+  }
+  // 2 3 5 7
+  //----------------------------------------------------------------
+
+  //==============================================================================
+  //==============================================================================
+  //==============================================================================
+  //==============================================================================
+  //console.log(typeof count);
+  // for (let i = 0; i < count.length; i++) {
+  //   if (count[i] == undefined) {
+  //     continue;
+  //   }
+  //   console.log(count[i] + ' ');
+  // }
+
+  // for (let el of count) {
+  //   // console.log(el);
+  //   if (count[el] == undefined) {
+  //     continue;
+  //   } else {
+  //     console.log(el);
+  //   }
+  // }
+}
+let arr = [7, 2, 5, 3, 5, 3];
+frequencyFind(arr);
+//===============================================================================
+
+function missing_Number(arr, brr) {
+  let count_1 = []; // object
+  brr.forEach(ele => {
+    count_1[ele] ? count_1[ele]++ : (count_1[ele] = 1);
+  });
+  console.log(count_1);
+  let count_2 = [];
+  arr.forEach(elem => {
+    count_2[elem] ? count_2[elem]++ : (count_2[elem] = 1);
+  });
+  console.log(count_2);
+  let res = [];
+}
+
+let arr = [203, 204, 205, 206, 207, 208, 203, 204, 205, 206];
+let brr = [203, 204, 204, 205, 206, 207, 205, 208, 203, 206, 205, 206, 204];
+missing_Number(arr, brr);
+
+//===============================================================================
+function unknown_Array(arr, brr) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  brr.sort(function (a, b) {
+    return a - b;
+  });
+
+  for (let ele of arr) {
+    if (brr.includes(ele)) {
+      brr.splice(brr.indexOf(ele), 1);
+      //brr.splice(brr.indexOf(ele),1);
+    }
+  }
+  let sorttedOrder = brr.sort(function (a, b) {
+    return a - b;
+  });
+  let set = new Set(sorttedOrder);
+  let res = Array.from(set); // nice properties.
+  console.log(res);
+}
+let arr = [203, 204, 205, 206, 207, 208, 203, 204, 205, 206];
+let brr = [203, 204, 204, 205, 206, 207, 205, 208, 203, 206, 205, 206, 204];
+unknown_Array(arr, brr);
+
+//=======================================================================================
+//sherlock valid string:---
+//----------------------------
+// test Case:-1
+// s="aabbcc";
+//  a---2
+//  b---2
+//  c---2
+// we can say. condition:- 1
+// all frequency are same so it is valid string.
+//-----------------------------------------------------
+// test case :-2
+// s="aabccdd"
+//  a----2
+//  b----1
+//  c----2
+//  d----2
+// all frequency are same but only one frequency are 1
+// so will say it is valid string.
+//-----------------------------------------------------
+// test case :-3
+// s="aabbccddd";
+//   a---2
+//   b---2
+//   c---2
+//   d---3
+// all frequency are same but only one frequency are higher by 1
+//   so it will valid string.
+//---------------------------------------------------------------
+// s="abcdeedcbae";
+//  a---2
+//  b---2
+//  c---2
+//  e---3
+//  d---2
+// frequency=[2,2,2,3,2];
+// after sorting
+// freqency = [2,2,2,2,3];
 */
+function sandeepValidString(str) {
+  let frequency_ = [];
+  let newArr = [];
+  str.split('').forEach(element => {
+    frequency_[element] ? frequency_[element]++ : (frequency_[element] = 1);
+  });
+  //  console.log(frequency_);
+  for (let ele in frequency_) {
+    newArr.push(frequency_[ele]);
+  }
+  // console.log(newArr);
+
+  newArr.sort(function (a, b) {
+    return a - b;
+  });
+
+  let len = newArr.length;
+  let first = newArr[0];
+  let second = newArr[1];
+  let secondLast = newArr[newArr.length - 2];
+  let last = newArr[newArr.length - 1];
+
+  if (len == 1) {
+    console.log('YES');
+  }
+  if (first == last) {
+    // all frequency are same{
+    console.log('YES');
+  }
+  if (first == 1 && second == last) {
+    // all are same but only one is 1
+    console.log('YES');
+  }
+  if (first == second && second == secondLast && secondLast == last - 1) {
+    // all freuency are same but only one is higher by 1
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+  // console.log('NO');
+}
+let str = 'abcdefghhgfedecba';
+sandeepValidString(str);
+
+//==========================================================================
+function twoStrings(s1, s2) {
+  let set1 = new Set(s1);
+  let set2 = new Set(s2);
+  // console.log(set1);
+  // console.log(set2);
+  let result = [];
+  for (let i of set2) {
+    if (set1.has(i)) {
+      result.push(i);
+    }
+  }
+  // console.log(result);
+  if (result.length === 0) {
+    console.log('NO');
+  } else {
+    console.log('YES');
+  }
+}
+let s1 = 'be';
+let s2 = 'cat';
+twoStrings(s1, s2);
+
+//===========================================================================
