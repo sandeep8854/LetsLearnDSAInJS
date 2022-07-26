@@ -551,7 +551,7 @@ allrepeatingExecptTwo(arr);
 //------------------------------------------------------------
 // remaining element will be there like as :- 2 and 4
 //---------------------------------------------------------------
-
+*/
 function oneRepeatingOneMissing(arr) {
   let xor = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -606,7 +606,7 @@ function oneRepeatingOneMissing(arr) {
 
 let arr = [3, 6, 2, 5, 1, 2, 7];
 oneRepeatingOneMissing(arr);
-*/
+
 //================================================================
 // All repeating Three times Execpt one.
 // 1- all number occures three times except one.
@@ -638,3 +638,80 @@ function allReetingThreeTimesExceptOne(arr) {
 let arr = [10, 20, 30, 40, , 10, 20, 20, 10, 30, 30];
 allReetingThreeTimesExceptOne(arr);
 //console.log(`Common Number Among are :- ${result}`);
+
+//=========================================================================
+
+function sum_VS_XOR(n) {
+  let binNum = n.toString(2);
+  //  console.log(typeof binNum); // it is string. so we can iterate the througth the loop.
+  let len = binNum.length;
+  // console.log(len); // 3 [number of bit].
+  let unsetbit_Zero = 0;
+  let setbit_One = 0;
+  for (let i = 0; i < len; i++) {
+    if (binNum[i] % 2 == 0) {
+      unsetbit_Zero++;
+    } else {
+      setbit_One++;
+    }
+  }
+  if (n == 0) {
+    unsetbit_Zero = 0;
+  }
+
+  console.log(2 ** unsetbit_Zero);
+
+  // console.log(unsetbit_Zero); // 2
+  // console.log(setbit_One);  // 1
+}
+let n = 4;
+sum_VS_XOR(n);
+
+// Explanation:- 1 // formula is :-- A+B=A^B+A&B
+//  n=5
+// binary of 5 number
+//  1   0   1   // logic is here how many type you can make a zero
+//  0  0/1  0
+// --------------
+//  0   0    0
+// --------------
+// we can say if you hava 1 then you can make a zero only one ways
+// result will be  1*
+// next - in case of 0 the we can make a zero two ways
+//  1*2=2
+//
+// Explanation 02:--
+//  n=4
+//  binary of 4 number
+//  1   0    0   //  logic is here how many type you can make a zero
+//  0  0/1  0/1
+//---------------
+//  0   0    0
+//----------------
+//  1*2*2==4
+//  ----------------
+//
+// 1   0   0
+// 0--> called as unsetbit ==2 unsetbit are there
+// 1--> callled as setbit =  1 setbit are there.
+
+//================================================================
+// question :- find the missing element in given array.
+
+function missing_Number(arr) {
+  let len = arr.length + 1;
+  let xor_Temp = 0;
+  for (let i = 1; i <= len; i++) {
+    xor_Temp ^= i;
+  }
+  //   console.log(xor_Temp); // 1
+
+  for (let i = 0; i < arr.length; i++) {
+    xor_Temp = xor_Temp ^ arr[i];
+  }
+  console.log(xor_Temp); // answer missing number is 3
+}
+let arr = [1, 2, 3, 4, 5, 6, 7, 9];
+missing_Number(arr);
+
+//=========================================================================
