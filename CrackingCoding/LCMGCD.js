@@ -54,7 +54,7 @@ let arr = [2, 7, 3, 9, 4];
 let n = arr.length;
 let res = findLCM(arr, n);
 console.log('LCM:- ' + res); //252
-
+*/
 //============================================================
 // find gcd in given array.
 
@@ -72,37 +72,36 @@ function lcmArray(arr) {
   return ans;
 }
 
-let arr = [2, 4, 6, 8];
+let arr = [16, 32, 96];
 let res = lcmArray(arr);
 console.log('GCD :- ' + res); // 2
 //=============================================================
 
+// let arr = [12, 2, 1, 3, 2];
+// for (let i = 0; i < arr.length; i++) {
+//   let sub_arr = arr.slice(i, i + 1);
+//   console.log(i);
+//   console.log(i + 1);
+//   console.log(sub_arr);
+//   break;
+// }
 
-let arr = [12, 2, 1, 3, 2];
-for (let i = 0; i < arr.length; i++) {
-  let sub_arr = arr.slice(i, i + 1);
-  console.log(i);
-  console.log(i + 1);
-  console.log(sub_arr);
-  break;
-}
-*/
 //=============================================
 // find the index valuue.
-function twoSum(arr, target) {
-  for (let i = 0; i < arr.length; i++) {
-    let find = target - arr[i];
-    let index = arr.indexOf(find);
-    if (index != -1 && index != i) {
-      return [i, index];
-    }
-  }
-}
-let arr2 = [7, 9, 6, 11, 10];
-let target2 = 20;
-let arr = [2, 7, 11, 15];
-let target = 9;
-let arr1 = [3, 2, 4];
-let target1 = 6;
-let res = twoSum(arr2, target2);
-console.log(`find the index ${res}`);
+// function twoSum(arr, target) {
+//   for (let i = 0; i < arr.length; i++) {
+//     let find = target - arr[i];
+//     let index = arr.indexOf(find);
+//     if (index != -1 && index != i) {
+//       return [i, index];
+//     }
+//   }
+// }
+// let arr2 = [7, 9, 6, 11, 10];
+// let target2 = 20;
+// let arr = [2, 7, 11, 15];
+// let target = 9;
+// let arr1 = [3, 2, 4];
+// let target1 = 6;
+// let res = twoSum(arr2, target2);
+// console.log(`find the index ${res}`);
