@@ -551,7 +551,7 @@ allrepeatingExecptTwo(arr);
 //------------------------------------------------------------
 // remaining element will be there like as :- 2 and 4
 //---------------------------------------------------------------
-*/
+
 function oneRepeatingOneMissing(arr) {
   let xor = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -715,3 +715,82 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 9];
 missing_Number(arr);
 
 //=========================================================================
+
+// Get Bit:----
+//  get the third bit (position = 2) of the number.(n=0101) == (5)10 decimal number.
+//
+//step- 1 find the bit mask.   1<<2(position)
+//step- 2 perform the operation AND.
+//   1-
+//       1<<2
+//      0001<<2
+//     ----------------
+//       0100
+//------------------------
+// 2-       0 1 0 0
+//        & 0 1 0 1
+//-------------------------------
+//         0  1 0 0  |it is non zero number.
+//---------------------------------
+
+function getBit(n, pos) {
+  let bit_mask = 1 << pos;
+
+  if ((bit_mask & n) == 0) {
+    console.log('bit was zero');
+  } else {
+    console.log('Bit was one');
+  }
+}
+
+let n = 5;
+let pos = 3;
+getBit(n, pos);
+
+//===========================================================================
+
+// Set Bit:----
+//  get the first bit (position = 1) of the number.(n=0101) == (5)10 decimal number.
+//
+//step- 1 find the bit mask.   1<<1(position)
+//step- 2 perform the operation OR.
+//   1-
+//       1<<1
+//      0001<<1
+//     ----------------
+//       0010
+//------------------------
+// 2-       0 0 1 0
+//        | 0 1 0 1
+//-------------------------------
+//          0 1 1 1  | 7
+//---------------------------------
+*/
+function setBit(n, pos) {
+  let bit_mask = 1 << pos;
+
+  let newNum = bit_mask | n;
+  console.log(newNum);
+}
+
+let n = 5;
+let pos = 1;
+setBit(n, pos);
+//===========================================================
+
+function findtwoNuBit(arr) {
+  let xorOff = 0;
+  let xorOn = 0;
+  let bitMask = 1 << 1;
+  console.log(bitMask);
+  for (let i = 0; i < arr.length; i++) {
+    if ((bitMask & arr[i]) == 0) {
+      xorOff = xorOff ^ arr[i];
+    } else {
+      xorOn = xorOn ^ arr[i];
+    }
+  }
+  console.log(xorOff, xorOn);
+}
+let arr = [4, 3, 4, 3, 6, 7, 5, 6];
+findtwoNuBit(arr);
