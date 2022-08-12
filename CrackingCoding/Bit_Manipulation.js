@@ -14,7 +14,7 @@
 //=========================================================
 //console.log(`Welcome to Bit Manipulation`);
 //==========================================================
-/*
+
 function remob(s) {
   s = s.split(' ');
   let ans = [];
@@ -164,7 +164,7 @@ function OddOrEven(n) {
 OddOrEven(11);
 //=======================================================================
 
-// Question:- Given an array find the unique element.
+// Question:- Given an array find the unique element. find ele
 //           _
 //   A ^ 1 = A
 //   A ^ 0 = A
@@ -765,7 +765,7 @@ getBit(n, pos);
 //-------------------------------
 //          0 1 1 1  | 7
 //---------------------------------
-*/
+
 function setBit(n, pos) {
   let bit_mask = 1 << pos;
 
