@@ -100,7 +100,7 @@ function balancedString(str) {
     console.log('0');
   }
 }
-let str = 'positionnn';
+let str = 'newAitionnn';
 balancedString(str);
 
 //=============================================================================
@@ -454,13 +454,13 @@ function pickb(b) {
   b.sort(function (a, b) {
     return a - b;
   });
-  let position = 0;
+  let newAition = 0;
   let count = 1;
   let max = 0;
 
   //==============================================
   for (let i = 1; i < b.length; i++) {
-    let difference = b[i] - b[position];
+    let difference = b[i] - b[newAition];
     if (difference <= 1) {
       count++;
     }
@@ -469,7 +469,7 @@ function pickb(b) {
       if (count > max) {
         max = count;
       }
-      position = i;
+      newAition = i;
       count = 1;
     }
   }
@@ -1171,10 +1171,10 @@ console.log(40 & 23);
 // Javascript program to find bit-wise
 // & of all numbers from x to y.
 
-// Find position of MSB in n. For example
-// if n = 17, then position of MSB is 4.
+// Find newAition of MSB in n. For example
+// if n = 17, then newAition of MSB is 4.
 // If n = 7, value of MSB is 3
-function msbPos(n) {
+function msbnewA(n) {
   let msb_p = -1;
   while (n > 0) {
     n = n >> 1;
@@ -1190,11 +1190,11 @@ function andOperator(x, y) {
   let a = 0; // Initialize ault
 
   while (x > 0 && y > 0) {
-    // Find positions of MSB in x and y
-    let msb_p1 = msbPos(x);
-    let msb_p2 = msbPos(y);
+    // Find newAitions of MSB in x and y
+    let msb_p1 = msbnewA(x);
+    let msb_p2 = msbnewA(y);
 
-    // If positions are not same, return
+    // If newAitions are not same, return
     if (msb_p1 != msb_p2) break;
 
     // Add 2^msb_p1 to ault
@@ -1217,17 +1217,17 @@ console.log(andOperator(x, y));
 
 //============================================================================
 
-// function countPosi(a) {
-//   let msb_pos = -1;
+// function countnewAi(a) {
+//   let msb_newA = -1;
 //   while (a > 0) {
 //     a = a >> 1;
-//     msb_pos++;
+//     msb_newA++;
 //   }
-//   console.log('count the position ' + msb_pos);
+//   console.log('count the newAition ' + msb_newA);
 // }
 
 // let a = 60;
-// countPosi(a);
+// countnewAi(a);
 
 //============================================================================
 
@@ -1246,9 +1246,9 @@ console.log(andOperator(x, y));
 // findMostSignificantBit(n);
 
 // //=============================================================
-// // count the position of most signigificant bit.
+// // count the newAition of most signigificant bit.
 
-// function countMSBPosition(num) {
+// function countMSBnewAition(num) {
 //   let count = -1;
 //   num = Math.floor(num / 2);
 //   while (n != 0) {
@@ -1258,7 +1258,7 @@ console.log(andOperator(x, y));
 //   console.log(count);
 // }
 // let num = 60;
-// countMSBPosition(num);  // 5
+// countMSBnewAition(num);  // 5
 
 //===================================================
 
@@ -1699,7 +1699,7 @@ function fibo(n) {
 }
 let n = 5;
 if (n <= 0) {
-  console.log('Enter positive Number ? ');
+  console.log('Enter newAitive Number ? ');
 } else {
   for (let i = 0; i <= n; i++) {
     console.log(fibo(i));
@@ -3433,7 +3433,7 @@ missing_Number(b);
 // we can say index of ele_mentment 0 and 2 will be remaining.
 // so we can say if index%2==0 then take the xor , other wise take don't
 //---------------------------------------------------------------------
-// supose we take an bay with even length of bay.
+// sunewAe we take an bay with even length of bay.
 // let b=[1,2,3,4]; then we can write all subbay of the bay ele_mentment.
 // like as --
 //     1 /
@@ -4454,25 +4454,25 @@ greedy_Florist(b, no_of_friends);
 
 //===================================================================================
 // explantion:--
-//           1- who will take 112 position values
-//           (i) 119 will take the position.
-//            (ii) 108 will take the position.
-//            (iii) 60 may be take the position.
+//           1- who will take 112 newAition values
+//           (i) 119 will take the newAition.
+//            (ii) 108 will take the newAition.
+//            (iii) 60 may be take the newAition.
 //-----------------------------------------------------
-//           2- who will take 42 position
-//          (i) 83 may be take the position.
-//          (ii) 114 will take the position.
-//          (iii) 98 may be take the position values
+//           2- who will take 42 newAition
+//          (i) 83 may be take the newAition.
+//          (ii) 114 will take the newAition.
+//          (iii) 98 may be take the newAition values
 //--------------------------------------------------------
-//          3- who will take 56 position
-//         (i) 49 may be take the position.
-//         (ii) 15 may be take the position.
-//         (iii) 43 amy be take the position.
+//          3- who will take 56 newAition
+//         (i) 49 may be take the newAition.
+//         (ii) 15 may be take the newAition.
+//         (iii) 43 amy be take the newAition.
 //------------------------------------------------------------------
-//         4- who does take 115 position values.
-//        (i) 110 may be take the position.
-//        (ii) 78 may be take the position.
-//        (iii) 56 may be take the position.
+//         4- who does take 115 newAition values.
+//        (i) 110 may be take the newAition.
+//        (ii) 78 may be take the newAition.
+//        (iii) 56 may be take the newAition.
 //======================================================================
 function flipping_matrix(row, col) {
   let matrix = new bay(row);
@@ -4979,9 +4979,9 @@ function orgaining_container_ball(row, col) {
   });
 
   if (row_bay.join() == col_bay.join()) {
-    //  console.log('Possible');
+    //  console.log('newAsible');
   } else {
-    // console.log('Impossible');
+    // console.log('ImnewAsible');
   }
 }
 
@@ -5362,8 +5362,8 @@ function stange_Counter(time) {
   let result = 0;
   while (1) {
     if (time_start <= time && time <= time_end) {
-      let position = time - time_start;
-      console.log(value - position);
+      let newAition = time - time_start;
+      console.log(value - newAition);
       break;
     } else {
       time_start = time_end + 1;
@@ -5679,7 +5679,7 @@ function number_line_jumps(x1, v1, x2, v2) {
   //   we can say    2 jumps ---2 seconds
   //   we can say    3 jumps ---3 seconds
   //   we can say    4 jumps ---4 seconds
-  // distance=(v1*j)+x1  // (v1--number of jumps also called as speed*j(time)+starting position.)
+  // distance=(v1*j)+x1  // (v1--number of jumps also called as speed*j(time)+starting newAition.)
   // distance=(v2*j)+x2
   // x1+(v1*j)=x2+(v2*j)
   // we have to find  j only , j is time.
@@ -5699,9 +5699,9 @@ function number_line_jumps(x1, v1, x2, v2) {
   }
 }
 
-let x1 = 0; // starting position kangbo first
+let x1 = 0; // starting newAition kangbo first
 let v1 = 3; // number of jumps, kangaroo first
-let x2 = 4; // starting position kangaroo second.
+let x2 = 4; // starting newAition kangaroo second.
 let v2 = 2; // number of jumps kangaroo second.
 number_line_jumps(x1, v1, x2, v2);
 
@@ -5716,7 +5716,7 @@ number_line_jumps(x1, v1, x2, v2);
 //    36---> 2,3,4,6,9,12,18,36
 
 // find the common element:--- 6 , 12
-// only two element are common so print 2 is your anwser.
+// only two element are common so prlet 2 is your anwser.
 
 function between_Two_Set(a, b) {
   let resultLCM = gettingLCM(a); // 6
@@ -5791,7 +5791,7 @@ function gettingGCD(b) {
 // let str = 'aaabccddd';
 // super_reducing_string(str);
 //==================================================================================
-*/
+
 function super_reducing_string(str) {
   let split = str.split('');
   let stack = [];
@@ -5820,3 +5820,2558 @@ let str = 'aa';
 super_reducing_string(str);
 
 //============================================================================================
+
+function bill_Division(arr, bill, b) {
+  let b_actual = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (i == bill) {
+      continue;
+    } else {
+      b_actual = b_actual + arr[i];
+    }
+  }
+  // console.log(b_actual);
+  let actual_charged = b_actual / 2;
+  // console.log(actual_charged);
+  if (actual_charged == b) {
+    console.log('Bon Appetit');
+  } else {
+    console.log(b - actual_charged);
+  }
+}
+
+let arr = [3, 10, 2, 9];
+let bill = 1; // as a index anna did not eat.
+let b = 7; // anna already paid it.
+bill_Division(arr, bill, b);
+
+//===================================================================================
+
+
+
+function anagram(str) {
+  let l = str.length;
+  if (l % 2 == 1) {
+    console.log(-1);
+  } else {
+    let s1 = '';
+    let s2 = '';
+    for (let i = 0; i < l / 2; i++) {
+      s1 = s1 + str[i];
+    }
+    for (let i = l / 2; i < l; i++) {
+      s2 = s2 + str[i];
+    }
+
+    // console.log(s1);
+    // console.log(s2);
+    let count = 0;
+    let res_1 = s1.split('').sort().join('');
+    let res_2 = s2.split('').sort().join('');
+
+    console.log(res_1);
+    console.log(res_2);
+    for (let i = 0; i < res_1.length; i++) {
+      if (res_1[i] != res_2[i]) {
+        count++;
+      }
+    }
+    console.log(count);
+  }
+}
+
+let str = 'hhpddlnnsjfoyxpciioigvjqzfbpllssuj';
+//let str = 'abc';
+anagram(str);
+
+//==========================================================================
+function anagram(str) {
+  let l = str.length;
+
+  if (l % 2 == 1) {
+    console.log(-1);
+  } else {
+    let s1 = '';
+    let s2 = '';
+    for (let i = 0; i < l / 2; i++) {
+      s1 = s1 + str[i];
+    }
+    for (let i = l / 2; i < l; i++) {
+      s2 = s2 + str[i];
+    }
+    console.log(s1);
+    console.log(s2);
+    let st1 = s1.split('');
+    let st2 = s2.split('');
+    let count = 0;
+    let flag = false;
+    for (let i = 0; i < s1.length; i++) {
+      if (st2.includes(st1[i])) {
+      }
+    }
+    console.log(st1);
+  }
+}
+
+let str = 'hhpddlnnsjfoyxpciioigvjqzfbpllssuj';
+//let str = 'aaabbb';
+anagram(str);
+
+//====================================================================
+
+function fre_(str) {
+  let l = str.length;
+  let s1 = '';
+  let s2 = '';
+
+  if (l % 2 == 1) {
+    console.log(-1);
+  } else {
+    for (let i = 0; i < l / 2; i++) {
+      s1 = s1 + str[i];
+    }
+    for (let i = l / 2; i < l; i++) {
+      s2 = s2 + str[i];
+    }
+
+    let st1 = s1.split('');
+    let st2 = s2.split('');
+
+    let map = new Map();
+    for (let i = 0; i < st1.length; i++) {
+      let el = st1[i];
+      if (map[el]) {
+        map[el]++;
+      } else {
+        map[el] = 1;
+      }
+    }
+    console.log(map);
+    for (let ell of st2) {
+      map[ell]--;
+    }
+    console.log(map);
+
+    let arr = [];
+    for (let i in map) {
+      if (map[i] > 0 || map[i] == NaN) {
+        arr.push(map[i]);
+      }
+    }
+
+    //  console.log(arr);
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+    console.log(sum);
+    //return sum;
+  }
+}
+let str = 'aaabbb';
+fre_(str);
+
+//==================================================================================
+
+function cut_and_sticks(arr) {
+  let l = arr.length;
+  let result = [];
+  let zeroCount = 0;
+  while (zeroCount < l) {
+    result.push(l - zeroCount);
+    // let min = Math.min(...arr);
+    let min = 1001;
+    for (let i = 0; i < arr.length; i++) {
+      if (min > arr[i] && arr[i] > 0) {
+        min = arr[i];
+      }
+    }
+    for (let i = 0; i < arr.length; i++) {
+      arr[i] = arr[i] - min;
+      if (arr[i] == 0) {
+        zeroCount++;
+      }
+    }
+  }
+  console.log(result);
+}
+let arr = [5, 4, 4, 2, 2, 8];
+cut_and_sticks(arr);
+
+
+//=============================================================================
+let n = 88209;
+let no = String(n);
+// console.log(no);
+// console.log(typeof no);
+// console.log(no.length);
+let sum_1 = '';
+for (let i = 0; i < Math.floor(no.length / 2); i++) {
+  sum_1 += no[i];
+}
+console.log(sum_1);
+let sum_2 = '';
+for (let i = Math.floor(no.length / 2); i < no.length; i++) {
+  sum_2 += no[i];
+}
+console.log(sum_2);
+let final = parselet(sum_1) + parselet(sum_2);
+console.log(final);
+
+// let sum_1 = parselet(Math.floor(no.length / 2));
+
+// Dattatreya Ramchandra Kaprekar :-------  दत्तात्रेय रामचंद्र कापरेकर
+//---------------------------------------------------------------------------
+
+function dattatreya_Ramchandra_Kaprekar(p, q) {
+  let kkaprekar = [];
+  // Kaprekar.push(1);
+  for (let i = p; i <= q; i++) {
+    let po = Math.pow(i, 2);
+    let no = String(po);
+
+    let sum_1 = '';
+    for (let i = 0; i < Math.floor(no.length / 2); i++) {
+      sum_1 += no[i];
+    }
+    //console.log(sum_1);
+    let sum_2 = '';
+    for (let i = Math.floor(no.length / 2); i < no.length; i++) {
+      sum_2 += no[i];
+    }
+    //console.log(sum_2);
+
+    let final = parselet(sum_1) + parselet(sum_2);
+    if (final == i) {
+      kkaprekar.push(final);
+    }
+    sum_1 = '';
+    sum_2 = '';
+    if (i == 1) {
+      kkaprekar.push(1);
+    }
+  }
+
+  if (kkaprekar.length == 0) {
+    // return 'INVALID RANGE';
+    console.log('INVALID RANGE');
+  } else {
+    let res = '';
+    for (let i = 0; i < kkaprekar.length; i++) {
+      res = res + kkaprekar[i] + ' ';
+    }
+    console.log(res);
+  }
+}
+
+let p = 100;
+let q = 300;
+dattatreya_Ramchandra_Kaprekar(p, q);
+
+//===============================================================================
+
+
+function cut_(arr) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  let res = [];
+  let i = 0;
+  while (i < arr.length) {
+    res.push(arr.length - i);
+    while (arr[i] == arr[i + 1]) {
+      i++;
+    }
+    i++;
+  }
+  console.log(res);
+}
+
+let arr = [5, 4, 4, 2, 2, 8];
+cut_(arr);
+
+//============================================================================
+
+// Explanations:--
+//                                      a b c
+//                                -----/----\-----
+//
+//
+//               a b c                     b a c                  c b a
+//
+//        a b c          a c b        b a c    b c a           c b a    c a b
+//
+// str="abc"  [abc][acb][bac][bca][cba][cab];
+// method - 1
+//  1- generate all the permutations  of the given string.
+//  2- check it contains palindrome string.
+//--------------------------------------------------------------------
+//note:- he taking more time and more space so bruth force algo will not work.
+//
+// method -2 in case of palindrome--
+// 1- If the length of string is even number, frequency of all the alphabets
+//    should be even.
+// 2- if length of string is odd number : frequency of all the alphabets should be
+//    be even, except one.
+//------------------------------------------------------------------------------
+// example:--
+//   anna                   [a:2,n:2]
+//   noon                   [n:2,o:2]
+//   level                  [e:2,l:2,v:1]
+//   madam                  [m:2,a:2,d:1]
+//   repaper                [r:2,e:2,p:2,a:1]
+//   kinikkinik             [k:4,i:4,n:2]
+//----------------------------------------------------------------------------------
+// if string length have 3 so permutation will be 3!=3*2*1==6 substring will
+// if string length have 4 so permutation will be 4!=4*3*2*1=24 substring will
+// if string length have 5 so permutation will be 5!=5*4*3*2*1=120 substring will
+// if string length have 6 so permutation will be 6!=6*5*4*3*2*1=720 substring will
+//-------------------------------------------------------------------------------------
+
+function game_of_thrones_1(str) {
+  let map = new Map();
+  for (let i = 0; i < str.length; i++) {
+    let el = str[i];
+    if (map[el]) {
+      map[el]++;
+    } else {
+      map[el] = 1;
+    }
+  }
+  console.log(map);
+  let count = 0;
+  for (let ell in map) {
+    if (map[ell] % 2 == 0) {
+      continue;
+    } else {
+      count++;
+    }
+  }
+  if (count == 0 || count == 1) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+}
+
+let str = 'aaabbbb';
+game_of_thrones_1(str);
+
+//===============================================================================
+function happy_Lady_Bugs(str) {
+  let flag = false;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == '_') {
+      //  console.log('NO');
+      flag = true;
+      break;
+    }
+  }
+  for (let i = 0; i < str.length - 1; i++) {
+    if (str[i] == str[i + 1]) {
+      // console.log('NO');
+      flag = true;
+      break;
+    }
+  }
+
+  if (str.length == 1 || (str.length == 2 && str[0] == '_') || str[1] == '_') {
+    flag = true;
+  }
+
+  if (flag == true) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+}
+
+let str = 'RB_YBR';
+happy_Lady_Bugs(str);
+
+//==================================================================================
+function happy_Lady_Bugs(str) {
+  let result = happy_Lady_Bugs(str);
+}
+
+let str = 'RB_YBR';
+happy_Lady_Bugs(str);
+
+function happy_Lady_Bugs(str) {}
+
+
+//=================================================================
+function sub_Division(s, d, m) {
+  let count = 0;
+  for (let i = 0; i < s.length; i++) {
+    let c = 0;
+    for (let j = 0; j < m; j++) {
+      if (i + j < s.length) {
+        c = c + s[i + j];
+      }
+    }
+    if (c == d) {
+      count++;
+    }
+  }
+  console.log(count);
+}
+
+let arr = [1, 2, 1, 3, 2];
+let d = 3;
+let m = 2;
+sub_Division(arr, d, m);
+
+//=========================================================================
+
+function migrateBird(arr) {
+  let map = new Map();
+  let max = 0;
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    if (map[el]) {
+      map[el]++;
+      max = Math.max(max, map[el]);
+    } else {
+      map[el] = 1;
+      max = Math.max(max, map[el]);
+    }
+  }
+  console.log(max);
+  for (let i in map) {
+    if (map[i] == max) {
+      console.log(i);
+    }
+  }
+}
+
+//let arr = [1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4];
+let arr = [1, 4, 4, 4, 5, 3];
+migrateBird(arr);
+
+
+//========================================================================
+//_________________________________________________
+//    |  |   |  |   |   |   |   |   |    |   |   |
+//_________________________________________________
+//    -----x----------  <-y-> --------x----------- lets assuming
+//
+//   we can say sum of all the  element
+//   should be present.in
+//    x+y+x=sum of all element.
+//    2x+y=sum
+//    2x=sum-y --------- (i)
+//                   ^
+//   arr = 3, 7, 5, 10, 2, 7, 4, 2
+//         |        ^
+//         y            ^
+//    sum=3+7+5+10+2+7+4+2=
+//    ==40  put the 40 in equation number ,now take x=0 left side have nothing we just started
+//     x=0
+//-------------------------
+//     2*x=40-y          y means arr[i]
+//     2*0=40-3
+//     0==37   whitch are not equal to
+////---------------------------------------------
+//     now x become x+arr[y];  0+3==3
+//   2*3==40-7
+//   6==33    is not equal
+//---------------------------------------------
+//    now x become x+arr[y]  3+7=10
+//   2*10==40-5
+//   20==35  which is not equal
+//---------------------------------------------
+//   now x become  x+arr[y] 10+5=15
+//   2*15==sum-10
+//   30==40-10
+//   30===30
+//   sum of all elements to the left is equal to the sum of all elements to the right.
+//
+// so we prlet YES.
+//
+//
+//===========================================================================
+
+function sherlock_And_Array(arr) {
+  let sum = 0;
+  let flag = false;
+  let x = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  for (let y = 0; y < arr.length; y++) {
+    if (2 * x == sum - arr[y]) {
+      flag = true;
+    }
+    x = x + arr[y];
+  }
+  if (flag == true) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+}
+
+let arr = [5, 6, 8, 11];
+sherlock_And_Array(arr);
+
+//============================================================================
+// console.log('b' == 'b');
+// function g(grid) {
+//   let newArr = [];
+//   //console.log(grid.length); // 3
+//   for (let i = 0; i < grid.length; i++) {
+//     let text = grid[i].split('').sort();
+//     newArr.push(text);
+//   }
+
+//   let col = newArr[0].length;
+//   // console.log(col);  // 3
+//   for (let i = 0; i < newArr.length - 1; i++) {
+//     for (let j = 0; j < col; j++) {
+//       if (newArr[i][j] > newArr[i + 1][j]) {
+//         return 'NO';
+//       }
+//     }
+//   }
+//   return 'YES';
+// }
+
+//====================================================================================
+
+
+function grid_(row, col) {
+  let arr = [
+    'e',
+    'b',
+    'a',
+    'c',
+    'd',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'o',
+    'l',
+    'm',
+    'k',
+    'n',
+    't',
+    'r',
+    'p',
+    'q',
+    's',
+    'x',
+    'y',
+    'w',
+    'u',
+    'v',
+  ];
+
+  let matrixGrid = new Array(row);
+  for (let i = 0; i < row; i++) {
+    matrixGrid[i] = new Array(col);
+  }
+  console.log(matrixGrid);
+
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrixGrid[i][j] = arr[k];
+      k++;
+    }
+  }
+  console.log(matrixGrid);
+
+  let n = matrixGrid.length;
+
+  let newArr = [];
+  for (let i = 0; i < n; i++) {
+    let text = matrixGrid[i].split('').sort();
+    newArr.push(text);
+  }
+  console.log(newArr);
+}
+
+let row = 5;
+let col = 5;
+grid_(row, col);
+
+
+//=========================================================================
+function challenge(grid, n) {
+  let newArr = [];
+
+  sort_By_Row(grid, n);
+  // console.log(res);
+  // console.log(newArr);
+  // let col = newArr[0].length;
+  // console.log(col);
+
+  // for (let i = 0; i < newArr.length - 1; i++) {
+  //   for (let j = 0; j < col; j++) {
+  //     if (newArr[i][j] > newArr[i + 1][j]) {
+  //       // return "NO";
+  //       console.log('NO');
+  //     }
+  //   }
+  // }
+  // console.log('YES');
+//}
+
+// let grid = [
+//   ['a', 'd', 'c'],
+//   ['z', 'b', 'e'],
+//   ['e', 'f', 'g'],
+// ];
+// let n = grid.length;
+// challenge(grid);
+// function sort_By_Row(grid, n) {
+//   for (let i = 0; i < n; i++) {
+//     grid[i].split('').sort();
+//   }
+//   console.log(grid);
+
+
+//==========================================================
+function twice(gridBySand, n) {
+  let newArr = [];
+  for (let i = 0; i < n; i++) {
+    let text = gridBySand[i].toString().split('').sort();
+    newArr.push(text);
+  }
+  console.log(newArr.trim());
+  let col = newArr[0].length;
+  console.log(col);
+
+  let flag = true;
+  for (let i = 0; i < newArr.length; i++) {
+    for (let j = 0; j < col; j++) {
+      if (newArr[i][j] > newArr[i + 1][j]) {
+        flag = false;
+      }
+    }
+  }
+  if (flag == true) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+}
+
+let gridBySand = [
+  ['a', 'd', 'c'],
+  ['z', 'b', 'e'],
+  ['e', 'f', 'g'],
+];
+let n = gridBySand.length;
+
+twice(gridBySand, n);
+
+//===========================================================================
+
+function sherlock_square(a, b) {
+  // let count = 0;
+  // for (let i = a; i <= b; i++) {
+  //   let s = Math.sqrt(i);
+  //   if (Number.isleteger(s)) {
+  //     count++;
+  //   }
+  // }
+  // console.log(count);
+  let b_ = Math.floor(Math.sqrt(b));
+  console.log(b_);
+  let a_ = Math.ceil(Math.sqrt(a));
+  console.log(a_);
+  let res = b_ - a_;
+  console.log(res + 1);
+}
+
+let a = 24;
+let b = 49;
+sherlock_square(a, b);
+
+//===========================================================================
+
+
+function rotateArray(arr, k, quaries) {
+  while (k > 0) {
+    let last = arr.pop();
+    arr.unshift(last);
+    k--;
+  }
+  //arr.unshift(last);
+  // console.log(arr);
+  let newArr = [];
+  for (let i = 0; i < quaries.length; i++) {
+    // if (quaries[i] == i + 1) {
+    //   newArr.push(arr[i]);
+    // }
+    newArr.push(arr[quaries[i]]);
+  }
+  console.log(newArr);
+}
+
+let arr = [3, 4, 5];
+let k = 2;
+let quaries = [1, 2];
+rotateArray(arr, k, quaries);
+
+//==============================================================================
+
+//function equalize_Array(arr) {
+// let map = new Map();
+// let max = 0;
+// let maxx = max;
+// for (let i = 0; i < arr.length; i++) {
+//   let el = arr[i];
+//   if (map[el]) {
+//     map[el]++;
+//     maxx = Math.max(map[el], max);
+//   } else {
+//     map[el] = 1;
+//     //  maxx = Math.max(map[el], max);
+//   }
+// }
+// console.log(map);
+// let count = 0;
+// for (let i in map) {
+//   if (map[i] == 1) {
+//     count++;
+//   }
+// }
+// console.log(count);
+// console.log(arr);
+//   let count = 0;
+//   arr.sort(function (a, b) {
+//     return a - b;
+//   });
+//   let max = arr[arr.length - 1];
+//   console.log(arr);
+//   console.log(max);
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] != max) {
+//       count++;
+//     }
+//   }
+//   console.log(count);
+// }
+function equalize_Array(arr) {
+  let map = new Map();
+  let max = 0;
+  let maxx = max;
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    if (map[el]) {
+      map[el]++;
+      maxx = Math.max(map[el], max);
+    } else {
+      map[el] = 1;
+      maxx = Math.max(map[el], max);
+    }
+  }
+  //  console.log(maxx);
+  let keynu = 0;
+  for (let e in map) {
+    if (map[e] == maxx) {
+      keynu = e;
+    }
+  }
+  //console.log(keynu);
+
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == keynu) {
+      count++;
+    }
+  }
+  console.log(count);
+}
+//==========================================================================
+
+
+function equalize_Array(arr) {
+  let map = new Map();
+
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    if (map[el]) {
+      map[el]++;
+    } else {
+      map[el] = 1;
+    }
+  }
+  console.log(map);
+  let val = [];
+  for (let el in map) {
+    val.push(map[el]);
+  }
+  console.log(val);
+  let max = Math.max(...val);
+  console.log(max);
+  console.log(arr.length - max);
+}
+
+let arr = [1, 2, 2, 3];
+equalize_Array(arr);
+
+//=====================================================================
+
+function minimum_Distance(arr) {
+  // 1 1 3 4
+  let min = Number.MAX_VALUE;
+  let j = 1;
+  let res = 0;
+  //  let fi = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 1 + i; j < arr.length; j++)
+      if (arr[i] == arr[j]) {
+        res = j - i;
+        res = Math.min(res, min);
+      }
+  }
+  if (res == 0) {
+    return;
+  }
+  console.log(res);
+}
+
+let arr = [7, 1, 3, 4, 1, 7];
+minimum_Distance(arr);
+
+//===================================================================================
+// function minimum_Distance(arr) {}
+// let arr = [7, 1, 3, 4, 1, 7];
+// minimum_Distance(arr);
+
+//---------------------------------------------------------------------------------------
+function sortedSentence(s) {
+  let arr = s.split(' ');
+  let minValue = 1;
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (minValue === Number(arr[i][arr[i].length - 1])) {
+      let removeArr = arr[i].split('');
+      removeArr.splice(removeArr.length - 1, 1);
+      result.push(removeArr.join(''));
+      minValue++;
+      arr.splice(i, 1);
+      i = -1;
+    }
+  }
+  return result.join(' ');
+}
+
+let s = 'is2 sentence4 This1 a3';
+sortedSentence(str);
+
+//==================================================================================
+
+function love_Letters_mistrery(s) {
+  // let map = new Map();
+  // for (let i = 0; i < str.length; i++) {
+  //   let el = str[i];
+  //   if (map[el]) {
+  //     map[el]++;
+  //   } else {
+  //     map[el] = 1;
+  //   }
+  // }
+  // console.log(map);
+
+  let count = 0;
+  for (let i = 0; i < Math.floor(s.length / 2); i++) {
+    count = count + Math.abs(s.charCodeAt(i) - s.charCodeAt(s.length - 1 - i));
+  }
+  console.log(count);
+}
+
+let s = 'cde';
+love_Letters_mistrery(s);
+
+
+
+//====================================================================================
+function helloweenSales(p, d, m, s) {
+  let count = 0;
+  while (s >= p) {
+    count++;
+    s = s - p;
+    p = Math.max(p - d, m);
+  }
+  console.log(count);
+}
+
+let priceOffirstGame = 20;
+let discount = 3;
+let minCostOfGame = 6;
+let budget = 80;
+helloweenSales(priceOffirstGame, discount, minCostOfGame, budget);
+//========================================================================================
+ // for (let i = 0; i < arr.length - 2; i++) {
+  //   for (let j = i + 1; j < arr.length - 1; j++) {
+  //     for (let k = j + 1; k < arr.length; k++) {
+  //       let a = arr[i];
+  //       let b = arr[j];
+  //       let c = arr[k];
+
+  //       if (b + c > a && c + a > b && a + b > c) {
+  //         flag = true;
+  //         newArr = [];
+  //         //   newArr.push(a,b,c);
+  //         //=======================
+  //         newArr.push(a);
+  //         newArr.push(b);
+  //         newArr.push(c);
+  //         //=========================
+  //       }
+  //     }
+  //   }
+  // }
+
+
+function maximumPerimeter(arr) {
+  let flag = false;
+  let newArr = [];
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  let l = arr.length;
+  while (l > 0) {
+    let i = 0;
+    let a = arr[i];
+    let b = arr[i + 1];
+    let c = arr[i + 2];
+    if (b + c > a && c + a > b && a + b > c) {
+      flag = true;
+      newArr = [];
+      //   newArr.push(a,b,c);
+
+      newArr.push(a);
+      newArr.push(b);
+      newArr.push(c);
+      break;
+    }
+    l--;
+    i++;
+  }
+  //=======================================================
+
+  //===========================================================
+  if (flag == true) {
+    console.log(newArr);
+  } else {
+    console.log(-1);
+  }
+}
+
+let arr = [1, 2, 3];
+maximumPerimeter(arr);
+
+//================================================================================
+function maximumPerimeter(arr) {
+  let flag = false;
+  let newArr = [];
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+
+  for (let i = 0; i < arr.length - 2; i++) {
+    for (let j = i + 1; j < arr.length - 1; j++) {
+      for (let k = j + 1; k < arr.length; k++) {
+        let a = arr[i];
+        let b = arr[j];
+        let c = arr[k];
+
+        if (b + c > a && c + a > b && a + b > c) {
+          flag = true;
+          newArr = [];
+          //   newArr.push(a,b,c);
+          //=======================
+          newArr.push(a);
+          newArr.push(b);
+          newArr.push(c);
+          //=========================
+        }
+      }
+    }
+  }
+  let kingOfMirzapur = '';
+  if (flag == true) {
+    // for(let i=0;i<newArr.length;i++){
+    //     kingOfMirzapur=kingOfMirzapur+newArr[i]+ " ";
+    // }
+    //return kingOfMirzapur;
+    return newArr;
+  } else {
+    // console.log(-1);
+    return [-1];
+  }
+}
+
+let arr = [1, 2, 3];
+maximumPerimeter(arr);
+
+
+//==============================================================
+
+function alternativeCharacter(s) {
+  let count = 0;
+  for (let i = 0; i < s.length - 1; i++) {
+    if (s[i] == s[i + 1]) {
+      count++;
+    }
+  }
+  console.log(count);
+}
+
+let s = 'AAAA';
+alternativeCharacter(s);
+
+//====================================================================
+
+
+function beautifulString(s) {
+  let count = 0;
+  for (let i = 0; i < s.length - 2; i++) {
+    if (s[i] == '0' && s[i + 1] == '1' && s[i + 2] == '0') {
+      count++;
+    }
+  }
+  console.log(count);
+}
+
+let s = '0101010';
+beautifulString(s);
+
+//=======================================================================
+function utopianTree(n) {
+  let height = 1;
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 == 0) {
+      height = height + 1;
+    } else {
+      height = height * 2;
+    }
+  }
+  console.log(height);
+}
+let n = 1;
+utopianTree(n);
+
+//=================================================================================
+
+function beautifulTriplet(arr, d) {
+  let count = 0;
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  for (let i = 0; i < arr.length - 2; i++) {
+    for (let j = i + 1; j < arr.length - 1; j++) {
+      if (arr[j] - arr[i] == d) {
+        for (let k = j + 1; k < arr.length; k++) {
+          if (arr[k] - arr[j] == d) {
+            count++;
+          }
+        }
+      }
+    }
+  }
+  console.log(count);
+}
+
+let arr = [2, 2, 3, 4, 5];
+let d = 1;
+beautifulTriplet(arr, d);
+
+//=======================================================================================
+
+function picking_Number(arr) {
+  let count = 0;
+  // arr.sort(function (a, b) {
+  //   return a - b;
+  // });
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (Math.abs(arr[i] - arr[i + 1] <= 1)) {
+      count++;
+    }
+  }
+  console.log(count);
+}
+
+let arr = [4, 6, 5, 3, 3, 1];
+picking_Number(arr);
+//===================================================================================
+
+
+function picking_Number(arr) {
+  //  console.log(arr.length);
+  //  let map = new Map();
+  let tempArr = new Array(100).fill(0);
+  // console.log(tempArr);
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    if (tempArr[el]) {
+      tempArr[el]++;
+    } else {
+      tempArr[el] = 1;
+    }
+  }
+  //  console.log(tempArr);
+  let newArr = [];
+  for (let i of Object.values(tempArr)) {
+    newArr.push(i);
+  }
+  // console.log(newArr);
+  let max = Number.MIN_VALUE;
+  for (let i = 1; i < newArr.length; i++) {
+    max = Math.max(max, newArr[i] + newArr[i - 1]);
+  }
+  console.log(max);
+}
+
+let arr = [4, 6, 5, 3, 3, 1];
+//let arr = [1, 2, 2, 3, 1, 2];
+// let arr = [
+//   66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66,
+//   66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66,
+//   66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66,
+//   66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66,
+//   66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66,
+//   66, 66, 66, 66, 66,
+// ];
+picking_Number(arr);
+
+//===================================================================================
+
+function repeat_String(s) {
+  let strLength = s.length;
+  //count the number of a in given string.
+  let countA = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] == 'a') {
+      countA++;
+    }
+  }
+  console.log('A :' + countA);
+  // how many times actal string are repeated.
+  let repeatedTimes = Math.floor(n / strLength);
+  console.log(repeatedTimes);
+
+  // find the length of string left after reperating.
+  let stringLeftLength = n - strLength * repeatedTimes;
+  console.log(stringLeftLength);
+
+  // count the remaining repetitions.
+  let extraA = 0;
+  for (let i = 0; i < stringLeftLength; i++) {
+    if (s[i] == 'a') {
+      extraA++;
+    }
+  }
+  console.log(extraA);
+  let totalCount = repeatedTimes * countA + extraA;
+  console.log(totalCount);
+}
+
+let s = 'abcd';
+let n = 10;
+repeat_String(s, n);
+
+//=================================================================
+
+function hackerRankReperting(s) {
+  let orignal = 'hackerrank';
+  let set = new Set(s);
+  let flag = false;
+  // for (let i = 0; i < s.length; i++) {
+  //   if (s[i] == orignal[i]) {
+  //   }
+  // }
+  console.log(set);
+  let comp = '';
+  for (let el of set) {
+    comp = comp + el;
+  }
+  console.log(comp);
+  if (orignal == comp) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+}
+
+let s = 'hhaacckkekraraannk';
+hackerRankReperting(s);
+
+        let str = "hackerrank";
+        if (sandeepstr.length() < str.length()) {
+            return "NO";
+        }
+        let j = 0;
+        for (let i = 0; i < sandeepstr.length(); i++) {
+            if (j < str.length() && sandeepstr.charAt(i) == str.charAt(j)) {
+                    j++;
+            }
+        }
+        return (j == str.length() ? "YES" : "NO");
+
+//====================================================================
+function hackerRankReperting(s) {
+  let original = 'hackerrank';
+  if (s.length < original.length) {
+    console.log('NO');
+  } else {
+    let count = 0;
+    for (let i = 0; i < s.length; i++) {
+      if (count < original.length && s[i] == original[count]) {
+        count++;
+      }
+    }
+    // if (count == original.length ? 'YES' : 'NO');
+    if (count == original.length) {
+      console.log('YES');
+    } else {
+      console.log('NO');
+    }
+  }
+}
+
+let s = 'hhaacckkekraraannk';
+hackerRankReperting(s);
+
+//=====================================================================================
+
+function desinerViewerPDF(h, s) {
+  let max = Number.MIN_VALUE;
+  for (let i = 0; i < s.length; i++) {
+    let res = s.charCodeAt(i) - 97;
+    let val = h[res];
+    max = Math.max(max, val);
+  }
+  console.log(max * s.length);
+}
+
+let h = [
+  1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7,
+];
+let s = 'zaba';
+desinerViewerPDF(h, s);
+
+
+
+//====================================================================================
+
+function jumping_Cloud(arr) {
+  // let count = -1;
+  // for (let i = 0; i < arr.length; i++) {
+  //   if (arr[i] == 0) {
+  //     count++;
+  //   }
+  // }
+  // console.log(count);
+  let map = new Map();
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    if (map[el]) {
+      map[el]++;
+    } else {
+      map[el] = 1;
+    }
+  }
+  // console.log(map);
+  let arrNew = [];
+  for (let i of Object.values(map)) {
+    arrNew.push(i);
+  }
+  // console.log(arrNew);
+  for (let i = 0; i < 1; i++) {
+    console.log(arrNew[i] - 1);
+  }
+}
+let arr = [0, 0, 1, 0, 0, 1, 0];
+jumping_Cloud(arr);
+
+
+//================================================================================
+function jumping_Cloud(arr) {
+  let l = arr.length;
+  let count = -1;
+  for (let i = 0; i < arr.length; ) {
+    if (i + 2 < l && arr[i + 2] == 0) {
+      i += 2;
+    } else {
+      i++;
+    }
+    count++;
+  }
+  console.log(count);
+}
+
+let arr = [0, 0, 1, 0, 0, 1, 0];
+jumping_Cloud(arr);
+
+
+//=================================================================================
+let arr = [1, 2, 3];
+
+for (let i = 0; i < arr.length - 1; i++) {
+  for (let j = 0; j < arr.length; j++) {
+    console.log(i, j);
+  }
+}
+
+//===============================================================================
+
+function acmICPC(row, col) {
+  let arr = [1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1];
+  let matrix = new Array(row);
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+  // console.log(matrix);
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+  // console.log(matrix);
+
+  let maxTopicCount = 0;
+  let teamCount = 0;
+
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = i + 1; j < matrix.length; j++) {
+      let tempVari = oR_Operation(matrix[i], matrix[j]);
+      if (tempVari > maxTopicCount) {
+        maxTopicCount = tempVari;
+        teamCount = 1;
+      } else if (tempVari == maxTopicCount) {
+        teamCount++;
+      }
+    }
+  }
+  console.log([maxTopicCount, teamCount]);
+}
+let row = 4;
+let col = 5;
+acmICPC(row, col);
+
+function oR_Operation(st1, st2) {
+  let count = 0;
+  for (let i = 0; i < st1.length; i++) {
+    if (st1[i] == '1' || st2[i] == '1') {
+      count++;
+    }
+  }
+  return count;
+}
+
+//==================================================================================
+
+function chocolate_Feast(amount, cost_of_choco, min_num_wrap) {
+  let countChoco = 0;
+  while (amount > min_num_wrap || amount <= min_num_wrap) {
+    if (amount < cost_of_choco) {
+      amount = Math.floor(amount / min_num_wrap);
+    } else {
+      amount = Math.floor(amount / cost_of_choco);
+    }
+    amount = Math.floor(amount / cost_of_choco);
+    countChoco = countChoco + amount;
+    // amount = Math.floor(amount / min_num_wrap);
+    // countChoco = countChoco + amount;
+    if (amount < 1) {
+      break;
+    }
+  }
+  console.log(countChoco);
+}
+let amount = 15;
+let cost_of_choco = 3;
+let min_num_wrap = 2;
+chocolate_Feast(amount, cost_of_choco, min_num_wrap);
+
+ let counter = n / c;
+    let wrappers = counter; // 3
+    while (wrappers >= m) { // 3 > 2
+      let tmp = wrappers / m;
+      counter += tmp;
+      wrappers = wrappers - (tmp * m) + tmp;
+    }
+
+    return counter;
+
+//============================================================
+function chocolate_feast(n, c, m) {
+  let counter = Math.floor(n / c);
+  let wrappers = counter;
+  while (wrappers >= m) {
+    let temp = Math.floor(wrappers / m);
+    counter = counter + temp;
+    wrappers = wrappers - temp * m + temp;
+  }
+  console.log(counter);
+}
+
+let n = 15;
+let c = 3;
+let m = 2;
+chocolate_feast(n, c, m);
+
+//==========================================
+
+function gemstones(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i].arr[i] == arr[j].arr[j]) {
+        for (let k = j + 1; k < arr.length; k++) {
+          if (arr[j].arr[j] == arr[k].arr[k]) {
+            count++;
+            break;
+          }
+          break;
+        }
+        break;
+      }
+      break;
+    }
+  }
+  console.log(count);
+}
+
+let arr = ['abc', 'abc', 'bc'];
+gemstones(arr);
+
+
+//==========================================================================
+function gemstones(row, col) {
+  let arr = ['a', 'b', 'c', 'a', 'b', 'c', 'b', 'c'];
+
+  let matrix = new Array(row);
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+  console.log(matrix);
+
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix.length; j++) {
+      if (matrix[i][j] == undefined) {
+        matrix[i][j] = '1';
+      }
+    }
+  }
+
+  let count = 0;
+  //  let actualCount = 0;
+  for (let i = 0; i < matrix.length - 1; i++) {
+    let actualCount = 0;
+    for (let j = 0; j < matrix.length; j++) {
+      if (matrix[i][j] == matrix[i + 1][j]) {
+        actualCount++;
+        break;
+      }
+    }
+    if (actualCount == matrix.length) {
+      count++;
+      actualCount = 0;
+    }
+  }
+
+  console.log(count);
+}
+
+let row = 3;
+let col = 3;
+gemstones(row, col);
+
+function gemstones(arr) {
+  let temp = [
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    // 'f',
+    // 'g',
+    // 'h',
+    // 'i',
+    // 'j',
+    // 'k',
+    // 'l',
+    // 'm',
+    // 'n',
+    // 'o',
+    // 'p',
+    // 'q',
+    // 'r',
+    // 's',
+    // 't',
+    // 'u',
+    // 'v',
+    // 'w',
+    // 'x',
+    // 'y',
+    // 'z',
+  ];
+  let count = 0;
+  let countActualResult = 0;
+  for (let i = 0; i < temp.length; i++) {
+    count = 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j].includes(temp[i])) {
+        count++;
+      }
+      if (count == arr.length) {
+        countActualResult++;
+      }
+    }
+  }
+  console.log(countActualResult);
+}
+let arr = ['abc', 'abc', 'bc'];
+gemstones(arr);
+
+//==============================================================
+// //let arr1 = ['a', 'b', 'c'];
+// let res = ['a', 'b', 'c'].includes('a');
+// console.log(res);
+
+
+//==============================================================================
+
+function gemstones(str_Array) {
+  let str_temp_Arr = ['a', 'b', 'c', 'd', 'e'];
+  let temp_Count = 0;
+  let res_Count = 0;
+
+  for (let i = 0; i < str_temp_Arr.length; i++) {
+    temp_Count = 0;
+    for (let j = 0; j < str_Array.length; j++) {
+      if (str_Array[j].includes(str_temp_Arr[i])) {
+        // search ele[str_temp_Arr]
+        temp_Count++;
+      }
+      if (temp_Count == str_Array.length) {
+        res_Count++;
+      }
+    } //2nd for loop
+  } //1st for loop
+  console.log(res_Count);
+}
+
+let str_Array = ['abc', 'abc', 'bc'];
+gemstones(str_Array);
+
+
+//==========================================================================
+
+function counting_Valleys(str, step) {
+  let vallyCount = 0;
+  let altitude = 0;
+  for (let i = 0; i < step; i++) {
+    if (str[i] == 'U') {
+      altitude++;
+      if (altitude == 0) {
+        vallyCount++;
+      }
+    } else {
+      altitude--;
+    }
+  }
+  console.log(vallyCount);
+}
+
+let str = 'UDDDUDUU';
+let step = 8;
+counting_Valleys(str, step);
+
+
+//============================================================================
+
+
+function library_Fine(
+  returned_Date,
+  returned_Month,
+  returned_Year,
+  due_Date,
+  due_Month,
+  due_Year
+) {
+  let fine = '';
+  if (returned_Month == due_Month && returned_Year == due_Year) {
+    fine = fine + returned_Date - due_Date;
+    console.log(fine * 15);
+  } else if (returned_Date == due_Date && returned_Year == due_Year) {
+    fine = fine + returned_Month - due_Month;
+    console.log(fine * 500);
+  } else if (returned_Date == due_Date && returned_Month == due_Month) {
+    fine = 10000;
+    console.log(fine);
+  } else {
+    console.log(fine);
+  }
+
+  if (fine < 0) {
+    console.log('0');
+  }
+}
+
+let returned_Date = 2;
+let returned_Month = 5;
+let returned_Year = 2015;
+let due_Date = 30;
+let due_Month = 5;
+let due_Year = 2015;
+library_Fine(
+  returned_Date,
+  returned_Month,
+  returned_Year,
+  due_Date,
+  due_Month,
+  due_Year
+);
+
+
+//============================================================================
+
+function service_Lane(arr, row, col) {
+  let newArr = [0, 3, 4, 6, 6, 7, 3, 5, 0, 7];
+  let matrix = new Array(row);
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+
+  let x = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = newArr[x];
+      x++;
+    }
+  }
+  console.log(matrix);
+  for (let e of matrix) {
+    console.log(e);
+  }
+  // let san = [4, 5, 6, 8];
+  // let sl = san.slice(-1);
+  // console.log('Sandeep' + sl);
+  let resultArr = [];
+  for (let e of matrix) {
+    let sliArr = arr.slice(e[0], e[1] + 1);
+    let min = Math.min(...sliArr);
+    resultArr.push(min);
+  }
+  console.log(resultArr);
+  // for (let el of matrix) {
+  //   console.log(el[0], el[1]);
+  // }
+
+  // for (let ell of matrix) {
+  //   console.log(ell[1]);
+  // }
+}
+
+let arr = [2, 3, 1, 2, 3, 2, 3, 3];
+let row = 5;
+let col = 2;
+service_Lane(arr, row, col);
+
+
+//===========================================================================
+
+function grading(grades) {
+  let resArr = [];
+  for (let i = 0; i < grades.length; i++) {
+    if (grades[i] < 38) {
+      // console.log(grades[i]);
+      resArr.push(grades[i]);
+    } else {
+      let multipleOF5 = Math.floor(grades[i] / 5 + 1) * 5;
+      if (multipleOF5 - grades[i] < 3) {
+        //   console.log(multipleOF5);
+        resArr.push(multipleOF5);
+      } else {
+        //   console.log(grades[i]);
+        resArr.push(grades[i]);
+      }
+    }
+  }
+  console.log(resArr);
+}
+//==========================================================
+// for (let i = 0; i < grades.length; i++) {
+//   if (grades[i] < 38) {
+//     console.log(grades[i]);
+//   } else {
+//     let multipleOF5 = Math.floor(grades[i] / 5 + 1) * 5;
+//     if (multipleOF5 - grades[i] < 3) {
+//       console.log(multipleOF5);
+//     } else {
+//       console.log(grades[i]);
+//     }
+//   }
+// }
+//====================================================
+
+//   for (let i = 0; i < grades.length; i++) {
+//     let multipleOF5 = Math.floor((arr[i] / 5) * 5);
+//     if (multipleOF5 < 38) {
+//       return arr[i];
+//       continue;
+//     }
+//     if(multipleOF5-arr1[i]<3){
+//    return multipleOF5;
+//     }
+// else{
+//   return arr1[i];
+// }
+// }
+//===========================================================
+
+let grades = [73, 67, 38, 33];
+grading(grades);
+
+//======================================================================================
+
+let arr = [7, 2, 3, 4];
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+// }
+let l = arr.length;
+let i = 0;
+while (i + 1 < l) {
+  console.log(arr[i + 1]);
+  i++;
+}
+
+//======================================================================================
+
+function getMaxiPrice(b, keyboards, drives) {
+  let sum = 0;
+  let maximum = 0;
+  for (let i = 0; i < keyboards.length; i++) {
+    for (let j = 0; j < drives.length; j++) {
+      sum = keyboards[i] + drives[j];
+      if (sum >= maximum && sum <= b) {
+        maximum = sum;
+      }
+    }
+  }
+  if (maximum == 0) {
+    return -1;
+  }
+  console.log(maximum);
+}
+
+let b = 60;
+let keyboard = [40, 50, 60];
+let drives = [5, 8, 12];
+getMaxiPrice(b, keyboard, drives);
+
+// 24 remaining.
+
+//=====================================================================
+function jumping_Cloud_revisited(c, k) {
+  let energy = 100;
+  let startingPoint = 0;
+  do {
+    startingPoint = (startingPoint + k) % c.length;
+    energy--;
+    if (c[startingPoint] == 1) {
+      energy -= 2;
+    }
+  } while (startingPoint != 0);
+  console.log(energy);
+}
+
+let c = [0, 0, 1, 0, 0, 1, 1, 0];
+let k = 2;
+jumping_Cloud_revisited(c, k);
+
+
+//=========================================================================
+
+function mars_Expolaration(s) {
+  let count = 0;
+  let fixed = 'SOS';
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] != fixed[i % 3]) {
+      count++;
+    }
+  }
+  console.log(count);
+}
+
+let s = 'SOSTOT';
+
+mars_Expolaration(s);
+
+//==========================================================================
+
+function day_Of_Programmar(year) {
+  if (year < 1918) {
+    if (year % 4 == 0)
+      //Julian Calender
+
+      console.log('12.09.' + year);
+    else console.log('13.09.' + year);
+  } else if (year > 1918) {
+    if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
+      //Gregorial Caledder
+
+      console.log('12.09.' + year);
+    else console.log('13.09.' + year);
+  } else {
+    //Special case: transition year
+    //year == 1918
+    console.log('26.09.' + year);
+  }
+}
+
+let year = 2017;
+day_Of_Programmar(year);
+
+
+//=================================================================================
+function caesar_cipher(s, k) {
+  // let newArr = [];
+  // for (let i = 0; i < s.length; i++) {
+  //   let code = s.charCodeAt(i) + k;
+  //   while (code > 122) {
+  //     code = code - 122 + 96;
+  //   }
+  //   newArr.push(String.fromCharCode(code));
+  // }
+  // console.log(newArr.join(''));
+
+  let temp = '';
+  for (let i = 0; i < s.length; i++) {
+    if()
+  }
+}
+let s = 'middle-Outz';
+let k = 2;
+caesar_cipher(s, k);
+//=======================================================================
+
+function caesar_cipher(s, k) {
+  let resultArr = [];
+  for (let i = 0; i < s.length; i++) {
+    let undefResult = s.charCodeAt(i);
+    if (undefResult >= 65 && undefResult <= 90) {
+      let capi_ChangePlusK = ((undefResult - 65 + k) % 26) + 65;
+      resultArr.push(String.fromCharCode(capi_ChangePlusK));
+    } else if (undefResult >= 97 && undefResult <= 122) {
+      let small_changePlusK = ((undefResult - 97 + k) % 26) + 97;
+      resultArr.push(String.fromCharCode(small_changePlusK));
+    } else {
+      resultArr.push(s[i]);
+    }
+  }
+  console.log(resultArr.join(''));
+}
+let s = 'middle-Outz';
+let k = 2;
+caesar_cipher(s, k);
+
+//=====================================================================
+
+function strong_Password(password, n) {
+  let special_char = '!@#$%^&*()-+';
+  let make_count = [0, 0, 0, 0];
+  for (let i = 0; i < password.length; i++) {
+    let asciiValu = password.charCodeAt(i);
+    if (asciiValu >= 48 && asciiValu <= 57) {
+      // belong to 0 to 9 digit.
+      make_count[0] = 1;
+    } else if (asciiValu >= 65 && asciiValu <= 90) {
+      make_count[1] = 1;
+      //belong to Capital latters.
+    } else if (asciiValu >= 97 && asciiValu <= 122) {
+      make_count[2] = 1;
+      // belong to small latters.
+    } else if (special_char.includes(password[i])) {
+      make_count[3] = 1;
+      // belong to special character.
+    }
+  }
+  let sum_Make = 0;
+  for (let i = 0; i < make_count.length; i++) {
+    sum_Make += make_count[i];
+  }
+  let max = Math.max(sum_Make, 6 - password.length);
+  console.log(max);
+}
+
+let password = '2bbbb';
+let n = password.length;
+strong_Password(password, n);
+
+//===================================================================================
+function strong_Password(password, n) {
+  let lc = 0;
+  let uc = 0;
+  let dc = 0;
+  let sp = 0;
+  let moreCount = 0;
+
+  for (let i = 0; i < n; i++) {
+    let asciiCode = password.charCodeAt(i);
+
+    if (asciiCode >= 65 && asciiCode <= 90) {
+      lc = 1;
+    } else if (asciiCode >= 97 && asciiCode <= 122) {
+      uc = 1;
+    } else if (asciiCode >= 48 && asciiCode <= 57) {
+      dc = 1;
+    } else {
+      sp = 1;
+    }
+  }
+  if (sp == 0) {
+    moreCount++;
+  }
+  if (lc == 0) {
+    moreCount++;
+  }
+  if (uc == 0) {
+    moreCount++;
+  }
+  if (dc == 0) {
+    moreCount++;
+  }
+  if (n < 6) {
+    if (6 - n > moreCount) {
+      console.log(6 - n);
+    } else {
+      console.log(moreCount);
+    }
+  } else {
+    console.log(moreCount);
+  }
+}
+let password =
+  'ni3buu2w5de91h9k2odvvpl3k235id1nca23kiv93p3dep1g4cl4irv72hb7v53q673w237qjtsru2tyt6a7531s6jo0tqts391v';
+let n = password.length;
+strong_Password(password, n);
+
+//======================================================================================================
+
+function findtwoNuBit(arr) {
+  let xorOff = 0;
+  let xorOn = 0;
+  let bitMask = 1 << 1;
+  // console.log(bitMask);
+  for (let i = 0; i < arr.length; i++) {
+    if ((bitMask & arr[i]) == 0) {
+      xorOff = xorOff ^ arr[i];
+    } else {
+      xorOn = xorOn ^ arr[i];
+    }
+  }
+  console.log(xorOff, xorOn);
+}
+let arr = [4, 3, 4, 3, 6, 7, 5, 6];
+findtwoNuBit(arr);
+// o/p  7,5
+
+//=====================================================================================
+function findtwoNuBit(arr_1) {
+  let map = new Map();
+  let newArr = [];
+  for (let i = 0; i < arr_1.length; i++) {
+    let el = arr_1[i];
+    if (map[el]) {
+      map[el]++;
+    } else {
+      map[el] = 1;
+    }
+  }
+
+  for (let i in map) {
+    if (map[i] % 2 != 0) {
+      newArr.push(i);
+    }
+  }
+  console.log(newArr);
+}
+
+let arr_1 = [4, 3, 4, 3, 6, 7, 5, 6];
+findtwoNuBit(arr_1);
+
+//=================================================================================
+function cavity_Map(row, col) {
+  let arr = [1, 1, 1, 2, 1, 9, 1, 2, 1, 8, 9, 2, 1, 2, 3, 4];
+  let matrix = new Array(row);
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+  console.log(matrix);
+
+  const matrix_2 = matrix.map(ele => ele.split(''));
+  // console.log(twoDArr);
+
+  // for (let i = 0; i < row; i++) {
+  //   for (let j = 0; j < col; j++) {
+  //     if(matrix[i][j].split(",")){
+
+  //     }
+  //   }
+
+  //   }
+  console.log(matrix);
+
+  for (let i = 1; i < matrix_2.length - 1; i++) {
+    for (let j = 1; j < matrix_2[i].length - 1; j++) {
+      if (
+        matrix_2[i][j] > matrix_2[i][j + 1] &&
+        matrix_2[i][j] > matrix_2[i][j - 1] &&
+        matrix_2[i][j] > matrix_2[i + 1][j] &&
+        matrix_2[i][j] > matrix_2[i - 1][j]
+      ) {
+        matrix_2[i][j] = 'X';
+      }
+    }
+  }
+  console.log(matrix_2);
+  let newGrid = matrix_2.map(el => el.join(''));
+  console.log(newGrid);
+
+  // good concept .. you have to remember this logic.
+}
+
+let row = 4;
+let col = 4;
+cavity_Map(row, col);
+
+//================================================================================
+
+
+function priyankaAndToys(w) {
+  w.sort(function (a, b) {
+    return a - b;
+  });
+  let count_Container = 1;
+  let sum = w[0];
+  for (let i of w) {
+    if (i > sum + 4) {
+      count_Container++;
+      sum = i;
+    }
+  }
+  console.log(count_Container);
+}
+
+let w = [1, 2, 3, 7, 12, 14, 21, 21];
+priyankaAndToys(w);
+
+for (let i = 0; i <= n; i++) {
+    if ((5 * (n - i)) % 3 == 0 && (3 * i) % 5 === 0) {
+      console.log(
+        Array(n - i)
+          .fill(5)
+          .concat(Array(i).fill(3))
+          .join('')
+      );
+
+      return;
+    }
+  }
+  console.log(-1);
+  return;
+
+//==========================================================================
+function decentNumber(n) {
+  var fives = n;
+  var threes = 0;
+  let actualRes = [];
+
+  while (threes <= n) {
+    if (fives % 3 == 0 && threes % 5 == 0) {
+      let result = assembleDecentNumber(fives, threes);
+      actualRes.push(result);
+    } else {
+      threes += 5;
+      fives -= 5;
+    }
+  }
+  if (actualRes.length == 0) {
+    // return -1;
+    console.log(-1);
+  } else {
+    // return actualRes;
+    console.log(actualRes);
+  }
+}
+let n = 11;
+decentNumber(n);
+
+function assembleDecentNumber(fives, threes) {
+  var arr = [];
+  for (let i = 0; i < fives; i++) {
+    arr.push(5);
+  }
+  for (let i = 0; i < threes; i++) {
+    arr.push(3);
+  }
+  return arr;
+}
+
+//=================================================================
+function sherlockAndBeast(n) {
+  let result = -1;
+  let i = n;
+  while (i >= 0) {
+    if (i % 3 == 0) {
+      result = '5'.repeat(i) + '3'.repeat(n - i);
+      break;
+    }
+    i = i - 5;
+  }
+  console.log(result);
+}
+let n = 11;
+sherlockAndBeast(n);
+
+//=================================================================
+let str = 'YYBBA__';
+let res = str.split('');
+console.log(res);
+res.sort();
+
+console.log(res.join(''));
+
+
+
+function largestPermutations(arr, k) {
+  let n = arr.length;
+  let newA = new Array(n + 1);
+  for (let i = 0; i < n; i++) {
+    newA[arr[i]] = i;
+  }
+  for (let i = 0; i < n && k > 0; i++) {
+    if (arr[i] == n - i) {
+      continue;
+    }
+    let temp = newA[n - i];
+
+    newA[arr[i]] = newA[n - i]; //swap the element newAition
+    newA[n - i] = i;
+
+    // Swap the ith largest value with
+    // the current value at ith place
+    let tmp1 = arr[temp];
+    arr[temp] = arr[i];
+    arr[i] = tmp1;
+
+    // decrement number of swaps
+    --k;
+  }
+  console.log(arr);
+  // console.log(newA);
+  // for (let i = 0; i < newA.length; i++) {
+  //   console.log(newA[i]);
+  // }
+}
+
+let arr = [1, 2, 3, 4];
+let k = 1;
+largestPermutations(arr, k);
+
+//==========================================================================
+function manasa_Stones(n, a, b) {
+  let set = new Set();
+  for (let i = 0; i < n; i++) {
+    let res = b * i + a * (n - i - 1);
+    set.add(res);
+  }
+  // console.log(set);
+  // return [...set].sort(function (a, b) {
+  //   return a - b;
+  });
+  let sandeep = '';
+  for (let i of set) {
+    sandeep = sandeep + i + ' ';
+  }
+  //  return sandeep;
+  console.log(sandeep);
+}
+
+let n = 4;
+let a = 10;
+let b = 100;
+manasa_Stones(n, a, b);
+
+//========================================================================
+
+function magicSquare(row, col) {
+  let arr = [4, 9, 2, 3, 5, 7, 8, 1, 5];
+  let matrix = new Array(row);
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+  //making a permutation of all matrix.
+
+  // let row_1 = 24;
+  // let col_1 = 3;
+  // let newArr = [
+  //   8, 1, 6, 3, 5, 7, 4, 9, 2, 6, 1, 8, 7, 5, 3, 2, 9, 4, 4, 9, 2, 3, 5, 7, 8,
+  //   1, 6, 2, 9, 4, 7, 5, 3, 6, 1, 8, 8, 3, 4, 1, 8, 9, 6, 7, 2, 4, 3, 8, 9, 5,
+  //   1, 2, 7, 6, 6, 7, 2, 1, 5, 9, 8, 3, 4, 2, 7, 6, 9, 5, 1, 4, 3, 8,
+  // ];
+  // let permutMatrix = new Array(row_1);
+  // for (let i = 0; i < row_1; i++) {
+  //   permutMatrix[i] = new Array(col_1);
+  // }
+  // let l = 0;
+  // for (let i = 0; i < row_1; i++) {
+  //   for (let j = 0; j < col_1; j++) {
+  //     permutMatrix[i][j] = newArr[l];
+  //     l++;
+  //   }
+  // }
+  // console.log(permutMatrix);
+  let permutMatrix = [
+    [
+      [8, 1, 6],
+      [3, 5, 7],
+      [4, 9, 2],
+    ], //1
+    [
+      [6, 1, 8],
+      [7, 5, 3],
+      [2, 9, 4],
+    ], //2
+    [
+      [4, 9, 2],
+      [3, 5, 7],
+      [8, 1, 6],
+    ], //3
+    [
+      [2, 9, 4],
+      [7, 5, 3],
+      [6, 1, 8],
+    ], //4
+    [
+      [8, 3, 4],
+      [1, 5, 9],
+      [6, 7, 2],
+    ], //5
+    [
+      [4, 3, 8],
+      [9, 5, 1],
+      [2, 7, 6],
+    ], //6
+    [
+      [6, 7, 2],
+      [1, 5, 9],
+      [8, 3, 4],
+    ], //7
+    [
+      [2, 7, 6],
+      [9, 5, 1],
+      [4, 3, 8],
+    ], //8
+  ];
+
+  // console.log(permutMatrix.length);
+
+  // console.log(permutMatrix[0][0][2]);
+  let minCost = Number.MAX_VALUE;
+  for (let p = 0; p < 8; p++) {
+    let cost = 0;
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        cost += Math.abs(matrix[i][j] - permutMatrix[p][i][j]);
+      }
+    }
+    minCost = Math.min(minCost, cost);
+  }
+  console.log(minCost);
+}
+
+let row = 3;
+let col = 3;
+magicSquare(row, col);
+
+
+//===============================================================================
+function climbibing_the_leaderboard(scores, alice) {
+  //  scores = Array.from(new Set(scores));
+  scores = Array.from(new Set(scores));
+  console.log(scores);
+
+  let player_rank = [];
+  // for (let score of alice) {
+  for (let i = 0; i < alice.length; i++) {
+    while (scores[0] && alice[i] >= scores[scores.length - 1]) {
+      scores.pop();
+    }
+    player_rank.push(scores.length + 1);
+  }
+  console.log(player_rank);
+}
+let ranked = [100, 100, 50, 40, 40, 20, 10];
+let player = [5, 25, 50, 120];
+climbibing_the_leaderboard(ranked, player);
+
+
+//============================================================================
+function grid_Search(row_1, col_1, row_2, col_2) {
+  let arr_1 = [
+    1, 2, 3, 4, 5, 2, 3, 4, 5, 6, 4, 5, 6, 7, 8, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5,
+  ];
+  let arr_2 = [3, 4, 5, 5, 6, 7, 3, 4, 5];
+  let matrix1 = new Array(row_1);
+  for (let i = 0; i < row_1; i++) {
+    matrix1[i] = new Array(col_1);
+  }
+  let k = 0;
+  for (let i = 0; i < row_1; i++) {
+    for (let j = 0; j < col_1; j++) {
+      matrix1[i][j] = arr_1[k];
+      k++;
+    }
+  }
+  let matrix2 = new Array(row_2);
+  for (let i = 0; i < row_2; i++) {
+    matrix2[i] = new Array(col_2);
+  }
+  let z = 0;
+  for (let i = 0; i < row_2; i++) {
+    for (let j = 0; j < col_2; j++) {
+      matrix2[i][j] = arr_2[z];
+      z++;
+    }
+  }
+  console.log(matrix1);
+  console.log(matrix2);
+  console.log(matrix1.length);
+  console.log(matrix2.length);
+
+  let flag = false;
+  for (let i = 0; i < matrix1.length - 1; i++) {
+    for (let j = 0; j < matrix1.length; j++) {
+      if (matrix1[i][j] == matrix2[i][j]) {
+      }
+    }
+  }
+}
+
+let row_1 = 5;
+let col_1 = 5;
+let row_2 = 3;
+let col_2 = 3;
+grid_Search(row_1, col_1, row_2, col_2);
+
+ let result_Arr = [];
+  for (let i = 0; i < order_Matrix.length; i++) {
+    result_Arr.push({
+      orderTime: order_Matrix[i][0] + order_Matrix[i][1],
+      index: i + 1,
+    });
+  }
+ // console.log(result_Arr);
+
+  result_Arr.sort((a, b) => a.orderTime - b.orderTime);
+ // console.log(result_Arr);
+
+  let res = [];
+  for (let el of result_Arr) {
+    res.push(el.index);
+  }
+  // console.log(res);
+    return res;
+
+//=================================================================
+function jimAndOrder(row, col) {
+  let jimMatrix = new Array(row);
+  let arr = [8, 1, 4, 2, 5, 6, 3, 1, 4, 3];
+
+  for (let i = 0; i < row; i++) {
+    jimMatrix[i] = new Array(col);
+  }
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      jimMatrix[i][j] = arr[k];
+      k++;
+    }
+  }
+  console.log(jimMatrix);
+
+  let result = [];
+  for (let i = 0; i < jimMatrix.length; i++) {
+    result.push({ orderTime: jimMatrix[i][0] + jimMatrix[i][1], index: i + 1 });
+  }
+  console.log(result);
+  result.sort((a, b) => a.orderTime - b.orderTime);
+
+  console.log(result);
+
+  let acutualRes = [];
+  for (let i of result) {
+    acutualRes.push(i.index);
+  }
+  console.log(acutualRes);
+
+  for (let i = 0; i < acutualRes.length; i++) {
+    console.log(acutualRes[i]);
+  }
+}
+let row = 5;
+let col = 2;
+
+jimAndOrder(row, col);
+
+//=======================================================================
+
+
+function lisa_WorkBook(n, k, arr) {
+  let page = 1;
+  let specialPage = 0;
+  let i = 0;
+  while (i < n) {
+    for (let index = 1; index <= arr[i]; index++) {
+      if (index == page) {
+        specialPage++;
+      }
+      if (index == arr[i] || index % k == 0) {
+        page++;
+      }
+    }
+    i++;
+  }
+  console.log(specialPage);
+}
+
+let n = 5;
+let k = 3;
+let arr = [4, 2, 6, 1, 10];
+lisa_WorkBook(n, k, arr);
+
+//===========================================================================
+
+function valid_String(s) {
+  let freq = [];
+  let str = s.split('');
+  console.log(str);
+  for (let i = 0; i < str.length; i++) {
+    let el = str[i];
+    if (freq[el]) {
+      freq[el]++;
+    } else {
+      freq[el] = 1;
+    }
+  }
+  console.log(freq);
+  let arr = [];
+  for (let ele in freq) {
+    arr.push(freq[ele]);
+  }
+  console.log(arr);
+
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  console.log(arr);
+  let first = arr[0];
+  let second = arr[1];
+  let secondLast = arr[arr.length - 2];
+  // console.log(secondLast);
+  let last = arr[arr.length - 1];
+
+  let flag = false;
+  if (arr.length == 1) {
+    flag = true;
+  }
+  if (first == last) {
+    flag = true;
+  }
+  if (first == last - 1) {
+    flag = true;
+  }
+  if (first == second && second == secondLast && secondLast == last - 1) {
+    flag = true;
+  }
+  if (first == 1 && second == last) {
+    flag = true;
+  }
+  if (flag == true) {
+    return 'YES';
+  } else {
+    return 'NO';
+  }
+}
+
+let s = 'aabbccc';
+valid_String(s);
+//===========================================================================
+*/
+
+function making_Anagaram(s1, s2) {
+  let map = [];
+  for (let i = 0; i < s1.length; i++) {
+    let el = s1[i];
+    if (map[el]) {
+      map[el]++;
+    } else {
+      map[el] = 1;
+    }
+  }
+  console.log(map);
+  let count = 0;
+  for (let i = 0; i < s2.length; i++) {
+    let ell = s2[i];
+    if (map[ell]) {
+      map[ell]--;
+    } else {
+      count++;
+    }
+  }
+  console.log(map);
+  console.log(count);
+
+  for (let e in map) {
+    count = count + map[e];
+  }
+  console.log(count);
+}
+
+let s1 = 'abc';
+let s2 = 'amnop';
+making_Anagaram(s1, s2);
+
+//==============================================================================
