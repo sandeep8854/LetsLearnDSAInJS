@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function pattern(n) {
+        let a = n * 2 - 1;
+        let b = 0;
+        let c = 3;
+        let w = 2;
+        let xy = 1;
+        for (let i = 0; i < a; i++) {
+          if (i <= Math.floor(a / 2)) {
+            // 0
+            for (let j = 0; j < a - b; j++) {
+              document.write(i + 1);
+            }
+            b += 2;
+            document.write('<br>');
+          } else {
+            for (let j = 0; j < c; j++) {
+              document.write(n - xy);
+            }
+            //  w += 1;
+            c += 2;
+            xy += 1;
+            document.write('<br>');
+          }
+        }
+      }
+      let n = 4;
+      pattern(n);
+    </script>
+  </head>
+  <body></body>
+</html>
