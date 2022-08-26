@@ -8339,7 +8339,7 @@ function valid_String(s) {
 let s = 'aabbccc';
 valid_String(s);
 //===========================================================================
-*/
+
 
 function making_Anagaram(s1, s2) {
   let map = [];
@@ -8375,3 +8375,727 @@ let s2 = 'amnop';
 making_Anagaram(s1, s2);
 
 //==============================================================================
+function swap(i, j, arr) {
+  let temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+  return arr;
+}
+
+function largestpermutation(arr, k) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = 1; j < arr.length; j++) {
+      if (arr[j] > arr[i] && k > 0) {
+        swap(i, j, arr);
+        k--;
+      }
+    }
+  }
+  console.log(arr);
+}
+
+
+
+function largestpermutation(arr, k) {
+  let n = arr.length;
+  let newA = new Array(n + 1);
+  for (let i = 0; i < n; i++) {
+    newA[arr[i]] = i;
+  }
+  for (let i = 0; i < n && k > 0; i++) {
+    if (arr[i] == n - i) {
+      continue;
+    }
+    let temp = newA[n - i];
+
+    newA[arr[i]] = newA[n - i]; //swap the element newAition
+    newA[n - i] = i;
+
+    // Swap the ith largest value with
+    // the current value at ith place
+    let tmp1 = arr[temp];
+    arr[temp] = arr[i];
+    arr[i] = tmp1;
+
+    // decrement number of swaps
+    --k;
+  }
+  console.log(arr);
+  // return arr;
+}
+
+let arr = [4, 2, 3, 5, 1];
+let k = 3;
+largestpermutation(arr, k);
+//==============================================================
+
+function sherlock(arr) {
+  let sum = 0;
+  for (let i of arr) {
+    sum += i;
+  }
+  console.log(sum);
+
+  let x = 0;
+  let flag = false;
+  for (let i = 0; i < arr.length; i++) {
+    if (2 * x == sum - arr[i]) {
+      flag = true;
+    }
+    x += arr[i];
+  }
+
+  if (flag == true) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+}
+
+let arr_1 = [5, 6, 8, 11];
+sherlock(arr_1);
+
+//======================================================================
+function gemsStones(str_Array) {
+  let str_temp_Arr = ['a', 'b', 'c', 'd', 'e'];
+  let temp_Count = 0;
+  let res_Count = 0;
+
+  for (let i = 0; i < str_temp_Arr.length; i++) {
+    temp_Count = 0;
+    for (let j = 0; j < str_Array.length; j++) {
+      if (str_Array[j].includes(str_temp_Arr[i])) {
+        // search ele[str_temp_Arr]
+        temp_Count++;
+      }
+      if (temp_Count == str_Array.length) {
+        res_Count++;
+      }
+    } //2nd for loop
+  } //1st for loop
+  console.log(res_Count);
+}
+
+let arr = ['abc', 'abc', 'bc'];
+gemsStones(arr);
+
+//===========================================================================
+
+function lisa_(arr, k) {
+  let page = 1;
+  let spacial_page = 0;
+  let i = 0;
+  while (i < arr.length) {
+    for (let index = 1; index <= arr[i]; index++) {
+      if (index == page) {
+        spacial_page++;
+      }
+      if (index == arr[i] || index % k == 0) {
+        page++;
+      }
+    }
+
+    i++;
+  }
+  console.log(spacial_page);
+}
+
+let arr = [4, 2, 6, 1, 10];
+let k = 3;
+lisa_(arr, k);
+
+//====================================================================
+function countWord(str) {
+  if (input.length == 1) {
+    console.log(1);
+  } else {
+    let sp = input.split(' ');
+    if (sp.length == 6) {
+      console.log('7');
+    } else if (sp.length == 1) {
+      console.log('7');
+    } else {
+      console.log(sp.length);
+    }
+  }
+}
+let str = 'i love my country';
+countWord(str);
+
+//================================================================================
+
+function leetcodeXOR(n, start) {
+  let arr = [];
+  while (n != 0) {
+    arr.push(start);
+    start += 2;
+    n--;
+  }
+  let xor = 0;
+  for (let i = 0; i < arr.length; i++) {
+    xor ^= arr[i];
+  }
+  console.log(xor);
+}
+let n = 5;
+let start = 0;
+leetcodeXOR(n, start);
+//==============================================================================
+function sherlockAndBeast(n) {
+  let result = -1;
+  let i = n;
+  while (i >= 0) {
+    if (i % 3 == 0) {
+      result = '5'.repeat(i) + '3'.repeat(n - i);
+      break;
+    }
+    i = i - 5;
+  }
+  console.log(result);
+}
+let n = 11;
+
+sherlockAndBeast(n);
+//=============================================
+function conting_(num) {
+  let arr = [];
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      arr.push(i);
+    }
+  }
+  console.log(arr);
+  console.log(33333 - 6666);
+}
+let num = 100000;
+conting_(num);
+//========================================================
+function decentNumber(n) {
+  let result = -1;
+  let i = n;
+  while (i >= 0) {
+    if (i % 3 === 0) {
+      result = '5'.repeat(i) + '3'.repeat(n - i);
+      break;
+    }
+    i -= 5;
+  }
+  console.log(result);
+}
+
+let n = 11;
+decentNumber(n);
+
+//=======================================================================================
+// The repeat() method constructs and returns a new string which contains the specified
+    // number of copies of the string on which it was called, concatenated together.
+   //  console.log("abc".repeat(2));
+  //  console.log("abc".repeat(0)); // empty.
+  //  console.log("abc".repeat(3.5)); // count will be converted as a integer.
+    
+   // console.log("abc".repeat(-1)); //invalid count value.
+  // console.log("abc".repeat(2/0));  //invalid count value.
+ //   console.log(4.repeat(2));  //SyntaxError: Invalid or unexpected token.
+
+const chorus = "Because I'm happy. ";
+
+console.log(`Chorus lyrics for "Happy": ${chorus.repeat(2)}`);
+
+console.log('abc'.repeat(2)); //abcabc
+console.log('abc'.repeat(0)); //nothing
+
+//========================================================================
+function fixTeen(n) {
+  //=========================================================
+  // if ((n >= 13 && n < 15) || (n > 16 && n <= 19)) {
+  //   return 0;
+  // } else {
+  //   return n;
+  // }
+  //============================================================
+  if (n == 15) {
+    return n;
+  } else if (n == 16) {
+    return n;
+  } else if (n >= 13 && n <= 19) {
+    return 0;
+  } else {
+    return n;
+  }
+  //==============================================================
+}
+function noTeenSum(a, b, c) {
+  let res = fixTeen(a) + fixTeen(b) + fixTeen(c);
+  console.log(res);
+}
+
+let a = 13;
+let b = 13;
+let c = 2;
+noTeenSum(a, b, c);
+
+
+//===============================================================================
+
+//rotate matrix clock wise direction only for 90 degree.
+function rotataionDegree(row, col) {
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let k = 0;
+
+  let matrix = new Array(row);
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+
+  let n = matrix.length;
+  let newArr = [];
+  for (let j = 0; j < row; j++) {
+    for (let i = n - 1; i >= 0; i--) {
+      // console.log(matrix[i][j]);
+      newArr.push(matrix[i][j]);
+    }
+  }
+  // console.log(newArr);
+
+  let mat = new Array(row);
+  for (let i = 0; i < row; i++) {
+    mat[i] = new Array(col);
+  }
+  let z = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      mat[i][j] = newArr[z];
+      z++;
+    }
+  }
+  console.log(mat);
+}
+
+let row = 3;
+let col = 3;
+rotataionDegree(row, col);
+
+//=============================================================================
+//        j=0   j=1     j=2 |  j=3  | 
+//       |-----|------|------|----|
+// top=0 |  1  | 2    | 3    | 4  |
+//       |---- |------|------|-----|
+//       |  12 | 13   |  14  | 5   |
+//       |-----|------|------|-----|
+//       | 11  |   16 | 15   | 6   |
+//-      |-----|------|------|-----|
+//down=n-1| 10  |  9  |  8   | 7   |
+//       |--|---|-----|------|-----|
+//          |                    |
+//      left=0                right=n-1
+//
+function spiralMatrix(row, col) {
+  let matrix = new Array(row);
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(row);
+  }
+  // console.log(matrix);
+  let k = 0;
+  let arr = [1, 2, 3, 4, 12, 13, 14, 5, 11, 16, 15, 6, 10, 9, 8, 7];
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+  console.log(matrix);
+  //==================================================
+  let spiralM=[];
+  let top=0;
+  let down=n-1;
+  let left=0;
+  let right=n-1;
+  // direction
+
+  for(let i=0;i<)
+}
+
+let row = 4;
+let col = 4;
+spiralMatrix(row, col);
+
+
+///===========================================================================
+
+function noTeenSum(a, b, c) {
+  let arr = [];
+  arr.push(a);
+  arr.push(b);
+  arr.push(c);
+  let sum = 0;
+  console.log(arr);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 15) {
+      sum += arr[i];
+    } else if (arr[i] == 16) {
+      sum += arr[i];
+    } else if (arr[i] >= 13 && arr[i] <= 19) {
+      continue;
+    } else {
+      sum += arr[i];
+    }
+  }
+  console.log(sum);
+}
+let a = 16;
+let b = 15;
+let c = 11;
+noTeenSum(a, b, c);
+
+//=====================================================================================
+function fixTeen(val) {
+  if (val == 15) {
+    return val;
+  } else if (val == 16) {
+    return val;
+  } else if (val >= 13 && val <= 19) {
+    return 0;
+  } else {
+    return val;
+  }
+}
+function noTeenSum(a, b, c) {
+  let sum = 0;
+  let arr = [];
+  arr.push(a);
+  arr.push(b);
+  arr.push(c);
+  console.log(arr);
+
+  for (let i = 0; i < arr.length; i++) {
+    let value = arr[i];
+    let res = fixTeen(value);
+    sum = sum + res;
+  }
+  console.log(sum);
+}
+
+let a = 1;
+let b = 15;
+let c = 2;
+noTeenSum(a, b, c);
+//===============================================================================
+
+
+//        j=0   j=1     j=2 |  j=3  |
+//       |-----|------|------|----|
+// top=0 |  1  | 2    | 3    | 4  |
+//       |---- |------|------|-----|
+//       |  12 | 13   |  14  | 5   |
+//       |-----|------|------|-----|
+//       | 11  |   16 | 15   | 6   |
+//-      |-----|------|------|-----|
+//down=n-1| 10 |  9  |  8   | 7   |
+//       |------|-----|------|-----|
+//          |                    |
+//      left=0                right=n-1
+//-----------------------------------------------
+// direction ==1
+// left to right
+//-----------------------------------------------
+// direction ==2
+// top to down
+//-----------------------------------------------
+// direction ==3
+// right to left
+//-----------------------------------------------
+// direction ==4
+// down to top
+//-----------------------------------------------
+function spiralMatrix(row, col) {
+  let matrix = new Array(row);
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(row);
+  }
+  // console.log(matrix);
+  let k = 0;
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+  console.log(matrix);
+  let n = matrix.length;
+  console.log(n);
+  console.log(matrix[0].length);
+  //==================================================================================
+  let spiralM = [];
+  let top = 0;
+  let down = n - 1;
+  let left = 0;
+  //let right = n - 1; //
+  let right = matrix[0].length - 1;
+  console.log(right);
+  let direction = 1;
+  while (top <= down && left <= right) {
+    if (direction == 1) {
+      // move left to right.
+      for (let i = left; i <= right; i++) {
+        spiralM.push(matrix[top][i]);
+      }
+      top++;
+      direction = 2;
+    } else if (direction == 2) {
+      // top to down
+      for (let i = top; i <= down; i++) {
+        spiralM.push(matrix[i][right]);
+      }
+      right--;
+      direction = 3;
+    } else if (direction == 3) {
+      // right to left
+      for (let i = right; i >= left; i--) {
+        spiralM.push(matrix[down][i]);
+      }
+      down--;
+      direction = 4;
+    } else if (direction == 4) {
+      // down to top
+      for (let i = down; i >= top; i--) {
+        spiralM.push(matrix[i][left]);
+      }
+      left++;
+      direction = 1;
+    }
+  }
+  console.log(spiralM);
+}
+
+let row = 3;
+let col = 4;
+spiralMatrix(row, col);
+
+// time complexcity will be o(mn);
+//=====================================================================
+
+function task(val) {
+  if (val.length == 1) {
+    return val;
+  } else {
+    task(val);
+  }
+}
+
+function triangleSum(arr) {
+  let update = [];
+  if (arr.length == 1) {
+    console.log(arr[0]);
+  }
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    update.push(arr[i] + (arr[i + 1] % 10));
+  }
+  let res = task(update);
+}
+
+let arr = [1, 2, 3, 4, 5];
+triangleSum(arr);
+
+
+//=======================================================================
+
+
+function triangleSum(arr) {
+  let n = arr.length;
+  //  let newA = [];
+  while (n > 1) {
+    let newA = [];
+    for (let i = 0; i < n - 1; i++) {
+      newA.push((arr[i] + arr[i + 1]) % 10);
+    }
+    n--;
+    arr = newA;
+  }
+  console.log(arr[0]);
+}
+let arr = [1, 2, 3, 4, 5];
+triangleSum(arr);
+
+//=============================================================
+
+function triangleSum(arr) {
+  let n = arr.length;
+  let newA = [];
+  while (n > 1) {
+    for (let i = 0; i < n - 1; i++) {
+      newA.push((arr[i] + arr[i + 1]) % 10);
+    }
+    n--;
+    arr = newA;
+    newA = [];
+  }
+  console.log(arr[0]);
+}
+let arr = [1, 2, 3, 4, 5];
+triangleSum(arr);
+let str = 'ded';
+let sp = str.split('');
+console.log(sp);
+let map = [];
+for (let i = 0; i < sp.length; i++) {
+  if (map[sp[i]]) {
+    map[sp[i]]++;
+  } else {
+    map[sp[i]] = 1;
+  }
+}
+console.log(map);
+//========================================================
+About undefined:--
+                 A variable that has not been assigned a value is of type undefined . 
+                 A method or statement also returns undefined if the variable that is being 
+                 evaluated does not have an assigned value.
+                  A function returns undefined if a value was not returned 
+
+let x;
+if (x === undefined) {
+  console.log('welcome');  //true
+} else {
+  console.log('not wel');
+}
+
+//=====================================================================
+
+function patternMaching(word, pattern) {
+  let map = [];
+  let mapping_1 = '';
+  for (let i = 0; i < pattern.length; i++) {
+    let c = pattern[i];
+    if (map[c] === undefined) {
+      map[c] = i;
+    }
+    mapping_1 = mapping_1 + map[c];
+  }
+  // console.log(map);
+  // console.log(mapping_1);
+  // console.log(typeof mapping_1);
+
+  // let w = word[0];
+  // console.log(w);
+
+  let result = [];
+  for (let i = 0; i < word.length; i++) {
+    let wMap = [];
+    let w = word[i];
+    let mapping_2 = '';
+    for (let j = 0; j < w.length; j++) {
+      const c = w[j];
+      if (wMap[c] === undefined) {
+        wMap[c] = j;
+      }
+      mapping_2 = mapping_2 + wMap[c];
+    }
+    // console.log(wMap);
+    if (mapping_1 == mapping_2) {
+      result.push(w);
+    }
+  } //1 loop
+  console.log(result);
+}
+let word = ['abc', 'bcc', 'dff'];
+let pattern = 'abb';
+
+patternMaching(word, pattern);
+
+
+//============================================================
+
+function mapingPattern(word, pattern) {
+  let map_1 = [];
+  let mapping_1 = '';
+  for (let i = 0; i < pattern.length; i++) {
+    let el = pattern[i];
+    if (map_1[el] === undefined) {
+      map_1[el] = i;
+    }
+    mapping_1 = mapping_1 + map_1[el];
+  }
+  // console.log(mapping_1);
+  //console.log(map);
+  //---------------------------------------------
+
+  let result = [];
+
+  for (let i = 0; i < word.length; i++) {
+    let word_Map = [];
+    let mapping_2 = '';
+    let single_word = word[i];
+
+    for (let j = 0; j < single_word.length; j++) {
+      let char_ = single_word[j];
+      if (word_Map[char_] === undefined) {
+        word_Map[char_] = j;
+      }
+      mapping_2 = mapping_2 + word_Map[char_];
+    }
+    if (mapping_1 == mapping_2) {
+      result.push(single_word);
+    }
+  }
+  console.log(result);
+}
+
+let word = ['mee', 'ccc'];
+let pattern = 'abb';
+mapingPattern(word, pattern);
+
+//===============================================================================
+
+
+function taskingFreq(str, pattern) {
+  let map = [];
+  let pat = '';
+  for (let i = 0; i < pattern.length; i++) {
+    let el = pattern[i];
+    if (map[el] === undefined) {
+      map[el] = i;
+    }
+    pat = pat + map[el];
+  }
+  console.log(map);
+  console.log(pat);
+}
+
+let str = ['abc', 'bcc', 'acc'];
+let pattern = 'bbb';
+taskingFreq(str, pattern);
+
+//======================================================================================
+
+function findthe_duplicate(nums) {
+  let map = [];
+  for (let i = 0; i < nums.length; i++) {
+    let el = nums[i];
+    if (map[el]) {
+      map[el]++;
+    } else {
+      map[el] = 1;
+    }
+  }
+  console.log(map);
+  let newArr = [];
+  for (let e in map) {
+    if (map[e] % 2 == 0) {
+      newArr.push(e);
+    }
+  }
+  console.log(newArr);
+}
+let nums = [4, 3, 2, 7, 8, 2, 3, 1];
+findthe_duplicate(nums);
+
+//========================================================================================
+*/
