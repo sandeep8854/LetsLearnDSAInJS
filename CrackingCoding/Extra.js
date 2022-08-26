@@ -138,11 +138,82 @@ function sherlockAndBeast(n) {
   console.log(result);
 }
 let n = 11;
+
 sherlockAndBeast(n);
-*/
-if (-1 >= -0) {
-  console.log('YES');
-} else {
-  console.log('No');
+//=============================================
+function conting_(num) {
+  let arr = [];
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      arr.push(i);
+    }
+  }
+  console.log(arr);
+  console.log(33333 - 6666);
 }
-console.log(3 - Math.abs(-2));
+let num = 100000;
+conting_(num);
+//========================================================
+function decentNumber(n) {
+  let result = -1;
+  let i = n;
+  while (i >= 0) {
+    if (i % 3 === 0) {
+      result = '5'.repeat(i) + '3'.repeat(n - i);
+      break;
+    }
+    i -= 5;
+  }
+  console.log(result);
+}
+
+let n = 11;
+decentNumber(n);
+
+//=======================================================================================
+// The repeat() method constructs and returns a new string which contains the specified
+    // number of copies of the string on which it was called, concatenated together.
+   //  console.log("abc".repeat(2));
+  //  console.log("abc".repeat(0)); // empty.
+  //  console.log("abc".repeat(3.5)); // count will be converted as a integer.
+    
+   // console.log("abc".repeat(-1)); //invalid count value.
+  // console.log("abc".repeat(2/0));  //invalid count value.
+ //   console.log(4.repeat(2));  //SyntaxError: Invalid or unexpected token.
+
+const chorus = "Because I'm happy. ";
+
+console.log(`Chorus lyrics for "Happy": ${chorus.repeat(2)}`);
+
+console.log('abc'.repeat(2)); //abcabc
+console.log('abc'.repeat(0)); //nothing
+*/
+//========================================================================
+function fixTeen(n) {
+  //=========================================================
+  // if ((n >= 13 && n < 15) || (n > 16 && n <= 19)) {
+  //   return 0;
+  // } else {
+  //   return n;
+  // }
+  //============================================================
+  if (n == 15) {
+    return n;
+  } else if (n == 16) {
+    return n;
+  } else if (n >= 13 && n <= 19) {
+    return 0;
+  } else {
+    return n;
+  }
+  //==============================================================
+}
+function noTeenSum(a, b, c) {
+  let res = fixTeen(a) + fixTeen(b) + fixTeen(c);
+  console.log(res);
+}
+
+let a = 13;
+let b = 13;
+let c = 2;
+noTeenSum(a, b, c);
