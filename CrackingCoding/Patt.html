@@ -15,14 +15,21 @@
         for (let i = 0; i < a; i++) {
           if (i <= Math.floor(a / 2)) {
             // 0
-            for (let j = 0; j < a - b; j++) {
-              document.write(i + 1);
+            for (let j = 0; j < a; j++) {
+              if (i + j >= 3 * i) {
+                document.write(i + 1);
+              } else {
+                document.write('&nbsp&nbsp');
+              }
             }
-            b += 2;
             document.write('<br>');
           } else {
-            for (let j = 0; j < c; j++) {
-              document.write(n - xy);
+            for (let j = 1; j <= c; j++) {
+              if (j <= a - c) {
+                document.write('&nbsp&nbsp');
+              } else {
+                document.write(n - xy);
+              }
             }
             //  w += 1;
             c += 2;
@@ -33,6 +40,13 @@
       }
       let n = 4;
       pattern(n);
+      // 1111111
+      // 22222
+      // 333
+      // 4
+      // 333
+      // 22222
+      // 1111111
     </script>
   </head>
   <body></body>
