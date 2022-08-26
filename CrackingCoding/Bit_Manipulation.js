@@ -14,7 +14,7 @@
 //=========================================================
 //console.log(`Welcome to Bit Manipulation`);
 //==========================================================
-
+/*
 function remob(s) {
   s = s.split(' ');
   let ans = [];
@@ -778,19 +778,37 @@ let pos = 1;
 setBit(n, pos);
 //===========================================================
 
-function findtwoNuBit(arr) {
-  let xorOff = 0;
-  let xorOn = 0;
-  let bitMask = 1 << 1;
-  console.log(bitMask);
-  for (let i = 0; i < arr.length; i++) {
-    if ((bitMask & arr[i]) == 0) {
-      xorOff = xorOff ^ arr[i];
-    } else {
-      xorOn = xorOn ^ arr[i];
-    }
-  }
-  console.log(xorOff, xorOn);
+// function findtwoNuBit(arr) {
+//   let xorOff = 0;
+//   let xorOn = 0;
+//   let bitMask = 1 << 1;
+//   console.log(bitMask);
+//   for (let i = 0; i < arr.length; i++) {
+//     if ((bitMask & arr[i]) == 0) {
+//       xorOff = xorOff ^ arr[i];
+//     } else {
+//       xorOn = xorOn ^ arr[i];
+//     }
+//   }
+//   console.log(xorOff, xorOn);
+// }
+// let arr = [4, 3, 4, 3, 6, 7, 5, 6];
+// findtwoNuBit(arr);
+*/
+//================================================================================
+
+function unsinedRightShiftOperator(a, b) {
+  let bin_1 = a.toString(2);
+  console.log(bin_1);
+  // let bin_2 = b.toString(2);
+  // console.log(bin_2);
+
+  let res = a >>> b;
+  let res_1 = res.toString(2);
+  console.log(res);
+  console.log(res_1);
 }
-let arr = [4, 3, 4, 3, 6, 7, 5, 6];
-findtwoNuBit(arr);
+
+let a = 240;
+let b = 3;
+unsinedRightShiftOperator(a, b);
