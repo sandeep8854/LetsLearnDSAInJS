@@ -9098,4 +9098,911 @@ let nums = [4, 3, 2, 7, 8, 2, 3, 1];
 findthe_duplicate(nums);
 
 //========================================================================================
+
+// Question:- given a n*n matrix, the problem is to sort the matrix row-wise
+//            and column wise.
+
+function sort_The_Matrix(row, col) {
+  let matrix = new Array(row);
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+
+  let k = 0;
+  let arr = [4, 1, 3, 9, 6, 8, 5, 2, 7];
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+  console.log(matrix);
+
+  let newArr = [];
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      newArr.push(matrix[i][j]);
+    }
+  }
+  console.log(newArr);
+  newArr.sort(function (a, b) {
+    return a - b;
+  });
+
+  console.log(newArr);
+  let x = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = newArr[x];
+      x++;
+    }
+  }
+  console.log(matrix);
+}
+
+let row = 3;
+let col = 3;
+sort_The_Matrix(row, col);
+
+//==========================================================================
+
+// given the string  find the number of "hi";
+// let str="SDDFSShi"; --1
+//let str="sandeephihihi"; --2
+//let str="AMDBDJNFhihihihihi" --5
+
+function findtheHi(str) {
+  let count = 0;
+  for (let i = 0; i < str.length - 1; i++) {
+    if (str[i] == 'h' && str[i + 1] == 'i') {
+      count++;
+    }
+  }
+  console.log(count);
+}
+
+let str = 'sandeephihihi';
+findtheHi(str);
+
+//==================================================================================
+
+
+function count_Matrix_1(row, col) {
+  let arr = [0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0];
+  let matrix = new Array(row);
+
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+  console.log(matrix);
+  let max = Number.MIN_VALUE;
+  let count = 0;
+  for (let i = 0; i < row; i++) {
+    let count = 0;
+    for (let j = 0; j < col; j++) {
+      if (matrix[i][j] == 1) {
+        count++;
+      }
+    }
+    max = Math.max(count, max);
+  }
+  console.log(max);
+}
+
+let row = 4;
+let col = 4;
+count_Matrix_1(row, col);
+
+
+//=============================================================================
+// Recursion-1;
+//---------------------
+Question-1
+//Given n of 1 or more, return the factorial of n, which is n * (n-1) * (n-2) ... 1.
+// Compute the result recursively (without loops).
+
+//factorial(1) → 1
+//factorial(2) → 2
+//factorial(3) → 6
+
+function recu(n) {
+  if (n == 0) {
+    return 1;
+  }
+  return n * recu(n - 1);
+}
+
+let n = 5;
+console.log(recu(n)); //120
+
+//===============================================================================
+
+// Question-2
+//We have bunnies standing in a line, numbered 1, 2, ...
+//The odd bunnies (1, 3, ..) have the normal 2 ears. The even bunnies (2, 4, ..)
+//we'll say have 3 ears, because they each have a raised foot.
+// Recursively return the number of "ears" in the bunny line 1, 2, ... n
+//(without loops or multiplication).
+
+//bunnyEars2(0) → 0
+//bunnyEars2(1) → 2
+//bunnyEars2(2) → 5
+function bunnyEears(n) {
+  if (n == 0) {
+    return 0;
+  }
+  if (n % 2 == 0) return 3 + bunnyEears(n - 1);
+  else return 2 + bunnyEears(n - 1);
+}
+
+let n = 10;
+console.log(bunnyEears(n)); //25
+
+//=========================================================================================
+
+// Question-03
+// Given a non-negative int n, return the count of the occurrences of 7 as a digit,
+// so for example 717 yields 2. (no loops). Note that mod (%) by 10 yields the rightmost digit
+// (126 % 10 is 6), while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
+
+//count7(717) → 2
+//count7(7) → 1
+//count7(123) → 0
+
+function count7(n) {
+  if (n < 1) return 0;
+  if (n % 10 == 7) return 1 + count7(Math.floor(n / 10));
+  else return count7(Math.floor(n / 10));
+}
+
+let n = 17777;
+console.log(count7(n)); //4
+
+//==================================================================================
+
+// Question-04
+//Given a string, compute recursively (no loops) the number of lowercase 'x' chars in the string.
+//countX("xxhixx") → 4
+//countX("xhixhix") → 3
+//countX("hi") → 0
+
+function countX(str) {
+  if (str.length == 0) {
+    return 0;
+  }
+  if (str[0] == 'x') return 1 + countX(str.substring(1));
+  else return countX(str.substring(1));
+}
+let str = 'hixx';
+console.log(countX(str)); // 2
+
+//=======================================================================================
+
+// Question-05
+//Given a string, compute recursively (no loops) a new string where all appearances of "pi"
+//have been replaced by "3.14".
+
+//changePi("xpix") → "x3.14x"
+//changePi("pipi") → "3.143.14"
+//changePi("pip") → "3.14p"
+
+function changePi(str) {
+  if (str.length == 0 || str.length < 2) return str;
+  if (str[0] == 'p' && str[1] == 'i')
+    return '3.14' + changePi(str.substring(2));
+  return str[0] + changePi(str.substring(1));
+}
+
+let str = 'pip';
+console.log(changePi(str));
+
+//========================================================================================
+
+// Question-06
+// Given an array of ints, compute recursively the number of times that the value 11
+// appears in the array. We'll use the convention of considering only the part of the
+//array that begins at the given index. In this way, a recursive call can pass index+1 to
+// move down the array. The initial call will pass in index as 0.
+
+//array11({1, 2, 11}, 0) → 1
+//array11({11, 11}, 0) → 2
+//array11({1, 2, 3, 4}, 0) → 0
+
+function array11(arr, initial) {
+  if (initial >= arr.length) {
+    return 0;
+  }
+  if (arr[initial] == 11) return 1 + array11(arr, initial + 1);
+  else return array11(arr, initial + 1);
+}
+let arr = [1, 2, 11, 11, 11];
+let intinal = 0;
+console.log(array11(arr, intinal));
+
+//===========================================================================================
+
+// Question-07
+//Given a string, compute recursively a new string where identical chars that are adjacent
+// in the original string are separated from each other by a "*".
+//pairStar("hello") → "hel*lo"
+//pairStar("xxyy") → "x*xy*y"
+//pairStar("aaaa") → "a*a*a*a"
+
+function pairStar(str) {
+  if (str.length == 0 || str.length < 2) {
+    return str;
+  }
+  if (str[0] == str[1]) return str[0] + '*' + pairStar(str.substring(1));
+  else return str[0] + pairStar(str.substring(1));
+}
+let str = 'aaaaaa';
+console.log(pairStar(str));
+
+//=========================================================================================
+
+// Question:-08
+// Count recursively the total number of "abc" and "aba" substrings that appear in the given string.
+
+//countAbc("abc") → 1
+//countAbc("abcxxabc") → 2
+//countAbc("abaxxaba") → 2
+
+function countAbc(str) {
+  if (str.length < 3) return 0;
+  let test = str.substring(0, 3);
+  if (test === 'abc' || test === 'aba') {
+    return 1 + countAbc(str.substring(1));
+  } else return countAbc(str.substring(1));
+}
+
+let str = 'abcxxabcxabcxaba';
+console.log(countAbc(str));
+
+//=========================================================================================
+
+// Question:-09
+//Given a string, compute recursively the number of times lowercase "hi" appears in the string,
+// however do not count "hi" that have an 'x' immedately before them.
+
+//countHi2("ahixhi") → 1
+//countHi2("ahibhi") → 2
+//countHi2("xhixhi") → 0
+
+function countHi2(str) {
+  let len = str.length;
+  if (len <= 1) return 0;
+
+  if (str[0] === 'x' && str[1] === 'h') return countHi2(str.substring(2));
+  if (str[0] == 'h' && str[1] == 'i') return 1 + countHi2(str.substring(2));
+  return countHi2(str.substring(1));
+}
+let str = 'ahixhi';
+console.log(countHi2(str));
+
+//==============================================================================
+
+//Question:-10
+// Given a string and a non-empty substring sub, compute recursively the number
+//of times that sub appears in the string, without the sub strings overlapping.
+
+//strCount("catcowcat", "cat") → 2
+//strCount("catcowcat", "cow") → 1
+//strCount("catcowcat", "dog") → 0
+
+function strCount(str, sub) {
+  let strLen = str.length;
+  let subLen = sub.length;
+
+  if (strLen < subLen) return 0;
+  let test = str.substring(0, subLen);
+  if (test === sub) return 1 + strCount(str.substring(subLen), sub);
+  else return strCount(str.substring(1), sub);
+}
+let str = 'catcowcat';
+let sub = 'dog';
+console.log(strCount(str, sub));
+
+//=========================================================================
+
+// Question:-11
+//We have a number of bunnies and each bunny has two big floppy ears.
+// We want to compute the total number of ears across all the bunnies recursively
+// (without loops or multiplication).
+
+//bunnyEars(0) → 0
+//bunnyEars(1) → 2
+//bunnyEars(2) → 4
+
+function bunnyCount(n) {
+  if (n == 0) return 0;
+  return 2 + bunnyCount(n - 1);
+}
+
+let n = 4;
+console.log(bunnyCount(n));
+
+//==========================================================================
+
+// Question:-12
+// We have triangle made of blocks. The topmost row has 1 block, the next row down has 2 blocks,
+// the next row has 3 blocks, and so on. Compute recursively (no loops or multiplication) the total
+//number of blocks in such a triangle with the given number of rows.
+
+//triangle(0) → 0
+//triangle(1) → 1
+//triangle(2) → 3
+
+function triangle(row) {
+  if (row == 0) return 0;
+  return row + triangle(row - 1);
+}
+
+let row = 5;
+console.log(triangle(row)); //15
+
+//======================================================================================
+
+// Question:-13
+// Given a non-negative int n, return the sum of its digits recursively (no loops).
+// Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (/)
+//by 10 removes the rightmost digit (126 / 10 is 12).
+
+//sumDigits(126) → 9
+//sumDigits(49) → 13
+//sumDigits(12) → 3
+function sumDigits(n) {
+  if (n < 10) return n;
+  return (n % 10) + sumDigits(Math.floor(n / 10));
+}
+let n = 1234;
+console.log(sumDigits(n));
+
+//===========================================================================================
+
+// Question:-14
+// Given a non-negative int n, compute recursively (no loops) the count of the occurrences
+//of 8 as a digit, except that an 8 with another 8 immediately to its left counts double,
+//so 8818 yields 4. Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6),
+// while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
+
+//count8(8) → 1
+//count8(818) → 2
+//count8(8818) → 4
+function count8(n) {
+  if (n < 1) return 0;
+  if (n % 10 == 8) return 1 + count8(Math.floor(n / 10));
+  else return count8(Math.floor(n / 10));
+}
+
+let n = 8888888;
+console.log(count8(n));
+
+//===================================================================================
+
+// Question:-15
+// Given base and n that are both 1 or more, compute recursively (no loops) the value
+// of base to the n power, so powerN(3, 2) is 9 (3 squared).
+
+//powerN(3, 1) → 3
+//powerN(3, 2) → 9
+//powerN(3, 3) → 27
+
+function powerN(base, pow) {
+  if (pow == 0) return 1;
+  return base * powerN(base, pow - 1);
+}
+
+let base = 3;
+let pow = 3;
+console.log(powerN(base, pow));
+
+//=================================================================================
+
+// Question:-16
+// Given a string, compute recursively (no loops) the number of times lowercase "hi" appears in the string.
+
+//countHi("xxhixx") → 1
+//countHi("xhixhix") → 2
+//countHi("hi") → 1
+
+function countHi(str) {
+  if (str.length < 2) return 0;
+  let test = str.substring(0, 2);
+  if (test == 'hi') return 1 + countHi(str.substring(2));
+  return countHi(str.substring(1));
+}
+let str = 'xxhixxhi';
+console.log(countHi(str));
+
+//=======================================================================================
+// Question:-17
+// Given a string, compute recursively (no loops) a new string where all the lowercase 'x' chars
+// have been changed to 'y' chars.
+
+//changeXY("codex") → "codey"
+//changeXY("xxhixx") → "yyhiyy"
+//changeXY("xhixhix") → "yhiyhiy"
+
+function changeXY(str) {
+  if (str.length == 0) return str;
+  if (str[0] == 'x') return 'y' + changeXY(str.substring(1));
+  return str[0] + changeXY(str.substring(1));
+}
+
+let str = 'xxhixx';
+console.log(changeXY(str));
+
+//===============================================================================
+
+// Question:-18
+// Given a string, compute recursively a new string where all the 'x' chars have been removed.
+
+//noX("xaxb") → "ab"
+//noX("abc") → "abc"
+//noX("xx") → ""
+
+function noX(str) {
+  if (str.length == '') return str;
+  if (str[0] == 'x') return noX(str.substring(1));
+  else return str[0] + noX(str.substring(1));
+}
+
+let str = 'abcxxzyz';
+console.log(noX(str));
+
+//=================================================================================
+
+// Question:-19
+// Given an array of ints, compute recursively if the array contains a 6. We'll use the
+// convention of considering only the part of the array that begins at the given index.
+//In this way, a recursive call can pass index+1 to move down the array. The initial call will
+// pass in index as 0.
+
+//array6({1, 6, 4}, 0) → true
+//array6({1, 4}, 0) → false
+//array6({6}, 0) → true
+
+function array6(arr, index) {
+  if (index >= arr.length) return false;
+
+  if (arr[index] == 6) return true;
+  else return array6(arr, index + 1);
+}
+
+let arr = [1, 6, 4];
+let index = 0;
+console.log(array6(arr, index));
+
+//=============================================================================
+
+//Question:-20
+//Given an array of ints, compute recursively if the array contains somewhere a value
+//followed in the array by that value times 10. We'll use the convention of considering only
+//the part of the array that begins at the given index. In this way, a recursive call can pass
+//index+1 to move down the array. The initial call will pass in index as 0.
+
+//array220({1, 2, 20}, 0) → true
+//array220({3, 30}, 0) → true
+//array220({3}, 0) → false
+//
+
+function array220(arr, index) {
+  if (index >= arr.length - 1) return false;
+  if (arr[index + 1] == arr[index] * 10) return true;
+  else return array220(arr, index + 1);
+}
+let arr = [1, 2, 20];
+let index = 0;
+console.log(array220(arr, index));
+
+//==================================================================================
+
+// Question:-21
+// Given a string, compute recursively a new string where all the adjacent chars are now separated by a "*".
+
+//allStar("hello") → "h*e*l*l*o"
+//allStar("abc") → "a*b*c"
+//allStar("ab") → "a*b"
+function allStar(str) {
+  if (str.length == 0 || str.length == 1) return str;
+  return str[0] + '*' + allStar(str.substring(1));
+}
+
+let str = 'ij';
+console.log(allStar(str));
+
+//==========================================================================================
+
+// Question:-22
+//Given a string, compute recursively a new string where all the lowercase 'x' chars have been moved
+// to the end of the string.
+
+//endX("xxre") → "rexx"
+//endX("xxhixx") → "hixxxx"
+//endX("xhixhix") → "hihixxx"
+
+function endX(str) {
+  if (str.length == 0) return str;
+  if (str[0] == 'x') return endX(str.substring(1)) + str[0];
+  else return str[0] + endX(str.substring(1));
+}
+let str = 'hiixxrexx';
+console.log(endX(str));
+
+//============================================================================
+
+// Question:-23
+//Given a string, compute recursively (no loops) the number of "11" substrings in the string.
+// The "11" substrings should not overlap.
+
+//count11("11abc11") → 2
+//count11("abc11x11x11") → 3
+//count11("111") → 1
+
+function count11(str) {
+  if (str.length < 2) return 0;
+  let test = str.substring(0, 2);
+  if (test === '11') return 1 + count11(str.substring(2));
+  else return count11(str.substring(1));
+}
+
+let str = '11abc11';
+console.log(count11(str));
+
+//==========================================================================
+
+// Question:-24
+//Given a string, return recursively a "cleaned" string where adjacent chars that are the
+// same have been reduced to a single char. So "yyzzza" yields "yza".
+
+//stringClean("yyzzza") → "yza"
+//stringClean("abbbcdd") → "abcd"
+//stringClean("Hello") → "Helo"
+
+function stringClean(str) {
+  if (str.length < 2) return str;
+  if (str[0] == str[1]) return stringClean(str.substring(1));
+  else return str[0] + stringClean(str.substring(1));
+}
+
+let str = 'yyzzza';
+console.log(stringClean(str));
+//=============================================================================================
+// Recursion:-02
+//Question:-26
+//Given an array of ints, is it possible to choose a group of some of the ints, such that the group
+// sums to the given target? This is a classic backtracking recursion problem. Once you understand
+//the recursive backtracking strategy in this problem, you can use the same pattern for many problems
+//to search a space of choices. Rather than looking at the whole array, our convention is to consider
+//the part of the array starting at index start and continuing to the end of the array. The caller can
+// specify the whole array simply by passing start as 0. No loops are needed -- the recursive calls
+// progress down the array.
+
+//groupSum(0, {2, 4, 8}, 10) → true
+//groupSum(0, {2, 4, 8}, 14) → true
+//groupSum(0, {2, 4, 8}, 9) → false
+
+function groupSum(start, arr, target) {
+  if (start >= arr.length) {
+    return target == 0;
+  }
+  if (groupSum(start + 1, arr, target - arr[start])) return true;
+  if (groupSum(start + 1, arr, target)) return true;
+
+  return false;
+}
+function backtracking(start, arr, target, sum) {
+  if (sum == target) {
+    return true;
+  }
+  if (start >= arr.length) return false;
+
+  for (let i = start; i < arr.length; i++) {
+    sum += arr[i];
+    if (backtracking(i + 1, arr, target, sum)) return true;
+    sum -= arr[i];
+  }
+  return false;
+}
+
+function groupSum(start, arr, target) {
+  return backtracking(start, arr, target, 0);
+}
+
+let start = 0;
+let arr = [2, 4, 8];
+let target = 10;
+console.log(groupSum(start, arr, target));
+
+
+//===============================================================================
+
+// Logical:-2
+// Question:-25
+//Return true if the given non-negative number is a multiple of 3 or 5, 
+//but not both. Use the % "mod" operator -- see Introduction to Mod
+
+//old35(3) → true
+//old35(10) → true
+//old35(15) → false
+
+
+function odd35(n) {
+  let res = (n % 3 == 0) ^ (n % 5 == 0);
+  if (res == 1) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+}
+let n = 30;
+odd35(n);
+
+//======================================================================
+
+//Question:-26
+// We want to make a row of bricks that is goal inches long. We have a number of small bricks (1 inch each)
+//and big bricks (5 inches each). Return true if it is possible to make the goal by choosing from
+//the given bricks. This is a little harder than it looks and can be done without any loops.
+// See also: Introduction to MakeBricks
+
+//makeBricks(3, 1, 8) → true
+//makeBricks(3, 1, 9) → false
+//makeBricks(3, 2, 10) → true
+function makeBricks(small, big, goal) {
+  if (big * 5 == goal) return true;
+  else if (small * 1 == goal) return true;
+  else if (small + big * 5 == goal) return true;
+  else return false;
+}
+
+let small = 0;
+let big = 0;
+let goal = 0;
+console.log(makeBricks(small, big, goal));
+
+//============================================================================================
+
+//Question:-27
+// Given 3 int values, a b c, return their sum. However, if one of the values is the same as another
+// of the values, it does not count towards the sum.
+
+//loneSum(1, 2, 3) → 6
+//loneSum(3, 2, 3) → 2
+//loneSum(3, 3, 3) → 0
+
+function loneSum(a, b, c) {
+  if (a == b && b == c) {
+    console.log('0');
+  } else if (a == b) {
+    console.log(c);
+  } else if (b == c) {
+    console.log(a);
+  } else if (a == c) {
+    console.log(b);
+  } else {
+    console.log(a + b + c);
+  }
+}
+let a = 1;
+let b = 3;
+let c = 3;
+loneSum(a, b, c);
+
+//=============================================================================
+
+// Question:-28
+//Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not count
+// towards the sum and values to its right do not count. So for example, if b is 13, then both b and c
+//do not count.
+
+//luckySum(1, 2, 3) → 6
+//luckySum(1, 2, 13) → 3
+//luckySum(1, 13, 3) → 1
+
+function luckySum(a, b, c) {
+  if (a == 13) {
+    console.log('0');
+  } else if (b == 13) {
+    console.log(a);
+  } else if (c == 13) {
+    console.log(a + b);
+  } else {
+    console.log(a + b + c);
+  }
+}
+
+let a = 1;
+let b = 2;
+let c = 13;
+luckySum(a, b, c);
+
+//===================================================================================
+ 
+// Question:-28
+// For this problem, we'll round an int value up to the next multiple of 10 if its rightmost
+//digit is 5 or more, so 15 rounds up to 20. Alternately, round down to the previous multiple of 10
+// if its rightmost digit is less than 5, so 12 rounds down to 10. Given 3 ints, a b c, return the sum of
+//their rounded values. To avoid code repetition, write a separate helper "public int round10(int num)
+//{" and call it 3 times. Write the helper entirely below and at the same indent level as roundSum().
+
+//roundSum(16, 17, 18) → 60
+//roundSum(12, 13, 14) → 30
+//roundSum(6, 4, 4) → 10
+
+// 1st method.
+
+function round10(num) {
+  let reminder = num % 10;
+  num = num - reminder;
+  if (reminder >= 5) {
+    num = num + 10;
+  }
+  return num;
+}
+function roundSum(a, b, c) {
+  return round10(a) + round10(b) + round10(c);
+}
+let a = 16;
+let b = 17;
+let c = 18;
+console.log(roundSum(a, b, c));
+
+//------------------------------------------------------------------------
+// 2nd method:-
+
+
+function round10(num) {
+  if (n % 10 < 5) return n - (n % 10);
+  else return n + (10 - (n % 10));
+}
+
+function roundSum(a, b, c) {
+  return round10(a) + round10(b) + round10(c);
+}
+
+let a = 16;
+let b = 17;
+let c = 18;
+console.log(roundSum(a, b, c));
+//===============================================================
+
+// Question:-29;
+//Given three ints, a b c, return true if one of b or c is "close" (differing from a by at most 1),
+// while the other is "far", differing from both other values by 2 or more. Note: Math.abs(num) computes
+// the absolute value of a number.
+
+//closeFar(1, 2, 10) → true
+//closeFar(1, 2, 3) → false
+//closeFar(4, 1, 3) → true
+
+function closeFar(a, b, c) {
+  let x = 0,
+    y = 0,
+    z = 0;
+  x = Math.abs(a - b);
+  y = Math.abs(b - c);
+  z = Math.abs(c - a);
+  if (a == b || b == c || c == a) return true;
+  if (x == y || y == z || x == z) return false;
+  return true;
+}
+let a = 1,
+  b = 2,
+  c = 3;
+console.log(closeFar(a, b, c));
+
+//==============================================================================
+
+// Question:-30
+// Given 2 int values greater than 0, return whichever value is nearest to 21 without going over.
+// Return 0 if they both go over.
+
+//blackjack(19, 21) → 21
+//blackjack(21, 19) → 21
+//blackjack(19, 22) → 19
+
+function blackjack(a, b) {
+  if (a > 21 && b > 21) return 0;
+  else if (a > 21) return b;
+  else if (b > 21) return a;
+  let updateA = 21 - a;
+  let updateB = 21 - b;
+  if (updateA > updateB) return b;
+  else a;
+}
+
+let a = 19;
+let b = 21;
+console.log(blackjack(a, b));
+
+//===========================================================================
+
+//Question:-31
+//Given three ints, a b c, one of them is small, one is medium and one is large.
+//Return true if the three values are evenly spaced, so the difference between
+//small and medium is the same as the difference between medium and large.
+
+//evenlySpaced(2, 4, 6) → true
+//evenlySpaced(4, 6, 2) → true
+//evenlySpaced(4, 6, 3) → false
+
+function evenlySpaced(a, b, c) {
+  // let comp_1 = a - b;
+  // let comp_2 = b - c;
+  // if (comp_1 == comp_2) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+
+  let arr = [a, b, c];
+  // console.log(arr);
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  // console.log(arr);
+
+  let valA = arr[1] - arr[0];
+  let val_B = arr[2] - arr[1];
+  if (valA == val_B) return true;
+  else return false;
+}
+
+let a = 4,
+  b = 6,
+  c = 2;
+console.log(evenlySpaced(a, b, c));
+
+//=============================================================================
+
+// Question:-32
+// We want make a package of goal kilos of chocolate. We have small bars (1 kilo each) and big bars
+//(5 kilos each). Return the number of small bars to use, assuming we always use big bars before small bars.
+// Return -1 if it can't be done.
+
+//makeChocolate(4, 1, 9) → 4
+//makeChocolate(4, 1, 10) → -1
+//makeChocolate(4, 1, 7) → 2
+
+function makeChocolate(small, big, goal) {
+  let rem = goal % 5;
+
+  if (small + big * 5 < goal) return -1;
+  else if (rem <= small && goal - big * 5 > 4) return rem + 5;
+  else if (rem <= small) return rem;
+  else return -1;
+}
+
+let small = 4,
+  big = 1,
+  goal = 9;
+console.log(makeChocolate(a, b, c));
+
+//==================================================================================
 */
+// Question:-33
+// When squirrels get together for a party, they like to have cigars. A squirrel party is successful
+// when the number of cigars is between 40 and 60, inclusive. Unless it is the weekend,
+//in which case there is no upper bound on the number of cigars. Return true if the party with the
+// given values is successful, or false otherwise.
+
+//cigarParty(30, false) → false
+//cigarParty(50, false) → true
+//cigarParty(70, true) → true
+
+function cigarParty(cigar, isWikend) {
+  if (isWikend == true && cigar >= 40) return true;
+  if (isWikend == false && cigar >= 40 && cigar <= 60) return true;
+  else return false;
+}
+let cigar = 70;
+let isWikend = true;
+console.log(cigarParty(cigar, isWikend));
