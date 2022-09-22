@@ -1844,7 +1844,7 @@ function stringMatch(a, b) {
 let a = 'abc';
 let b = 'abc';
 console.log(stringMatch(a, b));
-*/
+
 //=====================================================================================
 // Question:-111
 // Given a string, return a version where all the "x" have been removed. Except an "x" at the very start or
@@ -1854,7 +1854,2026 @@ console.log(stringMatch(a, b));
 //stringX("abxxxcd") → "abcd"
 //stringX("xabxxxcdx") → "xabcdx"
 
-function stringX(str) {}
+function stringX(str) {
+  let result = '';
+  let first = str.substring(0, 1);
+  let last = str.substring(str.length - 1);
 
-let str = 'xxHxix';
+  for (let i = 1; i < str.length - 1; i++) {
+    if (str[i] == 'x') {
+      continue;
+    } else {
+      result = result + str[i];
+    }
+  }
+  return first + result + last;
+}
+let str = 'xabxxxcdx';
 console.log(stringX(str));
+
+//===================================================================================
+// Question:-112
+// Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... so
+// "kittens" yields "kien".
+
+//altPairs("kitten") → "kien"
+//altPairs("Chocolate") → "Chole"
+//altPairs("CodingHorror") → "Congrr"
+
+function altPair(str) {
+  let result = '';
+  for (let i = 0; i < str.length; i = i + 4) {
+    let end = i + 2;
+    if (end > str.length) {
+      end = str.length;
+    }
+    result = result + str.substring(i, end);
+  }
+  return result;
+}
+
+let str = 'Chocolate';
+console.log(altPair(str));
+
+//===========================================================================
+function rightDigitFind(n) {
+  while (n >= 10) {
+    n = Math.floor(n / 10);
+  }
+  return Math.floor(n);
+}
+
+function rightDigti(arr) {
+  let digti = [];
+  for (let i = 0; i < arr.length; i++) {
+    let rightDi = rightDigitFind(arr[i]);
+    digti.push(rightDi);
+  }
+  return digti;
+}
+
+let arr = [5, 0.5, 14, 05];
+console.log(rightDigti(arr));
+
+//===============================================================================
+// Join():--
+//The join() method returns a new string by concatenating all of the elements in an array,
+//separated by a specified separator.
+//
+
+//let message = ['JavaScript', 'is', 'fun.']; // JavaScript is fun
+let message = [45, 14, 25, 36, 40];
+// join all elements of array using space
+let joinedMessage = message.join(' ');
+console.log(joinedMessage);
+console.log(typeof joinedMessage);
+console.log(joinedMessage.length);
+console.log(joinedMessage[0].joinedMessage[1]);
+
+// Output: JavaScript is fun.
+
+//====================================================================================
+
+//arr.join(','); // array look like as 16,8,886,8,1 this is become string
+//arr.join(",").split(",") // ["16","8","886","8","1"] this will become array.
+function rightDigit(arr) {
+  let final = [];
+  let arr_1 = arr.join(',').split(',');
+  // return arr_1;
+  for (let i = 0; i < arr_1.length; i++) {
+    final.push(arr_1[i][arr_1[i].length - 1]);
+  }
+  //return final;
+  let res = [];
+  for (let i = 0; i < final.length; i++) {
+    let tempNum = parseInt(final[i]);
+    res.push(tempNum);
+  }
+  return res;
+}
+
+let arr = [16, 8, 886, 8, 1];
+console.log(rightDigit(arr));
+
+//===================================================================================
+function leftDigit(arr_1) {
+  let result = [];
+  // let arr_1 = arr.join(',').split(',');
+  //  console.log(arr_1);
+  //console.log(typeof arr_1);
+  for (let i = 0; i < arr_1.length; i++) {
+    for (let j = 0; j < arr_1[i].length; j++) {
+      result.push(arr_1[i].charAt(0));
+      break;
+    }
+  }
+  console.log(result);
+  // return result;
+  //==----------------------------------------------------------------------------
+  // let final = [];
+  // let arr_1 = arr.join(',').split(',');
+  // console.log(arr_1); // ["16","8","886","8","1"]
+  // let res = arr_1[0][arr_1[0].arr_1[length-]];
+  // console.log(res);
+
+  // for (let i = 0; i < arr_1.length; i++) {
+  //   final.push(arr_1[i][arr_1[i].arr_1[0]]);
+  // }
+  // return final;
+}
+//---------------------------------------------------------------------------------
+
+let arr = ['16', '8', '0886', '8', '01'];
+leftDigit(arr);
+
+//========================================================================================
+function leftDigit(arr) {
+  let result = [];
+  //console.log(arr);
+  var num = 040;
+  console.log(num); // 32
+  // Uncaught SyntaxError: Decimals with leading zeros are not allowed in strict mode.
+}
+
+let arr = [16, 8, 18, 8, 1];
+arr = arr.join(',').split(',');
+leftDigit(arr);
+
+//====================================================================================
+// Question:-113
+// Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed,
+// but the "a" can be any char. The "yak" strings will not overlap.
+
+//stringYak("yakpak") → "pak"
+//stringYak("pakyak") → "pak"
+//stringYak("yak123ya") → "123ya"
+
+function stringYak(str) {
+  let res = '';
+  for (let i = 0; i < str.length; i++) {
+    if (i + 2 < str.length && str[i] == 'y' && str[i + 2] == 'k') {
+      i += 2;
+    } else {
+      res += str[i];
+    }
+  }
+  return res;
+}
+
+let str = 'yakpak';
+console.log(stringYak(str));
+
+//=================================================================================
+// Question:-114
+// Given an array of ints, return the number of times that two 6's are next to each other in the array.
+// Also count instances where the second "6" is actually a 7.
+
+//array667([6, 6, 2]) → 1
+//array667([6, 6, 2, 6]) → 1
+//array667([6, 7, 2, 6]) → 1
+
+function array667(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] == 6) {
+      if (arr[i + 1] == 6 || arr[i + 1] == 7) {
+        count++;
+      }
+    }
+  }
+  return count;
+  //---------------------------------------------------
+  // for (let i = 0; i < arr.length - 1; ) {
+  //   if (arr[i] == 6 && arr[i + 1] == 6) {
+  //     count++;
+  //     i += 1;
+  //   } else if (arr[i] == 6 && arr[i + 1] == 7) {
+  //     count++;
+  //     i += 1;
+  //   }
+  //   i++;
+  // }
+  // return count;
+  //------------------------------------------------------
+}
+
+let arr = [6, 6, 1, 2, 6, 7];
+console.log(array667(arr));
+
+//===================================================================================
+// Question:-115
+//Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array.
+//Return true if the array does not contain any triples.
+
+//noTriples([1, 1, 2, 2, 1]) → true
+//noTriples([1, 1, 2, 2, 2, 1]) → false
+//noTriples([1, 1, 1, 2, 2, 2, 1]) → false
+
+function noTriplet(arr) {
+  // arr.sort(function (a, b) {
+  //   return a - b;
+  // });
+  for (let i = 0; i < arr.length - 2; ) {
+    if (arr[i] == arr[i + 1] && arr[i + 1] == arr[i + 2]) {
+      return false;
+    }
+    i++;
+  }
+  return true;
+}
+let arr = [1, 1, 2, 2, 2, 1, 4, 4, 1, 4];
+console.log(noTriplet(arr));
+
+//===========================================================================================
+// Question:-116
+//Given an array of ints, return true if it contains a 2, 7, 1 pattern: a value, followed by the value plus 5,
+// followed by the value minus 1. Additionally the 271 counts even if the "1" differs by 2 or less from
+//the correct value.
+
+//has271([1, 2, 7, 1]) → true
+//has271([1, 2, 8, 1]) → false
+//has271([2, 7, 1]) → true
+
+function has271(nums) {
+  for (let i = 0; i < nums.length - 2; i++) {
+    let val = nums[i];
+    if (
+      nums[i + 1] == val + 5 && // the "7" check
+      Math.abs(nums[i + 2] - (val - 1)) <= 2
+    ) {
+      // the "1" check
+      return true;
+    }
+  }
+
+  // If we get here ... none found.
+  return false;
+}
+let nums = [1, 2, 7, 1];
+console.log(has271(nums));
+
+//===============================================================================
+//Question:-117
+// Array:-1
+// Given an array of ints, return true if 6 appears as either the first or last element in the array.
+//The array will be length 1 or more.
+
+//firstLast6([1, 2, 6]) → true
+//firstLast6([6, 1, 2, 3]) → true
+//firstLast6([13, 6, 1, 2, 3]) → false
+
+function firstLast6(arr) {
+  if (arr[0] == 6 || arr[arr.length - 1] == 6) return true;
+  return false;
+}
+
+let arr = [1, 2, 6];
+console.log(firstLast6(arr));
+
+//===================================================================================
+// Question:-118
+//Given an array of ints, return true if the array is length 1 or more, and the first element and the
+//last element are equal.
+
+//sameFirstLast([1, 2, 3]) → false
+//sameFirstLast([1, 2, 3, 1]) → true
+//sameFirstLast([1, 2, 1]) → true
+
+function sameFirstLast(arr) {
+  if(arr.length==0) return false;
+  if (arr[0] == arr[arr.length - 1]) return true;
+  return false;
+}
+
+let arr = [1, 2, 3];
+console.log(sameFirstLast(arr));
+
+//=========================================================================================
+// Question:-119
+// Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
+
+//makePi() → [3, 1, 4]
+
+function makePi() {
+  let arr = new Array(3, 1, 4);
+  return arr;
+}
+console.log(makePi());
+
+//====================================================================================
+// Question:-120
+// Given 2 arrays of ints, a and b, return true if they have the same first element or they have
+//the same last element. Both arrays will be length 1 or more.
+
+//commonEnd([1, 2, 3], [7, 3]) → true
+//commonEnd([1, 2, 3], [7, 3, 2]) → false
+//commonEnd([1, 2, 3], [1, 3]) → true
+
+function commonEnd(a, b) {
+  if (a[0] == b[0] || a[a.length - 1] == b[b.length - 1]) return true;
+  return false;
+}
+
+let a = [1, 2, 3];
+let b = [7, 3];
+console.log(commonEnd(a, b));
+
+//===========================================================================================
+// Question:-121
+// Given an array of ints length 3, return the sum of all the elements.
+
+//sum3([1, 2, 3]) → 6
+//sum3([5, 11, 2]) → 18
+//sum3([7, 0, 0]) → 7
+
+function sum3(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+let arr = [1, 2, 3];
+console.log(sum3(arr));
+
+//==========================================================================================
+// Question:-122
+// Given an array of ints length 3, return an array with the elements "rotated left"
+//so {1, 2, 3} yields {2, 3, 1}.
+
+//rotateLeft3([1, 2, 3]) → [2, 3, 1]
+//rotateLeft3([5, 11, 9]) → [11, 9, 5]
+//rotateLeft3([7, 0, 0]) → [0, 0, 7]
+
+function rotateLeft(arr) {
+  let resArr = new Array(3);
+  resArr[0] = arr[1];
+  resArr[1] = arr[2];
+  resArr[2] = arr[0];
+  return resArr;
+}
+let arr = [1, 2, 3];
+console.log(rotateLeft(arr));
+
+//=======================================================================================
+// Question:-123
+// Given an array of ints length 3, return a new array with the elements in reverse order,
+// so {1, 2, 3} becomes {3, 2, 1}.
+
+//reverse3([1, 2, 3]) → [3, 2, 1]
+//reverse3([5, 11, 9]) → [9, 11, 5]
+//reverse3([7, 0, 0]) → [0, 0, 7]
+
+function reverse3(arr) {
+  // return arr.sort(function (a, b) {
+  //   return a - b;
+  // });
+
+  let resArr = new Array(3);
+  resArr[0] = arr[2];
+  resArr[1] = arr[1];
+  resArr[2] = arr[0];
+  return resArr;
+}
+
+let arr = [1, 2, 3];
+console.log(reverse3(arr));
+
+//===============================================================================
+// Question:-124
+// Given an array of ints length 3, figure out which is larger, the first or last element in the array,
+// and set all the other elements to be that value. Return the changed array.
+
+//maxEnd3([1, 2, 3]) → [3, 3, 3]
+//maxEnd3([11, 5, 9]) → [11, 11, 11]
+//maxEnd3([2, 11, 3]) → [3, 3, 3]
+
+function maxEnd3(arr) {
+  let resArr = new Array(3);
+  let maxx = Number.MIN_VALUE;
+  if (arr[0] > arr[2]) {
+    maxx = arr[0];
+  } else {
+    maxx = arr[2];
+  }
+  resArr[0] = maxx;
+  resArr[1] = arr[1];
+  resArr[2] = maxx;
+  return resArr;
+}
+
+let arr = [2, 11, 3];
+console.log(maxEnd3(arr));
+
+//===================================================================
+// Question:-125
+// Given an array of ints, return the sum of the first 2 elements in the array. If the array length
+//is less than 2, just sum up the elements that exist, returning 0 if the array is length 0.
+
+//sum2([1, 2, 3]) → 3
+//sum2([1, 1]) → 2
+//sum2([1, 1, 1, 1]) → 2
+
+function sum2(arr) {
+  let sum;
+  if (arr.length == 1) {
+    sum = arr[0];
+  } else if (arr.length == 0) {
+    sum = 0;
+  } else {
+    let a = arr[0];
+    let b = arr[1];
+    sum = a + b;
+  }
+  return sum;
+}
+let arr = [12, 8, 12];
+console.log(sum2(arr));
+
+//====================================================================================
+// Question:-126
+// Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle elements.
+
+//middleWay({1, 2, 3}, {4, 5, 6}) → {2, 5}
+//middleWay({7, 7, 7}, {3, 8, 0}) → {7, 8}
+//middleWay({5, 2, 9}, {1, 4, 5}) → {2, 4}
+
+function middleWay(a, b) {
+  let resArr = new Array(2);
+  resArr[0] = a[1];
+  resArr[1] = b[1];
+  return resArr;
+}
+let a = [1, 2, 3];
+let b = [4, 5, 6];
+console.log(middleWay(a, b));
+
+//=======================================================================================
+// Question:-127
+// Given an array of ints, return a new array length 2 containing the first and last elements
+// from the original array. The original array will be length 1 or more.
+
+//makeEnds([1, 2, 3]) → [1, 3]
+//makeEnds([1, 2, 3, 4]) → [1, 4]
+//makeEnds([7, 4, 6, 2]) → [7, 2]
+
+function makeEnds(arr) {
+  let resArr = new Array(2);
+  if (arr.length == 1) {
+    resArr[0] = arr[0];
+  } else {
+    resArr[0] = arr[0];
+    resArr[1] = arr[arr.length - 1];
+  }
+  return resArr;
+}
+
+let arr = [7, 4, 6, 2];
+console.log(makeEnds(arr));
+
+//=========================================================================================
+// Question:-128
+// Given an int array length 2, return true if it contains a 2 or a 3.
+
+//has23([2, 5]) → true
+//has23([4, 3]) → true
+//has23([4, 5]) → false
+
+function has23(arr) {
+  if (arr[0] == 2 || arr[0] == 3 || arr[1] == 2 || arr[1] == 3) return true;
+  return false;
+}
+let arr = [2, 5];
+console.log(has23(arr));
+
+//=======================================================================================
+// Question:-129
+// Given an int array length 2, return true if it does not contain a 2 or 3.
+
+//no23([4, 5]) → true
+//no23([4, 2]) → false
+//no23([3, 5]) → false
+
+function no23(arr) {
+  if (arr[0] == 2 || arr[0] == 3 || arr[1] == 2 || arr[1] == 3) return false;
+  return true;
+}
+let arr = [2, 5];
+console.log(no23(arr));
+
+//=================================================================================
+// Question:-130
+// Given an int array, return a new array with double the length where its last element is the
+//same as the original array, and all the other elements are 0. The original array will be length 1 or more.
+// Note: by default, a new int array contains all 0's.
+
+//makeLast([4, 5, 6]) → [0, 0, 0, 0, 0, 6]
+//makeLast([1, 2]) → [0, 0, 0, 2]
+//makeLast([3]) → [0, 3]
+
+function makeLast(arr) {
+  let n = arr.length;
+  let resArr = new Array(n * 2);
+  resArr[resArr.length - 1] = arr[arr.length - 1];
+
+  for (let i = 0; i < resArr.length - 1; i++) {
+    resArr[i] = 0;
+  }
+  return resArr;
+}
+let arr = [1, 2];
+console.log(makeLast(arr));
+
+//=======================================================================================
+// Question:-131
+// Given an int array, return true if the array contains 2 twice, or 3 twice. The array will be
+// length 0, 1, or 2.
+
+//double23([2, 2]) → true
+//double23([3, 3]) → true
+//double23([2, 3]) → false
+
+function double23(arr) {
+  if (arr.length == 1 || arr.length == 0) return false;
+  if ((arr[0] == 2 && arr[1] == 2) || (arr[0] == 3 && arr[1] == 3)) return true;
+  return false;
+}
+let arr = [2, 3];
+console.log(double23(arr));
+
+//=============================================================================================
+// Question:-132
+// Given an int array length 3, if there is a 2 in the array immediately followed by a 3,
+//set the 3 element to 0. Return the changed array.
+
+//fix23([1, 2, 3]) → [1, 2, 0]
+//fix23([2, 3, 5]) → [2, 0, 5]
+//fix23([1, 2, 1]) → [1, 2, 1]
+
+function fix23(arr) {
+  let resArr = new Array(arr.length);
+  //---------------------------------------------------------------
+  // for (let i = 0; i < arr.length - 1; i++) {
+  //   if (arr[i] == 2 && arr[i + 1] == 3) {
+  //     resArr[i + 1] = 0;
+  //     resArr[i] = arr[i];            WRong.
+  //   } else {
+  //     resArr[i] = arr[i];
+  //   }
+  // }
+  //---------------------------------------------------------------
+  if (arr[0] == 2 && arr[1] == 3) {
+    resArr[1] = 0;
+    resArr[0] = arr[0];
+    resArr[2] = arr[2];
+  } else if (arr[1] == 2 && arr[2] == 3) {
+    resArr[2] = 0;
+    resArr[1] = arr[1];
+    resArr[0] = arr[0];
+  } else {
+    for (let i = 0; i < arr.length; i++) {
+      resArr[i] = arr[i];
+    }
+  }
+  return resArr;
+  //---------------------------------------------------------------
+}
+
+let arr = [2, 3, 5];
+console.log(fix23(arr));
+
+//=============================================================================
+// Question:-133
+// Start with 2 int arrays, a and b, of any length. Return how many of the arrays have 1 as
+//their first element.
+
+//start1({1, 2, 3}, {1, 3}) → 2
+//start1({7, 2, 3}, {1}) → 1
+//start1({1, 2}, {}) → 1
+
+function start1(a, b) {
+  let count = 0;
+  if (a.length > 0 && a[0] == 1) count++;
+  if (b.length > 0 && b[0] == 1) count++;
+  return count;
+}
+let a = [1, 2, 3];
+let b = [];
+console.log(start1(a, b));
+
+//==============================================================================
+// Question:-134
+// Start with 2 int arrays, a and b, each length 2. Consider the sum of the values in each array.
+//Return the array which has the largest sum. In event of a tie, return a.
+
+//biggerTwo([1, 2], [3, 4]) → [3, 4]
+//biggerTwo([3, 4], [1, 2]) → [3, 4]
+//biggerTwo([1, 1], [1, 2]) → [1, 2]
+
+function biggerTwo(a, b) {
+  let sum1 = a[0] + a[1];
+  let sum2 = b[0] + b[1];
+  if (sum1 > sum2) {
+    return a;
+  } else if (sum1 == sum2) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+let a = [2, 2];
+let b = [1, 3];
+console.log(biggerTwo(a, b));
+
+//===========================================================================================
+// Question:-135
+// Given an array of ints of even length, return a new array length 2 containing the middle two elements
+//from the original array. The original array will be length 2 or more.
+
+//makeMiddle([1, 2, 3, 4]) → [2, 3]
+//makeMiddle([7, 1, 2, 3, 4, 9]) → [2, 3]
+//makeMiddle([1, 2]) → [1, 2]
+
+function makeMiddle(arr) {
+  let resArr = new Array(2);
+  let n = arr.length;
+  let indexz = n / 2;
+  if (arr.length == 2) return arr;
+  resArr[1] = arr[indexz];
+  resArr[0] = arr[indexz - 1];
+  return resArr;
+}
+
+let arr = [1, 2];
+console.log(makeMiddle(arr));
+
+//===============================================================================================
+// Question:-136
+// Given 2 int arrays, each length 2, return a new array length 4 containing all their elements.
+
+//plusTwo([1, 2], [3, 4]) → [1, 2, 3, 4]
+//plusTwo([4, 4], [2, 2]) → [4, 4, 2, 2]
+//plusTwo([9, 2], [3, 4]) → [9, 2, 3, 4]
+
+function plusTwo(a, b) {
+  let resArr = new Array(a.length + b.length);
+  resArr = [...a, ...b];
+  return resArr;
+}
+
+let a = [1, 2];
+let b = [3, 4];
+console.log(plusTwo(a, b));
+
+//==================================================================================================
+// Question:-137
+// Given an array of ints, swap the first and last elements in the array. Return the modified array.
+// The array length will be at least 1.
+
+//swapEnds([1, 2, 3, 4]) → [4, 2, 3, 1]
+//swapEnds([1, 2, 3]) → [3, 2, 1]
+//swapEnds([8, 6, 7, 9, 5]) → [5, 6, 7, 9, 8]
+
+function swapEnds(arr) {
+  if (arr.length == 1) return arr;
+  let n = arr.length;
+  let temp = arr[0];
+  arr[0] = arr[n - 1];
+  arr[n - 1] = temp;
+  return arr;
+}
+
+let arr = [1];
+console.log(swapEnds(arr));
+
+//================================================================================================
+// Question:-138
+// Given an array of ints of odd length, return a new array length 3 containing the elements from the
+// middle of the array. The array length will be at least 3.
+
+//midThree([1, 2, 3, 4, 5]) → [2, 3, 4]
+//midThree([8, 6, 7, 5, 3, 0, 9]) → [7, 5, 3]
+//midThree([1, 2, 3]) → [1, 2, 3]
+function midThree(arr) {
+  let resArr = new Array(3);
+  let n = arr.length;
+  let index = Math.floor(n / 2);
+  resArr[0] = arr[index - 1];
+  resArr[1] = arr[index];
+  resArr[2] = arr[index + 1];
+
+  return resArr;
+}
+
+let arr = [8, 6, 7, 5, 3, 0, 9];
+console.log(midThree(arr));
+
+//============================================================================================
+// Question:-139
+// Given an array of ints of odd length, look at the first, last, and middle values in the array and return
+// the largest. The array length will be a least 1.
+
+//maxTriple([1, 2, 3]) → 3
+//maxTriple([1, 5, 3]) → 5
+//maxTriple([5, 2, 3]) → 5
+
+function maxTriplet(arr) {
+  // if (arr.length == 1) return arr[0];
+  // arr.sort(function (a, b) {
+  //   return a - b;
+  // });
+  // return arr[arr.length - 1];
+
+  let n = arr.length;
+  let mid = Math.floor(n / 2);
+  mid = Math.max(arr[0], arr[mid]);
+  mid = Math.max(mid, arr[n - 1]);
+  return mid;
+}
+
+let arr = [5, 1, 7, 3, 7, 8, 1];
+console.log(maxTriplet(arr));
+
+//===========================================================================================
+// Question:-140
+// Given an int array of any length, return a new array of its first 2 elements. If the array is smaller
+//than length 2, use whatever elements are present.
+
+//frontPiece([1, 2, 3]) → [1, 2]
+//frontPiece([1, 2]) → [1, 2]
+//frontPiece([1]) → [1]
+
+function frontPiece(arr) {
+  let res = [];
+  if (arr.length <= 2) return arr;
+  else {
+    res.push(arr[0]);
+    res.push(arr[1]);
+  }
+  return res;
+}
+
+let arr = [1];
+console.log(frontPiece(arr));
+
+//===========================================================================================
+// Question:-141
+//We'll say that a 1 immediately followed by a 3 in an array is an "unlucky" 1.
+// Return true if the given array contains an unlucky 1 in the first 2 or last 2 positions
+//in the array.
+
+//unlucky1({1, 3, 4, 5}) → true
+//unlucky1({2, 1, 3, 4, 5}) → true
+//unlucky1({1, 1, 1}) → false
+
+function unlucky(nums) {
+  if (nums.length < 2) {
+    return false;
+  } else if (
+    (nums[0] == 1 && nums[1] == 3) ||
+    (nums[nums.length - 2] == 1 && nums[nums.length - 1] == 3)
+  ) {
+    return true;
+  } else if (nums.length > 2 && nums[1] == 1 && nums[2] == 3) {
+    return true;
+  } else return false;
+}
+let arr = [1, 2, 3];
+console.log(unlucky(arr));
+
+//=====================================================================================
+//Question:-142
+//Given 2 int arrays, a and b, return a new array length 2 containing, as much as will fit, the elements from
+//a followed by the elements from b. The arrays may be any length, including 0, but there will be 2 or more
+// elements available between the 2 arrays.
+
+//make2([4, 5], [1, 2, 3]) → [4, 5]
+//make2([4], [1, 2, 3]) → [4, 1]
+//make2([], [1, 2]) → [1, 2]
+
+function make2(a, b) {
+  let resArr = new Array(2);
+  let aL = a.length;
+  let bL = b.length;
+
+  if (aL == 0) {
+    resArr[0] = b[0];
+    resArr[1] = b[1];
+    return resArr;
+  } else if (aL == 1 && bL == 1) {
+    resArr[0] = a[0];
+    resArr[1] = b[1];
+    return resArr;
+  } else if (aL == 1) {
+    resArr[0] = a[0];
+    resArr[1] = b[0];
+    return resArr;
+  } else {
+    resArr[0] = a[0];
+    resArr[1] = a[1];
+    return resArr;
+  }
+}
+
+let a = [4, 5];
+let b = [1, 2, 3];
+console.log(make2(a, b));
+
+//=======================================================================================
+// Question:-143
+// Given 2 int arrays, a and b, of any length, return a new array with the first element of each array.
+//If either array is length 0, ignore that array.
+
+//front11({1, 2, 3}, {7, 9, 8}) → {1, 7}
+//front11({1}, {2}) → {1, 2}
+//front11({1, 7}, {}) → {1}
+
+function front11(a, b) {
+  let res = [];
+  if (a.length == 0) {
+    res[0] = b[0];
+  } else if (b.length == 0) {
+    res[0] = a[0];
+  } else if (a.length == 0 && b.length == 0) {
+    return a;
+  } else {
+    res[0] = a[0];
+    res[1] = b[0];
+  }
+  return res;
+}
+
+let a = [];
+let b = [];
+console.log(front11(a, b));
+
+//=============================================================================================
+// Array:-02 medium level
+// Question:-144
+// Return the number of even ints in the given array. Note: the % "mod" operator computes the
+// remainder, e.g. 5 % 2 is 1.
+
+//countEvens([2, 1, 2, 3, 4]) → 3
+//countEvens([2, 2, 0]) → 3
+//countEvens([1, 3, 5]) → 0
+
+function countEvens(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 0) count++;
+  }
+  return count;
+}
+let arr = [2, 1, 2, 3, 4];
+console.log(countEvens(arr));
+
+//===========================================================================================
+// Question:-145
+// Given an array length 1 or more of ints, return the difference between the largest and smallest
+// values in the array. Note: the built-in Math.min(v1, v2) and Math.max(v1, v2) methods return the
+// smaller or larger of two values.
+
+//bigDiff([10, 3, 5, 6]) → 7
+//bigDiff([7, 2, 10, 9]) → 8
+//bigDiff([2, 10, 7, 2]) → 8
+
+function bigDiff(arr) {
+  //--------------------------------------------
+  // arr.sort(function (a, b) {
+  //   return a - b;
+  // });
+  // let min = arr[0];
+  // let max = arr[arr.length - 1];
+
+  // return max - min;
+  //----------------------------------------------
+
+  let min = arr[0];
+  let max = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    min = Math.min(min, arr[i]);
+    max = Math.max(max, arr[i]);
+  }
+  return max - min;
+}
+let arr = [10, 3, 5, 6];
+console.log(bigDiff(arr));
+
+//===================================================================================
+// Question:-146
+// Return the "centered" average of an array of ints, which we'll say is the mean average of the values,
+// except ignoring the largest and smallest values in the array. If there are multiple copies of the smallest
+// value, ignore just one copy, and likewise for the largest value. Use int division to produce the final
+// average. You may assume that the array is length 3 or more.
+
+//centeredAverage([1, 2, 3, 4, 100]) → 3
+//centeredAverage([1, 1, 5, 5, 10, 8, 7]) → 5
+//centeredAverage([-10, -4, -2, -4, -2, 0]) → -3
+
+function centeredAverage(arr) {
+  let min = arr[0];
+  let max = arr[0];
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+    min = Math.min(min, arr[i]);
+    max = Math.max(max, arr[i]);
+  }
+  sum = sum - max - min;
+  sum = Math.floor(sum / (arr.length - 2));
+  return sum;
+}
+
+let arr = [1, 2, 3, 4, 100];
+console.log(centeredAverage(arr));
+
+//===============================================================================================
+// Question:-147
+// Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 13 is
+// very unlucky, so it does not count and numbers that come immediately after a 13 also do not count.
+
+//sum13([1, 2, 2, 1]) → 6
+//sum13([1, 1]) → 2
+//sum13([1, 2, 2, 1, 13]) → 6
+
+function sum13(arr) {
+  // let sum = 0;
+  // for (let i = 0; i < arr.length; i++) {
+  //   if (arr[i] == 13) {
+  //     break;
+  //   } else {
+  //     sum += arr[i];          WRONG;
+  //   }
+  // }
+  // return sum;
+
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 13) {
+      i++;
+      continue;
+    }
+    sum += arr[i];
+  }
+  return sum;
+}
+let arr = [13, 1, 2, 13, 2, 1, 13];
+console.log(sum13(arr));
+
+//==================================================================================
+// Question:-148
+// Return the sum of the numbers in the array, except ignore sections of numbers starting
+//with a 6 and extending to the next 7 (every 6 will be followed by at least one 7).
+// Return 0 for no numbers.
+
+//sum67([1, 2, 2]) → 5
+//sum67([1, 2, 2, 6, 99, 99, 7]) → 5
+//sum67([1, 1, 6, 7, 2]) → 4
+
+function sum67(nums) {
+  let sum = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] != 6) {
+      sum = sum + nums[i];
+    } else {
+      while (nums[i] != 7) {
+        i++;
+      }
+    }
+  }
+  return sum;
+}
+
+let arr = [1, 2, 2, 6, 99, 99, 7];
+console.log(sum67(arr));
+
+//============================================================================================
+// Question:-149
+// Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.
+
+//has22([1, 2, 2]) → true
+//has22([1, 2, 1, 2]) → false
+//has22([2, 1, 2]) → false
+
+function has22(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] == 2 && arr[i + 1] == 2) return true;
+  }
+  return false;
+}
+let arr = [1, 2, 2];
+console.log(has22(arr));
+
+//===============================================================================================
+// Question:-150
+// Given an array of ints, return true if the array contains no 1's and no 3's.
+
+//lucky13([0, 2, 4]) → true
+//lucky13([1, 2, 3]) → false
+//lucky13([1, 2, 4]) → false
+
+function lucky13(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (a[i] == 1 || arr[i] == 3) {
+      return false;
+    }
+  }
+  return true;
+}
+
+let arr = [1, 2, 3];
+console.log(lucky13(arr));
+
+//=====================================================================================
+// Question:-151
+// Given an array of ints, return true if the sum of all the 2's in the array is exactly 8.
+
+//sum28([2, 3, 2, 2, 4, 2]) → true
+//sum28([2, 3, 2, 2, 4, 2, 2]) → false
+//sum28([1, 2, 3, 4]) → false
+
+function sum28(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 2) sum += arr[i];
+  }
+  if (sum == 8) return true;
+  return false;
+}
+
+let arr = [2, 3, 2, 2, 4, 2];
+console.log(sum28(arr));
+
+//===================================================================================
+// Question:-152
+// Given an array of ints, return true if the number of 1's is greater than the number of 4's
+
+//more14([1, 4, 1]) → true
+//more14([1, 4, 1, 4]) → false
+//more14([1, 1]) → true
+
+function more14(arr) {
+  let oneCount = 0;
+  let fourCount = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 1) oneCount++;
+    else if (arr[i] == 4) fourCount++;
+  }
+  if (oneCount > fourCount) return true;
+  else return false;
+}
+
+let arr = [1, 4, 1];
+console.log(more14(arr));
+
+//===============================================================================
+// Question:-153
+// Given a number n, create and return a new int array of length n, containing the numbers 0, 1, 2, ... n-1.
+//The given n may be 0, in which case just return a length 0 array. You do not need a separate if-statement
+// for the length-0 case; the for-loop should naturally execute 0 times in that case, so it just works.
+// The syntax to make a new int array is: new int[desired_length]   (See also: FizzBuzz Code)
+
+//fizzArray(4) → [0, 1, 2, 3]
+//fizzArray(1) → [0]
+//fizzArray(10) → [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+function fizzArray(n) {
+  let resArr = new Array();
+  // if (n == 0) {
+  //   resArr.push(n);
+  for (let i = 0; i < n; i++) {
+    resArr.push(i);
+  }
+  return resArr;
+}
+
+let n = 1;
+console.log(fizzArray(n));
+
+//========================================================================================
+// Question:-154
+// Given an array of ints, return true if every element is a 1 or a 4.
+
+//only14([1, 4, 1, 4]) → true
+//only14([1, 4, 2, 4]) → false
+//only14([1, 1]) → true
+
+function only14(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] != 1 && arr[i] != 4) {
+      count++;
+    }
+  }
+  if (count > 0) return false;
+  else return true;
+}
+
+let arr = [1, 4, 1, 4];
+console.log(only14(arr));
+
+//==================================================================================
+// Question:-155
+// Given a number n, create and return a new string array of length n, containing the
+//strings "0", "1" "2" .. through n-1. N may be 0, in which case just return a length 0 array. Note:
+// String.valueOf(xxx) will make the String form of most types. The syntax to make a new string array is:
+// new String[desired_length]  (See also: FizzBuzz Code)
+
+//fizzArray2(4) → ["0", "1", "2", "3"]
+//fizzArray2(10) → ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+//fizzArray2(2) → ["0", "1"]
+
+function fizzArray2(n) {
+  let resArr = new Array();
+  if (n == 0) resArr;
+  else {
+    for (let i = 0; i < n; i++) {
+      resArr.push(i);
+    }
+  }
+  return resArr.join(',').split(',');
+}
+
+let n = 4;
+console.log(fizzArray2(n));
+
+//===================================================================================
+// Question:-156
+// Given an array of ints, return true if it contains no 1's or it contains no 4's.
+
+//no14([1, 2, 3]) → true
+//no14([1, 2, 3, 4]) → false
+//no14([2, 3, 4]) → true
+
+function no14(arr) {
+  let count = 0;
+  let oneC = 0;
+  let fourC = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 1) {
+      oneC++;
+    } else if (arr[i] == 4) {
+      fourC++;
+    }
+  }
+
+  if (oneC > 0 && fourC > 0) return false;
+  else return true;
+}
+
+let arr = [1, 2, 3];
+console.log(no14(arr));
+
+//===================================================================================
+// Question:-157
+// We'll say that a value is "everywhere" in an array if for every pair of adjacent elements in the array,
+// at least one of the pair is that value. Return true if the given value is everywhere in the array.
+
+//isEverywhere([1, 2, 1, 3], 1) → true
+//isEverywhere([1, 2, 1, 3], 2) → false
+//isEverywhere([1, 2, 1, 3, 4], 1) → false
+
+function isEveryThing(arr, val) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] != val && arr[i + 1] != val) return false;
+  }
+  return true;
+}
+
+let arr = [1, 2, 1, 3];
+let val = 1;
+console.log(isEveryThing(arr, val));
+
+//==============================================================================
+// Question:-158
+// Given an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.
+
+//either24([1, 2, 2]) → true
+//either24([4, 4, 1]) → true
+//either24([4, 4, 1, 2, 2]) → false
+
+function either24(arr) {
+  let twoC = 0;
+  let fourC = 0;
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] == 2 && arr[i + 1] == 2) {
+      twoC++;
+    } else if (arr[i] == 4 && arr[i + 1] == 4) {
+      fourC++;
+    }
+  }
+  if (twoC > 1 && fourC > 1) return false;
+  else if (twoC == 0 && fourC == 0) return false;
+  else return true;
+}
+let arr = [1, 2, 2];
+console.log(either24(arr));
+
+//===============================================================================
+//  Question:-159
+// Given arrays nums1 and nums2 of the same length, for every element in nums1, consider the corresponding
+//element in nums2 (at the same index). Return the count of the number of times that the two elements
+// differ by 2 or less, but are not equal.
+
+//matchUp([1, 2, 3], [2, 3, 10]) → 2
+//matchUp([1, 2, 3], [2, 3, 5]) → 3
+//matchUp([1, 2, 3], [2, 3, 3]) → 2
+
+function matchUp(arr1, arr2) {
+  let count = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    let temp = Math.abs(arr1[i] - arr2[i]);
+    if (temp == 1 || temp == 2) count++;
+  }
+  return count;
+}
+
+let arr1 = [1, 2, 3];
+let arr2 = [2, 3, 5];
+console.log(matchUp(arr1, arr2));
+
+//======================================================================================
+// Question:-160
+// Given an array of ints, return true if the array contains two 7's next to each other,
+//or there are two 7's separated by one element, such as with {7, 1, 7}.
+
+//has77([1, 7, 7]) → true
+//has77([1, 7, 1, 7]) → true
+//has77([1, 7, 1, 1, 7]) → false
+
+function has77(arr) {
+  let result = false;
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] == 7 && arr[i + 1] == 7) {
+      result = true;
+    }
+  }
+  for (let i = 0; i < arr.length - 2; i++) {
+    if (arr[i] == 7 && arr[i + 2] == 7) {
+      result = true;
+    }
+  }
+  return result;
+}
+
+let arr = [1, 7, 7];
+console.log(has77(arr));
+
+//=======================================================================
+// Question:-161
+// Given an array of ints, return true if there is a 1 in the array with a 2 somewhere later in the array.
+
+//has12([1, 3, 2]) → true
+//has12([3, 1, 2]) → true
+//has12([3, 1, 4, 5, 2]) → true
+
+function has12(arr) {
+  //-------------------------------------------------------------
+  let result = true;
+  let oneC = 0;
+  let twoC = 0;
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] == 2 && arr[i + 1] == 1) {
+      result = false;
+    }
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 1) {
+      oneC++;
+    } else if (arr[i] == 2) {
+      twoC++;
+    }
+  }
+  if (result == false) return false;
+  else if (oneC >= 1 && twoC >= 1) return true;
+  // else if(result==false) return false;
+  else return false;
+  //-----------------------------------------------------------
+  let oneFound = false;
+  let twoFound = false;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 1) {
+      oneFound = true;
+    }
+    if (arr[i] == 2 && oneFound == true) {
+      twoFound = true;
+    }
+  }
+  return twoFound;
+}
+
+let arr = [1, 3, 2];
+console.log(has12(arr));
+
+//=============================================================================
+// Question:-162
+// Given an array of ints, return true if the array contains either 3 even or 3 odd values
+//all next to each other.
+
+//modThree([2, 1, 3, 5]) → true
+//modThree([2, 1, 2, 5]) → false
+//modThree([2, 4, 2, 5]) → true
+
+function modThree(arr) {
+  let evenC = 0;
+  let oddC = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if ((arr[i] & 1) == 1) oddC++;
+    else evenC++;
+  }
+  if (evenC == 3 || oddC == 3) return true;
+  else return false;
+}
+let arr = [2, 1, 3, 5];
+console.log(modThree(arr));
+
+//==================================================================================
+// Question:-163
+// Given an array of ints, return true if the value 3 appears in the array exactly 3 times,
+// and no 3's are next to each other.
+
+//haveThree([3, 1, 3, 1, 3]) → true
+//haveThree([3, 1, 3, 3]) → false
+//haveThree([3, 4, 3, 3, 4]) → false
+
+function haveThree(arr) {
+  let count = 0;
+  let found = false;
+  //-------------------------------------------------------------------------
+  // for (let i = 0; i < arr.length - 2; i++) {
+  //   if (arr[i] == 3 && arr[i + 2] == 3 && arr[i + 4] == 3) return true;
+  //   if (arr[i + 1] == 3 && arr[i + 3] == 3 && arr[i + 5] == 3) return true;
+  // }
+  // return false;
+  //------------------------------------------------------------------------
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] != 3) {
+      found = false;
+    }
+    if (arr[i] == 3 && found == true) {
+      return false;
+    }
+    if (arr[i] == 3 && found == false) {
+      found = true;
+      count++;
+    }
+  }
+  if (count == 3) return true;
+  else return false;
+}
+
+let arr = [3, 1, 3, 1, 3];
+console.log(haveThree(arr));
+
+//============================================================================
+// Question:-164
+// Given an array of ints, return true if every 2 that appears in the array is next to another 2.
+
+//twoTwo([4, 2, 2, 3]) → true
+//twoTwo([2, 2, 4]) → true
+//twoTwo([2, 2, 4, 2]) → false
+function twoTwo(arr) {
+  let newArr = new Array(arr.length + 2);
+  for (let i = 0; i < arr.length; i++) {
+    newArr[i + 1] = arr[i];
+  }
+  // return newArr;
+  for (let i = 0; i < newArr.length; i++) {
+    if (newArr[i] == 2) {
+      if (!(newArr[i + 1] == 2 || newArr[i - 1] == 2)) return false;
+    }
+  }
+  return true;
+}
+
+let arr = [4, 2, 2, 3];
+console.log(twoTwo(arr));
+
+//============================================================================
+// Question:-165
+// Return true if the group of N numbers at the start and end of the array are the same.
+// For example, with {5, 6, 45, 99, 13, 5, 6}, the ends are the same for n=0 and n=2,
+// and false for n=1 and n=3. You may assume that n is in the range 0..nums.length inclusive.
+
+//sameEnds([5, 6, 45, 99, 13, 5, 6], 1) → false
+//sameEnds([5, 6, 45, 99, 13, 5, 6], 2) → true
+//sameEnds([5, 6, 45, 99, 13, 5, 6], 3) → false
+
+function sameEnds(arr, givenLen) {
+  let findTrue = true;
+  for (let i = 0; i < givenLen; i++) {
+    if (arr[i] == arr[arr.length - givenLen - i]) {
+      findTrue = true;
+    } else {
+      findTrue = false;
+    }
+  }
+  return findTrue;
+}
+let arr = [5, 6, 45, 99, 13, 5, 6];
+let givenLen = 1;
+console.log(sameEnds(arr, givenLen));
+
+//====================================================================================
+// Question:-166
+// Return true if the array contains, somewhere, three increasing adjacent numbers
+//like .... 4, 5, 6, ... or 23, 24, 25.
+
+//tripleUp([1, 4, 5, 6, 2]) → true
+//tripleUp([1, 2, 3]) → true
+//tripleUp([1, 2, 4]) → false
+
+function tripleUp(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (i > 0 && arr[i] - 1 == arr[i - 1] && arr[i + 1] - 1 == arr[i]) {
+      return true;
+    }
+  }
+  return false;
+}
+
+let arr = [1, 4, 5, 6, 2];
+console.log(tripleUp(arr));
+
+//================================================================================
+// Question:-167
+// Given start and end numbers, return a new array containing the sequence of integers from start
+// up to but not including end, so start=5 and end=10 yields {5, 6, 7, 8, 9}. The end number will be
+// greater or equal to the start number. Note that a length-0 array is valid. (See also: FizzBuzz Code)
+
+//fizzArray3(5, 10) → [5, 6, 7, 8, 9]
+//fizzArray3(11, 18) → [11, 12, 13, 14, 15, 16, 17]
+//fizzArray3(1, 3) → [1, 2]
+
+function fizzArray(start, end) {
+  let resArr = new Array();
+  for (let i = start; i < end; i++) {
+    resArr.push(i);
+  }
+  return resArr;
+}
+
+let start = 5;
+let end = 10;
+console.log(fizzArray(start, end));
+
+//====================================================================================
+// Question:-168
+// Return an array that is "left shifted" by one -- so {6, 2, 5, 3} returns {2, 5, 3, 6}. You may modify
+//and return the given array, or return a new array.
+
+//shiftLeft({6, 2, 5, 3}) → {2, 5, 3, 6}
+//shiftLeft({1, 2}) → {2, 1}
+//shiftLeft({1}) → {1}
+
+function shiftLeft(arr) {
+  let resArr = new Array(arr.length);
+  resArr[arr.length - 1] = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    resArr[i - 1] = arr[i];
+  }
+  return resArr;
+}
+let arr = [7, 6, 7, 3, 6];
+console.log(shiftLeft(arr));
+
+//=======================================================================================
+// Question:-169
+// For each multiple of 10 in the given array, change all the values following it to be that multiple of 10,
+// until encountering another multiple of 10. So {2, 10, 3, 4, 20, 5} yields {2, 10, 10, 10, 20, 20}.
+
+//tenRun([2, 10, 3, 4, 20, 5]) → [2, 10, 10, 10, 20, 20]
+//tenRun([10, 1, 20, 2]) → [10, 10, 20, 20]
+//tenRun([10, 1, 9, 20]) → [10, 10, 10, 20]
+
+
+//let arr = [2, 10, 3, 4, 20, 5];
+
+let a = 5;
+console.log(a % 10 == 0);
+
+//========================================================================================
+// Question:-170
+// Given a non-empty array of ints, return a new array containing the elements from the original array that
+// come before the first 4 in the original array. The original array will contain at least one 4. Note that
+// it is valid in java to create an array of length 0.
+
+//pre4([1, 2, 4, 1]) → [1, 2]
+//pre4([3, 1, 4]) → [3, 1]
+//pre4([1, 4, 4]) → [1]
+
+function pre4(arr) {
+  let resArr = new Array();
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 4) break;
+    resArr.push(arr[i]);
+  }
+  return resArr;
+}
+let arr = [1, 4, 4];
+console.log(pre4(arr));
+
+//==================================================================================
+// Question:-171
+// Given a non-empty array of ints, return a new array containing the elements from the original array that
+//come after the last 4 in the original array. The original array will contain at least one 4. Note that it
+// is valid in java to create an array of length 0.
+
+//post4([2, 4, 1, 2]) → [1, 2]
+//post4([4, 1, 4, 2]) → [2]
+//post4([4, 4, 1, 2, 3]) → [1, 2, 3]
+
+function post4(arr) {
+  let resArr = new Array();
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] == 4) break;
+    resArr.push(arr[i]);
+  }
+  //return resArr;
+  let res = [];
+  for (let i = resArr.length - 1; i >= 0; i--) {
+    res.push(resArr[i]);
+  }
+  return res;
+}
+
+let arr = [4, 4, 1, 2, 3];
+console.log(post4(arr));
+
+//---------------------------------------------------------------------------------------
+// Question:-172
+// We'll say that an element in an array is "alone" if there are values before and after it,
+//and those values are different from it. Return a version of the given array where every instance
+// of the given value which is alone is replaced by whichever value to its left or right is larger.
+
+//notAlone([1, 2, 3], 2) → [1, 3, 3]
+//notAlone([1, 2, 3, 2, 5, 2], 2) → [1, 3, 3, 5, 5, 2]
+//notAlone([3, 4], 3) → [3, 4]
+function notAlone(arr) {
+  // if (arr.length < 3) return arr;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (i > 0 && i < arr.length - 1 && arr[i] == value) {
+      if (arr[i] != arr[i - 1] && arr[i] != arr[i + 1]) {
+        arr[i] = Math.max(arr[i - 1], arr[i + 1]);
+      }
+    }
+  }
+  return arr;
+}
+
+let arr = [3, 4];
+let value = 3;
+console.log(notAlone(arr, value));
+
+//====================================================================================
+// Question:-173
+// Return an array that contains the exact same numbers as the given array, but rearranged so that all the
+// zeros are grouped at the start of the array. The order of the non-zero numbers does not matter.
+//So {1, 0, 0, 1} becomes {0 ,0, 1, 1}. You may modify and return the given array or make a new array.
+
+//zeroFront([1, 0, 0, 1]) → [0, 0, 1, 1]
+//zeroFront([0, 1, 1, 0, 1]) → [0, 0, 1, 1, 1]
+//zeroFront([1, 0]) → [0, 1]
+function zeroFront(arr) {
+  //----------------------------------------------
+  let zeroC = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 0) zeroC++;
+  }
+  let resArr = new Array();
+
+  for (let i = 0; i < zeroC; i++) {
+    resArr[i] = 0;
+  }
+  let ele;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] != 0) {
+      ele = arr[i];
+      break;
+    }
+  }
+  for (let i = zeroC; i < arr.length; i++) {
+    resArr[i] = ele;
+  }
+  //-----------------------------------------------------
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 0) {
+      arr[i] = arr[count];
+      arr[count] = 0;
+      count++;
+    }
+  }
+
+  return resArr;
+}
+
+let arr = [1, 0];
+console.log(zeroFront(arr));
+
+//===============================================================================
+// Question:-174
+// Return a version of the given array where all the 10's have been removed. The remaining elements should
+//shift left towards the start of the array as needed, and the empty spaces a the end of the array should
+// be 0. So {1, 10, 10, 2} yields {1, 2, 0, 0}. You may modify and return the given array or make a new array.
+
+//withoutTen({1, 10, 10, 2}) → {1, 2, 0, 0}
+//withoutTen({10, 2, 10}) → {2, 0, 0}
+//withoutTen({1, 99, 10}) → {1, 99, 0}
+
+function withoutTen(arr) {
+  let resArr = new Array(arr.length);
+  let j = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 10) {
+    } else {
+      resArr[j] = arr[i];
+      j++;
+    }
+  }
+  for (let i = j; i < arr.length; i++) {
+    resArr[i] = 0;
+  }
+  return resArr;
+}
+let arr = [10, 2, 10];
+console.log(withoutTen(arr));
+
+//================================================================================
+// Question:-175
+// fizzBuzz
+
+function fizzbuzz(start, end) {
+  let resArr = new Array();
+  for (let i = start; i < end; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      resArr.push('fizzBuzz');
+    } else if (i % 3 == 0) {
+      resArr.push('Fizz');
+    } else if (i % 5 == 0) {
+      resArr.push('Buzz');
+    } else {
+      resArr.push(i);
+    }
+  }
+  return resArr.join(',').split(',');
+}
+let start = 1;
+let end = 35;
+console.log(fizzbuzz(start, end));
+
+//=======================================================================================
+// Array:-3 Hard problem with complex logic and with two loop.
+// Question:-176
+// Consider the leftmost and righmost appearances of some value in an array. We'll say that the "span"
+//is the number of elements between the two inclusive. A single value has a span of 1. Returns the
+//largest span found in the given array. (Efficiency is not a priority.)
+
+//maxSpan([1, 2, 1, 1, 3]) → 4
+//maxSpan([1, 4, 2, 1, 4, 1, 4]) → 6
+//maxSpan([1, 4, 2, 1, 4, 4, 4]) → 6
+
+function maxSpan(arr) {
+  let result = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] == arr[j]) {
+        let t = i - j + 1;
+        if (t > result) {
+          result = t;
+        }
+      }
+    }
+  }
+  return result;
+}
+
+let arr = [1, 2, 1, 1, 3];
+console.log(maxSpan(arr));
+
+//=========================================================================================
+// Question:-177
+//
+//let a = 'abcdeeeffg';
+//let res = Array.from(new Set(a));
+//console.log(res);
+
+// let score = [100, 80, 80, 20];
+// score = Array.from(score);
+// console.log(score);
+// score = Array.from(new Set(score));
+// console.log(score);
+// console.log(typeof score);
+
+function leaderBoard(score, alice) {
+  score = Array.from(new Set(score));
+  console.log(score);
+  let rank_Res = [];
+
+  for (let i = 0; i < alice.length; i++) {
+    while (score[0] && alice[i] >= score[score.length - 1]) {
+      score.pop();
+    }
+    rank_Res.push(score.length + 1);
+  }
+  return rank_Res;
+}
+
+let score = [100, 90, 90, 80];
+let alice = [70, 80, 105];
+console.log(leaderBoard(score, alice));
+
+//====================================================================================
+// Question:-178
+// Return an array that contains exactly the same numbers as the given array, but rearranged so that every 3 is
+// immediately followed by a 4. Do not move the 3's, but every other number may move. The array contains the
+// same number of 3's and 4's, every 3 has a number after it that is not a 3, and a 3 appears in the array
+// before any 4.
+
+//fix34([1, 3, 1, 4]) → [1, 3, 4, 1]
+//fix34([1, 3, 1, 4, 4, 3, 1]) → [1, 3, 4, 1, 1, 3, 4]
+//fix34([3, 2, 2, 4]) → [3, 4, 2, 2]
+
+function fix34(arr) {
+  let temp = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] == 4 && arr[j] == 3) {
+        temp = arr[j + 1]; // swaping operation going on.
+        arr[j + 1] = arr[i];
+        arr[i] = temp;
+      }
+    }
+  }
+  return arr;
+}
+let arr = [1, 3, 1, 4];
+console.log(fix34(arr));
+
+//================================================================================================
+// Question:-179
+// (This is a slightly harder version of the fix34 problem.) Return an array that contains exactly the same
+// numbers as the given array, but rearranged so that every 4 is immediately followed by a 5. Do not move the 4's,
+//but every other number may move. The array contains the same number of 4's and 5's, and every 4 has a number
+// after it that is not a 4. In this version, 5's may appear anywhere in the original array.
+
+//fix45([5, 4, 9, 4, 9, 5]) → [9, 4, 5, 4, 5, 9]
+//fix45([1, 4, 1, 5]) → [1, 4, 5, 1]
+//fix45([1, 4, 1, 5, 5, 4, 1]) → [1, 4, 5, 1, 1, 4, 5]
+
+function fix45(arr) {
+  let temp = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] == 5 && arr[j] == 4) {
+        temp = arr[j + 1];
+        arr[j + 1] = arr[i];
+        arr[i] = temp;
+      }
+    }
+  }
+  return arr;
+}
+
+let arr = [5, 4, 9, 4, 9, 5];
+console.log(fix45(arr));
+
+//=======================================================================================================
+// Question:-180
+// Given a non-empty array, return true if there is a place to split the array so that the sum of the
+// numbers on one side is equal to the sum of the numbers on the other side.
+
+//canBalance([1, 1, 1, 2, 1]) → true
+//canBalance([2, 1, 1, 2, 1]) → false
+//canBalance([10, 10]) → true
+
+function canBalance(arr) {
+  let sum_1 = 0;   // some test cases will fail.
+  let sum_2 = 0;
+  let len = Math.floor(arr.length / 2);
+  if (arr.length % 2 == 0) {
+    for (let i = 0; i < len; i++) {
+      sum_1 += arr[i];
+    }
+    for (let i = len; i < arr.length; i++) {
+      sum_2 += arr[i];
+    }
+  } else {
+    for (let i = 0; i <= len; i++) {
+      sum_1 += arr[i];
+    }
+    for (let i = len + 1; i < arr.length; i++) {
+      sum_2 += arr[i];
+    }
+  }
+  if (sum_1 == sum_2) return true;
+  else return false;
+}
+
+let arr = [2, 1, 1, 2, 1];
+console.log(canBalance(arr));
+//-------------------------------------------------------------------------------
+
+// 2nd approch.
+function canBalance(arr) {
+  let left_Sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    left_Sum += arr[i];
+
+    let right_Sum = 0;
+    for (let j = arr.length - 1; j > i; j--) {
+      right_Sum += arr[j];
+    }
+    if (left_Sum == right_Sum) return true;
+  }
+  return false;
+}
+
+let arr = [2, 1, 1, 2, 1];
+console.log(canBalance(arr));
+
+//---------------------------------------------------------
+// 3rd Approch.
+function canBalance(arr) {
+  let right_Sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    right_Sum += arr[i];
+  }
+  let left_Sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    left_Sum += arr[i];
+    right_Sum -= arr[i];
+    if (right_Sum == left_Sum) return true;
+  }
+  return false;
+}
+
+let arr = [3, 2, 1, 1, 2, 3];
+console.log(canBalance(arr));
+
+//=======================================================================================
+// Question:-181
+// Given two arrays of ints sorted in increasing order, outer and inner, return true if all of the numbers
+//in inner appear in outer. The best solution makes only a single "linear" pass of both arrays, taking
+//advantage of the fact that both arrays are already in sorted order.
+
+//linearIn([1, 2, 4, 6], [2, 4]) → true
+//linearIn([1, 2, 4, 6], [2, 3, 4]) → false
+//linearIn([1, 2, 4, 4, 6], [2, 4]) → true
+
+function linearIn(arrA, arrB) {
+  let count = 0;
+  let j = 0;
+  for (let i = 0; i < arrA.length; i++) {
+    if (arrA[i] == arrB[j]) {
+      count++;
+      j++;
+    } else if (arrA[i] > arrB[j]) {
+      return false;
+    }
+    if (count == arrB.length) return true;
+  }
+  return false;
+}
+
+let arrA = [1, 2, 4, 6];
+let arrB = [2, 4];
+console.log(linearIn(arrA, arrB));
+
+//=====================================================================================
+// Question:-182
+// Given n>=0, create an array length n*n with the following pattern, shown here for
+// n=3 : {0, 0, 1,    0, 2, 1,    3, 2, 1} (spaces added to show the 3 groups).
+
+//squareUp(3) → [0, 0, 1, 0, 2, 1, 3, 2, 1]
+//squareUp(2) → [0, 1, 2, 1]
+//squareUp(4) → [0, 0, 0, 1, 0, 0, 2, 1, 0, 3, 2, 1, 4, 3, 2, 1]
+
+function squareUp(n) {
+  let result = new Array(n * n).fill(0);
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+      result[i * n - j] = j;
+    }
+  }
+  return result;
+}
+
+let n = 4;
+console.log(squareUp(n));
+
+//============================================================================================
+// Question:-183
+// Given n>=0, create an array with the pattern {1,    1, 2,    1, 2, 3,   ... 1, 2, 3 .. n}
+//(spaces added to show the grouping). Note that the length of the array will be 1 + 2 + 3 ... + n,
+// which is known to sum to exactly n*(n + 1)/2.
+
+//seriesUp(3) → [1, 1, 2, 1, 2, 3]
+//seriesUp(4) → [1, 1, 2, 1, 2, 3, 1, 2, 3, 4]
+//seriesUp(2) → [1, 1, 2]
+
+function seriesUP(n) {
+  let result = [];
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+      result.push(j);
+    }
+  }
+  return result;
+}
+
+let n = 3;
+console.log(seriesUP(n));
+
+//==========================================================================================
+// Question:-184
+// We'll say that a "mirror" section in an array is a group of contiguous elements such that somewhere in
+//the array, the same group appears in reverse order. For example, the largest mirror section in
+// {1, 2, 3, 8, 9, 3, 2, 1} is length 3 (the {1, 2, 3} part). Return the size of the largest mirror section
+//found in the given array.
+
+//maxMirror([1, 2, 3, 8, 9, 3, 2, 1]) → 3
+//maxMirror([1, 2, 1, 4]) → 3
+//maxMirror([7, 1, 2, 9, 7, 2, 1]) → 2
+
+function maxMirror(arr) {
+  let len = arr.length;
+  let count = 0;
+  let max = 0;
+  for (let i = 0; i < len; i++) {
+    count = 0;
+    for (let j = len - 1; j >= 0 && i + count < len; j--) {
+      if (arr[i + count] == arr[j]) {
+        count++;
+      } else {
+        if (count > 0) {
+          max = Math.max(count, max);
+          count = 0;
+        }
+      }
+    }
+    max = Math.max(max, count);
+  }
+  return max;
+}
+
+let arr = [7, 1, 2, 9, 7, 2, 1];
+console.log(maxMirror(arr));
+
+//==================================================================================
+// Question:-185
+// Say that a "clump" in an array is a series of 2 or more adjacent elements of the same value.
+//Return the number of clumps in the given array.
+
+//countClumps([1, 2, 2, 3, 4, 4]) → 2
+//countClumps([1, 1, 2, 1, 1]) → 2
+//countClumps([1, 1, 1, 1, 1]) → 1
+
+function countClumps(arr) {
+  let len = arr.length;
+  let count = 0;
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] == arr[i + 1]) {
+      count++;
+    }
+    while (i < arr.length - 1 && arr[i] == arr[i + 1]) {
+      i++;
+    }
+  }
+  return count;
+}
+
+let arr = [1, 1, 1, 1, 1];
+console.log(countClumps(arr));
+
+//==============================================================================================
+
+// Question:-186
+// Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
+
+//helloName("Bob") → "Hello Bob!"
+//helloName("Alice") → "Hello Alice!"
+//helloName("X") → "Hello X!"
+
+function helloName(str) {
+  return 'Hello' + ' ' + str + '!';
+}
+
+let str = 'Bob';
+console.log(helloName(str));
+*/
+//===========================================================================================
+// Question:-187
+// Given two strings, a and b, return the result of putting them together in the order abba, e.g.
+//"Hi" and "Bye" returns "HiByeByeHi".
+
+//makeAbba("Hi", "Bye") → "HiByeByeHi"
+//makeAbba("Yo", "Alice") → "YoAliceAliceYo"
+//makeAbba("What", "Up") → "WhatUpUpWhat"
