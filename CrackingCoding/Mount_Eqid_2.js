@@ -3868,7 +3868,7 @@ function helloName(str) {
 
 let str = 'Bob';
 console.log(helloName(str));
-*/
+
 //===========================================================================================
 // Question:-187
 // Given two strings, a and b, return the result of putting them together in the order abba, e.g.
@@ -3877,3 +3877,724 @@ console.log(helloName(str));
 //makeAbba("Hi", "Bye") → "HiByeByeHi"
 //makeAbba("Yo", "Alice") → "YoAliceAliceYo"
 //makeAbba("What", "Up") → "WhatUpUpWhat"
+
+//============================================================================================
+// Question:-188
+// Functional:-01
+// Given a list of integers, return a list where each integer is multiplied by 2.
+
+//doubling([1, 2, 3]) → [2, 4, 6]
+//doubling([6, 8, 6, 8, -1]) → [12, 16, 12, 16, -2]
+//doubling([]) → []
+
+function doubling(arr) {
+  let resArr = new Array(arr.length);
+  for (let i = 0; i < arr.length; i++) {
+    resArr[i] = arr[i] * 2;
+  }
+  return resArr;
+}
+let arr = [1, 2, -1];
+console.log(doubling(arr));
+
+//==========================================================================================
+// Question:-189
+// Given a list of integers, return a list where each integer is multiplied with itself.
+
+//square([1, 2, 3]) → [1, 4, 9]
+//square([6, 8, -6, -8, 1]) → [36, 64, 36, 64, 1]
+//square([]) → []
+
+function square(arr) {
+  let resArr = new Array(arr.length);
+  for (let i = 0; i < arr.length; i++) {
+    resArr[i] = arr[i] * arr[i];
+  }
+  return resArr;
+}
+
+let arr = [6, 8, -6, -8, 1];
+console.log(square(arr));
+
+//===========================================================================================
+// Question:-190
+// Given a list of strings, return a list where each string has "*" added at its end.
+
+//addStar(["a", "bb", "ccc"]) → ["a*", "bb*", "ccc*"]
+//addStar(["hello", "there"]) → ["hello*", "there*"]
+//addStar(["*"]) → ["**"]
+
+function addStar(arr) {
+  let resArr = new Array(arr.length);
+  for (let i = 0; i < arr.length; i++) {
+    resArr[i] = arr[i] + '*';
+  }
+  return resArr;
+}
+
+let arrList = ['one', 'two', 'three'];
+console.log(addStar(arrList));
+
+//==============================================================================================
+// Question:-191
+// Given a list of strings, return a list where each string is replaced by 3 copies of the string
+//concatenated together.
+
+//copies3(["a", "bb", "ccc"]) → ["aaa", "bbbbbb", "ccccccccc"]
+//copies3(["24", "a", ""]) → ["242424", "aaa", ""]
+//copies3(["hello", "there"]) → ["hellohellohello", "theretherethere"]
+
+function copies3(arr) {
+  let resArr = new Array(arr.length);
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    let res = el.repeat(3);
+    resArr[i] = res;
+  }
+  return resArr;
+}
+
+let arr = ['a', 'bb', 'sandeep'];
+console.log(copies3(arr));
+
+//=======================================================================================
+// Question:-192
+// Given a list of strings, return a list where each string has "y" added at its start and end.
+
+//moreY(["a", "b", "c"]) → ["yay", "yby", "ycy"]
+//moreY(["hello", "there"]) → ["yhelloy", "ytherey"]
+//moreY(["yay"]) → ["yyayy"]
+
+function moreY(arr) {
+  let resArr = new Array(arr.length);
+  for (let i = 0; i < arr.length; i++) {
+    let res = 'y' + arr[i] + 'y';
+    resArr[i] = res;
+  }
+  return resArr;
+}
+
+let arr = ['abc', 'ball', 'cat'];
+console.log(moreY(arr));
+
+//========================================================================================
+// Question:-193
+// Given a list of integers, return a list where each integer is added to 1 and the result is multiplied by 10.
+
+//math1([1, 2, 3]) → [20, 30, 40]
+//math1([6, 8, 6, 8, 1]) → [70, 90, 70, 90, 20]
+//math1([10]) → [110]
+
+function math1(arr) {
+  let resArr = new Array(arr.length);
+  for (let i = 0; i < arr.length; i++) {
+    let el = (arr[i] + 1) * 10;
+    resArr[i] = el;
+  }
+  return resArr;
+}
+
+let arr = [6, 8, 6, 8, 1];
+console.log(math1(arr));
+
+//================================================================================================
+// Question:- 194
+// Given a list of non-negative integers, return an integer list of the rightmost digits. (Note: use %)
+
+//rightDigit([1, 22, 93]) → [1, 2, 3]
+//rightDigit([16, 8, 886, 8, 1]) → [6, 8, 6, 8, 1]
+//rightDigit([10, 0]) → [0, 0]
+function leftDigit(n) {
+  while (n >= 10) {
+    n = Math.floor(n / 10);
+  }
+  return Math.floor(n);
+}
+
+function right(el) {
+  let reminder = el % 10;
+  return reminder;
+}
+
+function rightDigit(arr) {
+  let resArr = new Array();
+  let resArrLeft = new Array();
+
+  for (let i = 0; i < arr.length; i++) {
+    // let ele = right(arr[i]);
+    let ele1 = leftDigit(arr[i]);
+    // resArr.push(ele);
+    resArrLeft.push(ele1);
+  }
+  // return resArr;
+  return resArrLeft;
+}
+let arr = [10, 0];
+console.log(rightDigit(arr));
+
+//=================================================================================
+// Question:-195
+// Given a list of strings, return a list where each string is converted to lower case
+//(Note: String toLowerCase() method).
+
+//lower(["Hello", "Hi"]) → ["hello", "hi"]
+//lower(["AAA", "BBB", "ccc"]) → ["aaa", "bbb", "ccc"]
+//lower(["KitteN", "ChocolaTE"]) → ["kitten", "chocolate"]
+
+function lower(arr) {
+  let resArr = new Array();
+  for (let i = 0; i < arr.length; i++) {
+    let ele = arr[i].toLowerCase();
+    resArr.push(ele);
+  }
+  return resArr;
+}
+
+let arr = ['Hello', 'Hi', 'AAA', 'SAndEEp'];
+console.log(lower(arr));
+
+//===================================================================
+// Question:-196
+// convert lower to upper and uppert to lower.
+
+function convert(str) {
+  let st = '';
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] >= 'a' && str[i] <= 'z') {
+      //convert lower case to upper case.
+      let conv = str.charCodeAt(i) - 32;
+      st += String.fromCharCode(conv);
+    } else {
+      // convert to upper case to lower case.
+      let conv_2 = str.charCodeAt(i) + 32;
+      st += String.fromCharCode(conv_2);
+    }
+  }
+  return st;
+}
+let str = 'SandEEp';
+console.log(convert(str));
+
+//=======================================================================================
+// Question:-197
+// during bit manipulation:-
+
+function convert(str) {
+  let st = '';
+  for (let i = 0; i < str.length; i++) {
+    let con = str.charCodeAt(i) ^ (1 << 5);
+    st += String.fromCharCode(con);
+  }
+  return st;
+}
+
+let str = 'ZandEEp';
+console.log(convert(str));
+
+//=======================================================================================
+// Question:-198
+// given an array convert upper case to lower case and lower case to upper case.
+
+function convert(stArr) {
+  let resArr = new Array();
+  for (let i = 0; i < stArr.length; i++) {
+    let s = stArr[i];
+    let ss = '';
+    let index = 0;
+    while (s.length > index) {
+      let con = s.charCodeAt(index) ^ (1 << 5);
+      ss += String.fromCharCode(con);
+      index++;
+    }
+    resArr.push(ss);
+    ss = '';
+    index = 0;
+  }
+  return resArr;
+}
+
+let stArr = ['sAndeeP', 'praJaPATi', 'OjashWy', 'APPle'];
+console.log(convert(stArr));
+
+//=============================================================================================
+// Question:-199
+// Given a list of strings, return a list where each string has all its "x" removed.
+
+//noX(["ax", "bb", "cx"]) → ["a", "bb", "c"]
+//noX(["xxax", "xbxbx", "xxcx"]) → ["a", "bb", "c"]
+//noX(["x"]) → [""]
+
+function noX(strArr) {
+  let resArr = new Array();
+  for (let i = 0; i < strArr.length; i++) {
+    let s = strArr[i];
+    let index = 0;
+    let ss = '';
+    while (s.length > index) {
+      if (s[index] != 'x') {
+        ss += s[index];
+      }
+      index++;
+    }
+    resArr.push(ss);
+    index = 0;
+    ss = '';
+  }
+  return resArr;
+}
+let strArr = ['xbxbx', 'xxax', 'xxcx'];
+console.log(noX(strArr));
+
+//=============================================================================================
+// Question:-200
+// Given a list of integers, return a list of the integers, omitting any that are less than 0.
+
+//noNeg([1, -2]) → [1]
+//noNeg([-3, -3, 3, 3]) → [3, 3]
+//noNeg([-1, -1, -1]) → []
+
+function noNeg(arr) {
+  let resArr = new Array();
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      resArr.push(arr[i]);
+    }
+  }
+  return resArr;
+}
+
+let arr = [-3, -3, 3, 3, -5, 5, -7, 10];
+console.log(noNeg(arr));
+
+//====================================================================================
+// Question:-201
+// Given a list of non-negative integers, return a list of those numbers except omitting any that end with 9.
+// (Note: % by 10)
+
+//no9([1, 2, 19]) → [1, 2]
+//no9([9, 19, 29, 3]) → [3]
+//no9([1, 2, 3]) → [1, 2, 3]
+
+function no9(arr) {
+  let resArr = new Array();
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    let e = el % 10;
+    if (e != 9) {
+      resArr.push(e);
+    }
+  }
+  return resArr;
+}
+let arr = [9, 19, 29, 3, 29, 1, 2, 6];
+console.log(no9(arr));
+
+//=============================================================================================
+// Question:-202
+// Given a list of integers, return a list of those numbers, omitting any that are between 13 and 19 inclusive.
+
+//noTeen([12, 13, 19, 20]) → [12, 20]
+//noTeen([1, 14, 1]) → [1, 1]
+//noTeen([15]) → []
+
+function noTeen(arr) {
+  let resArr = new Array();
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= 13 && arr[i] <= 19) {
+    } else {
+      resArr.push(arr[i]);
+    }
+  }
+  return resArr;
+}
+
+let arr = [12, 13, 19, 20];
+console.log(noTeen(arr));
+
+//====================================================================================================
+// Question:-203
+// Given a list of strings, return a list of the strings, omitting any string that contains a "z".
+// (Note: the str.contains(x) method returns a boolean)
+
+//noZ(["aaa", "bbb", "aza"]) → ["aaa", "bbb"]
+//noZ(["hziz", "hzello", "hi"]) → ["hi"]
+//noZ(["hello", "howz", "are", "youz"]) → ["hello", "are"]
+
+function noZ(strArr) {
+  let resArr = new Array();
+  for (let i = 0; i < strArr.length; i++) {
+    let s = strArr[i];
+    let index = 0;
+    let flag = true;
+    while (s.length > index) {
+      if (s[index] == 'z') {
+        flag = false;
+      }
+      index++;
+    }
+    index = 0;
+    if (flag == true) {
+      resArr.push(strArr[i]);
+    }
+  }
+  return resArr;
+}
+
+let strArr = ['hello', 'howz', 'are', 'youz'];
+console.log(noZ(strArr));
+
+//=================================================================================
+// Question:-204
+// Given a list of strings, return a list of the strings, omitting any string length 4 or more.
+
+//noLong(["this", "not", "too", "long"]) → ["not", "too"]
+//noLong(["a", "bbb", "cccc"]) → ["a", "bbb"]
+//noLong(["cccc", "cccc", "cccc"]) → []
+
+function nolong(strArr) {
+  let resArr = new Array();
+  for (let i = 0; i < strArr.length; i++) {
+    let s = strArr[i];
+    if (s.length < 4) {
+      resArr.push(strArr[i]);
+    }
+  }
+  return resArr;
+}
+
+let strArr = [
+  'this',
+  'not',
+  'too',
+  'long',
+  'sandeep',
+  'you',
+  'have',
+  'to',
+  'imp',
+];
+console.log(nolong(strArr));
+
+//==============================================================================================
+// Question:-205
+// Given a list of strings, return a list of the strings, omitting any string length 3 or 4.
+
+//no34(["a", "bb", "ccc"]) → ["a", "bb"]
+//no34(["a", "bb", "ccc", "dddd"]) → ["a", "bb"]
+//no34(["ccc", "dddd", "apple"]) → ["apple"]
+
+function no34(strArr) {
+  let resArr = new Array();
+  for (let i = 0; i < strArr.length; i++) {
+    let s = strArr[i];
+    if (s.length == 3 || s.length == 4) {
+    } else {
+      resArr.push(strArr[i]);
+    }
+  }
+  return resArr;
+}
+
+let strArr = ['a', 'bb', 'ccc', 'apple', 'dddd'];
+console.log(no34(strArr));
+
+//==============================================================================================
+// Question:-206
+// Given a list of strings, return a list where each string has "y" added at its end, omitting any
+// resulting strings that contain "yy" as a substring anywhere.
+
+//noYY(["a", "b", "c"]) → ["ay", "by", "cy"]
+//noYY(["a", "b", "cy"]) → ["ay", "by"]
+//noYY(["xx", "ya", "zz"]) → ["xxy", "yay", "zzy"]
+
+function noYY(strArr) {
+  let resArr = new Array();
+  for (let i = 0; i < strArr.length; i++) {
+    let s = strArr[i];
+    let s1 = s + 'y';
+    let flag = false;
+    for (let j = 0; j < s1.length - 1; j++) {
+      if (s1.substring(j, j + 2) == 'yy') {
+        flag = true;
+      }
+    }
+    if (flag == false) {
+      resArr.push(strArr[i]);
+    }
+    flag = false;
+  }
+  return resArr;
+}
+let strArr = ['a', 'yyb', 'c', 'cy', 'xx'];
+console.log(noYY(strArr));
+
+//=======================================================================================
+// Question:-207
+// Given a list of non-negative integers, return a list of those numbers multiplied by 2,
+//omitting any of the resulting numbers that end in 2.
+
+//two2([1, 2, 3]) → [4, 6]
+//two2([2, 6, 11]) → [4]
+//two2([0]) → [0]
+
+function two2(arr) {
+  let resArr = new Array();
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i] * 2;
+    let remainder = el % 10;
+    if (remainder != 2) {
+      resArr.push(el);
+    }
+  }
+  return resArr;
+}
+
+let arr = [1, 2, 3, 21, 26, 31];
+console.log(two2(arr));
+
+//====================================================================================
+// Question:-208
+// Given a list of integers, return a list of those numbers squared and the product added to 10,
+// omitting any of the resulting numbers that end in 5 or 6.
+
+//square56([3, 1, 4]) → [19, 11]
+//square56([1]) → [11]
+//square56([2]) → [14]
+
+function square56(arr) {
+  let resArr = new Array();
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i] * arr[i] + 10;
+    let reminder = el % 10;
+    if (reminder == 5 || reminder == 6) {
+    } else {
+      resArr.push(el);
+    }
+  }
+  return resArr;
+}
+
+let arr = [3, 1, 4];
+console.log(square56(arr));
+
+//=============================================================================================
+// Question:-209
+// Given a string, count the number of words ending in 'y' or 'z' -- so the 'y' in "heavy" and the 'z'
+//in "fez" count, but not the 'y' in "yellow" (not case sensitive). We'll say that a y or z is at the
+//end of a word if there is not an alphabetic letter immediately following it. (Note: Character.isLetter(char)
+// tests if a char is an alphabetic letter.)
+
+//countYZ("fez day") → 2
+//countYZ("day fez") → 2
+//countYZ("day fyyyz") → 2
+
+function countYZ(str) {
+  let count = 0;
+  let s = str.split(' ');
+  for (let i = 0; i < s.length; i++) {
+    let el = s[i];
+    if (el[el.length - 1] == 'y' || el[el.length - 1] == 'z') {
+      count++;
+    }
+  }
+  return count;
+}
+let str = 'day fyyyz';
+console.log(countYZ(str));
+
+//=============================================================================================
+// Question:-210
+// Given two strings, base and remove, return a version of the base string where all instances of the remove
+//string have been removed (not case sensitive). You may assume that the remove string is length 1 or more.
+// Remove only non-overlapping instances, so with "xxx" removing "xx" leaves "x".
+
+//withoutString("Hello there", "llo") → "He there"
+//withoutString("Hello there", "e") → "Hllo thr"
+//withoutString("Hello there", "x") → "Hello there"
+
+function withoutString(base, remove) {
+  let bLen = base.length;
+  let rLen = remove.length;
+  let lowbase = base.toLowerCase();
+  let lowrem = remove.toLowerCase();
+  let finalRes = '';
+
+  for (let i = 0; i < bLen; i++) {
+    if (i <= bLen - rLen) {
+      let temp = lowbase.substring(i, i + rLen);
+      if (temp != lowrem) {
+        finalRes += base.substring(i, i + 1);
+      } else {
+        i += rLen - 1;
+      }
+    } else {
+      let temp2 = lowbase.substring(i, i + 1);
+      if (temp2 != lowrem) {
+        finalRes += base.substring(i, i + 1);
+      }
+    }
+  }
+  return finalRes;
+}
+let str = 'Hello there';
+let remove = 'llo';
+console.log(withoutString(str, remove));
+
+//===========================================================================================
+// Question:-211
+// Given a string, return true if the number of appearances of "is" anywhere in the string is equal
+//to the number of appearances of "not" anywhere in the string (case sensitive).
+
+//equalIsNot("This is not") → false
+//equalIsNot("This is notnot") → true
+//equalIsNot("noisxxnotyynotxisi") → true
+
+function equalISNot(str) {
+  //let newStr = '';
+  // for (let i = 0; i < str.length; i++) {
+  //   if (str[i] != ' ') {
+  //     newStr += str[i];
+  //   }
+  // }
+  //newStr = str.toLowerCase();
+  //-----------------------------------------------------------------------
+  // let notC = 0;
+  // let isC = 0;
+  // for (let i = 0; i < str.length - 1; i++) {
+  //   let temp1 = str.substring(i, i + 2);
+  //   if (temp1 == 'is') isC++;
+  // }
+  // for (let i = 0; i < str.length - 2; i++) {
+  //   let temp2 = str.substring(i, i + 3);
+  //   if (temp2 == 'not') notC++;
+  // }
+  // if (notC == isC) return true;
+  // else return false;
+  //---------------------------------------------------------------------
+  let len = str.length;
+  let isCount = 0;
+  let notCount = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (i < len - 2) {
+      let temp1 = str.substring(i, i + 3);
+      if (temp1 == 'not') notCount++;
+    }
+    if (i < len - 1) {
+      let temp2 = str.substring(i, i + 2);
+      if (temp2 == 'is') isCount++;
+    }
+  }
+  if (isCount == notCount) return true;
+  else return false;
+}
+
+let str = 'This is notnot';
+console.log(equalISNot(str));
+
+//===============================================================================================
+// Question:-212
+// We'll say that a lowercase 'g' in a string is "happy" if there is another 'g' immediately to its left or right.
+// Return true if all the g's in the given string are happy.
+
+//gHappy("xxggxx") → true
+//gHappy("xxgxx") → false
+//gHappy("xxggyygxx") → false
+
+function gHappy(str) {
+  // //----------------------------------------------------------
+  // for (let i = 1; i < str.length - 1; i++) {
+  //   if (str[i] == 'g') {
+  //     if (str[i - 1] == 'g' || str[i + 1] == 'g') return true;
+  //   }
+  // }
+  // return false;
+  //-------------------------------------------------------------
+  let len = str.length;
+  let happy = true;
+  for (let i = 0; i < len; i++) {
+    if (str[i] == 'g') {
+      if (i > 0 && str[i - 1] == 'g') happy = true;
+      else if (i < len - 1 && str[i + 1] == 'g') happy = true;
+      else happy = false;
+    }
+  }
+  return happy;
+}
+
+let str = 'xxggyygxx';
+console.log(gHappy(str));
+
+//=============================================================================
+// Quuestion:-213
+// We'll say that a "triple" in a string is a char appearing three times in a row. Return the number of
+// triples in the given string. The triples may overlap.
+
+//countTriple("abcXXXabc") → 1
+//countTriple("xxxabyyyycd") → 3
+//countTriple("a") → 0
+
+function counttriplet(str) {
+  //-----------------------------------------------------------------------------------------
+  // let count = 0;
+  // for (let i = 0; i < str.length - 2; i++) {
+  //   for (let j = i + 1; j < str.length - 1; j++) {
+  //     for (let k = j + 1; k < str.length; k++) {       //   he will give wrong answer always.
+  //       // if ((str[i] == str[j]) == str[k]) count++;
+  //       console.log(str[i] + ' ' + str[j] + ' ' + str[k]);
+  //     }
+  //   }
+  // }
+  // return count;
+  //-----------------------------------------------------------------------------------------
+  let count = 0;
+  let len = str.length;
+  for (let i = 0; i < len - 2; i++) {
+    let temp = str[i];
+    if (temp == str[i + 1] && temp == str[i + 2]) count++;
+  }
+  return count;
+}
+
+let str = 'xxxabyyyycd';
+console.log(counttriplet(str));
+
+//==========================================================================================
+// Question:-214
+// Given a string, return the sum of the digits 0-9 that appear in the string, ignoring all other characters.
+// Return 0 if there are no digits in the string. (Note: Character.isDigit(char) tests if a char is one of the
+// chars '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
+
+//sumDigits("aa1bc2d3") → 6
+//sumDigits("aa11b33") → 8
+//sumDigits("Chocolate") →0
+
+function sumDigits(str) {
+  let sum = 0;
+  let s = str.split('');
+  for (let i = 0; i < s.length; i++) {
+    let val = str[i];
+    let num = parseInt(val);
+    if (!isNaN(num)) {
+      // important concept.
+      sum += num;
+    }
+  }
+  return sum;
+}
+
+let str = 'aa11b33';
+console.log(sumDigits(str));
+
+//=======================================================================================
+// Question:-215
+// Given a string, return the longest substring that appears at both the beginning and end of the string
+//without overlapping. For example, sameEnds("abXab") is "ab".
+
+//sameEnds("abXYab") → "ab"
+//sameEnds("xx") → "x"
+//sameEnds("xxx") → "x"
+
+function sameEnds(str) {
+  let len = str.length;
+  let half = Math.floor(len / 2);
+ 
