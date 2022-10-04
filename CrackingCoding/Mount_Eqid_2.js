@@ -151,14 +151,14 @@ console.log(love6(a, b));
 
 //=============================================================================
 // Question:-40
-// Given a number n, return true if n is in the range 1..10, inclusive. Unless "outsideMode" is true,
+// Given a number n, return true if n is in the range 1..10, inclusive. Unless "resultsideMode" is true,
 // in which case return true if the number is less or equal to 1, or greater or equal to 10.
 //in1To10(5, false) → true
 //in1To10(11, false) → false
 //in1To10(11, true) → true
 
-function num1To10(n, outsideMode) {
-  if (outsideMode == false) {
+function num1To10(n, resultsideMode) {
+  if (resultsideMode == false) {
     if (n >= 1 && n <= 10) {
       return true;
     } else {
@@ -174,8 +174,8 @@ function num1To10(n, outsideMode) {
 }
 
 let n = 11,
-  outsideMode = true;
-console.log(num1To10(n, outsideMode));
+  resultsideMode = true;
+console.log(num1To10(n, resultsideMode));
 
 //============================================================================
 
@@ -307,7 +307,7 @@ console.log(answerCell(isMorning, isMom, isAsleep));
 //======================================================================================
 
 // Question:-48
-// We are having a party with amounts of tea and candy. Return the int outcome of the party encoded
+// We are having a party with amounts of tea and candy. Return the int resultcome of the party encoded
 // as 0=bad, 1=good, or 2=great. A party is good (1) if both tea and candy are at least 5. However,
 // if either tea or candy is at least double the amount of the other one, the party is great (2).
 //However, in all cases, if either tea or candy is less than 5, the party is always bad (0).
@@ -498,11 +498,11 @@ console.log(lessBy10(a, b, c));
 // if the two dice show the same value, increment one die to the next value, wrapping around to 1 if its
 // value was 6.
 
-//withoutDoubles(2, 3, true) → 5
-//withoutDoubles(3, 3, true) → 7
-//withoutDoubles(3, 3, false) →6
+//withresultDoubles(2, 3, true) → 5
+//withresultDoubles(3, 3, true) → 7
+//withresultDoubles(3, 3, false) →6
 
-function withoutDoubles(a, b, noDoubles) {
+function withresultDoubles(a, b, noDoubles) {
   if (noDoubles == true) {
     if (a == b) {
       if (a != 6) {
@@ -517,7 +517,7 @@ function withoutDoubles(a, b, noDoubles) {
 let a = 6,
   b = 6,
   noDoubles = true;
-console.log(withoutDoubles(a, b, noDoubles));
+console.log(withresultDoubles(a, b, noDoubles));
 
 //==============================================================================
 
@@ -638,7 +638,7 @@ let a = 12,
 console.log(shareDigit(a, b));
 //=========================================================================================================
 //Given 2 non-negative ints, a and b, return their sum, so long as the sum has the same number of digits as a.
-// If the sum has more digits than a, just return a without b. (Note: one way to compute the number of digits
+// If the sum has more digits than a, just return a withresult b. (Note: one way to compute the number of digits
 // of a non-negative int n is to convert it to a string with String.valueOf(n) and then check the length of
 //the string.)
 
@@ -740,13 +740,13 @@ triangular(row, col);
 //  1,2,3
 //  1,4,9
 //  76,34,21
-// output will be:- 3,9,76
+// resultput will be:- 3,9,76
 
 // Example:-2
 //  4,6,7,9
 //  6,7,8,4
 //  7,9,10,1
-// output will be:- 9,8,10
+// resultput will be:- 9,8,10
 //---------------------------------------------------
 
 function maximum_Row_Element(row, col) {
@@ -1294,7 +1294,7 @@ maximumPriduct(arr);
 // Question:-89
 // Given an array find missing number?
 // arr=[1,2,3,5,6,7];
-// 4 is missing value which are not present. so print 4. as a output.
+// 4 is missing value which are not present. so print 4. as a resultput.
 
 function unknowValue(arr) {
   let tempArr = [];
@@ -1930,7 +1930,7 @@ console.log(typeof joinedMessage);
 console.log(joinedMessage.length);
 console.log(joinedMessage[0].joinedMessage[1]);
 
-// Output: JavaScript is fun.
+// resultput: JavaScript is fun.
 
 //====================================================================================
 
@@ -2242,7 +2242,7 @@ console.log(reverse3(arr));
 
 //===============================================================================
 // Question:-124
-// Given an array of ints length 3, figure out which is larger, the first or last element in the array,
+// Given an array of ints length 3, figure result which is larger, the first or last element in the array,
 // and set all the other elements to be that value. Return the changed array.
 
 //maxEnd3([1, 2, 3]) → [3, 3, 3]
@@ -3484,11 +3484,11 @@ console.log(zeroFront(arr));
 //shift left towards the start of the array as needed, and the empty spaces a the end of the array should
 // be 0. So {1, 10, 10, 2} yields {1, 2, 0, 0}. You may modify and return the given array or make a new array.
 
-//withoutTen({1, 10, 10, 2}) → {1, 2, 0, 0}
-//withoutTen({10, 2, 10}) → {2, 0, 0}
-//withoutTen({1, 99, 10}) → {1, 99, 0}
+//withresultTen({1, 10, 10, 2}) → {1, 2, 0, 0}
+//withresultTen({10, 2, 10}) → {2, 0, 0}
+//withresultTen({1, 99, 10}) → {1, 99, 0}
 
-function withoutTen(arr) {
+function withresultTen(arr) {
   let resArr = new Array(arr.length);
   let j = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -3504,7 +3504,7 @@ function withoutTen(arr) {
   return resArr;
 }
 let arr = [10, 2, 10];
-console.log(withoutTen(arr));
+console.log(withresultTen(arr));
 
 //================================================================================
 // Question:-175
@@ -3720,8 +3720,8 @@ console.log(canBalance(arr));
 
 //=======================================================================================
 // Question:-181
-// Given two arrays of ints sorted in increasing order, outer and inner, return true if all of the numbers
-//in inner appear in outer. The best solution makes only a single "linear" pass of both arrays, taking
+// Given two arrays of ints sorted in increasing order, resulter and inner, return true if all of the numbers
+//in inner appear in resulter. The best solution makes only a single "linear" pass of both arrays, taking
 //advantage of the fact that both arrays are already in sorted order.
 
 //linearIn([1, 2, 4, 6], [2, 4]) → true
@@ -4408,11 +4408,11 @@ console.log(countYZ(str));
 //string have been removed (not case sensitive). You may assume that the remove string is length 1 or more.
 // Remove only non-overlapping instances, so with "xxx" removing "xx" leaves "x".
 
-//withoutString("Hello there", "llo") → "He there"
-//withoutString("Hello there", "e") → "Hllo thr"
-//withoutString("Hello there", "x") → "Hello there"
+//withresultString("Hello there", "llo") → "He there"
+//withresultString("Hello there", "e") → "Hllo thr"
+//withresultString("Hello there", "x") → "Hello there"
 
-function withoutString(base, remove) {
+function withresultString(base, remove) {
   let bLen = base.length;
   let rLen = remove.length;
   let lowbase = base.toLowerCase();
@@ -4438,7 +4438,7 @@ function withoutString(base, remove) {
 }
 let str = 'Hello there';
 let remove = 'llo';
-console.log(withoutString(str, remove));
+console.log(withresultString(str, remove));
 
 //===========================================================================================
 // Question:-211
@@ -4588,7 +4588,7 @@ console.log(sumDigits(str));
 //=======================================================================================
 // Question:-215
 // Given a string, return the longest substring that appears at both the beginning and end of the string
-//without overlapping. For example, sameEnds("abXab") is "ab".
+//withresult overlapping. For example, sameEnds("abXab") is "ab".
 
 //sameEnds("abXYab") → "ab"
 //sameEnds("xx") → "x"
@@ -4597,4 +4597,1006 @@ console.log(sumDigits(str));
 function sameEnds(str) {
   let len = str.length;
   let half = Math.floor(len / 2);
- 
+  let front = '';
+  let end = '';
+  for (let i = half; i >= 0; i--) {
+    front = str.substring(0, i);
+    end = str.substring(len - i);
+    if (front == end) break;
+  }
+  return front;
+}
+
+let str = 'abXYab';
+console.log(sameEnds(str));
+
+//========================================================================================
+// Question:-216
+// Given a string, return a string where every appearance of the lowercase word "is" has been replaced with
+//"is not". The word "is" should not be immediately preceeded or followed by a letter -- so for example the
+//"is" in "this" does not count. (Note: Character.isLetter(char) tests if a char is a letter.)
+
+//notReplace("is test") → "is not test"
+//notReplace("is-is") → "is not-is not"
+//notReplace("This is right") → "This is not right"
+
+function notReplace(str) {
+  let strArr = str.split(' ');
+  console.log(strArr);
+  let n = 'not';
+  let result = '';
+  for (let i = 0; i < strArr.length; i++) {
+    let s = strArr[i];
+    if (s.length == 2) {
+      if (s == 'is') {
+        result = result + 'is' + ' ' + n;
+      }
+    } else {
+      result = result + ' ' + s + ' ';
+    }
+  }
+  return result;
+}
+let str = 'is-is';
+console.log(notReplace(str));
+
+//====================================================================================
+// Question:-217
+// Given an array and given an number add every digit to every array element if digit has been finised,
+// then start the digit from 0 index.
+
+function addingNumber(arr, n) {
+  n = String(n);
+  let resArr = new Array();
+  let j = 0;
+  for (let i = 0; i < arr.length; i++) {
+    let num = Number(n[j]);
+    j++;
+    resArr.push(num + arr[i]);
+    if (n.length == j) {
+      j = 0;
+    }
+  }
+  return resArr;
+}
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let n = 123456789;
+console.log(addingNumber(arr, n));
+
+//==========================================================================================
+// Question:-218
+// message = "scresult"
+//key = 1939
+//digitalCipher(message, key) ➞ [20, 12, 18, 30, 21]
+
+//  s  c  o  u  t
+// 19  3 15 21 20
+
+//s  c  o  u  t
+//19  3 15 21 20
+//+1  9  3  9  1
+//---------------
+//20 12 18 30 21
+
+function digitalCipher(message, key) {
+  key = String(key);
+  let res = [];
+  for (let i = 0; i < message.length; i++) {
+    // res.push(key[i % key.length] - 96 + message.charCodeAt(i));
+    let ascii = message.charCodeAt(i);
+    let accdChar = ascii - 96;
+    // let strValue = key[i % key.length];
+    let num = Number(key[i % key.length]);
+    // console.log(num);
+    res.push(accdChar + num);
+  }
+  return res;
+}
+
+let message = 'scresult';
+let key = 1939;
+console.log(digitalCipher(message, key));
+
+//===================================================================================
+// Question:-219
+//----------------------------------------------------------------------
+function findDigit(n) {
+  while (n >= 10) {
+    n = n % 10;
+  }
+  return n;
+}
+// not pass all test cases;
+
+function sevenBoom(arr) {
+  let flag = false;
+  for (let i = 0; i < arr.length; i++) {
+    let el = findDigit(arr[i]);
+    if (el == 7) {
+      flag = true;
+    }
+  }
+  if (flag == true) return 'Boom!';
+  else return 'there is no 7 in the array';
+}
+//--------------------------------------------------------------
+function sevenBoom(arr) {
+  var new_arr = arr.join('');
+  console.log(typeof new_arr);
+  if (new_arr.includes('7')) {
+    return 'Boom!';
+  } else {
+    return 'there is no 7 in the array';
+  }
+}
+//----------------------------------------------------------------
+
+let arr = [2, 55, 60, 97, 86];
+console.log(sevenBoom(arr));
+
+//====================================================================================
+// Question:-220
+// Mutations Only: Zeroes to the End
+
+function zerostoEnd(arr) {
+  //--------------------------------------------
+  // let count = 0;
+  // arr.sort(function (a, b) {
+  //   return a - b;
+  // });
+  // // return arr;
+  // for (let i = 0; i < arr.length; i++) {
+  //   if (arr[i] == 0) count++;
+  // }
+  // for (let i = 0; i < arr.length - count; i++) {
+  //   arr[i] = arr[i];
+  // }
+  // return arr;
+  //--------------------------------------------------
+  let result = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] == 0) {
+      arr.splice(i, 1);
+    //  console.log(arr);
+      result.push(0);
+    }
+  }
+  arr.push(...result);
+  return arr;
+}
+
+let arr = [1, 2, 0, 0, 4, 0, 5];
+console.log(zerostoEnd(arr));
+
+//=====================================================================================
+// Question:-221
+// Create a function that takes the dimensions of two triangles (as arrays)
+//and checks if the first triangle fits into the second one.
+// doesTriangleFit([1, 1, 1], [1, 1, 1]) ➞ true
+//doesTriangleFit([1, 1, 1], [2, 2, 2]) ➞ true
+//doesTriangleFit([1, 2, 3], [1, 2, 2]) ➞ false
+//doesTriangleFit([1, 2, 4], [1, 2, 6]) ➞ false
+//Notes
+//Triangle fits if it has the same or smaller size as the hole.
+//The function should return false if the triangle with that dimensions is not possible.
+
+function area_Triangle(arr) {
+  let area = 0;
+  let sum = 0;
+  // let flag = true;
+
+  if (
+    arr[0] + arr[1] > arr[2] &&
+    arr[1] + arr[2] > arr[0] &&
+    arr[0] + arr[2] > arr[1]
+  ) {
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+    let p = Math.floor(sum / 2);
+    area = Math.floor(
+      Math.sqrt(p * (p - arr[0]) * (p - arr[1]) * (p - arr[2]))
+    );
+  } else {
+    area = false;
+  }
+  return area;
+}
+
+function doesTriangeFit(arr_1, arr_2) {
+  let area_1 = area_Triangle(arr_1);
+  let area_2 = area_Triangle(arr_2);
+  if (area_1 === false || area_2 === false) {
+    return false;
+  } else if (area_1 <= area_2) return true;
+}
+
+let arr_1 = [1, 1, 1];
+let arr_2 = [2, 2, 2];
+console.log(doesTriangeFit(arr_1, arr_2));
+
+//===============================================================================
+// Question:-222
+// Programming Polyglot
+//Create a function that takes a number that represents a person's programming language score,
+// and returns an alphabetised array of programming languages they are proficient in. Arbitrarily assigned
+//points for each language are listed below:
+// getLanguages(25) ➞ ["C#", "JavaScript", "PHP"]
+//getLanguages(100) ➞ ["Java", "Python", "Ruby"]
+//getLanguages(53) ➞ ["C#", "Java", "PHP", "Python"]
+
+function getLanguage(n) {
+  //----------------------------------------------------
+  // let map = new Map();
+  // map.set('c#', 1);
+  // map.set('c++', 2);
+  // map.set('java', 4);
+  // map.set('PHP', 16);
+  // map.set('python', 32);
+  // map.set('Ruby', 64);
+  // map.set('shift', 128);
+  // console.log(map);
+  // let resLang = [];
+  // for (let el in map) {
+  //   if (map[el] <= n) {
+  //     resLang.push(el, map[el]);
+  //   }
+  // }
+  // return resLang;
+  //------------------------------------------------------
+  let result = [];
+  let language = [
+    'C#',
+    'C++',
+    'Java',
+    'JavaScript',
+    'PHP',
+    'Python',
+    'Ruby',
+    'Swift',
+  ];
+  for (let i = 0; i < language.length; i++) {
+    if ((n & (1 << i)) === 2 ** i) {
+      result.push(language[i]);
+    }
+  }
+  return result;
+}
+let n = 25;
+console.log(getLanguage(n));
+
+//============================================================================
+// Question:-223
+// maximum product subarray. find?
+// arr=[2,3,-2,4]---[2,3]=6
+// arr=[-2,0,-1]--- [0].
+
+function maxiProduct(arr) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+
+  let max = Math.max(
+    arr[0] * arr[1] * arr[arr.length - 1],
+    arr[arr.length - 1] * arr[arr.length - 2 * arr[arr.length - 3]]
+  );
+  return max;
+}
+
+let arr = [2, 3, -2, 4];
+console.log(maxiProduct(arr));
+
+//===============================================================================
+// Question:-224
+// You are a professional robber planning to rob houses along a street. Each house has a certain amount of money
+//stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems
+// connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+//Given an integer array nums representing the amount of money of each house, return the maximum amount of money you
+// can rob tonight withresult alerting the police.
+
+//let arr = [1, 2, 3,1];  1+3=4;
+//arr=[2,7,9,3,1]=12
+
+function rob(arr) {
+  let product = Number.MIN_VALUE;
+  for (let i = 0; i < arr.length - 1; i += 2) {
+    for (let j = i + 1; j < arr.length; j += 2) {
+      product = Math.max(arr[i] + arr[j], product);
+    }
+  }
+  return product;
+}
+
+let arr = [2, 7, 9, 3, 1];
+console.log(rob(arr));
+
+//========================================================================================
+// Question:-225
+// find prefix product of array.
+//[1,2,3,4,5]--[1,2,6,24,120];
+
+function prefixProduct(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    arr[i] = arr[i] * arr[i - 1];
+  }
+  return arr;
+}
+let arr = [2, 2, 3, 4, 5];
+console.log(prefixProduct(arr));
+
+//======================================================================================
+// Question:-226
+// find suffix product of array.
+// [1,2,3,4,5]--[120,120,60,20,5]
+
+function suffixProduct(arr) {
+  for (let i = arr.length - 2; i >= 0; i--) {
+    arr[i] = arr[i] * arr[i + 1];
+  }
+  return arr;
+}
+
+let arr = [1, 2, 3, 4, 5];
+console.log(suffixProduct(arr));
+
+//====================================================================================
+// Quuestion:-227
+//  Product of Array Except Self
+//Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the
+//elements of nums except nums[i].
+//The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
+//You must write an algorithm that runs in O(n) time and withresult using the division operation.
+//Example 1:
+//Input: nums = [1,2,3,4]
+//resultput: [24,12,8,6]
+//Example 2:
+//Input: nums = [-1,1,0,-3,3]
+//resultput: [0,0,9,0,0]
+
+// Apporach :-01
+// A brute force solution using nested loop.
+//[2,1,3,4]--[12,24,8,6];
+
+function productExceptSelf(arr) {
+  let productArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let productCurrent = 1;
+    for (let j = 0; j < arr.length; j++) {
+      if (i == j) {
+        continue;
+      }
+      productCurrent = productCurrent * arr[j];
+    }
+    productArr.push(productCurrent);
+  }
+  return productArr;
+}
+
+let arr = [2, 1, 3, 4];
+console.log(productExceptSelf(arr));
+// time complexcity o(n^2).
+
+//========================================================================================
+// Question:-228
+// Apporach 2 using prefix and suffix product array.
+
+function productExceptSelf(arr) {
+  let product = [];
+  // let prefixProduct = [];
+  let prefixProduct = new Array(arr.length);
+
+  prefixProduct[0] = arr[0];
+
+  //let suffixProduct = [];
+  let suffixProduct = new Array(arr.length);
+  suffixProduct[arr.length - 1] = arr[arr.length - 1];
+
+  for (let i = 1; i < arr.length; i++) {
+    prefixProduct[i] = arr[i] * prefixProduct[i - 1];
+  }
+  console.log(prefixProduct);
+
+  for (let i = arr.length - 2; i >= 0; i--) {
+    suffixProduct[i] = arr[i] * suffixProduct[i + 1];
+  }
+  console.log(suffixProduct);
+
+  for (let i = 0; i < arr.length; i++) {
+    product.push(prefixProduct[i] * suffixProduct[i]);
+  }
+  return product;
+}
+
+let arr = [1, 2, 3, 4];
+console.log(productExceptSelf(arr));
+
+//-----------------------------------------------------------------------------
+function productExceptSelf(arr) {
+  let prefixProduct = new Array(arr.length);
+  let suffixProduct = new Array(arr.length);
+  let product = new Array(arr.length);
+
+  prefixProduct[0] = 1;
+
+  for (let i = 1; i < arr.length; i++) {
+    prefixProduct[i] = arr[i - 1] * prefixProduct[i - 1];
+  }
+  console.log(prefixProduct);
+
+  suffixProduct[arr.length - 1] = 1;
+  for (let i = arr.length - 2; i >= 0; i--) {
+    suffixProduct[i] = arr[i + 1] * suffixProduct[i + 1];
+  }
+  console.log(suffixProduct);
+
+  for (let i = 0; i < arr.length; i++) {
+    product[i] = prefixProduct[i] * suffixProduct[i];
+  }
+  return product;
+}
+
+let arr = [1, 2, 3, 4];
+console.log(productExceptSelf(arr));
+
+//==============================================================================
+// Question:-229
+//Given an array of integers nums and an integer k, return the number of contiguous subarrays where the
+// product of all the elements in the subarray is strictly less than k.
+//Example 1:
+//Input: nums = [10,5,2,6], k = 100
+//resultput: 8
+//Explanation: The 8 subarrays that have product less than 100 are:
+//[10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]
+//Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.
+//Example 2:
+//Input: nums = [1,2,3], k = 0
+//resultput: 0
+
+function sumarrayProductLessThanK(arr, k) {
+  let count = 0;
+  let multiplication;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < k) {
+      count++;
+    }
+    multiplication = arr[i];
+    for (let j = i + 1; j < arr.length; j++) {
+      multiplication = multiplication * arr[j];
+      if (multiplication < k) {
+        count++;
+      } else {
+        break;
+      }
+    }
+  }
+  return count;
+}
+
+let arr = [10, 5, 2, 6];
+let k = 100;
+console.log(sumarrayProductLessThanK(arr, k));
+
+//=================================================================================================
+// Question:-230
+// rotate an array..
+// Given an array, rotate the array to the right by k steps, where k is non-negative.
+//Example 1:
+//Input: nums = [1,2,3,4,5,6,7], k = 3
+//resultput: [5,6,7,1,2,3,4]
+//Explanation:
+//rotate 1 steps to the right: [7,1,2,3,4,5,6]
+//rotate 2 steps to the right: [6,7,1,2,3,4,5]
+//rotate 3 steps to the right: [5,6,7,1,2,3,4]
+//Example 2:
+//Input: nums = [-1,-100,3,99], k = 2
+//resultput: [3,99,-1,-100]
+//Explanation:
+//rotate 1 steps to the right: [99,-1,-100,3]
+//rotate 2 steps to the right: [3,99,-1,-100]
+
+function rotate(arr, k) {
+  while (k--) {
+    let last = arr.pop();
+    arr.unshift(last);
+  }
+  return arr;
+}
+let arr = [1, 2, 3, 4, 5, 6, 7];
+let k = 3;
+console.log(rotate(arr, k));
+
+//================================================================================
+// Question:-231
+//Find First and Last Position of Element in Sorted Array
+//Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of
+//a given target value.
+//If target is not found in the array, return [-1, -1].
+//You must write an algorithm with O(log n) runtime complexity.
+//Example 1:
+//Input: nums = [5,7,7,8,8,10], target = 8
+//resultput: [3,4]
+//Example 2:
+//Input: nums = [5,7,7,8,8,10], target = 6
+//resultput: [-1,-1]
+//Example 3:
+//Input: nums = [], target = 0
+//resultput: [-1,-1]
+
+function searchRange(arr, target) {
+  let notFound = [-1, -1];
+  let res = [];
+  let flag = false;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == target) {
+      res.push(i);
+      res.push(i + 1);
+      flag = true;
+      break;
+    }
+  }
+  if (flag == true) return res;
+  else return notFound;
+}
+let arr = [5, 7, 7, 8, 8, 10];
+let target = 12;
+console.log(searchRange(arr, target));
+
+//=======================================================================================
+//Given n>=0, create an array length n*n with the following pattern, show
+//n here for n=3 : {0, 0, 1,    0, 2, 1,    3, 2, 1} (spaces added to show the 3 groups).
+
+//squareUp(3) → [0, 0, 1, 0, 2, 1, 3, 2, 1]
+//squareUp(2) → [0, 1, 2, 1]
+//squareUp(4) → [0, 0, 0, 1, 0, 0, 2, 1, 0, 3, 2, 1, 4, 3, 2, 1]
+
+function pattern(n) {
+  let result = [];
+  // let str="";
+  for (let i = 1; i <= n; i++) {
+    for (let j = n; j >= 1; j--) {
+      if (j > i) {
+        result.push(0);
+      } else {
+        // str+=j+" ";
+        result.push(j);
+      }
+    }
+    // str+="\n";
+  }
+  console.log(result);
+}
+let n = 6;
+pattern(n);
+
+//====================================================================================================
+
+function shiftZEro(arr) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 0) count++;
+  }
+  let len = arr.length - count;
+  let i = len - 1;
+  // for (let i = len - 1; i >= 0;) {
+  for (let j = 0; j < len; j++) {
+    let temp = arr[j];
+    arr[j] = arr[i];
+    arr[i] = temp;
+    i--;
+  }
+
+  return arr;
+}
+
+let arr = [1, 0, 0, 4, 5];
+console.log(shiftZEro(arr));
+
+//================================================================================
+function zero(arr) {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] == 0) {
+      arr.splice(i, 1);
+      arr.push(0);
+    }
+  }
+  return arr;
+}
+
+let arr = [1, 2, 0, 4, 0, 0, 5];
+console.log(zero(arr));
+
+//===================================================================================
+function heigestPair(arr) {
+  let map = new Map();
+  // let strArr = [];
+  // for (let i = 0; i < arr.length; i++) {
+  //   let st = String(arr[i]);
+  //   strArr.push(st);
+  // }
+  //  console.log(strArr);
+//--------------------------------------------------
+  for (let el of arr) {
+    if (map[el]) {
+      map[el]++;
+    } else {
+      map[el] = 1;
+    }
+  }
+
+
+  //--------------------------------------------------------
+  // for (var i = 0; i < arr.length; i++) {
+  //   if (map.has(arr[i])) {
+  //     map.set(arr[i], map.get(arr[i]) + 1);
+  //   } else {
+  //     map.set(arr[i], 1);
+  //   }
+  // }
+  //--------------------------------------------------------
+  console.log(map);
+  console.log(map.length);
+  // let flag = false;
+  // let result = [];
+  // for (let ell in map) {
+  //   if (ell > 1) {
+  //     result.push(map[ell]);
+  //     flag = true;
+  //     result.push(flag);
+  //     break;
+  //   }
+  // }
+  // if (flag == true) {
+  //   return result;
+  // } else {
+  //   return flag;
+  // }
+}
+
+let arr = ['a', 'a', 'q', 'q', '6'];
+console.log(heigestPair(arr));
+
+//=======================================================================
+
+function heigestPair(arr) {
+  let hp = new Map();
+  for (let el of arr) {
+    if (hp[el]) {
+      hp[el]++;
+    } else {
+      hp[el] = 1;
+    }
+  }
+  console.log(hp);
+  let result = [];
+  let flag = false;
+
+  for (let ell in hp) {
+    if (hp[ell] > 1) {
+      result.push(ell);
+      result.push(true);
+      flag = true;
+      break;
+    }
+    // console.log(ell);
+  }
+  if (flag == true) {
+    return result;
+  }
+  return flag;
+}
+
+let arr = ['a', 'a', 'q', 'q', '6'];
+console.log(heigestPair(arr));
+
+//========================================================================================
+//Balanced Words
+//We can assign a value to each character in a word, based on their position in the alphabet
+// (a = 1, b = 2, ... , z = 26). A balanced word is one where the sum of values on the left-hand side of the word
+//equals the sum of values on the right-hand side. For odd length words, the middle character (balance point) is ignored.
+//Write a function that returns true if the word is balanced, and false if it's not.
+//Examples
+//balanced("zips") ➞ true
+// "zips" = "zi|ps" = 26+9|16+19 = 35|35 = true
+//balanced("brake") ➞ false
+// "brake" = "br|ke" = 2+18|11+5 = 20|16 = false
+
+function balanced(str) {
+  let len = str.length;
+  let mid = ~~(len / 2);
+  let num_1 = 0;
+  let num_2 = 0;
+
+  if (len % 2 == 0) {
+    for (let i = 0; i < mid; i++) {
+      num_1 += str.charCodeAt(i) - 96;
+    }
+    for (let k = mid; k < len; k++) {
+      num_2 += str.charCodeAt(k) - 96;
+    }
+  } else {
+    for (let i = 0; i < mid; i++) {
+      num_1 += str.charCodeAt(i) - 96;
+    }
+    for (let jj = mid + 1; jj < len; jj++) {
+      num_2 += str.charCodeAt(jj) - 96;
+    }
+  }
+  if (num_1 == num_2) return true;
+  else return false;
+}
+
+let str = 'brake';
+console.log(balanced(str));
+
+//======================================================================================
+
+function diamondArrays(n) {
+  let result = [];
+  for (let i = 1; i <= n; i++) {
+    result.push(Array(i).fill(i));
+  }
+
+  for (let i = n - 1; i >= 1; i--) {
+    result.push(Array(i).fill(i));
+  }
+  return result;
+}
+
+let n = 5;
+console.log(diamondArrays(n));
+
+//==========================================================================================
+// given an string find result how  many character are repeated.
+//let str="abccdb"
+// a==1
+// b==2
+// c==2
+// d==1
+
+function repeatedCount(str) {
+  let count = 0;
+  let result = [];
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i + 1; j < str.length; j++) {
+      if (str[i] == str[j] && !result.includes(str[j])) {
+        result.push(str[i]);
+        count++;
+      }
+    }
+  }
+  return count;
+}
+
+let str = 'abccdbccaa';
+console.log(repeatedCount(str));
+
+//==================================================================================================
+
+function repeatedCount(str) {
+  let map = new Map();
+  let s = str.split(''); 
+  console.log(s);
+
+  for (let el of s) {
+    if (map[el]) {
+      map[el]++;
+    } else {
+      map[el] = 1;
+    }
+  }
+  console.log(map);
+
+  let count = 0;
+  for (let ell in map) {
+    if (map[ell] > 1) {
+      count++;
+    }
+  }
+  return count;
+}
+
+let str = 'abccdbccaa';
+console.log(repeatedCount(str));
+
+//================================================================================================
+
+function left_rotation(n, d, t) {
+  // let bit = 32;
+  let binary = n.toString(2);
+  // console.log(binary);
+  let len = binary.length;
+  //console.log(len);
+  let cut = len - d;
+  // console.log(cut);
+  if (t == false) {
+    // let bit = 32;
+    let a = n << d;
+    //  console.log(a);
+    let b = n >> cut;
+    return a | b;
+  } else {
+    let a = n >> d;
+    let b = n << cut;
+    return a | b;
+  }
+}
+
+let n = 16;
+let d = 1;
+let t = false;
+
+console.log(left_rotation(n, d, t));
+
+//============================================================================================
+
+function decode(str) {
+  let result = [];
+  for (let i = 0; i < str.length; i++) {
+    let num = str.charCodeAt(i);
+    result[i] = 0;
+    while (num > 0) {
+      result[i] += num % 10;
+      num = ~~(num / 10);
+    }
+  }
+  return result;
+}
+
+//let str = 'something challenging';
+let str = 'wonderful';
+console.log(decode(str));
+
+//==========================================================================================
+// Given an array of strings nums containing n unique binary strings each of length n, return a binary string
+//of length n that does not appear in nums. If there are multiple answers, you may return any of them.
+//Example 1:
+//Input: nums = ["01","10"]
+//Output: "11"
+//Explanation: "11" does not appear in nums. "00" would also be correct.
+//Example 2:
+//Input: nums = ["00","01"]
+//Output: "11"
+//Explanation: "11" does not appear in nums. "10" would also be correct.
+//Input: nums = ["111","011","001"]
+//Output: "101"
+//Explanation: "101" does not appear in nums. "000", "010", "100", and "110" would also be correct.
+
+function differentBinaryString(arr) {
+  let result = '';
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i][i] == '0') {
+      result += '1';
+    } else {
+      result += '0';
+    }
+  }
+  return result;
+}
+
+let arr = ['111', '011', '001'];
+console.log(differentBinaryString(arr));
+
+//===========================================================================================
+
+function addingArray(arr, n) {
+  let result = [];
+  let re = '';
+  for (let i = 0; i < n; i++) {
+    re += arr[i];
+  }
+  result.push(re);
+  if (result.length == n * n) {
+    console.log(result);
+  }
+}
+
+function generatrBinaryString(n, arr, i) {
+  if (i == n) {
+    addingArray(arr, n);
+    return;
+  }
+
+  arr[i] = 0;
+  generatrBinaryString(n, arr, i + 1);
+
+  arr[i] = 1;
+  generatrBinaryString(n, arr, i + 1);
+}
+
+let n = 4;
+let arr = new Array(n).fill(0);
+
+generatrBinaryString(n, arr, 0);
+
+//==========================================================================================
+// Minimum Number of Steps to Make Two Strings Anagram II
+//You are given two strings s and t. In one step, you can append any character to either s or t.
+//Return the minimum number of steps to make s and t anagrams of each other.
+//An anagram of a string is a string that contains the same characters with a different (or the same) ordering.
+//Example 1:
+//Input: s = "leetcode", t = "coats"
+//Output: 7
+//Explanation:
+//- In 2 steps, we can append the letters in "as" onto s = "leetcode", forming s = "leetcodeas".
+//- In 5 steps, we can append the letters in "leede" onto t = "coats", forming t = "coatsleede".
+//"leetcodeas" and "coatsleede" are now anagrams of each other.
+//We used a total of 2 + 5 = 7 steps.
+//It can be shown that there is no way to make them anagrams of each other with less than 7 steps.
+//Example 2:
+//Input: s = "night", t = "thing"
+//Output: 0
+//Explanation: The given strings are already anagrams of each other. Thus, we do not need any further steps.
+//"cotxazilut"
+//"nahrrmcchxwrieqqdwdpneitkxgnt"
+//
+function minStep(s, t) {
+  let map = new Map();
+
+  for (let el of s) {
+    if (map[el]) {
+      map[el]++;
+    } else {
+      map[el] = 1;
+    }
+  }
+  console.log(map);
+  let count = 0;
+  for (let el in map) {
+    if (map[el] > 1) {
+      count++;
+    }
+  }
+  console.log(count);
+
+  let present = 0;
+  let nonpresent = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (t.includes(s[i])) {
+      present++;
+    } else {
+      nonpresent++;
+    }
+  }
+  // console.log(present);
+  // console.log(nonpresent);
+  let pre = 0;
+  let non_ = 0;
+  for (let i = 0; i < t.length; i++) {
+    if (s.includes(t[i])) {
+      pre++;
+    } else {
+      non_++;
+    }
+  }
+  // console.log(pre);
+  // console.log(non_);
+  return nonpresent + non_;
+}
+let s = 'leetcode';
+let t = 'coats';
+console.log(minStep(s, t));
+
+//======================================================================================================
+//let arr = ['S', 'a', 't'];
+//let str = 'darling';
+//let st = str.splice(1, 1);
+//console.log(st);
+
+function removeOccourecence(s, part) {
+  let stack = [];
+
+  // stack.push(10);
+  // stack.push(20);
+  // console.log(stack);
+  let res = '';
+  for (let i = 0; i < s.length; i++) {
+    if (res.length == part.length) {
+      stack.push(res);
+      if (stack[0] == part) {
+  
+//===================================================================================
