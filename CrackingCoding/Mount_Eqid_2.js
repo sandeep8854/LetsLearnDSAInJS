@@ -3,7 +3,7 @@
 // Question:-34
 //You and your date are trying to get a table at a restaurant. The parameter "you" is the stylishness of your
 // clothes, in the range 0..10, and "date" is the stylishness of your date's clothes. The result getting the
-//table is encoded as an int value with 0=no, 1=maybe, 2=yes. If either of you is very stylish, 8 or more,
+//table is encoded as an int valalue with 0=no, 1=maybe, 2=yes. If either of you is valery stylish, 8 or more,
 // then the result is 2 (yes). With the exception that if either of you has style of 2 or less,
 // then the result is 0 (no). Otherwise the result is 1 (maybe).
 
@@ -25,8 +25,8 @@ console.log(dateFashion(you, date));
 //===============================================================================
 // Question:-35
 // The squirrels in Palo Alto spend most of the day playing. In particular, they play if the temperature
-// is between 60 and 90 (inclusive). Unless it is summer, then the upper limit is 100 instead of 90.
-// Given an int temperature and a boolean isSummer, return true if the squirrels play and false otherwise.
+// is between 60 and 90 (inclusivale). Unless it is summer, then the upper limit is 100 instead of 90.
+// Givalen an int temperature and a boolean isSummer, return true if the squirrels play and false otherwise.
 
 //squirrelPlay(70, false) → true
 //squirrelPlay(95, false) → false
@@ -48,9 +48,9 @@ console.log(squirrelPlay(temperature, summer));
 
 //=======================================================================================================
 // Question:-36
-// You are driving a little too fast, and a police officer stops you. Write code to compute the result,
-// encoded as an int value: 0=no ticket, 1=small ticket, 2=big ticket. If speed is 60 or less,
-//the result is 0. If speed is between 61 and 80 inclusive, the result is 1. If speed is 81 or more,
+// You are drivaling a little too fast, and a police officer stops you. Write code to compute the result,
+// encoded as an int valalue: 0=no ticket, 1=small ticket, 2=big ticket. If speed is 60 or less,
+//the result is 0. If speed is between 61 and 80 inclusivale, the result is 1. If speed is 81 or more,
 //the result is 2. Unless it is your birthday -- on that day, your speed can be 5 higher in all cases.
 
 //caughtSpeeding(60, false) → 0
@@ -77,7 +77,7 @@ console.log(caughtSpeed(speed, birthday));
 
 //=================================================================================
 // Question:-37
-// Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden,
+// Givalen 2 ints, a and b, return their sum. Howevaler, sums in the range 10..19 inclusivale, are forbidden,
 // so in that case just return 20.
 
 //sortaSum(3, 4) → 7
@@ -99,17 +99,17 @@ console.log(sortaSum(a, b));
 
 //===============================================================================
 // Question:-38
-// Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating
-//if we are on vacation, return a string of the form "7:00" indicating when the alarm clock should ring.
-// Weekdays, the alarm should be "7:00" and on the weekend it should be "10:00". Unless we are on vacation --
+// Givalen a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating
+//if we are on valacation, return a string of the form "7:00" indicating when the alarm clock should ring.
+// Weekdays, the alarm should be "7:00" and on the weekend it should be "10:00". Unless we are on valacation --
 // then on weekdays it should be "10:00" and weekends it should be "off".
 
 //alarmClock(1, false) → "7:00"
 //alarmClock(5, false) → "7:00"
 //alarmClock(0, false) → "10:00"
 
-function alarmClock(day, vacation) {
-  if (vacation == true) {
+function alarmClock(day, valacation) {
+  if (valacation == true) {
     if (day > 0 && day != 6) return '10:00';
     else return 'off';
   } else {
@@ -119,19 +119,19 @@ function alarmClock(day, vacation) {
 }
 
 let day = 5,
-  vacation = true;
-console.log(alarmClock(day, vacation));
+  valacation = true;
+console.log(alarmClock(day, valacation));
 
 //==========================================================================
 // Question:-39
-// The number 6 is a truly great number. Given two int values, a and b,
+// The number 6 is a truly great number. Givalen two int valalues, a and b,
 // return true if either one is 6. Or if their sum or difference is 6. Note:
-//the function Math.abs(num) computes the absolute value of a number.
+//the function Math.abs(num) computes the absolute valalue of a number.
 
-//love6(6, 4) → true
-//love6(4, 5) → false
-//love6(1, 5) → true
-function love6(a, b) {
+//lovale6(6, 4) → true
+//lovale6(4, 5) → false
+//lovale6(1, 5) → true
+function lovale6(a, b) {
   //--------------------------------------------
   //   if (a == 6 || b == 6) return true;
   //   let sum = a + b;
@@ -147,11 +147,11 @@ function love6(a, b) {
 
 let a = 6,
   b = 4;
-console.log(love6(a, b));
+console.log(lovale6(a, b));
 
 //=============================================================================
 // Question:-40
-// Given a number n, return true if n is in the range 1..10, inclusive. Unless "resultsideMode" is true,
+// Givalen a number n, return true if n is in the range 1..10, inclusivale. Unless "resultsideMode" is true,
 // in which case return true if the number is less or equal to 1, or greater or equal to 10.
 //in1To10(5, false) → true
 //in1To10(11, false) → false
@@ -181,24 +181,24 @@ console.log(num1To10(n, resultsideMode));
 
 // Quuestion:-41
 //We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of 11.
-// Return true if the given non-negative number is special. Use the % "mod" operator --
+// Return true if the givalen non-negativale number is special. Use the % "mod" operator --
 // see Introduction to Mod
 
-//specialEleven(22) → true
-//specialEleven(23) → true
-//specialEleven(24) → false
+//specialElevalen(22) → true
+//specialElevalen(23) → true
+//specialElevalen(24) → false
 
-function spacialEleven(n) {
+function spacialElevalen(n) {
   if (n % 11 == 0 || n % 11 == 1) return true;
   else return false;
 }
 let n = 24;
-console.log(spacialEleven(n));
+console.log(spacialElevalen(n));
 
 //===================================================================================
 
 // Question:-42
-// Return true if the given non-negative number is 1 or 2 more than a multiple of 20. See also:
+// Return true if the givalen non-negativale number is 1 or 2 more than a multiple of 20. See also:
 //Introduction to Mod
 
 //more20(20) → false
@@ -215,7 +215,7 @@ console.log(more20(n));
 //=====================================================================
 
 // Question:-43
-// Return true if the given non-negative number is a multiple of 3 or 5, but not both.
+// Return true if the givalen non-negativale number is a multiple of 3 or 5, but not both.
 //Use the % "mod" operator -- see Introduction to Mod
 
 //old35(3) → true
@@ -235,7 +235,7 @@ console.log(old35(n));
 //=================================================================================
 
 // Question:-44
-// Return true if the given non-negative number is 1 or 2 less than a multiple of 20.
+// Return true if the givalen non-negativale number is 1 or 2 less than a multiple of 20.
 // So for example 38 and 39 return true, but 40 returns false. See also: Introduction to Mod
 //less20(18) → true
 //less20(19) → true
@@ -252,8 +252,8 @@ console.log(less20(n));
 //=========================================================================================
 
 // Question:-45
-// Given a non-negative number "num", return true if num is within 2 of a multiple of 10.
-// Note: (a % b) is the remainder of dividing a by b, so (7 % 5) is 2. See also: Introduction to Mod
+// Givalen a non-negativale number "num", return true if num is within 2 of a multiple of 10.
+// Note: (a % b) is the remainder of divaliding a by b, so (7 % 5) is 2. See also: Introduction to Mod
 
 //nearTen(12) → true
 //nearTen(17) → false
@@ -268,8 +268,8 @@ console.log(nearTen(n));
 
 //=================================================================================
 // Question:-46
-// Given 2 ints, a and b, return their sum. However, "teen" values in the range 13..19 inclusive,
-// are extra lucky. So if either value is a teen, just return 19.
+// Givalen 2 ints, a and b, return their sum. Howevaler, "teen" valalues in the range 13..19 inclusivale,
+// are extra lucky. So if either valalue is a teen, just return 19.
 
 //teenSum(3, 4) → 7
 //teenSum(10, 13) → 19
@@ -307,10 +307,10 @@ console.log(answerCell(isMorning, isMom, isAsleep));
 //======================================================================================
 
 // Question:-48
-// We are having a party with amounts of tea and candy. Return the int resultcome of the party encoded
-// as 0=bad, 1=good, or 2=great. A party is good (1) if both tea and candy are at least 5. However,
+// We are havaling a party with amounts of tea and candy. Return the int resultcome of the party encoded
+// as 0=bad, 1=good, or 2=great. A party is good (1) if both tea and candy are at least 5. Howevaler,
 // if either tea or candy is at least double the amount of the other one, the party is great (2).
-//However, in all cases, if either tea or candy is less than 5, the party is always bad (0).
+//Howevaler, in all cases, if either tea or candy is less than 5, the party is always bad (0).
 
 //teaParty(6, 8) → 1
 //teaParty(3, 8) → 0
@@ -329,7 +329,7 @@ console.log(teaParty(tea, candy));
 //====================================================================================
 
 // Question:-49
-// Given a string str, if the string starts with "f" return "Fizz". If the string ends with "b" return "Buzz".
+// Givalen a string str, if the string starts with "f" return "Fizz". If the string ends with "b" return "Buzz".
 //If both the "f" and "b" conditions are true, return "FizzBuzz". In all other cases,
 // return the string unchanged. (See also: FizzBuzz Code)
 
@@ -351,10 +351,10 @@ console.log(fizzString(str));
 //=====================================================================================
 
 // Question:-50
-// Given an int n, return the string form of the number followed by "!". So the int 6 yields "6!".
-//Except if the number is divisible by 3 use "Fizz" instead of the number, and if the number is divisible by 5
-//use "Buzz", and if divisible by both 3 and 5, use "FizzBuzz". Note: the % "mod" operator computes the
-//remainder after division, so 23 % 10 yields 3. What will the remainder be when one number divides evenly
+// Givalen an int n, return the string form of the number followed by "!". So the int 6 yields "6!".
+//Except if the number is divalisible by 3 use "Fizz" instead of the number, and if the number is divalisible by 5
+//use "Buzz", and if divalisible by both 3 and 5, use "FizzBuzz". Note: the % "mod" operator computes the
+//remainder after divalision, so 23 % 10 yields 3. What will the remainder be when one number divalides evalenly
 //into another? (See also: FizzBuzz Code and Introduction to Mod)
 
 //fizzString2(1) → "1!"
@@ -373,7 +373,7 @@ console.log(fizzString2(n));
 //============================================================================================
 
 // Question:-51
-// Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
+// Givalen three ints, a b c, return true if it is possible to add two of the ints to get the third.
 
 //twoAsOne(1, 2, 3) → true
 //twoAsOne(3, 1, 2) → true
@@ -396,7 +396,7 @@ console.log(twoAsOne(a, b, c));
 //=================================================================================
 
 // Question:-52
-// Given three ints, a b c, return true if b is greater than a, and c is greater than b. However,
+// Givalen three ints, a b c, return true if b is greater than a, and c is greater than b. Howevaler,
 // with the exception that if "bOk" is true, b does not need to be greater than a.
 
 //inOrder(1, 2, 4, false) → true
@@ -421,8 +421,8 @@ console.log(inOrder(a, b, c, bOk));
 
 //======================================================================================
 // Question:-53
-// Given three ints, a b c, return true if they are in strict increasing order, such as 2 5 11, or 5 6 7,
-//but not 6 5 7 or 5 5 7. However, with the exception that if "equalOk" is true, equality is allowed,
+// Givalen three ints, a b c, return true if they are in strict increasing order, such as 2 5 11, or 5 6 7,
+//but not 6 5 7 or 5 5 7. Howevaler, with the exception that if "equalOk" is true, equality is allowed,
 // such as 5 5 7 or 5 5 5.
 
 //inOrderEqual(2, 5, 11, false) → true
@@ -448,8 +448,8 @@ console.log(inOrderEqual(a, b, c, equalOk));
 //=====================================================================================
 
 // Question:-54
-// Given three ints, a b c, return true if two or more of them have the same rightmost digit.
-// The ints are non-negative. Note: the % "mod" operator computes the remainder, e.g. 17 % 10 is 7.
+// Givalen three ints, a b c, return true if two or more of them havale the same rightmost digit.
+// The ints are non-negativale. Note: the % "mod" operator computes the remainder, e.g. 17 % 10 is 7.
 
 //lastDigit(23, 19, 13) → true
 //lastDigit(23, 19, 12) → false
@@ -473,7 +473,7 @@ console.log(lastDigit(a, b, c));
 //=========================================================================================
 
 // Question:-55
-// Given three ints, a b c, return true if one of them is 10 or more less than one of the others.
+// Givalen three ints, a b c, return true if one of them is 10 or more less than one of the others.
 
 //lessBy10(1, 7, 11) → true
 //lessBy10(1, 7, 10) → false
@@ -494,9 +494,9 @@ console.log(lessBy10(a, b, c));
 //==================================================================================
 
 // Question:-56
-// Return the sum of two 6-sided dice rolls, each in the range 1..6. However, if noDoubles is true,
-// if the two dice show the same value, increment one die to the next value, wrapping around to 1 if its
-// value was 6.
+// Return the sum of two 6-sided dice rolls, each in the range 1..6. Howevaler, if noDoubles is true,
+// if the two dice show the same valalue, increment one die to the next valalue, wrapping around to 1 if its
+// valalue was 6.
 
 //withresultDoubles(2, 3, true) → 5
 //withresultDoubles(3, 3, true) → 7
@@ -522,8 +522,8 @@ console.log(withresultDoubles(a, b, noDoubles));
 //==============================================================================
 
 // Question:-57
-// Given two int values, return whichever value is larger. However if the two values have the same remainder
-// when divided by 5, then the return the smaller value. However, in all cases, if the two values are the same,
+// Givalen two int valalues, return whichevaler valalue is larger. Howevaler if the two valalues havale the same remainder
+// when divalided by 5, then the return the smaller valalue. Howevaler, in all cases, if the two valalues are the same,
 //return 0. Note: the % "mod" operator computes the remainder, e.g. 7 % 5 is 2.
 
 //maxMod5(2, 3) → 3
@@ -543,8 +543,8 @@ console.log(maxMode5(a, b));
 //===========================================================================================
 
 // Question:-58
-// You have a red lottery ticket showing ints a, b, and c, each of which is 0, 1, or 2.
-//If they are all the value 2, the result is 10. Otherwise if they are all the same, the result is 5.
+// You havale a red lottery ticket showing ints a, b, and c, each of which is 0, 1, or 2.
+//If they are all the valalue 2, the result is 10. Otherwise if they are all the same, the result is 5.
 //Otherwise so long as both b and c are different from a, the result is 1. Otherwise the result is 0.
 
 //redTicket(2, 2, 2) → 10
@@ -566,7 +566,7 @@ console.log(redTicket(a, b, c));
 //====================================================================
 
 // Question:-59
-// You have a green lottery ticket, with ints a, b, and c on it. If the numbers are all different from each
+// You havale a green lottery ticket, with ints a, b, and c on it. If the numbers are all different from each
 // other, the result is 0. If all of the numbers are the same, the result is 20. If two of the numbers are
 // the same, the result is 10.
 
@@ -588,7 +588,7 @@ console.log(greenTicket(a, b, c));
 //================================================================================
 
 // Question:-60;
-// You have a blue lottery ticket, with ints a, b, and c on it. This makes three pairs,
+// You havale a blue lottery ticket, with ints a, b, and c on it. This makes three pairs,
 //which we'll call ab, bc, and ac. Consider the sum of the numbers in each pair. If any pair sums to exactly
 // 10, the result is 10. Otherwise if the ab sum is exactly 10 more than either bc or ac sums,
 //the result is 5. Otherwise the result is 0.
@@ -614,8 +614,8 @@ console.log(blueTicket(a, b, c));
 //=======================================================================================
 
 // Question:-61
-// Given two ints, each in the range 10..99, return true if there is a digit that appears in both numbers,
-//such as the 2 in 12 and 23. (Note: division, e.g. n/10, gives the left digit while the % "mod" n%10 gives
+// Givalen two ints, each in the range 10..99, return true if there is a digit that appears in both numbers,
+//such as the 2 in 12 and 23. (Note: divalision, e.g. n/10, givales the left digit while the % "mod" n%10 givales
 // the right digit.)
 
 //shareDigit(12, 23) → true
@@ -637,9 +637,9 @@ let a = 12,
   b = 23;
 console.log(shareDigit(a, b));
 //=========================================================================================================
-//Given 2 non-negative ints, a and b, return their sum, so long as the sum has the same number of digits as a.
+//Givalen 2 non-negativale ints, a and b, return their sum, so long as the sum has the same number of digits as a.
 // If the sum has more digits than a, just return a withresult b. (Note: one way to compute the number of digits
-// of a non-negative int n is to convert it to a string with String.valueOf(n) and then check the length of
+// of a non-negativale int n is to convalert it to a string with String.valalueOf(n) and then check the length of
 //the string.)
 
 //sumLimit(2, 3) → 5
@@ -764,7 +764,7 @@ function maximum_Row_Element(row, col) {
   }
   console.log(matrix);
   let resArr = [];
-  let max = Number.MIN_VALUE;
+  let max = Number.MIN_valALUE;
   for (let i = 0; i < row; i++) {
     for (let j = 0; j < col; j++) {
       max = Math.max(max, matrix[i][j]);
@@ -781,20 +781,20 @@ maximum_Row_Element(row, col);
 //=====================================================================================
 // Warmup:-1
 // Question:-65
-// The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation.
-// We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.
+// The parameter weekday is true if it is a weekday, and the parameter valacation is true if we are on valacation.
+// We sleep in if it is not a weekday or we're on valacation. Return true if we sleep in.
 //sleepIn(false, false) → true
 //sleepIn(true, false) → false
 //sleepIn(false, true) → true
 
-function sleepIn(weekday, vacation) {
-  if (weekday == false && vacation == false) return true;
-  if (weekday == true && vacation == false) return false;
-  if (weekday == false && vacation == true) return true;
-  if (weekday == true && vacation == true) return true;
+function sleepIn(weekday, valacation) {
+  if (weekday == false && valacation == false) return true;
+  if (weekday == true && valacation == false) return false;
+  if (weekday == false && valacation == true) return true;
+  if (weekday == true && valacation == true) return true;
   else return false;
 //-----------------------------------------------------
-if(!weekday||vacation){
+if(!weekday||valacation){
   return true;
 }
 return false;
@@ -802,13 +802,13 @@ return false;
 }
 
 let weekday = false,
-  vacation = true;
-console.log(sleepIn(weekday, vacation));
+  valacation = true;
+console.log(sleepIn(weekday, valacation));
 
 //=========================================================================
 
 // Question:-66
-// We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling.
+// We havale two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling.
 // We are in trouble if they are both smiling or if neither of them is smiling.
 // Return true if we are in trouble.
 
@@ -838,7 +838,7 @@ console.log(monkeyTrouble(aSmile, bSmile));
 //====================================================================================
 
 // Question:-67
-// Given two int values, return their sum. Unless the two values are the same,
+// Givalen two int valalues, return their sum. Unless the two valalues are the same,
 //then return double their sum.
 
 //sumDouble(1, 2) → 3
@@ -856,8 +856,8 @@ console.log(sumDouble(a, b));
 //===================================================================
 
 // Question:-68
-// Given an int n, return the absolute difference between n and 21, except return double the
-// absolute difference if n is over 21.
+// Givalen an int n, return the absolute difference between n and 21, except return double the
+// absolute difference if n is ovaler 21.
 
 //diff21(19) → 2
 //diff21(10) → 11
@@ -872,7 +872,7 @@ console.log(diff21(n));
 
 //==============================================================================
 // Question:-69
-// We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23.
+// We havale a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23.
 // We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return true
 //if we are in trouble.
 
@@ -893,7 +893,7 @@ console.log(parrotTrouble(talking, hour));
 //==========================================================================
 
 // Question:-70
-// Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
+// Givalen 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
 
 //makes10(9, 10) → true
 //makes10(9, 9) → false
@@ -915,8 +915,8 @@ console.log(makes10(a, b));
 //============================================================================
 
 // Question:-71
-// Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num)
-//computes the absolute value of a number.
+// Givalen an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num)
+//computes the absolute valalue of a number.
 
 //nearHundred(93) → true
 //nearHundred(90) → true
@@ -935,15 +935,15 @@ console.log(nearhundred(n));
 //============================================================================
 
 // Question:-72
-// Given 2 int values, return true if one is negative and one is positive. Except if the parameter
-//"negative" is true, then return true only if both are negative.
+// Givalen 2 int valalues, return true if one is negativale and one is positivale. Except if the parameter
+//"negativale" is true, then return true only if both are negativale.
 
 //posNeg(1, -1, false) → true
 //posNeg(-1, 1, false) → true
 //posNeg(-4, -5, true) → true
 
-function posNeg(a, b, negative) {
-  if (negative == true) {
+function posNeg(a, b, negativale) {
+  if (negativale == true) {
     //return (a < 0 && b < 0);
     if (a < 0 && b < 0) return true;
   } else {
@@ -953,12 +953,12 @@ function posNeg(a, b, negative) {
 
 let a = 1,
   b = -1,
-  negative = false;
-console.log(posNeg(a, b, negative));
+  negativale = false;
+console.log(posNeg(a, b, negativale));
 
 //==============================================================================
 // Question:-73
-// Given a string, return a new string where "not " has been added to the front. However,
+// Givalen a string, return a new string where "not " has been added to the front. Howevaler,
 //if the string already begins with "not", return the string unchanged. Note: use .equals()
 //to compare 2 strings.
 
@@ -977,9 +977,9 @@ console.log(notString(str));
 //===============================================================================
 
 // Question:-74
-// Given a non-empty string and an int n, return a new string where the char at index n has been removed.
-// The value of n will be a valid index of a char in the original string
-// (i.e. n will be in the range 0..str.length()-1 inclusive).
+// Givalen a non-empty string and an int n, return a new string where the char at index n has been removaled.
+// The valalue of n will be a valalid index of a char in the original string
+// (i.e. n will be in the range 0..str.length()-1 inclusivale).
 
 //missingChar("kitten", 1) → "ktten"
 //missingChar("kitten", 0) → "itten"
@@ -999,7 +999,7 @@ console.log(missingChar(str, index));
 
 //===================================================================================
 // Question:-75
-// Given a string, return a new string where the first and last chars have been exchanged.
+// Givalen a string, return a new string where the first and last chars havale been exchanged.
 
 //frontBack("code") → "eodc"
 //frontBack("a") → "a"
@@ -1018,10 +1018,10 @@ console.log(frontBack(str));
 
 //==============================================================================
 // Question:-76
-//Given a string, we'll say that the front is the first 3 chars of the string. If the string length is
-// less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
+//Givalen a string, we'll say that the front is the first 3 chars of the string. If the string length is
+// less than 3, the front is whatevaler is there. Return a new string which is 3 copies of the front.
 
-//front3("Java") → "JavJavJav"
+//front3("Javala") → "JavalJavalJaval"
 //front3("Chocolate") → "ChoChoCho"
 //front3("abc") → "abcabcabc"
 
@@ -1037,7 +1037,7 @@ console.log(front3(str));
 
 //===============================================================================
 // Question:-77
-//Given a string, take the last char and return a new string with the last char added at the front and back,
+//Givalen a string, take the last char and return a new string with the last char added at the front and back,
 // so "cat" yields "tcatt". The original string will be length 1 or more.
 
 //backAround("cat") → "tcatt"
@@ -1054,7 +1054,7 @@ console.log(backAround(str));
 //===================================================================================
 
 // Question:-78
-// Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % "mod"
+// Return true if the givalen non-negativale number is a multiple of 3 or a multiple of 5. Use the % "mod"
 // operator -- see Introduction to Mod
 
 //or35(3) → true
@@ -1070,9 +1070,9 @@ console.log(or35(n));
 
 //======================================================================================
 // Question:-78
-// Given a string, take the first 2 chars and return the string with the 2 chars added at both
+// Givalen a string, take the first 2 chars and return the string with the 2 chars added at both
 //the front and back, so "kitten" yields"kikittenki". If the string length is less than 2,
-//use whatever chars are there.
+//use whatevaler chars are there.
 //-----------------------------------------------------------------
 //front22("kitten") → "kikittenki"
 //front22("Ha") → "HaHaHa"
@@ -1098,7 +1098,7 @@ console.log(front22(str));
 //========================================================================
 
 // Question:-79
-// Given a string, return true if the string starts with "hi" and false otherwise.
+// Givalen a string, return true if the string starts with "hi" and false otherwise.
 
 //startHi("hi there") → true
 //startHi("hi") → true
@@ -1114,7 +1114,7 @@ console.log(startHi(str));
 //==========================================================================
 
 // Question:-80
-// Given two temperatures, return true if one is less than 0 and the other is greater than 100.
+// Givalen two temperatures, return true if one is less than 0 and the other is greater than 100.
 
 //icyHot(120, -1) → true
 //icyHot(-1, 120) → true
@@ -1133,7 +1133,7 @@ console.log(icyHot(a, b));
 //======================================================================
 
 // Quuestion:-81
-// Given 2 int values, return true if either of them is in the range 10..20 inclusive.
+// Givalen 2 int valalues, return true if either of them is in the range 10..20 inclusivale.
 
 //in1020(12, 99) → true
 //in1020(21, 12) → true
@@ -1151,7 +1151,7 @@ console.log(in1020(a, b));
 //=================================================================
 
 //  Question:-82
-// We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 3 int values,
+// We'll say that a number is "teen" if it is in the range 13..19 inclusivale. Givalen 3 int valalues,
 // return true if 1 or more of them are teen.
 
 //hasTeen(13, 20, 10) → true
@@ -1173,7 +1173,7 @@ console.log(hasTeen(a, b, c));
 //==========================================================
 
 // Question:-83
-// We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values,
+// We'll say that a number is "teen" if it is in the range 13..19 inclusivale. Givalen 2 int valalues,
 // return true if one or the other is teen, but not both.
 
 //loneTeen(13, 99) → true
@@ -1196,7 +1196,7 @@ console.log(loneTeen(a, b));
 //=============================================================================
 
 // Question:-84
-// Given a string, if the string "del" appears starting at index 1, return a string
+// Givalen a string, if the string "del" appears starting at index 1, return a string
 //where that "del" has been deleted. Otherwise, return the string unchanged.
 
 //delDel("adelbc") → "abc"
@@ -1216,7 +1216,7 @@ console.log(delDel(str));
 //============================================================================
 
 // Question:-85
-// Return true if the given string begins with "mix", except the 'm' can be anything, so "pix", "9ix" ..
+// Return true if the givalen string begins with "mix", except the 'm' can be anything, so "pix", "9ix" ..
 // all count.
 
 //mixStart("mix snacks") → true
@@ -1238,33 +1238,33 @@ console.log(mixStart(str));
 // Question:-86
 
 function rearranegArr(arr) {
-  let positiveArr = [];
-  let negativeArr = [];
+  let positivaleArr = [];
+  let negativaleArr = [];
   let resultArr = [];
 
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] >= 0) {
-      positiveArr.push(arr[i]);
+      positivaleArr.push(arr[i]);
     } else {
-      negativeArr.push(arr[i]);
+      negativaleArr.push(arr[i]);
     }
   }
-  // console.log(positiveArr);
-  //console.log(negativeArr);
+  // console.log(positivaleArr);
+  //console.log(negativaleArr);
 
   let i = 0;
   let j = 0;
   let k = 0;
-  while (i < negativeArr.length && j < positiveArr.length) {
-    resultArr[k++] = positiveArr[j++];
-    resultArr[k++] = negativeArr[i++];
+  while (i < negativaleArr.length && j < positivaleArr.length) {
+    resultArr[k++] = positivaleArr[j++];
+    resultArr[k++] = negativaleArr[i++];
   }
   // console.log(resultArr);
-  while (j < positiveArr.length) {
-    resultArr[k++] = positiveArr[j++];
+  while (j < positivaleArr.length) {
+    resultArr[k++] = positivaleArr[j++];
   }
-  while (i < negativeArr.length) {
-    resultArr[k++] = negativeArr[i++];
+  while (i < negativaleArr.length) {
+    resultArr[k++] = negativaleArr[i++];
   }
   console.log(resultArr);
 }
@@ -1276,7 +1276,7 @@ rearranegArr(arr);
 // Question:-87
 
 function maximumPriduct(arr) {
-  let max = Number.MIN_VALUE;
+  let max = Number.MIN_valALUE;
   for (let i = 0; i < arr.length - 2; i++) {
     for (let j = i + 1; j < arr.length - 1; j++) {
       for (let k = j + 1; k < arr.length; k++) {
@@ -1292,11 +1292,11 @@ maximumPriduct(arr);
 
 //======================================================================
 // Question:-89
-// Given an array find missing number?
+// Givalen an array find missing number?
 // arr=[1,2,3,5,6,7];
-// 4 is missing value which are not present. so print 4. as a resultput.
+// 4 is missing valalue which are not present. so print 4. as a resultput.
 
-function unknowValue(arr) {
+function unknowvalalue(arr) {
   let tempArr = [];
   let n = arr.length;
   console.log(n);
@@ -1320,7 +1320,7 @@ function unknowValue(arr) {
   console.log(xor);
 }
 let arr = [1, 2, 3, 5, 6, 7, 4, 9];
-unknowValue(arr);
+unknowvalalue(arr);
 
 //==============================================================================
 // method:-2
@@ -1344,7 +1344,7 @@ unknown(arr);
 // Question:-90
 function maximumPriduct(arr) {
   arr.sort((a, b) => a - b);
-  let max = Number.MIN_VALUE;
+  let max = Number.MIN_valALUE;
   for (let i = 0; i < arr.length - 2; i++) {
     for (let j = i + 1; j < arr.length - 1; j++) {
       for (let k = j + 1; k < arr.length; k++) {
@@ -1372,7 +1372,7 @@ maximumPriduct(arr);
 
 //============================================================================
 // Question:-91
-// Given a string, return a string made of the first 2 chars (if present), however include first char only
+// Givalen a string, return a string made of the first 2 chars (if present), howevaler include first char only
 // if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz".
 
 //startOz("ozymandias") → "oz"
@@ -1394,7 +1394,7 @@ console.log(startOz(str));
 
 //=================================================================================
 // Question:-92
-// Given three int values, a b c, return the largest.
+// Givalen three int valalues, a b c, return the largest.
 
 //intMax(1, 2, 3) → 3
 //intMax(1, 3, 2) → 3
@@ -1417,8 +1417,8 @@ console.log(intMax(a, b, c));
 
 //==========================================================================
 // Question:-93
-// Given 2 int values, return whichever value is nearest to the value 10, or return 0 in the event of a tie.
-// Note that Math.abs(n) returns the absolute value of a number.
+// Givalen 2 int valalues, return whichevaler valalue is nearest to the valalue 10, or return 0 in the evalent of a tie.
+// Note that Math.abs(n) returns the absolute valalue of a number.
 
 //close10(8, 13) → 8
 //close10(13, 8) → 8
@@ -1442,8 +1442,8 @@ console.log(close10(a, b));
 
 //=========================================================================
 // Question:-94
-// Given 2 int values, return true if they are both in the range 30..40 inclusive,
-// or they are both in the range 40..50 inclusive.
+// Givalen 2 int valalues, return true if they are both in the range 30..40 inclusivale,
+// or they are both in the range 40..50 inclusivale.
 
 //in3050(30, 31) → true
 //in3050(30, 41) → false
@@ -1468,7 +1468,7 @@ console.log(in3050(a, b));
 //======================================================================
 
 // Question:-95
-// Given 2 positive int values, return the larger value that is in the range 10..20 inclusive,
+// Givalen 2 positivale int valalues, return the larger valalue that is in the range 10..20 inclusivale,
 // or return 0 if neither is in that range.
 
 //max1020(11, 19) → 19
@@ -1484,7 +1484,7 @@ function max1020(a, b) {
   // // return bigger;
   // if (bigger >= 10 && bigger <= 20) return bigger;
 
-  // first make a is bigger value.
+  // first make a is bigger valalue.
 
   if (b > a) {
     let temp = a;
@@ -1502,7 +1502,7 @@ console.log(max1020(a, b));
 
 //==========================================================================
 // Question:-96
-// Return true if the given string contains between 1 and 3 'e' chars.
+// Return true if the givalen string contains between 1 and 3 'e' chars.
 
 //stringE("Hello") → true
 //stringE("Heelle") → true
@@ -1523,7 +1523,7 @@ console.log(stringE(str));
 
 //================================================================================
 // Question:-97
-// Given two non-negative int values, return true if they have the same last digit,
+// Givalen two non-negativale int valalues, return true if they havale the same last digit,
 // such as with 27 and 57. Note that the % "mod" operator computes remainders, so 17 % 10 is 7.
 
 //lastDigit(7, 17) → true
@@ -1543,9 +1543,9 @@ console.log(lastDigit(a, b));
 
 //===================================================================================
 // Question:-98
-// Given a string, return a new string where the last 3 chars are now in upper case.
-//If the string has less than 3 chars, uppercase whatever is there. Note that str.toUpperCase()
-// returns the uppercase version of a string.
+// Givalen a string, return a new string where the last 3 chars are now in upper case.
+//If the string has less than 3 chars, uppercase whatevaler is there. Note that str.toUpperCase()
+// returns the uppercase valersion of a string.
 
 //endUp("Hello") → "HeLLO"
 //endUp("hi there") → "hi thERE"
@@ -1566,14 +1566,14 @@ console.log(endUp(str));
 
 //=========================================================================
 // Question:-99
-// Given a non-empty string and an int N, return the string made starting with char 0, and then every
+// Givalen a non-empty string and an int N, return the string made starting with char 0, and then evalery
 // Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more.
 
-//everyNth("Miracle", 2) → "Mrce"
-//everyNth("abcdefg", 2) → "aceg"
-//everyNth("abcdefg", 3) → "adg"
+//evaleryNth("Miracle", 2) → "Mrce"
+//evaleryNth("abcdefg", 2) → "aceg"
+//evaleryNth("abcdefg", 3) → "adg"
 
-function everyNth(str, n) {
+function evaleryNth(str, n) {
   let res = '';
   for (let i = 0; i < str.length; i = i + n) {
     res = res + str[i];
@@ -1583,13 +1583,13 @@ function everyNth(str, n) {
 
 let str = 'Chocolates';
 let n = 100;
-console.log(everyNth(str, n));
+console.log(evaleryNth(str, n));
 
 //==========================================================================
 // Question:-100
 // Warmup:-2
 //---------------------
-// Given a string and a non-negative int n, return a larger string that is n copies of the original string.
+// Givalen a string and a non-negativale int n, return a larger string that is n copies of the original string.
 
 //stringTimes("Hi", 2) → "HiHi"
 //stringTimes("Hi", 3) → "HiHiHi"
@@ -1605,8 +1605,8 @@ console.log(stringTimes(str, n));
 
 //=======================================================================================
 // Qestion:-101
-// Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars,
-//or whatever is there if the string is less than length 3. Return n copies of the front;
+// Givalen a string and a non-negativale int n, we'll say that the front of the string is the first 3 chars,
+//or whatevaler is there if the string is less than length 3. Return n copies of the front;
 
 //frontTimes("Chocolate", 2) → "ChoCho"
 //frontTimes("Chocolate", 3) → "ChoChoCho"
@@ -1625,7 +1625,7 @@ console.log(frontTimes(str, n));
 
 //=========================================================================
 // Question:-102
-// Count the number of "xx" in the given string. We'll say that overlapping is allowed,
+// Count the number of "xx" in the givalen string. We'll say that ovalerlapping is allowed,
 //so "xxx" contains 2 "xx".
 
 //countXX("abcxx") → 1
@@ -1651,7 +1651,7 @@ console.log(countXX(str));
 
 //====================================================================================
 // Question:-103
-// Given a string, return true if the first instance of "x" in the string is immediately followed by
+// Givalen a string, return true if the first instance of "x" in the string is immediately followed by
 // another "x".
 
 //doubleX("axxbb") → true
@@ -1680,7 +1680,7 @@ console.log(dobleXX(str));
 //================================================================================
 // Question:-104
 
-// Given a string, return a new string made of every other char starting with the first,
+// Givalen a string, return a new string made of evalery other char starting with the first,
 // so "Hello" yields "Hlo".
 
 //stringBits("Hello") → "Hlo"
@@ -1715,7 +1715,7 @@ console.log(product(arr));
 
 //================================================================================
 // Question:-105
-// Given a non-empty string like "Code" return a string like "CCoCodCode".
+// Givalen a non-empty string like "Code" return a string like "CCoCodCode".
 
 //stringSplosion("Code") → "CCoCodCode"
 //stringSplosion("abc") → "aababc"
@@ -1733,7 +1733,7 @@ console.log(stringSplosion(str));
 
 //=======================================================================================
 // Question:-106
-// Given a string, return the count of the number of times that a substring length 2 appears in the
+// Givalen a string, return the count of the number of times that a substring length 2 appears in the
 // string and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring)
 //.
 
@@ -1756,7 +1756,7 @@ console.log(last2(str));
 
 //======================================================================================
 // Question:-107
-// Given an array of ints, return the number of 9's in the array.
+// Givalen an array of ints, return the number of 9's in the array.
 
 //arrayCount9([1, 2, 9]) → 1
 //arrayCount9([1, 9, 9]) → 2
@@ -1775,7 +1775,7 @@ console.log(arrayCount9(arr));
 
 //========================================================================================
 // Question:-108
-// Given an array of ints, return true if one of the first 4 elements in the array is a 9.
+// Givalen an array of ints, return true if one of the first 4 elements in the array is a 9.
 //The array length may be less than 4.
 
 //arrayFront9([1, 2, 9, 3, 4]) → true
@@ -1798,7 +1798,7 @@ console.log(arrayFront9(arr));
 
 //===============================================================================
 // Question:-109
-// Given an array of ints, return true if the sequence of numbers 1, 2, 3 appears in the array somewhere.
+// Givalen an array of ints, return true if the sequence of numbers 1, 2, 3 appears in the array somewhere.
 
 //array123([1, 1, 2, 3, 1]) → true
 //array123([1, 1, 2, 4, 1]) → false
@@ -1818,7 +1818,7 @@ console.log(array123(arr));
 
 //================================================================================
 // Question:-110
-// Given 2 strings, a and b, return the number of the positions where they contain the same length 2
+// Givalen 2 strings, a and b, return the number of the positions where they contain the same length 2
 //substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings appear in
 // the same place in both strings.
 
@@ -1847,8 +1847,8 @@ console.log(stringMatch(a, b));
 
 //=====================================================================================
 // Question:-111
-// Given a string, return a version where all the "x" have been removed. Except an "x" at the very start or
-//end should not be removed.
+// Givalen a string, return a valersion where all the "x" havale been removaled. Except an "x" at the valery start or
+//end should not be removaled.
 
 //stringX("xxHxix") → "xHix"
 //stringX("abxxxcd") → "abcd"
@@ -1873,7 +1873,7 @@ console.log(stringX(str));
 
 //===================================================================================
 // Question:-112
-// Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... so
+// Givalen a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... so
 // "kittens" yields "kien".
 
 //altPairs("kitten") → "kien"
@@ -1921,7 +1921,7 @@ console.log(rightDigti(arr));
 //separated by a specified separator.
 //
 
-//let message = ['JavaScript', 'is', 'fun.']; // JavaScript is fun
+//let message = ['JavalaScript', 'is', 'fun.']; // JavalaScript is fun
 let message = [45, 14, 25, 36, 40];
 // join all elements of array using space
 let joinedMessage = message.join(' ');
@@ -1930,7 +1930,7 @@ console.log(typeof joinedMessage);
 console.log(joinedMessage.length);
 console.log(joinedMessage[0].joinedMessage[1]);
 
-// resultput: JavaScript is fun.
+// resultput: JavalaScript is fun.
 
 //====================================================================================
 
@@ -1990,7 +1990,7 @@ leftDigit(arr);
 function leftDigit(arr) {
   let result = [];
   //console.log(arr);
-  var num = 040;
+  valar num = 040;
   console.log(num); // 32
   // Uncaught SyntaxError: Decimals with leading zeros are not allowed in strict mode.
 }
@@ -2001,8 +2001,8 @@ leftDigit(arr);
 
 //====================================================================================
 // Question:-113
-// Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed,
-// but the "a" can be any char. The "yak" strings will not overlap.
+// Suppose the string "yak" is unlucky. Givalen a string, return a valersion where all the "yak" are removaled,
+// but the "a" can be any char. The "yak" strings will not ovalerlap.
 
 //stringYak("yakpak") → "pak"
 //stringYak("pakyak") → "pak"
@@ -2025,7 +2025,7 @@ console.log(stringYak(str));
 
 //=================================================================================
 // Question:-114
-// Given an array of ints, return the number of times that two 6's are next to each other in the array.
+// Givalen an array of ints, return the number of times that two 6's are next to each other in the array.
 // Also count instances where the second "6" is actually a 7.
 
 //array667([6, 6, 2]) → 1
@@ -2062,7 +2062,7 @@ console.log(array667(arr));
 
 //===================================================================================
 // Question:-115
-//Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array.
+//Givalen an array of ints, we'll say that a triple is a valalue appearing 3 times in a row in the array.
 //Return true if the array does not contain any triples.
 
 //noTriples([1, 1, 2, 2, 1]) → true
@@ -2086,9 +2086,9 @@ console.log(noTriplet(arr));
 
 //===========================================================================================
 // Question:-116
-//Given an array of ints, return true if it contains a 2, 7, 1 pattern: a value, followed by the value plus 5,
-// followed by the value minus 1. Additionally the 271 counts even if the "1" differs by 2 or less from
-//the correct value.
+//Givalen an array of ints, return true if it contains a 2, 7, 1 pattern: a valalue, followed by the valalue plus 5,
+// followed by the valalue minus 1. Additionally the 271 counts evalen if the "1" differs by 2 or less from
+//the correct valalue.
 
 //has271([1, 2, 7, 1]) → true
 //has271([1, 2, 8, 1]) → false
@@ -2096,10 +2096,10 @@ console.log(noTriplet(arr));
 
 function has271(nums) {
   for (let i = 0; i < nums.length - 2; i++) {
-    let val = nums[i];
+    let valal = nums[i];
     if (
-      nums[i + 1] == val + 5 && // the "7" check
-      Math.abs(nums[i + 2] - (val - 1)) <= 2
+      nums[i + 1] == valal + 5 && // the "7" check
+      Math.abs(nums[i + 2] - (valal - 1)) <= 2
     ) {
       // the "1" check
       return true;
@@ -2115,7 +2115,7 @@ console.log(has271(nums));
 //===============================================================================
 //Question:-117
 // Array:-1
-// Given an array of ints, return true if 6 appears as either the first or last element in the array.
+// Givalen an array of ints, return true if 6 appears as either the first or last element in the array.
 //The array will be length 1 or more.
 
 //firstLast6([1, 2, 6]) → true
@@ -2132,7 +2132,7 @@ console.log(firstLast6(arr));
 
 //===================================================================================
 // Question:-118
-//Given an array of ints, return true if the array is length 1 or more, and the first element and the
+//Givalen an array of ints, return true if the array is length 1 or more, and the first element and the
 //last element are equal.
 
 //sameFirstLast([1, 2, 3]) → false
@@ -2162,7 +2162,7 @@ console.log(makePi());
 
 //====================================================================================
 // Question:-120
-// Given 2 arrays of ints, a and b, return true if they have the same first element or they have
+// Givalen 2 arrays of ints, a and b, return true if they havale the same first element or they havale
 //the same last element. Both arrays will be length 1 or more.
 
 //commonEnd([1, 2, 3], [7, 3]) → true
@@ -2180,7 +2180,7 @@ console.log(commonEnd(a, b));
 
 //===========================================================================================
 // Question:-121
-// Given an array of ints length 3, return the sum of all the elements.
+// Givalen an array of ints length 3, return the sum of all the elements.
 
 //sum3([1, 2, 3]) → 6
 //sum3([5, 11, 2]) → 18
@@ -2199,7 +2199,7 @@ console.log(sum3(arr));
 
 //==========================================================================================
 // Question:-122
-// Given an array of ints length 3, return an array with the elements "rotated left"
+// Givalen an array of ints length 3, return an array with the elements "rotated left"
 //so {1, 2, 3} yields {2, 3, 1}.
 
 //rotateLeft3([1, 2, 3]) → [2, 3, 1]
@@ -2218,14 +2218,14 @@ console.log(rotateLeft(arr));
 
 //=======================================================================================
 // Question:-123
-// Given an array of ints length 3, return a new array with the elements in reverse order,
+// Givalen an array of ints length 3, return a new array with the elements in revalerse order,
 // so {1, 2, 3} becomes {3, 2, 1}.
 
-//reverse3([1, 2, 3]) → [3, 2, 1]
-//reverse3([5, 11, 9]) → [9, 11, 5]
-//reverse3([7, 0, 0]) → [0, 0, 7]
+//revalerse3([1, 2, 3]) → [3, 2, 1]
+//revalerse3([5, 11, 9]) → [9, 11, 5]
+//revalerse3([7, 0, 0]) → [0, 0, 7]
 
-function reverse3(arr) {
+function revalerse3(arr) {
   // return arr.sort(function (a, b) {
   //   return a - b;
   // });
@@ -2238,12 +2238,12 @@ function reverse3(arr) {
 }
 
 let arr = [1, 2, 3];
-console.log(reverse3(arr));
+console.log(revalerse3(arr));
 
 //===============================================================================
 // Question:-124
-// Given an array of ints length 3, figure result which is larger, the first or last element in the array,
-// and set all the other elements to be that value. Return the changed array.
+// Givalen an array of ints length 3, figure result which is larger, the first or last element in the array,
+// and set all the other elements to be that valalue. Return the changed array.
 
 //maxEnd3([1, 2, 3]) → [3, 3, 3]
 //maxEnd3([11, 5, 9]) → [11, 11, 11]
@@ -2251,7 +2251,7 @@ console.log(reverse3(arr));
 
 function maxEnd3(arr) {
   let resArr = new Array(3);
-  let maxx = Number.MIN_VALUE;
+  let maxx = Number.MIN_valALUE;
   if (arr[0] > arr[2]) {
     maxx = arr[0];
   } else {
@@ -2268,7 +2268,7 @@ console.log(maxEnd3(arr));
 
 //===================================================================
 // Question:-125
-// Given an array of ints, return the sum of the first 2 elements in the array. If the array length
+// Givalen an array of ints, return the sum of the first 2 elements in the array. If the array length
 //is less than 2, just sum up the elements that exist, returning 0 if the array is length 0.
 
 //sum2([1, 2, 3]) → 3
@@ -2293,7 +2293,7 @@ console.log(sum2(arr));
 
 //====================================================================================
 // Question:-126
-// Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle elements.
+// Givalen 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle elements.
 
 //middleWay({1, 2, 3}, {4, 5, 6}) → {2, 5}
 //middleWay({7, 7, 7}, {3, 8, 0}) → {7, 8}
@@ -2311,7 +2311,7 @@ console.log(middleWay(a, b));
 
 //=======================================================================================
 // Question:-127
-// Given an array of ints, return a new array length 2 containing the first and last elements
+// Givalen an array of ints, return a new array length 2 containing the first and last elements
 // from the original array. The original array will be length 1 or more.
 
 //makeEnds([1, 2, 3]) → [1, 3]
@@ -2334,7 +2334,7 @@ console.log(makeEnds(arr));
 
 //=========================================================================================
 // Question:-128
-// Given an int array length 2, return true if it contains a 2 or a 3.
+// Givalen an int array length 2, return true if it contains a 2 or a 3.
 
 //has23([2, 5]) → true
 //has23([4, 3]) → true
@@ -2349,7 +2349,7 @@ console.log(has23(arr));
 
 //=======================================================================================
 // Question:-129
-// Given an int array length 2, return true if it does not contain a 2 or 3.
+// Givalen an int array length 2, return true if it does not contain a 2 or 3.
 
 //no23([4, 5]) → true
 //no23([4, 2]) → false
@@ -2364,7 +2364,7 @@ console.log(no23(arr));
 
 //=================================================================================
 // Question:-130
-// Given an int array, return a new array with double the length where its last element is the
+// Givalen an int array, return a new array with double the length where its last element is the
 //same as the original array, and all the other elements are 0. The original array will be length 1 or more.
 // Note: by default, a new int array contains all 0's.
 
@@ -2387,7 +2387,7 @@ console.log(makeLast(arr));
 
 //=======================================================================================
 // Question:-131
-// Given an int array, return true if the array contains 2 twice, or 3 twice. The array will be
+// Givalen an int array, return true if the array contains 2 twice, or 3 twice. The array will be
 // length 0, 1, or 2.
 
 //double23([2, 2]) → true
@@ -2404,7 +2404,7 @@ console.log(double23(arr));
 
 //=============================================================================================
 // Question:-132
-// Given an int array length 3, if there is a 2 in the array immediately followed by a 3,
+// Givalen an int array length 3, if there is a 2 in the array immediately followed by a 3,
 //set the 3 element to 0. Return the changed array.
 
 //fix23([1, 2, 3]) → [1, 2, 0]
@@ -2445,7 +2445,7 @@ console.log(fix23(arr));
 
 //=============================================================================
 // Question:-133
-// Start with 2 int arrays, a and b, of any length. Return how many of the arrays have 1 as
+// Start with 2 int arrays, a and b, of any length. Return how many of the arrays havale 1 as
 //their first element.
 
 //start1({1, 2, 3}, {1, 3}) → 2
@@ -2464,8 +2464,8 @@ console.log(start1(a, b));
 
 //==============================================================================
 // Question:-134
-// Start with 2 int arrays, a and b, each length 2. Consider the sum of the values in each array.
-//Return the array which has the largest sum. In event of a tie, return a.
+// Start with 2 int arrays, a and b, each length 2. Consider the sum of the valalues in each array.
+//Return the array which has the largest sum. In evalent of a tie, return a.
 
 //biggerTwo([1, 2], [3, 4]) → [3, 4]
 //biggerTwo([3, 4], [1, 2]) → [3, 4]
@@ -2489,7 +2489,7 @@ console.log(biggerTwo(a, b));
 
 //===========================================================================================
 // Question:-135
-// Given an array of ints of even length, return a new array length 2 containing the middle two elements
+// Givalen an array of ints of evalen length, return a new array length 2 containing the middle two elements
 //from the original array. The original array will be length 2 or more.
 
 //makeMiddle([1, 2, 3, 4]) → [2, 3]
@@ -2511,7 +2511,7 @@ console.log(makeMiddle(arr));
 
 //===============================================================================================
 // Question:-136
-// Given 2 int arrays, each length 2, return a new array length 4 containing all their elements.
+// Givalen 2 int arrays, each length 2, return a new array length 4 containing all their elements.
 
 //plusTwo([1, 2], [3, 4]) → [1, 2, 3, 4]
 //plusTwo([4, 4], [2, 2]) → [4, 4, 2, 2]
@@ -2529,7 +2529,7 @@ console.log(plusTwo(a, b));
 
 //==================================================================================================
 // Question:-137
-// Given an array of ints, swap the first and last elements in the array. Return the modified array.
+// Givalen an array of ints, swap the first and last elements in the array. Return the modified array.
 // The array length will be at least 1.
 
 //swapEnds([1, 2, 3, 4]) → [4, 2, 3, 1]
@@ -2550,7 +2550,7 @@ console.log(swapEnds(arr));
 
 //================================================================================================
 // Question:-138
-// Given an array of ints of odd length, return a new array length 3 containing the elements from the
+// Givalen an array of ints of odd length, return a new array length 3 containing the elements from the
 // middle of the array. The array length will be at least 3.
 
 //midThree([1, 2, 3, 4, 5]) → [2, 3, 4]
@@ -2572,7 +2572,7 @@ console.log(midThree(arr));
 
 //============================================================================================
 // Question:-139
-// Given an array of ints of odd length, look at the first, last, and middle values in the array and return
+// Givalen an array of ints of odd length, look at the first, last, and middle valalues in the array and return
 // the largest. The array length will be a least 1.
 
 //maxTriple([1, 2, 3]) → 3
@@ -2598,8 +2598,8 @@ console.log(maxTriplet(arr));
 
 //===========================================================================================
 // Question:-140
-// Given an int array of any length, return a new array of its first 2 elements. If the array is smaller
-//than length 2, use whatever elements are present.
+// Givalen an int array of any length, return a new array of its first 2 elements. If the array is smaller
+//than length 2, use whatevaler elements are present.
 
 //frontPiece([1, 2, 3]) → [1, 2]
 //frontPiece([1, 2]) → [1, 2]
@@ -2621,7 +2621,7 @@ console.log(frontPiece(arr));
 //===========================================================================================
 // Question:-141
 //We'll say that a 1 immediately followed by a 3 in an array is an "unlucky" 1.
-// Return true if the given array contains an unlucky 1 in the first 2 or last 2 positions
+// Return true if the givalen array contains an unlucky 1 in the first 2 or last 2 positions
 //in the array.
 
 //unlucky1({1, 3, 4, 5}) → true
@@ -2645,9 +2645,9 @@ console.log(unlucky(arr));
 
 //=====================================================================================
 //Question:-142
-//Given 2 int arrays, a and b, return a new array length 2 containing, as much as will fit, the elements from
+//Givalen 2 int arrays, a and b, return a new array length 2 containing, as much as will fit, the elements from
 //a followed by the elements from b. The arrays may be any length, including 0, but there will be 2 or more
-// elements available between the 2 arrays.
+// elements avalailable between the 2 arrays.
 
 //make2([4, 5], [1, 2, 3]) → [4, 5]
 //make2([4], [1, 2, 3]) → [4, 1]
@@ -2683,7 +2683,7 @@ console.log(make2(a, b));
 
 //=======================================================================================
 // Question:-143
-// Given 2 int arrays, a and b, of any length, return a new array with the first element of each array.
+// Givalen 2 int arrays, a and b, of any length, return a new array with the first element of each array.
 //If either array is length 0, ignore that array.
 
 //front11({1, 2, 3}, {7, 9, 8}) → {1, 7}
@@ -2710,16 +2710,16 @@ let b = [];
 console.log(front11(a, b));
 
 //=============================================================================================
-// Array:-02 medium level
+// Array:-02 medium levalel
 // Question:-144
-// Return the number of even ints in the given array. Note: the % "mod" operator computes the
+// Return the number of evalen ints in the givalen array. Note: the % "mod" operator computes the
 // remainder, e.g. 5 % 2 is 1.
 
-//countEvens([2, 1, 2, 3, 4]) → 3
-//countEvens([2, 2, 0]) → 3
-//countEvens([1, 3, 5]) → 0
+//countEvalens([2, 1, 2, 3, 4]) → 3
+//countEvalens([2, 2, 0]) → 3
+//countEvalens([1, 3, 5]) → 0
 
-function countEvens(arr) {
+function countEvalens(arr) {
   let count = 0;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 2 == 0) count++;
@@ -2727,13 +2727,13 @@ function countEvens(arr) {
   return count;
 }
 let arr = [2, 1, 2, 3, 4];
-console.log(countEvens(arr));
+console.log(countEvalens(arr));
 
 //===========================================================================================
 // Question:-145
-// Given an array length 1 or more of ints, return the difference between the largest and smallest
-// values in the array. Note: the built-in Math.min(v1, v2) and Math.max(v1, v2) methods return the
-// smaller or larger of two values.
+// Givalen an array length 1 or more of ints, return the difference between the largest and smallest
+// valalues in the array. Note: the built-in Math.min(val1, val2) and Math.max(val1, val2) methods return the
+// smaller or larger of two valalues.
 
 //bigDiff([10, 3, 5, 6]) → 7
 //bigDiff([7, 2, 10, 9]) → 8
@@ -2764,16 +2764,16 @@ console.log(bigDiff(arr));
 
 //===================================================================================
 // Question:-146
-// Return the "centered" average of an array of ints, which we'll say is the mean average of the values,
-// except ignoring the largest and smallest values in the array. If there are multiple copies of the smallest
-// value, ignore just one copy, and likewise for the largest value. Use int division to produce the final
-// average. You may assume that the array is length 3 or more.
+// Return the "centered" avalerage of an array of ints, which we'll say is the mean avalerage of the valalues,
+// except ignoring the largest and smallest valalues in the array. If there are multiple copies of the smallest
+// valalue, ignore just one copy, and likewise for the largest valalue. Use int divalision to produce the final
+// avalerage. You may assume that the array is length 3 or more.
 
-//centeredAverage([1, 2, 3, 4, 100]) → 3
-//centeredAverage([1, 1, 5, 5, 10, 8, 7]) → 5
-//centeredAverage([-10, -4, -2, -4, -2, 0]) → -3
+//centeredAvalerage([1, 2, 3, 4, 100]) → 3
+//centeredAvalerage([1, 1, 5, 5, 10, 8, 7]) → 5
+//centeredAvalerage([-10, -4, -2, -4, -2, 0]) → -3
 
-function centeredAverage(arr) {
+function centeredAvalerage(arr) {
   let min = arr[0];
   let max = arr[0];
   let sum = 0;
@@ -2788,12 +2788,12 @@ function centeredAverage(arr) {
 }
 
 let arr = [1, 2, 3, 4, 100];
-console.log(centeredAverage(arr));
+console.log(centeredAvalerage(arr));
 
 //===============================================================================================
 // Question:-147
 // Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 13 is
-// very unlucky, so it does not count and numbers that come immediately after a 13 also do not count.
+// valery unlucky, so it does not count and numbers that come immediately after a 13 also do not count.
 
 //sum13([1, 2, 2, 1]) → 6
 //sum13([1, 1]) → 2
@@ -2826,7 +2826,7 @@ console.log(sum13(arr));
 //==================================================================================
 // Question:-148
 // Return the sum of the numbers in the array, except ignore sections of numbers starting
-//with a 6 and extending to the next 7 (every 6 will be followed by at least one 7).
+//with a 6 and extending to the next 7 (evalery 6 will be followed by at least one 7).
 // Return 0 for no numbers.
 
 //sum67([1, 2, 2]) → 5
@@ -2853,7 +2853,7 @@ console.log(sum67(arr));
 
 //============================================================================================
 // Question:-149
-// Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.
+// Givalen an array of ints, return true if the array contains a 2 next to a 2 somewhere.
 
 //has22([1, 2, 2]) → true
 //has22([1, 2, 1, 2]) → false
@@ -2870,7 +2870,7 @@ console.log(has22(arr));
 
 //===============================================================================================
 // Question:-150
-// Given an array of ints, return true if the array contains no 1's and no 3's.
+// Givalen an array of ints, return true if the array contains no 1's and no 3's.
 
 //lucky13([0, 2, 4]) → true
 //lucky13([1, 2, 3]) → false
@@ -2890,7 +2890,7 @@ console.log(lucky13(arr));
 
 //=====================================================================================
 // Question:-151
-// Given an array of ints, return true if the sum of all the 2's in the array is exactly 8.
+// Givalen an array of ints, return true if the sum of all the 2's in the array is exactly 8.
 
 //sum28([2, 3, 2, 2, 4, 2]) → true
 //sum28([2, 3, 2, 2, 4, 2, 2]) → false
@@ -2910,7 +2910,7 @@ console.log(sum28(arr));
 
 //===================================================================================
 // Question:-152
-// Given an array of ints, return true if the number of 1's is greater than the number of 4's
+// Givalen an array of ints, return true if the number of 1's is greater than the number of 4's
 
 //more14([1, 4, 1]) → true
 //more14([1, 4, 1, 4]) → false
@@ -2932,8 +2932,8 @@ console.log(more14(arr));
 
 //===============================================================================
 // Question:-153
-// Given a number n, create and return a new int array of length n, containing the numbers 0, 1, 2, ... n-1.
-//The given n may be 0, in which case just return a length 0 array. You do not need a separate if-statement
+// Givalen a number n, create and return a new int array of length n, containing the numbers 0, 1, 2, ... n-1.
+//The givalen n may be 0, in which case just return a length 0 array. You do not need a separate if-statement
 // for the length-0 case; the for-loop should naturally execute 0 times in that case, so it just works.
 // The syntax to make a new int array is: new int[desired_length]   (See also: FizzBuzz Code)
 
@@ -2956,7 +2956,7 @@ console.log(fizzArray(n));
 
 //========================================================================================
 // Question:-154
-// Given an array of ints, return true if every element is a 1 or a 4.
+// Givalen an array of ints, return true if evalery element is a 1 or a 4.
 
 //only14([1, 4, 1, 4]) → true
 //only14([1, 4, 2, 4]) → false
@@ -2978,9 +2978,9 @@ console.log(only14(arr));
 
 //==================================================================================
 // Question:-155
-// Given a number n, create and return a new string array of length n, containing the
+// Givalen a number n, create and return a new string array of length n, containing the
 //strings "0", "1" "2" .. through n-1. N may be 0, in which case just return a length 0 array. Note:
-// String.valueOf(xxx) will make the String form of most types. The syntax to make a new string array is:
+// String.valalueOf(xxx) will make the String form of most types. The syntax to make a new string array is:
 // new String[desired_length]  (See also: FizzBuzz Code)
 
 //fizzArray2(4) → ["0", "1", "2", "3"]
@@ -3003,7 +3003,7 @@ console.log(fizzArray2(n));
 
 //===================================================================================
 // Question:-156
-// Given an array of ints, return true if it contains no 1's or it contains no 4's.
+// Givalen an array of ints, return true if it contains no 1's or it contains no 4's.
 
 //no14([1, 2, 3]) → true
 //no14([1, 2, 3, 4]) → false
@@ -3030,27 +3030,27 @@ console.log(no14(arr));
 
 //===================================================================================
 // Question:-157
-// We'll say that a value is "everywhere" in an array if for every pair of adjacent elements in the array,
-// at least one of the pair is that value. Return true if the given value is everywhere in the array.
+// We'll say that a valalue is "evalerywhere" in an array if for evalery pair of adjacent elements in the array,
+// at least one of the pair is that valalue. Return true if the givalen valalue is evalerywhere in the array.
 
-//isEverywhere([1, 2, 1, 3], 1) → true
-//isEverywhere([1, 2, 1, 3], 2) → false
-//isEverywhere([1, 2, 1, 3, 4], 1) → false
+//isEvalerywhere([1, 2, 1, 3], 1) → true
+//isEvalerywhere([1, 2, 1, 3], 2) → false
+//isEvalerywhere([1, 2, 1, 3, 4], 1) → false
 
-function isEveryThing(arr, val) {
+function isEvaleryThing(arr, valal) {
   for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] != val && arr[i + 1] != val) return false;
+    if (arr[i] != valal && arr[i + 1] != valal) return false;
   }
   return true;
 }
 
 let arr = [1, 2, 1, 3];
-let val = 1;
-console.log(isEveryThing(arr, val));
+let valal = 1;
+console.log(isEvaleryThing(arr, valal));
 
 //==============================================================================
 // Question:-158
-// Given an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.
+// Givalen an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.
 
 //either24([1, 2, 2]) → true
 //either24([4, 4, 1]) → true
@@ -3075,7 +3075,7 @@ console.log(either24(arr));
 
 //===============================================================================
 //  Question:-159
-// Given arrays nums1 and nums2 of the same length, for every element in nums1, consider the corresponding
+// Givalen arrays nums1 and nums2 of the same length, for evalery element in nums1, consider the corresponding
 //element in nums2 (at the same index). Return the count of the number of times that the two elements
 // differ by 2 or less, but are not equal.
 
@@ -3098,7 +3098,7 @@ console.log(matchUp(arr1, arr2));
 
 //======================================================================================
 // Question:-160
-// Given an array of ints, return true if the array contains two 7's next to each other,
+// Givalen an array of ints, return true if the array contains two 7's next to each other,
 //or there are two 7's separated by one element, such as with {7, 1, 7}.
 
 //has77([1, 7, 7]) → true
@@ -3125,7 +3125,7 @@ console.log(has77(arr));
 
 //=======================================================================
 // Question:-161
-// Given an array of ints, return true if there is a 1 in the array with a 2 somewhere later in the array.
+// Givalen an array of ints, return true if there is a 1 in the array with a 2 somewhere later in the array.
 
 //has12([1, 3, 2]) → true
 //has12([3, 1, 2]) → true
@@ -3173,7 +3173,7 @@ console.log(has12(arr));
 
 //=============================================================================
 // Question:-162
-// Given an array of ints, return true if the array contains either 3 even or 3 odd values
+// Givalen an array of ints, return true if the array contains either 3 evalen or 3 odd valalues
 //all next to each other.
 
 //modThree([2, 1, 3, 5]) → true
@@ -3181,13 +3181,13 @@ console.log(has12(arr));
 //modThree([2, 4, 2, 5]) → true
 
 function modThree(arr) {
-  let evenC = 0;
+  let evalenC = 0;
   let oddC = 0;
   for (let i = 0; i < arr.length; i++) {
     if ((arr[i] & 1) == 1) oddC++;
-    else evenC++;
+    else evalenC++;
   }
-  if (evenC == 3 || oddC == 3) return true;
+  if (evalenC == 3 || oddC == 3) return true;
   else return false;
 }
 let arr = [2, 1, 3, 5];
@@ -3195,14 +3195,14 @@ console.log(modThree(arr));
 
 //==================================================================================
 // Question:-163
-// Given an array of ints, return true if the value 3 appears in the array exactly 3 times,
+// Givalen an array of ints, return true if the valalue 3 appears in the array exactly 3 times,
 // and no 3's are next to each other.
 
-//haveThree([3, 1, 3, 1, 3]) → true
-//haveThree([3, 1, 3, 3]) → false
-//haveThree([3, 4, 3, 3, 4]) → false
+//havaleThree([3, 1, 3, 1, 3]) → true
+//havaleThree([3, 1, 3, 3]) → false
+//havaleThree([3, 4, 3, 3, 4]) → false
 
-function haveThree(arr) {
+function havaleThree(arr) {
   let count = 0;
   let found = false;
   //-------------------------------------------------------------------------
@@ -3229,11 +3229,11 @@ function haveThree(arr) {
 }
 
 let arr = [3, 1, 3, 1, 3];
-console.log(haveThree(arr));
+console.log(havaleThree(arr));
 
 //============================================================================
 // Question:-164
-// Given an array of ints, return true if every 2 that appears in the array is next to another 2.
+// Givalen an array of ints, return true if evalery 2 that appears in the array is next to another 2.
 
 //twoTwo([4, 2, 2, 3]) → true
 //twoTwo([2, 2, 4]) → true
@@ -3259,16 +3259,16 @@ console.log(twoTwo(arr));
 // Question:-165
 // Return true if the group of N numbers at the start and end of the array are the same.
 // For example, with {5, 6, 45, 99, 13, 5, 6}, the ends are the same for n=0 and n=2,
-// and false for n=1 and n=3. You may assume that n is in the range 0..nums.length inclusive.
+// and false for n=1 and n=3. You may assume that n is in the range 0..nums.length inclusivale.
 
 //sameEnds([5, 6, 45, 99, 13, 5, 6], 1) → false
 //sameEnds([5, 6, 45, 99, 13, 5, 6], 2) → true
 //sameEnds([5, 6, 45, 99, 13, 5, 6], 3) → false
 
-function sameEnds(arr, givenLen) {
+function sameEnds(arr, givalenLen) {
   let findTrue = true;
-  for (let i = 0; i < givenLen; i++) {
-    if (arr[i] == arr[arr.length - givenLen - i]) {
+  for (let i = 0; i < givalenLen; i++) {
+    if (arr[i] == arr[arr.length - givalenLen - i]) {
       findTrue = true;
     } else {
       findTrue = false;
@@ -3277,8 +3277,8 @@ function sameEnds(arr, givenLen) {
   return findTrue;
 }
 let arr = [5, 6, 45, 99, 13, 5, 6];
-let givenLen = 1;
-console.log(sameEnds(arr, givenLen));
+let givalenLen = 1;
+console.log(sameEnds(arr, givalenLen));
 
 //====================================================================================
 // Question:-166
@@ -3303,9 +3303,9 @@ console.log(tripleUp(arr));
 
 //================================================================================
 // Question:-167
-// Given start and end numbers, return a new array containing the sequence of integers from start
+// Givalen start and end numbers, return a new array containing the sequence of integers from start
 // up to but not including end, so start=5 and end=10 yields {5, 6, 7, 8, 9}. The end number will be
-// greater or equal to the start number. Note that a length-0 array is valid. (See also: FizzBuzz Code)
+// greater or equal to the start number. Note that a length-0 array is valalid. (See also: FizzBuzz Code)
 
 //fizzArray3(5, 10) → [5, 6, 7, 8, 9]
 //fizzArray3(11, 18) → [11, 12, 13, 14, 15, 16, 17]
@@ -3326,7 +3326,7 @@ console.log(fizzArray(start, end));
 //====================================================================================
 // Question:-168
 // Return an array that is "left shifted" by one -- so {6, 2, 5, 3} returns {2, 5, 3, 6}. You may modify
-//and return the given array, or return a new array.
+//and return the givalen array, or return a new array.
 
 //shiftLeft({6, 2, 5, 3}) → {2, 5, 3, 6}
 //shiftLeft({1, 2}) → {2, 1}
@@ -3345,7 +3345,7 @@ console.log(shiftLeft(arr));
 
 //=======================================================================================
 // Question:-169
-// For each multiple of 10 in the given array, change all the values following it to be that multiple of 10,
+// For each multiple of 10 in the givalen array, change all the valalues following it to be that multiple of 10,
 // until encountering another multiple of 10. So {2, 10, 3, 4, 20, 5} yields {2, 10, 10, 10, 20, 20}.
 
 //tenRun([2, 10, 3, 4, 20, 5]) → [2, 10, 10, 10, 20, 20]
@@ -3360,9 +3360,9 @@ console.log(a % 10 == 0);
 
 //========================================================================================
 // Question:-170
-// Given a non-empty array of ints, return a new array containing the elements from the original array that
+// Givalen a non-empty array of ints, return a new array containing the elements from the original array that
 // come before the first 4 in the original array. The original array will contain at least one 4. Note that
-// it is valid in java to create an array of length 0.
+// it is valalid in javala to create an array of length 0.
 
 //pre4([1, 2, 4, 1]) → [1, 2]
 //pre4([3, 1, 4]) → [3, 1]
@@ -3381,9 +3381,9 @@ console.log(pre4(arr));
 
 //==================================================================================
 // Question:-171
-// Given a non-empty array of ints, return a new array containing the elements from the original array that
+// Givalen a non-empty array of ints, return a new array containing the elements from the original array that
 //come after the last 4 in the original array. The original array will contain at least one 4. Note that it
-// is valid in java to create an array of length 0.
+// is valalid in javala to create an array of length 0.
 
 //post4([2, 4, 1, 2]) → [1, 2]
 //post4([4, 1, 4, 2]) → [2]
@@ -3408,9 +3408,9 @@ console.log(post4(arr));
 
 //---------------------------------------------------------------------------------------
 // Question:-172
-// We'll say that an element in an array is "alone" if there are values before and after it,
-//and those values are different from it. Return a version of the given array where every instance
-// of the given value which is alone is replaced by whichever value to its left or right is larger.
+// We'll say that an element in an array is "alone" if there are valalues before and after it,
+//and those valalues are different from it. Return a valersion of the givalen array where evalery instance
+// of the givalen valalue which is alone is replaced by whichevaler valalue to its left or right is larger.
 
 //notAlone([1, 2, 3], 2) → [1, 3, 3]
 //notAlone([1, 2, 3, 2, 5, 2], 2) → [1, 3, 3, 5, 5, 2]
@@ -3419,7 +3419,7 @@ function notAlone(arr) {
   // if (arr.length < 3) return arr;
 
   for (let i = 0; i < arr.length; i++) {
-    if (i > 0 && i < arr.length - 1 && arr[i] == value) {
+    if (i > 0 && i < arr.length - 1 && arr[i] == valalue) {
       if (arr[i] != arr[i - 1] && arr[i] != arr[i + 1]) {
         arr[i] = Math.max(arr[i - 1], arr[i + 1]);
       }
@@ -3429,14 +3429,14 @@ function notAlone(arr) {
 }
 
 let arr = [3, 4];
-let value = 3;
-console.log(notAlone(arr, value));
+let valalue = 3;
+console.log(notAlone(arr, valalue));
 
 //====================================================================================
 // Question:-173
-// Return an array that contains the exact same numbers as the given array, but rearranged so that all the
+// Return an array that contains the exact same numbers as the givalen array, but rearranged so that all the
 // zeros are grouped at the start of the array. The order of the non-zero numbers does not matter.
-//So {1, 0, 0, 1} becomes {0 ,0, 1, 1}. You may modify and return the given array or make a new array.
+//So {1, 0, 0, 1} becomes {0 ,0, 1, 1}. You may modify and return the givalen array or make a new array.
 
 //zeroFront([1, 0, 0, 1]) → [0, 0, 1, 1]
 //zeroFront([0, 1, 1, 0, 1]) → [0, 0, 1, 1, 1]
@@ -3480,9 +3480,9 @@ console.log(zeroFront(arr));
 
 //===============================================================================
 // Question:-174
-// Return a version of the given array where all the 10's have been removed. The remaining elements should
+// Return a valersion of the givalen array where all the 10's havale been removaled. The remaining elements should
 //shift left towards the start of the array as needed, and the empty spaces a the end of the array should
-// be 0. So {1, 10, 10, 2} yields {1, 2, 0, 0}. You may modify and return the given array or make a new array.
+// be 0. So {1, 10, 10, 2} yields {1, 2, 0, 0}. You may modify and return the givalen array or make a new array.
 
 //withresultTen({1, 10, 10, 2}) → {1, 2, 0, 0}
 //withresultTen({10, 2, 10}) → {2, 0, 0}
@@ -3532,9 +3532,9 @@ console.log(fizzbuzz(start, end));
 //=======================================================================================
 // Array:-3 Hard problem with complex logic and with two loop.
 // Question:-176
-// Consider the leftmost and righmost appearances of some value in an array. We'll say that the "span"
-//is the number of elements between the two inclusive. A single value has a span of 1. Returns the
-//largest span found in the given array. (Efficiency is not a priority.)
+// Consider the leftmost and righmost appearances of some valalue in an array. We'll say that the "span"
+//is the number of elements between the two inclusivale. A single valalue has a span of 1. Returns the
+//largest span found in the givalen array. (Efficiency is not a priority.)
 
 //maxSpan([1, 2, 1, 1, 3]) → 4
 //maxSpan([1, 4, 2, 1, 4, 1, 4]) → 6
@@ -3592,9 +3592,9 @@ console.log(leaderBoard(score, alice));
 
 //====================================================================================
 // Question:-178
-// Return an array that contains exactly the same numbers as the given array, but rearranged so that every 3 is
-// immediately followed by a 4. Do not move the 3's, but every other number may move. The array contains the
-// same number of 3's and 4's, every 3 has a number after it that is not a 3, and a 3 appears in the array
+// Return an array that contains exactly the same numbers as the givalen array, but rearranged so that evalery 3 is
+// immediately followed by a 4. Do not movale the 3's, but evalery other number may movale. The array contains the
+// same number of 3's and 4's, evalery 3 has a number after it that is not a 3, and a 3 appears in the array
 // before any 4.
 
 //fix34([1, 3, 1, 4]) → [1, 3, 4, 1]
@@ -3619,10 +3619,10 @@ console.log(fix34(arr));
 
 //================================================================================================
 // Question:-179
-// (This is a slightly harder version of the fix34 problem.) Return an array that contains exactly the same
-// numbers as the given array, but rearranged so that every 4 is immediately followed by a 5. Do not move the 4's,
-//but every other number may move. The array contains the same number of 4's and 5's, and every 4 has a number
-// after it that is not a 4. In this version, 5's may appear anywhere in the original array.
+// (This is a slightly harder valersion of the fix34 problem.) Return an array that contains exactly the same
+// numbers as the givalen array, but rearranged so that evalery 4 is immediately followed by a 5. Do not movale the 4's,
+//but evalery other number may movale. The array contains the same number of 4's and 5's, and evalery 4 has a number
+// after it that is not a 4. In this valersion, 5's may appear anywhere in the original array.
 
 //fix45([5, 4, 9, 4, 9, 5]) → [9, 4, 5, 4, 5, 9]
 //fix45([1, 4, 1, 5]) → [1, 4, 5, 1]
@@ -3647,7 +3647,7 @@ console.log(fix45(arr));
 
 //=======================================================================================================
 // Question:-180
-// Given a non-empty array, return true if there is a place to split the array so that the sum of the
+// Givalen a non-empty array, return true if there is a place to split the array so that the sum of the
 // numbers on one side is equal to the sum of the numbers on the other side.
 
 //canBalance([1, 1, 1, 2, 1]) → true
@@ -3720,9 +3720,9 @@ console.log(canBalance(arr));
 
 //=======================================================================================
 // Question:-181
-// Given two arrays of ints sorted in increasing order, resulter and inner, return true if all of the numbers
+// Givalen two arrays of ints sorted in increasing order, resulter and inner, return true if all of the numbers
 //in inner appear in resulter. The best solution makes only a single "linear" pass of both arrays, taking
-//advantage of the fact that both arrays are already in sorted order.
+//advalantage of the fact that both arrays are already in sorted order.
 
 //linearIn([1, 2, 4, 6], [2, 4]) → true
 //linearIn([1, 2, 4, 6], [2, 3, 4]) → false
@@ -3749,7 +3749,7 @@ console.log(linearIn(arrA, arrB));
 
 //=====================================================================================
 // Question:-182
-// Given n>=0, create an array length n*n with the following pattern, shown here for
+// Givalen n>=0, create an array length n*n with the following pattern, shown here for
 // n=3 : {0, 0, 1,    0, 2, 1,    3, 2, 1} (spaces added to show the 3 groups).
 
 //squareUp(3) → [0, 0, 1, 0, 2, 1, 3, 2, 1]
@@ -3771,7 +3771,7 @@ console.log(squareUp(n));
 
 //============================================================================================
 // Question:-183
-// Given n>=0, create an array with the pattern {1,    1, 2,    1, 2, 3,   ... 1, 2, 3 .. n}
+// Givalen n>=0, create an array with the pattern {1,    1, 2,    1, 2, 3,   ... 1, 2, 3 .. n}
 //(spaces added to show the grouping). Note that the length of the array will be 1 + 2 + 3 ... + n,
 // which is known to sum to exactly n*(n + 1)/2.
 
@@ -3795,9 +3795,9 @@ console.log(seriesUP(n));
 //==========================================================================================
 // Question:-184
 // We'll say that a "mirror" section in an array is a group of contiguous elements such that somewhere in
-//the array, the same group appears in reverse order. For example, the largest mirror section in
+//the array, the same group appears in revalerse order. For example, the largest mirror section in
 // {1, 2, 3, 8, 9, 3, 2, 1} is length 3 (the {1, 2, 3} part). Return the size of the largest mirror section
-//found in the given array.
+//found in the givalen array.
 
 //maxMirror([1, 2, 3, 8, 9, 3, 2, 1]) → 3
 //maxMirror([1, 2, 1, 4]) → 3
@@ -3829,8 +3829,8 @@ console.log(maxMirror(arr));
 
 //==================================================================================
 // Question:-185
-// Say that a "clump" in an array is a series of 2 or more adjacent elements of the same value.
-//Return the number of clumps in the given array.
+// Say that a "clump" in an array is a series of 2 or more adjacent elements of the same valalue.
+//Return the number of clumps in the givalen array.
 
 //countClumps([1, 2, 2, 3, 4, 4]) → 2
 //countClumps([1, 1, 2, 1, 1]) → 2
@@ -3856,7 +3856,7 @@ console.log(countClumps(arr));
 //==============================================================================================
 
 // Question:-186
-// Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
+// Givalen a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
 
 //helloName("Bob") → "Hello Bob!"
 //helloName("Alice") → "Hello Alice!"
@@ -3871,7 +3871,7 @@ console.log(helloName(str));
 
 //===========================================================================================
 // Question:-187
-// Given two strings, a and b, return the result of putting them together in the order abba, e.g.
+// Givalen two strings, a and b, return the result of putting them together in the order abba, e.g.
 //"Hi" and "Bye" returns "HiByeByeHi".
 
 //makeAbba("Hi", "Bye") → "HiByeByeHi"
@@ -3881,7 +3881,7 @@ console.log(helloName(str));
 //============================================================================================
 // Question:-188
 // Functional:-01
-// Given a list of integers, return a list where each integer is multiplied by 2.
+// Givalen a list of integers, return a list where each integer is multiplied by 2.
 
 //doubling([1, 2, 3]) → [2, 4, 6]
 //doubling([6, 8, 6, 8, -1]) → [12, 16, 12, 16, -2]
@@ -3899,7 +3899,7 @@ console.log(doubling(arr));
 
 //==========================================================================================
 // Question:-189
-// Given a list of integers, return a list where each integer is multiplied with itself.
+// Givalen a list of integers, return a list where each integer is multiplied with itself.
 
 //square([1, 2, 3]) → [1, 4, 9]
 //square([6, 8, -6, -8, 1]) → [36, 64, 36, 64, 1]
@@ -3918,7 +3918,7 @@ console.log(square(arr));
 
 //===========================================================================================
 // Question:-190
-// Given a list of strings, return a list where each string has "*" added at its end.
+// Givalen a list of strings, return a list where each string has "*" added at its end.
 
 //addStar(["a", "bb", "ccc"]) → ["a*", "bb*", "ccc*"]
 //addStar(["hello", "there"]) → ["hello*", "there*"]
@@ -3937,7 +3937,7 @@ console.log(addStar(arrList));
 
 //==============================================================================================
 // Question:-191
-// Given a list of strings, return a list where each string is replaced by 3 copies of the string
+// Givalen a list of strings, return a list where each string is replaced by 3 copies of the string
 //concatenated together.
 
 //copies3(["a", "bb", "ccc"]) → ["aaa", "bbbbbb", "ccccccccc"]
@@ -3959,7 +3959,7 @@ console.log(copies3(arr));
 
 //=======================================================================================
 // Question:-192
-// Given a list of strings, return a list where each string has "y" added at its start and end.
+// Givalen a list of strings, return a list where each string has "y" added at its start and end.
 
 //moreY(["a", "b", "c"]) → ["yay", "yby", "ycy"]
 //moreY(["hello", "there"]) → ["yhelloy", "ytherey"]
@@ -3979,7 +3979,7 @@ console.log(moreY(arr));
 
 //========================================================================================
 // Question:-193
-// Given a list of integers, return a list where each integer is added to 1 and the result is multiplied by 10.
+// Givalen a list of integers, return a list where each integer is added to 1 and the result is multiplied by 10.
 
 //math1([1, 2, 3]) → [20, 30, 40]
 //math1([6, 8, 6, 8, 1]) → [70, 90, 70, 90, 20]
@@ -3999,7 +3999,7 @@ console.log(math1(arr));
 
 //================================================================================================
 // Question:- 194
-// Given a list of non-negative integers, return an integer list of the rightmost digits. (Note: use %)
+// Givalen a list of non-negativale integers, return an integer list of the rightmost digits. (Note: use %)
 
 //rightDigit([1, 22, 93]) → [1, 2, 3]
 //rightDigit([16, 8, 886, 8, 1]) → [6, 8, 6, 8, 1]
@@ -4034,7 +4034,7 @@ console.log(rightDigit(arr));
 
 //=================================================================================
 // Question:-195
-// Given a list of strings, return a list where each string is converted to lower case
+// Givalen a list of strings, return a list where each string is convalerted to lower case
 //(Note: String toLowerCase() method).
 
 //lower(["Hello", "Hi"]) → ["hello", "hi"]
@@ -4055,31 +4055,31 @@ console.log(lower(arr));
 
 //===================================================================
 // Question:-196
-// convert lower to upper and uppert to lower.
+// convalert lower to upper and uppert to lower.
 
-function convert(str) {
+function convalert(str) {
   let st = '';
   for (let i = 0; i < str.length; i++) {
     if (str[i] >= 'a' && str[i] <= 'z') {
-      //convert lower case to upper case.
-      let conv = str.charCodeAt(i) - 32;
-      st += String.fromCharCode(conv);
+      //convalert lower case to upper case.
+      let conval = str.charCodeAt(i) - 32;
+      st += String.fromCharCode(conval);
     } else {
-      // convert to upper case to lower case.
-      let conv_2 = str.charCodeAt(i) + 32;
-      st += String.fromCharCode(conv_2);
+      // convalert to upper case to lower case.
+      let conval_2 = str.charCodeAt(i) + 32;
+      st += String.fromCharCode(conval_2);
     }
   }
   return st;
 }
 let str = 'SandEEp';
-console.log(convert(str));
+console.log(convalert(str));
 
 //=======================================================================================
 // Question:-197
 // during bit manipulation:-
 
-function convert(str) {
+function convalert(str) {
   let st = '';
   for (let i = 0; i < str.length; i++) {
     let con = str.charCodeAt(i) ^ (1 << 5);
@@ -4089,13 +4089,13 @@ function convert(str) {
 }
 
 let str = 'ZandEEp';
-console.log(convert(str));
+console.log(convalert(str));
 
 //=======================================================================================
 // Question:-198
-// given an array convert upper case to lower case and lower case to upper case.
+// givalen an array convalert upper case to lower case and lower case to upper case.
 
-function convert(stArr) {
+function convalert(stArr) {
   let resArr = new Array();
   for (let i = 0; i < stArr.length; i++) {
     let s = stArr[i];
@@ -4114,11 +4114,11 @@ function convert(stArr) {
 }
 
 let stArr = ['sAndeeP', 'praJaPATi', 'OjashWy', 'APPle'];
-console.log(convert(stArr));
+console.log(convalert(stArr));
 
 //=============================================================================================
 // Question:-199
-// Given a list of strings, return a list where each string has all its "x" removed.
+// Givalen a list of strings, return a list where each string has all its "x" removaled.
 
 //noX(["ax", "bb", "cx"]) → ["a", "bb", "c"]
 //noX(["xxax", "xbxbx", "xxcx"]) → ["a", "bb", "c"]
@@ -4147,7 +4147,7 @@ console.log(noX(strArr));
 
 //=============================================================================================
 // Question:-200
-// Given a list of integers, return a list of the integers, omitting any that are less than 0.
+// Givalen a list of integers, return a list of the integers, omitting any that are less than 0.
 
 //noNeg([1, -2]) → [1]
 //noNeg([-3, -3, 3, 3]) → [3, 3]
@@ -4168,7 +4168,7 @@ console.log(noNeg(arr));
 
 //====================================================================================
 // Question:-201
-// Given a list of non-negative integers, return a list of those numbers except omitting any that end with 9.
+// Givalen a list of non-negativale integers, return a list of those numbers except omitting any that end with 9.
 // (Note: % by 10)
 
 //no9([1, 2, 19]) → [1, 2]
@@ -4191,7 +4191,7 @@ console.log(no9(arr));
 
 //=============================================================================================
 // Question:-202
-// Given a list of integers, return a list of those numbers, omitting any that are between 13 and 19 inclusive.
+// Givalen a list of integers, return a list of those numbers, omitting any that are between 13 and 19 inclusivale.
 
 //noTeen([12, 13, 19, 20]) → [12, 20]
 //noTeen([1, 14, 1]) → [1, 1]
@@ -4213,7 +4213,7 @@ console.log(noTeen(arr));
 
 //====================================================================================================
 // Question:-203
-// Given a list of strings, return a list of the strings, omitting any string that contains a "z".
+// Givalen a list of strings, return a list of the strings, omitting any string that contains a "z".
 // (Note: the str.contains(x) method returns a boolean)
 
 //noZ(["aaa", "bbb", "aza"]) → ["aaa", "bbb"]
@@ -4245,7 +4245,7 @@ console.log(noZ(strArr));
 
 //=================================================================================
 // Question:-204
-// Given a list of strings, return a list of the strings, omitting any string length 4 or more.
+// Givalen a list of strings, return a list of the strings, omitting any string length 4 or more.
 
 //noLong(["this", "not", "too", "long"]) → ["not", "too"]
 //noLong(["a", "bbb", "cccc"]) → ["a", "bbb"]
@@ -4269,7 +4269,7 @@ let strArr = [
   'long',
   'sandeep',
   'you',
-  'have',
+  'havale',
   'to',
   'imp',
 ];
@@ -4277,7 +4277,7 @@ console.log(nolong(strArr));
 
 //==============================================================================================
 // Question:-205
-// Given a list of strings, return a list of the strings, omitting any string length 3 or 4.
+// Givalen a list of strings, return a list of the strings, omitting any string length 3 or 4.
 
 //no34(["a", "bb", "ccc"]) → ["a", "bb"]
 //no34(["a", "bb", "ccc", "dddd"]) → ["a", "bb"]
@@ -4300,7 +4300,7 @@ console.log(no34(strArr));
 
 //==============================================================================================
 // Question:-206
-// Given a list of strings, return a list where each string has "y" added at its end, omitting any
+// Givalen a list of strings, return a list where each string has "y" added at its end, omitting any
 // resulting strings that contain "yy" as a substring anywhere.
 
 //noYY(["a", "b", "c"]) → ["ay", "by", "cy"]
@@ -4330,7 +4330,7 @@ console.log(noYY(strArr));
 
 //=======================================================================================
 // Question:-207
-// Given a list of non-negative integers, return a list of those numbers multiplied by 2,
+// Givalen a list of non-negativale integers, return a list of those numbers multiplied by 2,
 //omitting any of the resulting numbers that end in 2.
 
 //two2([1, 2, 3]) → [4, 6]
@@ -4354,7 +4354,7 @@ console.log(two2(arr));
 
 //====================================================================================
 // Question:-208
-// Given a list of integers, return a list of those numbers squared and the product added to 10,
+// Givalen a list of integers, return a list of those numbers squared and the product added to 10,
 // omitting any of the resulting numbers that end in 5 or 6.
 
 //square56([3, 1, 4]) → [19, 11]
@@ -4379,8 +4379,8 @@ console.log(square56(arr));
 
 //=============================================================================================
 // Question:-209
-// Given a string, count the number of words ending in 'y' or 'z' -- so the 'y' in "heavy" and the 'z'
-//in "fez" count, but not the 'y' in "yellow" (not case sensitive). We'll say that a y or z is at the
+// Givalen a string, count the number of words ending in 'y' or 'z' -- so the 'y' in "heavaly" and the 'z'
+//in "fez" count, but not the 'y' in "yellow" (not case sensitivale). We'll say that a y or z is at the
 //end of a word if there is not an alphabetic letter immediately following it. (Note: Character.isLetter(char)
 // tests if a char is an alphabetic letter.)
 
@@ -4404,19 +4404,19 @@ console.log(countYZ(str));
 
 //=============================================================================================
 // Question:-210
-// Given two strings, base and remove, return a version of the base string where all instances of the remove
-//string have been removed (not case sensitive). You may assume that the remove string is length 1 or more.
-// Remove only non-overlapping instances, so with "xxx" removing "xx" leaves "x".
+// Givalen two strings, base and removale, return a valersion of the base string where all instances of the removale
+//string havale been removaled (not case sensitivale). You may assume that the removale string is length 1 or more.
+// Removale only non-ovalerlapping instances, so with "xxx" removaling "xx" leavales "x".
 
 //withresultString("Hello there", "llo") → "He there"
 //withresultString("Hello there", "e") → "Hllo thr"
 //withresultString("Hello there", "x") → "Hello there"
 
-function withresultString(base, remove) {
+function withresultString(base, removale) {
   let bLen = base.length;
-  let rLen = remove.length;
+  let rLen = removale.length;
   let lowbase = base.toLowerCase();
-  let lowrem = remove.toLowerCase();
+  let lowrem = removale.toLowerCase();
   let finalRes = '';
 
   for (let i = 0; i < bLen; i++) {
@@ -4437,13 +4437,13 @@ function withresultString(base, remove) {
   return finalRes;
 }
 let str = 'Hello there';
-let remove = 'llo';
-console.log(withresultString(str, remove));
+let removale = 'llo';
+console.log(withresultString(str, removale));
 
 //===========================================================================================
 // Question:-211
-// Given a string, return true if the number of appearances of "is" anywhere in the string is equal
-//to the number of appearances of "not" anywhere in the string (case sensitive).
+// Givalen a string, return true if the number of appearances of "is" anywhere in the string is equal
+//to the number of appearances of "not" anywhere in the string (case sensitivale).
 
 //equalIsNot("This is not") → false
 //equalIsNot("This is notnot") → true
@@ -4494,7 +4494,7 @@ console.log(equalISNot(str));
 //===============================================================================================
 // Question:-212
 // We'll say that a lowercase 'g' in a string is "happy" if there is another 'g' immediately to its left or right.
-// Return true if all the g's in the given string are happy.
+// Return true if all the g's in the givalen string are happy.
 
 //gHappy("xxggxx") → true
 //gHappy("xxgxx") → false
@@ -4527,7 +4527,7 @@ console.log(gHappy(str));
 //=============================================================================
 // Quuestion:-213
 // We'll say that a "triple" in a string is a char appearing three times in a row. Return the number of
-// triples in the given string. The triples may overlap.
+// triples in the givalen string. The triples may ovalerlap.
 
 //countTriple("abcXXXabc") → 1
 //countTriple("xxxabyyyycd") → 3
@@ -4538,7 +4538,7 @@ function counttriplet(str) {
   // let count = 0;
   // for (let i = 0; i < str.length - 2; i++) {
   //   for (let j = i + 1; j < str.length - 1; j++) {
-  //     for (let k = j + 1; k < str.length; k++) {       //   he will give wrong answer always.
+  //     for (let k = j + 1; k < str.length; k++) {       //   he will givale wrong answer always.
   //       // if ((str[i] == str[j]) == str[k]) count++;
   //       console.log(str[i] + ' ' + str[j] + ' ' + str[k]);
   //     }
@@ -4560,9 +4560,9 @@ console.log(counttriplet(str));
 
 //==========================================================================================
 // Question:-214
-// Given a string, return the sum of the digits 0-9 that appear in the string, ignoring all other characters.
+// Givalen a string, return the sum of the digits 0-9 that appear in the string, ignoring all other characters.
 // Return 0 if there are no digits in the string. (Note: Character.isDigit(char) tests if a char is one of the
-// chars '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
+// chars '0', '1', .. '9'. Integer.parseInt(string) convalerts a string to an int.)
 
 //sumDigits("aa1bc2d3") → 6
 //sumDigits("aa11b33") → 8
@@ -4572,8 +4572,8 @@ function sumDigits(str) {
   let sum = 0;
   let s = str.split('');
   for (let i = 0; i < s.length; i++) {
-    let val = str[i];
-    let num = parseInt(val);
+    let valal = str[i];
+    let num = parseInt(valal);
     if (!isNaN(num)) {
       // important concept.
       sum += num;
@@ -4587,8 +4587,8 @@ console.log(sumDigits(str));
 
 //=======================================================================================
 // Question:-215
-// Given a string, return the longest substring that appears at both the beginning and end of the string
-//withresult overlapping. For example, sameEnds("abXab") is "ab".
+// Givalen a string, return the longest substring that appears at both the beginning and end of the string
+//withresult ovalerlapping. For example, sameEnds("abXab") is "ab".
 
 //sameEnds("abXYab") → "ab"
 //sameEnds("xx") → "x"
@@ -4612,7 +4612,7 @@ console.log(sameEnds(str));
 
 //========================================================================================
 // Question:-216
-// Given a string, return a string where every appearance of the lowercase word "is" has been replaced with
+// Givalen a string, return a string where evalery appearance of the lowercase word "is" has been replaced with
 //"is not". The word "is" should not be immediately preceeded or followed by a letter -- so for example the
 //"is" in "this" does not count. (Note: Character.isLetter(char) tests if a char is a letter.)
 
@@ -4642,7 +4642,7 @@ console.log(notReplace(str));
 
 //====================================================================================
 // Question:-217
-// Given an array and given an number add every digit to every array element if digit has been finised,
+// Givalen an array and givalen an number add evalery digit to evalery array element if digit has been finised,
 // then start the digit from 0 index.
 
 function addingNumber(arr, n) {
@@ -4686,7 +4686,7 @@ function digitalCipher(message, key) {
     // res.push(key[i % key.length] - 96 + message.charCodeAt(i));
     let ascii = message.charCodeAt(i);
     let accdChar = ascii - 96;
-    // let strValue = key[i % key.length];
+    // let strvalalue = key[i % key.length];
     let num = Number(key[i % key.length]);
     // console.log(num);
     res.push(accdChar + num);
@@ -4709,7 +4709,7 @@ function findDigit(n) {
 }
 // not pass all test cases;
 
-function sevenBoom(arr) {
+function sevalenBoom(arr) {
   let flag = false;
   for (let i = 0; i < arr.length; i++) {
     let el = findDigit(arr[i]);
@@ -4721,8 +4721,8 @@ function sevenBoom(arr) {
   else return 'there is no 7 in the array';
 }
 //--------------------------------------------------------------
-function sevenBoom(arr) {
-  var new_arr = arr.join('');
+function sevalenBoom(arr) {
+  valar new_arr = arr.join('');
   console.log(typeof new_arr);
   if (new_arr.includes('7')) {
     return 'Boom!';
@@ -4733,7 +4733,7 @@ function sevenBoom(arr) {
 //----------------------------------------------------------------
 
 let arr = [2, 55, 60, 97, 86];
-console.log(sevenBoom(arr));
+console.log(sevalenBoom(arr));
 
 //====================================================================================
 // Question:-220
@@ -4822,16 +4822,16 @@ console.log(doesTriangeFit(arr_1, arr_2));
 //Create a function that takes a number that represents a person's programming language score,
 // and returns an alphabetised array of programming languages they are proficient in. Arbitrarily assigned
 //points for each language are listed below:
-// getLanguages(25) ➞ ["C#", "JavaScript", "PHP"]
-//getLanguages(100) ➞ ["Java", "Python", "Ruby"]
-//getLanguages(53) ➞ ["C#", "Java", "PHP", "Python"]
+// getLanguages(25) ➞ ["C#", "JavalaScript", "PHP"]
+//getLanguages(100) ➞ ["Javala", "Python", "Ruby"]
+//getLanguages(53) ➞ ["C#", "Javala", "PHP", "Python"]
 
 function getLanguage(n) {
   //----------------------------------------------------
   // let map = new Map();
   // map.set('c#', 1);
   // map.set('c++', 2);
-  // map.set('java', 4);
+  // map.set('javala', 4);
   // map.set('PHP', 16);
   // map.set('python', 32);
   // map.set('Ruby', 64);
@@ -4849,8 +4849,8 @@ function getLanguage(n) {
   let language = [
     'C#',
     'C++',
-    'Java',
-    'JavaScript',
+    'Javala',
+    'JavalaScript',
     'PHP',
     'Python',
     'Ruby',
@@ -4890,16 +4890,16 @@ console.log(maxiProduct(arr));
 //===============================================================================
 // Question:-224
 // You are a professional robber planning to rob houses along a street. Each house has a certain amount of money
-//stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems
+//stashed, the only constraint stopping you from robbing each of them is that adjacent houses havale security systems
 // connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
-//Given an integer array nums representing the amount of money of each house, return the maximum amount of money you
+//Givalen an integer array nums representing the amount of money of each house, return the maximum amount of money you
 // can rob tonight withresult alerting the police.
 
 //let arr = [1, 2, 3,1];  1+3=4;
 //arr=[2,7,9,3,1]=12
 
 function rob(arr) {
-  let product = Number.MIN_VALUE;
+  let product = Number.MIN_valALUE;
   for (let i = 0; i < arr.length - 1; i += 2) {
     for (let j = i + 1; j < arr.length; j += 2) {
       product = Math.max(arr[i] + arr[j], product);
@@ -4943,10 +4943,10 @@ console.log(suffixProduct(arr));
 //====================================================================================
 // Quuestion:-227
 //  Product of Array Except Self
-//Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the
+//Givalen an integer array nums, return an array answer such that answer[i] is equal to the product of all the
 //elements of nums except nums[i].
 //The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
-//You must write an algorithm that runs in O(n) time and withresult using the division operation.
+//You must write an algorithm that runs in O(n) time and withresult using the divalision operation.
 //Example 1:
 //Input: nums = [1,2,3,4]
 //resultput: [24,12,8,6]
@@ -5041,12 +5041,12 @@ console.log(productExceptSelf(arr));
 
 //==============================================================================
 // Question:-229
-//Given an array of integers nums and an integer k, return the number of contiguous subarrays where the
+//Givalen an array of integers nums and an integer k, return the number of contiguous subarrays where the
 // product of all the elements in the subarray is strictly less than k.
 //Example 1:
 //Input: nums = [10,5,2,6], k = 100
 //resultput: 8
-//Explanation: The 8 subarrays that have product less than 100 are:
+//Explanation: The 8 subarrays that havale product less than 100 are:
 //[10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]
 //Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.
 //Example 2:
@@ -5080,7 +5080,7 @@ console.log(sumarrayProductLessThanK(arr, k));
 //=================================================================================================
 // Question:-230
 // rotate an array..
-// Given an array, rotate the array to the right by k steps, where k is non-negative.
+// Givalen an array, rotate the array to the right by k steps, where k is non-negativale.
 //Example 1:
 //Input: nums = [1,2,3,4,5,6,7], k = 3
 //resultput: [5,6,7,1,2,3,4]
@@ -5109,8 +5109,8 @@ console.log(rotate(arr, k));
 //================================================================================
 // Question:-231
 //Find First and Last Position of Element in Sorted Array
-//Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of
-//a given target value.
+//Givalen an array of integers nums sorted in non-decreasing order, find the starting and ending position of
+//a givalen target valalue.
 //If target is not found in the array, return [-1, -1].
 //You must write an algorithm with O(log n) runtime complexity.
 //Example 1:
@@ -5143,7 +5143,7 @@ let target = 12;
 console.log(searchRange(arr, target));
 
 //=======================================================================================
-//Given n>=0, create an array length n*n with the following pattern, show
+//Givalen n>=0, create an array length n*n with the following pattern, show
 //n here for n=3 : {0, 0, 1,    0, 2, 1,    3, 2, 1} (spaces added to show the 3 groups).
 
 //squareUp(3) → [0, 0, 1, 0, 2, 1, 3, 2, 1]
@@ -5230,7 +5230,7 @@ function heigestPair(arr) {
 
 
   //--------------------------------------------------------
-  // for (var i = 0; i < arr.length; i++) {
+  // for (valar i = 0; i < arr.length; i++) {
   //   if (map.has(arr[i])) {
   //     map.set(arr[i], map.get(arr[i]) + 1);
   //   } else {
@@ -5295,9 +5295,9 @@ console.log(heigestPair(arr));
 
 //========================================================================================
 //Balanced Words
-//We can assign a value to each character in a word, based on their position in the alphabet
-// (a = 1, b = 2, ... , z = 26). A balanced word is one where the sum of values on the left-hand side of the word
-//equals the sum of values on the right-hand side. For odd length words, the middle character (balance point) is ignored.
+//We can assign a valalue to each character in a word, based on their position in the alphabet
+// (a = 1, b = 2, ... , z = 26). A balanced word is one where the sum of valalues on the left-hand side of the word
+//equals the sum of valalues on the right-hand side. For odd length words, the middle character (balance point) is ignored.
 //Write a function that returns true if the word is balanced, and false if it's not.
 //Examples
 //balanced("zips") ➞ true
@@ -5351,7 +5351,7 @@ let n = 5;
 console.log(diamondArrays(n));
 
 //==========================================================================================
-// given an string find result how  many character are repeated.
+// givalen an string find result how  many character are repeated.
 //let str="abccdb"
 // a==1
 // b==2
@@ -5452,7 +5452,7 @@ let str = 'wonderful';
 console.log(decode(str));
 
 //==========================================================================================
-// Given an array of strings nums containing n unique binary strings each of length n, return a binary string
+// Givalen an array of strings nums containing n unique binary strings each of length n, return a binary string
 //of length n that does not appear in nums. If there are multiple answers, you may return any of them.
 //Example 1:
 //Input: nums = ["01","10"]
@@ -5515,7 +5515,7 @@ generatrBinaryString(n, arr, 0);
 
 //==========================================================================================
 // Minimum Number of Steps to Make Two Strings Anagram II
-//You are given two strings s and t. In one step, you can append any character to either s or t.
+//You are givalen two strings s and t. In one step, you can append any character to either s or t.
 //Return the minimum number of steps to make s and t anagrams of each other.
 //An anagram of a string is a string that contains the same characters with a different (or the same) ordering.
 //Example 1:
@@ -5530,7 +5530,7 @@ generatrBinaryString(n, arr, 0);
 //Example 2:
 //Input: s = "night", t = "thing"
 //Output: 0
-//Explanation: The given strings are already anagrams of each other. Thus, we do not need any further steps.
+//Explanation: The givalen strings are already anagrams of each other. Thus, we do not need any further steps.
 //"cotxazilut"
 //"nahrrmcchxwrieqqdwdpneitkxgnt"
 //
@@ -5587,7 +5587,7 @@ console.log(minStep(s, t));
 //let st = str.splice(1, 1);
 //console.log(st);
 
-function removeOccourecence(s, part) {
+function removaleOccourecence(s, part) {
   let stack = [];
 
   // stack.push(10);
@@ -5598,5 +5598,816 @@ function removeOccourecence(s, part) {
     if (res.length == part.length) {
       stack.push(res);
       if (stack[0] == part) {
-  
+        stack.pop();
+        res = '';
+      } else {
+        res = '';
+      }
+    } else {
+      res += s[i];
+    }
+  }
+  console.log(stack);
+}
+let s = 'axxxxyyyyb';
+let part = 'xy';
+console.log(removaleOccourecence(s, part));
+
 //===================================================================================
+
+function removaleOccourecence(s, part) {
+  while (s.includes(part)) {
+    s = s.replace(part, '');
+  }
+  return s;
+}
+
+let s = 'axxxxyyyyb';
+let part = 'xy';
+console.log(removaleOccourecence(s, part));
+
+//===================================================================================
+
+function numOfPair(arr, target) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] == target) {
+        count++;
+      }
+      if (arr[j] + arr[i] == target) {
+        count++;
+      }
+    }
+  }
+  return count;
+}
+
+let arr = ['777', '7', '77', '77'];
+let target = '7777';
+console.log(numOfPair(arr, target));
+
+//==========================================================================================
+
+// function smallest_Subsequence(str) {
+//   let set = new Set(str);
+//   let arr = Array.from(set);
+//   let res = '';
+//   for (let i = 0; i < arr.length; i++) {
+//     res += arr[i];
+//   }
+//   return res;
+// }
+
+// let str = 'bcabc'; //bca
+// console.log(smallest_Subsequence(str));
+//----------------------------------------------------------------------------------------
+let A = ['sandeep'];
+ function serial (A){
+    let ans = '';
+    let i =0;
+    let count=0;
+    while ( i<A.length){
+      ans+=A[i];
+ans+=count
+      ans+='~';
+      count++;
+      i++
+    
+    }
+    
+    return ans;
+  }
+  console.log(serial(A));
+
+//========================================================================================
+// Monotonic Stack:-
+// A monotonic stack is a stack whose elements are monotonically increasing or decreasing. It contains all
+//qualities that a typical stack has and its elements are all monotonic decreasing or increasing.
+//Below are the features of a monotonic stack:
+//It is a range of queries in an array situation
+//The minima/maxima elements
+//When an element is popped from the monotonic stack, it will nevaler be utilised again.
+// Example:---
+
+function monotonic_Stack(arr) {
+  let stack = [];
+  for (let i = 0; i < arr.length; i++) {
+    while (stack.length != 0 && stack[stack.length - 1] > arr[i]) {
+      stack.pop();
+    }
+    stack.push(arr[i]);
+  }
+  return stack;
+}
+
+let arr = [2, 3, 7, 11, 5, 17, 19]; //  Answer:-[2, 3, 5, 17, 19]
+console.log(monotonic_Stack(arr));
+
+//---------------------------------------------------------------------------------------------
+//Givalen an array find the next greater element for evalery elements. next greater element of a element
+//in the first greater element on the right side of the array. element for which no greater element
+//exits consider as next greater element is -1.
+
+//brute force approach
+
+function next_Greater_Element(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    let nextGreaterEle = -1;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] < arr[j]) {
+        nextGreaterEle = arr[j];
+        break;
+      }
+    }
+    // result[i] = nextGreaterEle;
+    result.push(nextGreaterEle);
+  }
+  return result;
+}
+
+let arr = [3, 2, 8, 7, 6, 17, 12];
+console.log(next_Greater_Element(arr));
+
+//===================================================================================
+// An efficient solution using stack - travalesing from left to right.
+
+function next_Greater_Element(arr) {
+  let le = arr.length;
+  let result = new Array(le).fill(0);
+  let stack = [];
+
+  for (let i = arr.length - 1; i >= 0; i--) {
+    let el = arr[i];
+    // if stack is empty, no next greater element.
+    while (stack.length == 0) {
+      stack.push(el);
+      result[i] = -1;
+      continue;
+    }
+
+    // if top of stack is greater, it is next greater.
+    while (stack[stack.length - 1] > el) {
+      stack.push(el);
+      result[i] = stack[stack.length - 1];
+    }
+
+    // removale all element smaller than element
+    while (stack[stack.length - 1] <= el && stack.length != 0) {
+      stack.pop();
+    }
+
+    if (stack.length == 0) {
+      result[i] = -1;
+    } else {
+      result[i] = stack[stack.length - 1];
+    }
+
+    stack.push(el);
+  }
+  return result;
+}
+
+let arr = [1, 3, 4, 1, 2];
+//let arr = [6, 4, 3, 8, 7, 12, 15, 16, 2, 1, 5, 11, 13, 9];
+console.log(next_Greater_Element(arr));
+
+//================================================================================================
+
+function nge(arr) {
+  let b = new Array(arr.length).fill(-1);
+  let stack = [];
+  stack.push(0);
+  for (let i = 1; i < arr.length; i++) {
+    while (stack.length != 0 && stack[stack.length - 1] < arr[i]) {
+      b[i] = arr[i];
+      stack.pop();
+    }
+    stack.push(i);
+  }
+  return b;
+}
+
+let arr = [13, 7, 6, 12, 10];
+console.log(nge(arr));
+
+//=============================================================================================
+// Sevalen Ate Nine
+//A number can eat the number to the right of it if it's smaller than itself. After eating that number,
+// it becomes the sum of itself and that number. Your job is to create a function that returns the final
+// array after the leftmost element has finished "eating".
+//Examples
+//[5, 3, 7] ➞ [8, 7] ➞ [15]
+// 5 eats 3 to become 8
+// 8 eats 7 to become 15
+
+function nomNam(arr) {
+  // let le = arr.length;
+  while (arr.length != 1) {
+    if (arr[0] > arr[1]) {
+      arr[1] = arr[0] + arr[1];
+      arr = arr.slice(1);
+    } else {
+      break;
+    }
+  }
+  return arr;
+}
+
+//let arr = [1, 2, 3];
+let arr = [9, 8, 60, 2, 50];
+console.log(nomNam(arr));
+
+//===================================================================================
+// Product of Remaining Elements
+//Write a function that returns true if you can partition an array into one element and the rest,
+// such that this element is equal to the product of all other elements excluding itself.
+//Examples
+//canPartition([2, 8, 4, 1]) ➞ true
+// 8 = 2 x 4 x 1
+//canPartition([-1, -10, 1, -2, 20]) ➞ false
+
+//canPartition([-1, -20, 5, -1, -2, 2]) ➞ true
+
+function canPartitions(arr) {
+  let flag = false;
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    let product = 1;
+    for (let j = 0; j < arr.length; j++) {
+      //  product = 1;
+      if (i == j) {
+        continue;
+      }
+      product *= arr[j];
+    }
+    if (el == product) flag = true;
+  }
+  return flag;
+}
+
+let arr = [-1, -20, 5, -1, -2, 2];
+console.log(canPartitions(arr));
+
+//==================================================================================
+function nge(arr) {
+  let nextGreaterEle = new Array(arr.length);
+  let stack = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (stack.length == 0) {
+      stack.push(i);
+    }
+
+    while (stack.length > 0 && arr[i] > arr[stack[stack.length - 1]]) {
+      let po = stack.pop();
+      nextGreaterEle[po] = arr[i];
+    }
+    stack.push(i);
+  } // for loop end
+  while (stack.length != 0) {
+    // this loop will be handle only -1 valalue
+    let po = stack.pop(); // where -1 valalue want to put up.
+    nextGreaterEle[po] = -1;
+  }
+  return nextGreaterEle;
+}
+
+let arr = [13, 7, 6, 12, 10];
+console.log(nge(arr));
+
+//=========================================================================================
+// Example 1:
+//Input: nums1 = [4,1,2], nums2 = [1,3,4,2]
+//Output: [-1,3,-1]
+//Explanation: The next greater element for each value of nums1 is as follows:
+//- 4 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
+//- 1 is underlined in nums2 = [1,3,4,2]. The next greater element is 3.
+//- 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
+//Example 2:
+//Input: nums1 = [2,4], nums2 = [1,2,3,4]
+//Output: [3,-1]
+//Explanation: The next greater element for each value of nums1 is as follows:
+//- 2 is underlined in nums2 = [1,2,3,4]. The next greater element is 3.
+//- 4 is underlined in nums2 = [1,2,3,4]. There is no next greater element, so the answer is -1.
+
+function nextGreaterElement(nums1, nums2) {
+  let result = [];
+  for (let val of nums1) {
+    const index = nums2.indexOf(val);
+    let find = false;
+    for (let j = index + 1; j < nums2.length; j++) {
+      if (nums2[j] > val) {
+        result.push(nums2[j]);
+        find = true;
+        break;
+      }
+    }
+    if (find == false) {
+      result.push(-1);
+    }
+  }
+  return result;
+}
+
+let nums1 = [4, 1, 2];
+let nums2 = [1, 3, 4, 2];
+console.log(nextGreaterElement(nums1, nums2));
+
+//==========================================================================================
+// Input: nums = [1,2,1]
+//Output: [2,-1,2]
+//Explanation: The first 1's next greater number is 2;
+//The number 2 can't find next greater number.
+//The second 1's next greater number needs to search circularly, which is also 2.
+//Example 2:
+//Input: nums = [1,2,3,4,3]
+//Output: [2,3,4,-1,4]
+
+function nextGreaterElement_II(arr) {
+  let updateArr = new Array();
+  for (let i = 0; i < arr.length; i++) {
+    updateArr.push(arr[i]);
+  }
+  for (let i = 0; i < arr.length; i++) {
+    updateArr.push(arr[i]);
+  }
+  console.log(updateArr);
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    let flag = false;
+    for (let j = i + 1; j < updateArr.length; j++) {
+      if (updateArr[j] > arr[i]) {
+        result.push(updateArr[j]);
+        flag = true;
+        break;
+      }
+    }
+    if (flag == false) result.push(-1);
+  }
+  return result;
+}
+
+let arr = [1, 5, 3, 6, 8];
+console.log(nextGreaterElement_II(arr));
+
+//======================================================================================
+// 137. Single Number II
+//Given an integer array nums where every element appears three times except for one, which appears exactly once.
+//Find the single element and return it.
+//You must implement a solution with a linear runtime complexity and use only constant extra space.
+//Input: nums = [2,2,3,2]
+//Output: 3
+//Example 2:
+//Input: nums = [0,1,0,1,0,1,99]
+//Output: 99
+
+function singleNumber_II(arr) {
+  let res = [];
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    if (res[el]) {
+      res[el]++;
+    } else {
+      res[el] = 1;
+    }
+  }
+  // console.log(res);
+  for (let val in res) {
+    if (res[val] == 1) {
+      return val;
+    }
+  }
+}
+
+let arr = [0, 1, 0, 1, 0, 1, 99];
+console.log(singleNumber_II(arr));
+
+//==============================================================================================
+
+//Input: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5
+//Output: true
+
+//Input: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20
+//Output: false
+
+function searchEle(row, col) {
+  let arr = [
+    1, 4, 7, 11, 15, 2, 5, 8, 12, 19, 3, 6, 9, 16, 22, 10, 13, 14, 17, 24, 18,
+    21, 23, 26, 30,
+  ];
+  let target = 5;
+  let matrix = [];
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+  // console.log(matrix);
+
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+  //console.log(matrix);
+  let flag = false;
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] == target) flag = true;
+    }
+  }
+  return flag;
+}
+let row = 5;
+let col = 5;
+console.log(searchEle(row, col));
+
+//=============================================================================================
+// Input: nums1 = [2,1,3], nums2 = [10,2,5,0]
+//Output: 13
+//Explanation:
+//A possible nums3 array is [8,0,7,2,11,3,4,1,9,1,6,3].
+//The bitwise XOR of all these numbers is 13, so we return 13.
+//Example 2:
+//Input: nums1 = [1,2], nums2 = [3,4]
+//Output: 0
+//Explanation:
+//All possible pairs of bitwise XORs are nums1[0] ^ nums2[0], nums1[0] ^ nums2[1], nums1[1] ^ nums2[0],
+//and nums1[1] ^ nums2[1].
+//Thus, one possible nums3 array is [2,5,1,6].
+//2 ^ 5 ^ 1 ^ 6 = 0, so we return 0.
+
+function xorAllNumber(arr) {
+  let xor = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      console.log(arr1[i], arr2[j]);
+      let xor1 = arr1[i] ^ arr2[j];
+      xor ^= xor1;
+    }
+  }
+  return xor;
+}
+
+let arr1 = [2, 1, 3];
+let arr2 = [10, 2, 5, 0];
+console.log(xorAllNumber(arr1, arr2));
+
+//============================================================================================
+// Use three nested loops.
+//Outer loops will decide the starting point of a sub-array, call it as startPoint.
+//First inner loops will decide the group size (sub-array size). Group size starting from 1 and goes up array size.
+//Let’s call is as grps.
+//The most inner loop will actually print the sub-array by iterating the given array from startPoint and print
+//the next grps elements
+function sumOddLengthSubArray(arr) {
+  let sum = 0;
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    // startPoint
+    for (let j = i; j <= arr.length; j++) {
+      // grps
+      for (let k = i; k < j; k++) {
+        // subarray from start point and print next grps
+        result.push(arr[k]);
+      }
+      if (result.length % 2 == 1) {
+        for (let z = 0; z < result.length; z++) {
+          sum += result[z];
+        }
+      }
+      console.log(result);
+      result = [];
+    }
+  }
+  return sum;
+}
+
+let arr = [1, 4, 2, 5, 3];
+console.log(sumOddLengthSubArray(arr));
+
+//==============================================================================================
+// 78. Subsets
+//Given an integer array nums of unique elements, return all possible subsets (the power set).
+//The solution set must not contain duplicate subsets. Return the solution in any order.
+//Example 1:
+//Input: nums = [1,2,3]
+//Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+//Example 2:
+//Input: nums = [0]
+//Output: [[],[0]]
+
+function subset_(arr) {
+  let result = [];
+  let answer = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i; j < arr.length; j++) {
+      for (let k = i; k <= j; k++) {
+        result.push(arr[k]);
+      }
+      //  console.log(result);
+      answer.push(result);
+      result = [];
+    }
+  }
+  console.log(answer);
+  let final_ = [];
+  final_.push([]);
+
+  //console.log(answer[2].length); //2
+  for (let i = 0; i < answer.length; i++) {
+    if (answer[i].length == 0) {
+    } else {
+      final_.push(answer[i]);
+    }
+  }
+  return final_;
+
+  // for (let i = 1; i < answer.length; i++) {
+  //   for(let j=i;j<answer[il.length;j++){
+  //     if()
+  //   }
+  //  return answer;
+
+  // for (let i = 0; i < answer.length; i++) {
+  //   console.log(answer[i]);
+  // }
+  // console.log(answer[0]);
+  // console.log(answer[1]);
+  // console.log(answer[2]);
+  // console.log(answer[3]);
+  // console.log(answer[4]);
+  // console.log(answer[5]);
+  // console.log(answer[6]);
+
+  // for (let i = 1; i < answer.length; i++) {
+  //   if (answer[i].length != 0) {
+  //     final_.push(answer[i]);
+  //   }
+  // }
+  // return answer;
+}
+
+let arr = [1, 2, 3];
+console.log(subset_(arr));
+
+//============================================================================================
+// 907. Sum of Subarray Minimums
+//Given an array of integers arr, find the sum of min(b), where b ranges over every (contiguous) subarray of arr.
+//Since the answer may be large, return the answer modulo 109 + 7.
+//Example 1:
+//Input: arr = [3,1,2,4]
+//Output: 17
+//Explanation:
+//Subarrays are [3], [1], [2], [4], [3,1], [1,2], [2,4], [3,1,2], [1,2,4], [3,1,2,4].
+//Minimums are 3, 1, 2, 4, 1, 1, 2, 1, 1, 1.
+//Sum is 17.
+//Example 2:
+//Input: arr = [11,81,94,43,3]
+//Output: 444
+
+//========================================================================================
+// Example 1:
+//Input: names = ["Mary","John","Emma"], heights = [180,165,170]
+//Output: ["Mary","Emma","John"]
+//Explanation: Mary is the tallest, followed by Emma and John.
+//Example 2:
+//Input: names = ["Alice","Bob","Bob"], heights = [155,185,150]
+//Output: ["Bob","Alice","Bob"]
+//Explanation: The first Bob is the tallest, followed by Alice and the second Bob
+
+function sortPeople(name, heights) {
+  let arr = [];
+  for (let i = 0; i < name.length; i++) {
+    arr.push(heights[i]);
+    arr.push(name[i]);
+  }
+  let row = heights.length;
+  let col = name.length;
+
+  let matrix = new Array(row);
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(2);
+  }
+
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < 2; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+  // return matrix;
+  let newRes = [];
+  for (let i = 0; i < matrix.length; i++) {
+    newRes.push({ Num: matrix[i][0], Name: matrix[i][1] });
+  }
+  // return newRes;
+  newRes.sort(function (a, b) {
+    return b.Num - a.Num;
+  });
+  console.log(newRes);
+
+  let result = [];
+  for (let val of newRes) {
+    result.push(val.Name);
+  }
+  return result;
+}
+
+let name = ['Marry', 'John', 'Emma'];
+let heights = [180, 165, 170];
+
+console.log(sortPeople(name, heights));
+
+//=================================================================================
+
+function findOne(num) {
+  let gate_1;
+  num = num / 2;
+  gate_1 = num + 1;
+  num -= 1;
+
+  let gate_2;
+  num = num / 2;
+  gate_2 = num + 1;
+  num--;
+
+  let gate_3;
+  num = num / 2;
+  gate_3 = num + 1;
+  num--;
+
+  return num;
+}
+
+let num = 22;
+console.log(findOne(num));
+
+//=====================================================================================
+// Given an array of integers nums, return the number of good pairs.
+//A pair (i, j) is called good if nums[i] == nums[j] and i < j.
+//Example 1:
+//Input: nums = [1,2,3,1,1,3]
+//Output: 4
+//Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.
+//Example 2:
+//Input: nums = [1,1,1,1]
+//Output: 6
+//Explanation: Each pair in the array are good.
+//Example 3:
+//Input: nums = [1,2,3]
+//Output: 0
+function goodPair(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        count++;
+      }
+    }
+  }
+  return count;
+}
+
+let arr = [1, 2, 3];
+console.log(goodPair(arr));
+
+//=========================================================================================
+// Given an integer array nums, return the most frequent even element.
+//If there is a tie, return the smallest one. If there is no such element, return -1.
+//Example 1:
+//Input: nums = [0,1,2,2,4,4,1]
+//Output: 2
+//Explanation:
+//The even elements are 0, 2, and 4. Of these, 2 and 4 appear the most.
+//We return the smallest one, which is 2.
+//Example 2:
+//Input: nums = [4,4,4,9,2,4]
+//Output: 4
+//Explanation: 4 is the even element appears the most.
+// Example 3:
+//Input: nums = [29,47,21,41,13,37,25,7]
+//Output: -1
+//Explanation: There is no even element.
+
+function mostFrequentEven(arr) {
+  let freq = [];
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    if (freq[el]) {
+      freq[el]++;
+    } else {
+      freq[el] = 1;
+    }
+  }
+  console.log(freq);
+
+  for (let ell of freq) {
+    if (freq[ell] % 2 == 0) {
+      if (ell == 1) {
+        return 2;
+      } else {
+        return ell;
+      }
+    }
+  }
+  return -1;
+}
+
+let arr = [4, 4, 4, 9, 2, 4];
+console.log(mostFrequentEven(arr));
+*/
+//=========================================================================================
+//Input: arr = [0,1,2,3,4,5,6,7,8]
+//Output: [0,1,2,4,8,3,5,6,7]
+//Explantion: [0] is the only integer with 0 bits.
+//[1,2,4,8] all have 1 bit.
+//[3,5,6] have 2 bits.
+//[7] has 3 bits.
+//The sorted array by bits is [0,1,2,4,8,3,5,6,7]
+//Example 2:
+//Input: arr = [1024,512,256,128,64,32,16,8,4,2,1]
+//Output: [1,2,4,8,16,32,64,128,256,512,1024]
+//Explantion: All integers have 1 bit in the binary representation, you should just sort them in ascending order.
+
+// function sortBasedOnBinary(arr) {}
+
+// let arr = [0, 1, 2, 3, 4, 5, 7, 8];
+// console.log(sortBasedOnBinary(arr));
+
+// function countOne(n) {
+//   if (n == 0) {
+//     return n;
+//   }
+//   let setBitCount = 0;
+//   while (n != 0) {
+//     n = n & (n - 1);
+//     setBitCount++;
+//   }
+//   return setBitCount;
+// }
+// let n = 8;
+// console.log(countOne(n));
+
+//-----------------------------------------------------------------------------------------------
+
+function countSetBit_Function(n) {
+  let setBitCount = 0;
+  if (n == 1) return n;
+  while (n != 0) {
+    n = n & (n - 1);
+    setBitCount++;
+  }
+  return setBitCount;
+}
+
+function sortBasedOnBinary(arr) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  console.log(arr);
+  let resArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let countOneBit = countSetBit_Function(arr[i]);
+    resArr.push(countOneBit);
+    resArr.push(arr[i]);
+  }
+  // return resArr;
+  let matrix = [];
+  for (let i = 0; i < arr.length; i++) {
+    matrix[i] = new Array(2);
+  }
+  let k = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < 2; j++) {
+      matrix[i][j] = resArr[k];
+      k++;
+    }
+  }
+  console.log(matrix);
+  let res = [];
+  for (let i = 0; i < matrix.length; i++) {
+    res.push({ countOneBIT: matrix[i][0], arrayNumber: matrix[i][1] });
+  }
+  console.log(res);
+
+  res.sort(function (a, b) {
+    return a.countOneBIT - b.countOneBIT;
+  });
+
+  console.log(res);
+
+  let finalRES = [];
+
+  for (let el of res) {
+    finalRES.push(el.arrayNumber);
+  }
+  //console.log(finalRES);
+  return finalRES;
+}
+// let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+let arr = [1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1];
+console.log(sortBasedOnBinary(arr));
