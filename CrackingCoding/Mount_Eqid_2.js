@@ -4379,9 +4379,9 @@ console.log(square56(arr));
 
 //=============================================================================================
 // Question:-209
-// Givalen a string, count the number of words ending in 'y' or 'z' -- so the 'y' in "heavaly" and the 'z'
+// Givalen a string, count the number of wordss ending in 'y' or 'z' -- so the 'y' in "heavaly" and the 'z'
 //in "fez" count, but not the 'y' in "yellow" (not case sensitivale). We'll say that a y or z is at the
-//end of a word if there is not an alphabetic letter immediately following it. (Note: Character.isLetter(char)
+//end of a words if there is not an alphabetic letter immediately following it. (Note: Character.isLetter(char)
 // tests if a char is an alphabetic letter.)
 
 //countYZ("fez day") → 2
@@ -4612,8 +4612,8 @@ console.log(sameEnds(str));
 
 //========================================================================================
 // Question:-216
-// Givalen a string, return a string where evalery appearance of the lowercase word "is" has been replaced with
-//"is not". The word "is" should not be immediately preceeded or followed by a letter -- so for example the
+// Givalen a string, return a string where evalery appearance of the lowercase words "is" has been replaced with
+//"is not". The words "is" should not be immediately preceeded or followed by a letter -- so for example the
 //"is" in "this" does not count. (Note: Character.isLetter(char) tests if a char is a letter.)
 
 //notReplace("is test") → "is not test"
@@ -5294,11 +5294,11 @@ let arr = ['a', 'a', 'q', 'q', '6'];
 console.log(heigestPair(arr));
 
 //========================================================================================
-//Balanced Words
-//We can assign a valalue to each character in a word, based on their position in the alphabet
-// (a = 1, b = 2, ... , z = 26). A balanced word is one where the sum of valalues on the left-hand side of the word
-//equals the sum of valalues on the right-hand side. For odd length words, the middle character (balance point) is ignored.
-//Write a function that returns true if the word is balanced, and false if it's not.
+//Balanced wordss
+//We can assign a valalue to each character in a words, based on their position in the alphabet
+// (a = 1, b = 2, ... , z = 26). A balanced words is one where the sum of valalues on the left-hand side of the words
+//equals the sum of valalues on the right-hand side. For odd length wordss, the middle character (balance point) is ignored.
+//Write a function that returns true if the words is balanced, and false if it's not.
 //Examples
 //balanced("zips") ➞ true
 // "zips" = "zi|ps" = 26+9|16+19 = 35|35 = true
@@ -6319,7 +6319,7 @@ function mostFrequentEven(arr) {
 
 let arr = [4, 4, 4, 9, 2, 4];
 console.log(mostFrequentEven(arr));
-*/
+
 //=========================================================================================
 //Input: arr = [0,1,2,3,4,5,6,7,8]
 //Output: [0,1,2,4,8,3,5,6,7]
@@ -6411,3 +6411,997 @@ function sortBasedOnBinary(arr) {
 // let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 let arr = [1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1];
 console.log(sortBasedOnBinary(arr));
+
+//===========================================================================================
+// Input: nums = [2,1,3,3], k = 2
+//Output: [3,3]
+//Explanation:
+//The subsequence has the largest sum of 3 + 3 = 6.
+//Example 2:
+//Input: nums = [-1,-2,3,4], k = 3
+//Output: [-1,3,4]
+//Explanation: 
+//The subsequence has the largest sum of -1 + 3 + 4 = 6.
+//Example 3:
+//Input: nums = [3,4,3,3], k = 2
+//Output: [3,4]
+//Explanation:
+//The subsequence has the largest sum of 3 + 4 = 7. 
+//Another possible subsequence is [4, 3].
+function numOfSubArray(nums, k) {
+  let n = nums.length;
+  let min;
+  let index;
+  for (let i = 0; i < n - k; i++) {
+    min = Math.min(...nums);
+    index = nums.indexOf(min);
+    nums.splice(index, 1);
+  }
+  return nums;
+}
+
+let arr = [2, 1, 3, 3];
+let k = 2;
+console.log(numOfSubArray(arr, k));
+
+//=========================================================================================
+//  Kth Largest Element in an Array
+//Given an integer array nums and an integer k, return the kth largest element in the array.
+//Note that it is the kth largest element in the sorted order, not the kth distinct element.
+//You must solve it in O(n) time complexity.
+//Example 1:
+//Input: nums = [3,2,1,5,6,4], k = 2
+//Output: 5
+//Example 2:
+//Input: nums = [3,2,3,1,2,4,5,5,6], k = 4
+//Output: 4
+
+function kthLargestElement(arr) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+
+  return arr[arr.length - k];
+}
+let arr = [3, 2, 1, 5, 6, 4];
+let k = 2;
+console.log(kthLargestElement(arr));
+
+//==========================================================================================
+// Given an integer array nums, return the third distinct maximum number in this array. If the third maximum does
+// not exist, return the maximum number.
+//Example 1:
+//Input: nums = [3,2,1]
+//Output: 1
+//Explanation:
+//The first distinct maximum is 3.
+//The second distinct maximum is 2.
+//The third distinct maximum is 1.
+//Example 2:
+//Input: nums = [1,2]
+//Output: 2
+//Explanation:
+//The first distinct maximum is 2.
+//The second distinct maximum is 1.
+//The third distinct maximum does not exist, so the maximum (2) is returned instead.
+// Example 3:
+//Input: nums = [2,2,3,1]
+//Output: 1
+//Explanation:
+//The first distinct maximum is 3.
+//The second distinct maximum is 2 (both 2's are counted together since they have the same value).
+//The third distinct maximum is 1.
+
+function thirdMaximum(arr) {
+  let set = new Set(arr);
+  let newArr = Array.from(set);
+  let n = newArr.length;
+  let l = n - 3;
+  newArr.sort(function (a, b) {
+    return a - b;
+  });
+
+  if (newArr.length == 1) return newArr[0];
+  else if (newArr.length == 2) return newArr[1];
+  else if (newArr.length > 2) return newArr[l];
+}
+
+let arr = [3, 2, 1, 1];
+console.log(thirdMaximum(arr));
+
+//=============================================================================================
+// 389. Find the Difference
+//You are given two strings s and t.
+//String t is generated by random shuffling string s and then add one more letter at a random position.
+//Return the letter that was added to t.
+//Example 1:
+//Input: s = "abcd", t = "abcde"
+//Output: "e"
+//Explanation: 'e' is the letter that was added.
+//Example 2:
+//Input: s = "", t = "y"
+//Output: "y"
+
+function findTheDifference(s, t) {
+  let strAscii = [];
+  let str_t_ascii = [];
+  for (let i = 0; i < s.length; i++) {
+    let convert = s.charCodeAt(i);
+    strAscii.push(convert);
+  }
+  for (let i = 0; i < t.length; i++) {
+    let convert = t.charCodeAt(i);
+    str_t_ascii.push(convert);
+  }
+
+  let xor = 0;
+  for (let i = 0; i < strAscii.length; i++) {
+    xor ^= strAscii[i];
+  }
+
+  for (let i = 0; i < str_t_ascii.length; i++) {
+    xor ^= str_t_ascii[i];
+  }
+
+  return String.fromCharCode(xor);
+}
+
+let s = 'abcd';
+let t = 'abcde';
+console.log(findTheDifference(s, t));
+
+//==========================================================================================
+//Example 1:
+//Input: arr = [1,3,5]
+//Output: 4
+//Explanation: All subarrays are [[1],[1,3],[1,3,5],[3],[3,5],[5]]
+//All sub-arrays sum are [1,4,9,3,8,5].
+//Odd sums are [1,9,3,5] so the answer is 4.
+//Example 2:
+//Input: arr = [2,4,6]
+//Output: 0
+//Explanation: All subarrays are [[2],[2,4],[2,4,6],[4],[4,6],[6]]
+//All sub-arrays sum are [2,6,12,4,10,6].
+//All sub-arrays have even sum and the answer is 0.
+//Example 3:
+//Input: arr = [1,2,3,4,5,6,7]
+//Output: 16
+
+function numOfSubArray(arr) {
+  let subarray = [];
+  let answer = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i; j < arr.length; j++) {
+      for (let k = i; k <= j; k++) {
+        subarray.push(arr[k]);
+      }
+      answer.push(subarray);
+      subarray = [];
+    }
+  }
+  console.log(answer.length);
+  let res = [];
+  let sum = 0;
+  for (let i = 0; i < answer.length; i++) {
+    sum = 0;
+    for (let j = 0; j < answer[i].length; j++) {
+      sum = sum + answer[i][j];
+    }
+    res.push(sum);
+  }
+  let count = 0;
+  for (let i = 0; i < res.length; i++) {
+    if (res[i] % 2 != 0) {
+      count++;
+    }
+  }
+  return count;
+}
+
+let arr = [1, 3, 5];
+console.log(numOfSubArray(arr));
+
+//----------------------------------------------------------------------------------------------------
+
+function printArray(arr, currentIndex) {
+  if (currentIndex == arr.length) {
+    return;
+  }
+
+  let result = '';
+  for (let i = currentIndex; i < arr.length; i++) {
+    result += arr[i];
+    console.log(result);
+  }
+  printArray(arr, currentIndex + 1);
+}
+
+function numOfSubArray(arr) {
+  let res = printArray(arr, 0);
+  return res;
+}
+
+let arr = [1, 3, 5];
+console.log(numOfSubArray(arr));
+
+//=======================================================================================
+function numOfSubArray(arr, k) {
+  let subarray = [];
+  let answer = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i; j < arr.length; j++) {
+      for (let k = i; k <= j; k++) {
+        subarray.push(arr[k]);
+      }
+      answer.push(subarray);
+      subarray = [];
+    }
+  }
+  let count = 0;
+  for (let i = 0; i < answer.length; i++) {
+    let sum = 0;
+    for (let j = 0; j < answer[i].length; j++) {
+      sum += answer[i][j];
+    }
+    if (sum == k) {
+      count++;
+    }
+  }
+  return count;
+}
+
+let arr = [1, 2, 3];
+let k = 3;
+console.log(numOfSubArray(arr, k));
+
+//======================================================================================
+
+function hourGlassMaxSum(row, col) {
+  let arr = [
+    2, 3, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 2, 4, 4, 0, 0, 0, 2, 0,
+  ];
+  let matrix = [];
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+
+  let top_1, top_2, top_3, center, bottom_1, bottom_2, bottom_3;
+  let maxSum = Number.MIN_VALUE;
+  for (let i = 0; i < matrix.length - 2; i++) {
+    for (let j = 0; j < matrix[i].length - 2; j++) {
+      //  let sum = 0;
+      top_1 = matrix[i][j];
+      top_2 = matrix[i][j + 1];
+      top_3 = matrix[i][j + 2];
+      center = matrix[i + 1][j + 1];
+      bottom_1 = matrix[i + 2][j];
+      bottom_2 = matrix[i + 2][j + 1];
+      bottom_3 = matrix[i + 2][j + 2];
+      let sum = top_1 + top_2 + top_3 + center + bottom_1 + bottom_2 + bottom_3;
+      if (sum > maxSum) {
+        maxSum = sum;
+      }
+    }
+  }
+  return maxSum;
+}
+
+let row = 5;
+let col = 5;
+console.log(hourGlassMaxSum(row, col));
+
+//=========================================================================================
+// 1991. Find the Middle Index in Array
+
+function findMiddleIndex(arr) {
+  sum=0;
+  for(let e of nums){
+      sum+=e;
+  }
+  let x=0;
+  let index=-1
+  for(let i=0;i<nums.length;i++){
+      if(2*x==sum-nums[i]){
+          index=i;
+          break;
+      }
+      x+=nums[i];
+  }
+  return index;
+  
+}
+
+let arr = [2, 3, -1, 8, 4];
+console.log(findMiddleIndex(arr));
+
+//=============================================================================================
+
+// 1380. Lucky Numbers in a Matrix
+//Given an m x n matrix of distinct numbers, return all lucky numbers in the matrix in any order.
+//A lucky number is an element of the matrix such that it is the minimum element in its row and maximum in its column.
+//Example 1:
+//Input: matrix = [[3,7,8],[9,11,13],[15,16,17]]
+//Output: [15]
+//Explanation: 15 is the only lucky number since it is the minimum in its row and the maximum in its column.
+//Example 2:
+//Input: matrix = [[1,10,4,2],[9,3,8,7],[15,16,17,12]]
+//Output: [12]
+//Explanation: 12 is the only lucky number since it is the minimum in its row and the maximum in its column.
+//Example 3:
+//Input: matrix = [[7,8],[1,2]]
+//Output: [7]
+//Explanation: 7 is the only lucky number since it is the minimum in its row and the maximum in its column.
+
+function luckyNumber(row, col) {
+  let arr = [1, 10, 4, 2, 9, 3, 8, 7, 15, 16, 17, 12];
+  let matrix = [];
+
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+  console.log(matrix);
+  let row_1 = matrix.length; // 3
+  let col_1 = matrix[0].length; //4
+  console.log(row_1, col_1);
+  let minRowMaxColArr = [];
+  for (let i = 0; i < matrix.length; i++) {
+    let min = Number.MAX_VALUE;
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (min > matrix[i][j]) {
+        min = matrix[i][j];
+      }
+    }
+    minRowMaxColArr.push(min);
+  }
+  console.log(minRowMaxColArr);
+
+  //  let maxColArr = [];
+  for (let j = 0; j < col_1; j++) {
+    let max = Number.MIN_VALUE;
+    for (let i = 0; i < matrix.length; i++) {
+      if (max < matrix[i][j]) {
+        max = matrix[i][j];
+      }
+    }
+    minRowMaxColArr.push(max);
+  }
+  console.log(minRowMaxColArr);
+  let result = [];
+  let map = [];
+  for (let i = 0; i < minRowMaxColArr.length; i++) {
+    let el = minRowMaxColArr[i];
+    if (map[el]) {
+      map[el]++;
+    } else {
+      map[el] = 1;
+    }
+  }
+  console.log(map);
+
+  for (let ell in map) {
+    if (map[ell] > 1) {
+      result.push(ell);
+    }
+  }
+  return result;
+}
+
+let row = 3;
+let col = 4;
+console.log(luckyNumber(row, col));
+
+//=============================================================================================
+
+// prefix sum array creation:-
+
+function funPrefixArr(arr) {
+  let prefixArr = [];
+  prefixArr[0] = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    prefixArr[i] = arr[i] + prefixArr[i - 1];
+  }
+  return prefixArr;
+}
+
+let arr = [1, 2, 3, 4, 5, 6];
+console.log(funPrefixArr(arr));
+
+//------------------------------------------------------------------------------------------
+// Input: arr = [1,3,4,8], queries = [[0,1],[1,2],[0,3],[3,3]]
+//Output: [2,7,14,8]
+//Explanation:
+//The XOR values for queries are:
+//[0,1] = 1 xor 3 = 2
+//[1,2] = 3 xor 4 = 7
+//[0,3] = 1 xor 3 xor 4 xor 8 = 14
+//[3,3] = 8
+
+function xorQuaries(arr, row, col) {
+  let matrix = [];
+  // let matrixArr = [0, 1, 1, 2, 0, 3, 3, 3];
+  let matrixArr = [0, 0, 0, 0, 0, 0];
+
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = matrixArr[k];
+      k++;
+    }
+  }
+  console.log(matrix);
+  let answer = [];
+  for (let i = 0; i < matrix.length; i++) {
+    let left = matrix[i][0];
+    let right = matrix[i][1];
+    let xor = 0;
+    if (left == right) {
+      answer.push(arr[left]);
+    } else {
+      for (let j = left; j <= right; j++) {
+        xor ^= arr[j];
+      }
+      answer.push(xor);
+    }
+  }
+  return answer;
+}
+
+//let arr = [1, 3, 4, 8];
+let arr = [16];
+let row = 3;
+let col = 2;
+console.log(xorQuaries(arr, row, col));
+
+//==================================================================================
+
+function numSubArrayWithSum(arr, goal) {
+  let subarray = [];
+  let answer = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i; j < arr.length; j++) {
+      for (let k = i; k <= j; k++) {
+        subarray.push(arr[k]);
+      }
+      answer.push(subarray);
+      subarray = [];
+    }
+  }
+  console.log(answer);
+  let count = 0;
+  let str = '';
+  for (let i = 0; i < answer.length; i++) {
+    for (let j = 0; j < answer[i].length; j++) {
+      str += answer[j];
+    }
+    str = Number(str);
+    let num = parseInt(str, 2);
+    if (num == goal) {
+      count++;
+    }
+    str = '';
+  }
+
+  return count;
+}
+
+let arr = [1, 0, 1, 0, 1];
+let goal = 2;
+console.log(numSubArrayWithSum(arr, goal));
+
+//========================================================================================
+//Example 1:
+//Input: nums = [2,3,5]
+//Output: [4,3,5]
+//Explanation: Assuming the arrays are 0-indexed, then
+//result[0] = |2-2| + |2-3| + |2-5| = 0 + 1 + 3 = 4,
+//result[1] = |3-2| + |3-3| + |3-5| = 1 + 0 + 2 = 3,
+//result[2] = |5-2| + |5-3| + |5-5| = 3 + 2 + 0 = 5.
+//Example 2:
+//Input: nums = [1,4,6,8,10]
+//Output: [24,15,13,15,21]
+
+function getSumAbsoluteDiff(nums) {
+  // let result = [];
+  // for (let i = 0; i < arr.length; i++) {
+  //   let sum = 0;
+  //   let re = 0;
+  //   for (let j = 0; j < arr.length; j++) {
+  //     re = Math.abs(arr[i] - arr[j]);
+  //     sum += re;
+  //   }
+  //   result.push(sum);
+  // }
+  // return result;
+
+  let res = [];
+  let neg = 0;
+  let pos = 0;
+  for (let i = 0; i < nums.length; i++) {
+    pos += nums[i];
+  }
+  for (let i = 0; i < nums.length; i++) {
+    pos -= nums[i];
+    let sum = 0;
+    sum += neg + nums[i] * i;
+    sum += pos - nums[i] * (nums.length - i - 1);
+    res.push(sum);
+    neg -= nums[i];
+  }
+  return res;
+}
+let arr = [2, 3, 5];
+console.log(getSumAbsoluteDiff(arr));
+
+//==============================================================================
+
+function squareOnSorted(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i] * arr[i];
+  }
+  console.log(arr);
+  let result = new Array(arr.length).fill(0);
+  console.log(result);
+
+  let left = 0;
+  let right = arr.length - 1;
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[left] > arr[right]) {
+      result[i] = arr[left];
+      left++;
+    } else {
+      result[i] = arr[right];
+      right--;
+    }
+  }
+  return result;
+}
+
+let arr = [-4, -1, 0, 3, 10];
+console.log(squareOnSorted(arr));
+
+//========================================================================================
+// Input: nums = [4,5,0,-2,-3,1], k = 5
+//Output: 7
+//Explanation: There are 7 subarrays with a sum divisible by k = 5:
+//[4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]
+//Example 2:
+//Input: nums = [5], k = 9
+//Output: 0
+
+function subArrayDivByK(arr, k) {
+  let subarray = [];
+  let answer = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i; j < arr.length; j++) {
+      for (let k = i; k <= j; k++) {
+        subarray.push(arr[k]);
+      }
+      answer.push(subarray);
+      subarray = [];
+    }
+  }
+  console.log(answer);
+
+  let count = 0;
+  let sum = 0;
+  for (let i = 0; i < answer.length; i++) {
+    sum = 0;
+    for (let j = 0; j < answer[i].length; j++) {
+      sum += answer[i][j];
+    }
+    if (sum % k == 0) {
+      count++;
+    }
+  }
+  return count;
+}
+
+let arr = [4, 5];
+let k = 5;
+console.log(subArrayDivByK(arr, k));
+
+//------------------------------------------------------------------------------------
+// Input: ranges = [[1,2],[3,4],[5,6]], left = 2, right = 5
+// Output: true
+// Explanation: Every integer between 2 and 5 is covered:
+// - 2 is covered by the first range.
+// - 3 and 4 are covered by the second range.
+// - 5 is covered by the third range.
+// Example 2:
+
+// Input: ranges = [[1,10],[10,20]], left = 21, right = 21
+// Output: false
+// Explanation: 21 is not covered by any range.
+
+function getCovered(row, col, left, right) {
+  let matrix = [];
+  let arr = [1, 2, 3, 4, 5, 6];
+  let k = 0;
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[k];
+      k++;
+    }
+  }
+  console.log(matrix);
+
+  let arrr = [];
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      arrr.push(matrix[i][j]);
+    }
+  }
+  console.log(arrr);
+  let flag = true;
+  for (let i = left; i <= right; i++) {
+    if (!arr.includes(i)) {
+      flag = false;
+    }
+  }
+
+  return flag;
+
+  //------------------------------------------------------
+  // let count = 0;
+  // for (let i = 0; i < matrix.length; i++) {
+  //   if (matrix[i][0] <= left || matrix[i][1] <= right) {
+  //     count++;
+  //   }
+  // }
+  // if (count == matrix.length) return true;
+  // else {
+  //   return false;
+  // }
+  //------------------------------------------------------------
+  // var t = new Set();
+  // for (let x of matrix) {
+  //   for (let i = x[0]; i <= x[1]; i++) {
+  //     t.add(i);
+  //   }
+  // }
+  // for (let i = left; i <= right; i++) {
+  //   if (!t.has(i)) return false;
+  // }
+
+  // return true;
+  //------------------------------------------------------------
+}
+
+let row = 3;
+let col = 2;
+let left = 2;
+let right = 5;
+console.log(getCovered(row, col, left, right));
+
+//==========================================================================================
+
+// function reverseBITS(n) {
+//   var result = 0;
+//   var count = 32;
+
+//   while (count--) {
+//     result *= 2;
+//     result += n & 1;
+//     n = n >> 1;
+//   }
+//   return result;
+// }
+
+// let n = 00000010100101000001111010011100;
+// console.log(reverseBITS(n));
+
+//=========================================================================================
+
+function addingWithoutPlusMin(a, b) {
+  let xor = a ^ b;
+  let carry = a & b;
+  if (carry == 0) return xor;
+  else {
+    return addingWithoutPlusMin(xor, carry << 1);
+  }
+}
+
+let a = -10,
+  b = -5;
+console.log(addingWithoutPlusMin(a, b));
+
+//==========================================================================================
+// 2433. Find The Original Array of Prefix Xor
+// You are given an integer array pref of size n. Find and return the array arr of size n that satisfies:
+// pref[i] = arr[0] ^ arr[1] ^ ... ^ arr[i].
+// Note that ^ denotes the bitwise-xor operation.
+// It can be proven that the answer is unique.
+// Example 1:
+// Input: pref = [5,2,0,3,1]
+// Output: [5,7,2,3,2]
+// Explanation: From the array [5,7,2,3,2] we have the following:
+// - pref[0] = 5.
+// - pref[1] = 5 ^ 7 = 2.
+// - pref[2] = 5 ^ 7 ^ 2 = 0.
+// - pref[3] = 5 ^ 7 ^ 2 ^ 3 = 3.
+// - pref[4] = 5 ^ 7 ^ 2 ^ 3 ^ 2 = 1.
+//===========================================================================
+// Explanation:-   pref=[5,2,0,3,1]
+//                 arr=[a,b,c,d,e]
+// we know that b=x^a
+//              x=b^a  , yes we can do it.
+
+//step-1  a=5;
+//step-2  a^b=2   -------------equation (i)
+//      5^b=2
+// then b=5^2=7
+
+// step-3  a^b^c=0       ---equation(ii)    ,  we now that a^b=2;
+//         2^c=0
+//         c=0^2 ==2
+
+// step-4  a^b^c^d=3     -----  equation(iii)
+// we know that a^b^c=0
+//         0^d=3
+//         d=3^0===3
+
+// step-5  a^b^c^d^e=1  ------equation(iv)
+// we know that a^b^c^d=3
+//          3^d=1
+//          d=3^1 == 2
+
+// final result will be =[5,7,2,3,2]
+function findArray(pref) {
+  let arr = [];
+  for (let i = 0; i < pref.length; i++) {
+    if (i == 0) {
+      arr[i] = pref[i];
+    } else {
+      arr[i] = pref[i] ^ pref[i - 1];
+    }
+  }
+  return arr;
+}
+
+let pref = [5, 2, 0, 3, 1];
+console.log(findArray(pref));
+
+//=================================================================================
+// Input: encoded = [1,2,3], first = 1
+//Output: [1,0,2,1]
+//Explanation: If arr = [1,0,2,1], then first = 1 and encoded = [1 XOR 0, 0 XOR 2, 2 XOR 1] = [1,2,3]
+//Example 2:
+//Input: encoded = [6,2,7,3], first = 4
+//Output: [4,2,0,7,4]
+
+// function decodeXOR(arr, first) {}
+
+// let encoded = [1, 2, 3];
+// let first = 1;
+// console.log(decodeXOR(encoded, first));
+
+//-----------------------------------------------------------------------------------------
+// for array =[1,2,3] , there will be 2(pow)3= 8 subset will be generated.
+// subsequence;;
+// based on this binary concept.
+//  arr=[1,2,3]      binary    decimal
+//  - - -             0 0 0     0
+//  - - 3             0 0 1     1
+//  - 2 -             0 1 0     2
+//  - 2 3             0 1 1     3
+//  1 - -             1 0 0     4
+//  1 - 3             1 0 1     5
+//  1 2 -             1 1 0     6
+//  1 2 3             1 1 1     7
+
+function findAllSubset(arr) {
+  let subsetArr = [];
+  let final = [];
+  let limit = Math.pow(2, arr.length);
+  console.log(limit);
+
+  for (let i = 0; i < limit; i++) {
+    let temp = i;
+    for (let j = arr.length - 1; j >= 0; j--) {
+      let reminder = temp % 2;
+      temp = ~~(temp / 2);
+      if (reminder == 0) {
+      } else {
+        subsetArr.push(arr[j]);
+      }
+    }
+    final.push(subsetArr.reverse());
+    subsetArr = [];
+  }
+  return final;
+}
+
+let arr = [1, 2, 3];
+console.log(findAllSubset(arr));
+
+//=====================================================================================
+
+function findAllSubset(arr) {
+  let subsetArr = [];
+  let final = [];
+  let limit = Math.pow(2, arr.length);
+  console.log(limit);
+
+  for (let i = 0; i < limit; i++) {
+    let temp = i;
+    for (let j = arr.length - 1; j >= 0; j--) {
+      let reminder = temp % 2;
+      temp = ~~(temp / 2);
+      if (reminder == 0) {
+      } else {
+        subsetArr.push(arr[j]);
+      }
+    }
+    final.push(subsetArr.reverse());
+    subsetArr = [];
+  }
+  let str = final.map(JSON.stringify);
+  console.log(str);
+  let unique = new Set(str);
+  console.log(unique);
+
+  let result = [];
+  unique.forEach(a => result.push(JSON.parse(a)));
+  console.log(result);
+  return result;
+}
+
+let arr = [4, 4, 4, 1, 4];
+console.log(findAllSubset(arr));
+
+// // how to remove duplicate array in side an array
+//let  arr=[[],[2],[2],[2,2],[1],[1,2],[1,2],[1,2,3]];
+
+// output :- [[],[2],[2,2],[1],[1,2],[1,2,3]]
+
+//==================================================================================================
+// Given a string array wordss, return the maximum value of length(words[i]) * length(words[j]) where the two
+//wordss do not share common letters. If no such two wordss exist, return 0.
+//Example 1:
+//Input: wordss = ["abcw","baz","foo","bar","xtfn","abcdef"]
+//Output: 16
+//Explanation: The two wordss can be "abcw", "xtfn".
+//Example 2:
+//Input: wordss = ["a","ab","abc","d","cd","bcd","abcd"]
+//Output: 4
+//Explanation: The two wordss can be "ab", "cd".
+
+function checkingUniqueStringwords(x, y) {
+  for (let i = 0; i < x.length; i++) {
+    if (y.includes(x[i])) {
+      return false;
+    }
+  }
+  return true;
+}
+function max_Product(words) {
+  let max = Number.MIN_VALUE;
+  for (let i = 0; i < words.length - 1; i++) {
+    for (let j = i + 1; j < words.length; j++) {
+      let findUnique = checkingUniqueStringwords(words[i], words[j]);
+      if (findUnique == true) {
+        max = Math.max(max, words[i].length * words[j].length);
+      }
+    }
+  }
+  return max;
+}
+
+let wordss = ['abcw', 'baz', 'foo', 'bar', 'xtfn', 'abcdef'];
+console.log(max_Product(wordss));
+
+//==================================================================================
+
+function find_Complement(n) {
+  let res = '';
+  let bin = n.toString(2);
+  console.log(bin);
+  for (let i = 0; i < bin.length; i++) {
+    if (bin[i] == 0) {
+      res += 1;
+    } else {
+      res += 0;
+    }
+  }
+  console.log(res);
+  return parseInt(res, 2);
+  // let result = res.toString(10);
+  // return result;
+}
+
+let num = 5;
+console.log(find_Complement(num));
+
+//=======================================================================================
+// Input: nums = [3,10,5,25,2,8]
+//Output: 28
+//Explanation: The maximum result is 5 XOR 25 = 28.
+//Example 2:
+//Input: nums = [14,70,53,83,49,91,36,80,92,51,66,70]
+//Output: 127
+
+function maximumXOR(arr) {
+  let max = Number.MIN_VALUE;
+  let set = [...new Set(arr)];
+  console.log(set);
+  for (let i = 0; i < set.length - 1; i++) {
+    for (let j = i + 1; j < set.length; j++) {
+      let x = set[i] ^ set[j];
+      max = Math.max(max, x);
+    }
+  }
+  return max;
+}
+
+let arr = [3, 10, 5, 25, 2, 8, 5];
+console.log(maximumXOR(arr));
+*/
+//======================================================================================
+// 477. Total Hamming Distance
+//Example 1:
+//Input: nums = [4,14,2]
+//Output: 6
+//Explanation: In binary representation, the 4 is 0100, 14 is 1110, and 2 is 0010 (just
+//showing the four bits relevant in this case).
+//The answer will be:
+//HammingDistance(4, 14) + HammingDistance(4, 2) + HammingDistance(14, 2) = 2 + 2 + 2 = 6.
+
+function counting_(a, b) {
+  //----------------------------------------------------
+  // let count = 0;
+  // let xor = a ^ b;
+  // let bin = xor.toString(2);
+  // for (let i = 0; i < bin.length; i++) {
+  //   if (bin[i] == 1) {
+  //     count++;
+  //   }
+  // }
+  // return count;
+
+  //------------------------------------------------------
+  let xored = a ^ b;
+  let count = 0;
+  while (xored > 0) {
+    const bit = xored & 1;
+    count += bit;
+    xored = xored >> 1;
+  }
+  return count;
+}
+
+function totalHammingDistance(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      let res = counting_(arr[i], arr[j]);
+      total += res;
+    }
+  }
+  return total;
+}
+
+let arr = [4, 14, 2];
+console.log(totalHammingDistance(arr));
