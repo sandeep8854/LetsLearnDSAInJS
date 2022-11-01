@@ -5,7 +5,163 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script></script>
+    <script>
+      /*
+      //==========================================================================
+      function pattern(n) {
+        let count = 1;
+        let a = n + 1;
+        for (let i = 1; i <= n; i++) {
+          for (let j = a; j > 0; j--) {
+            if (j > i) {
+              document.write('*');
+            } else {
+              if ((i + j) % 2 == 0) {
+                document.write('1');
+              } else {
+                document.write('0');
+              }
+            }
+          }
+          document.write('<br>');
+        }
+      }
+      let n = 4;
+      pattern(n);
+      
+
+      function pattern(n) {
+        for (let i = 1; i <= n; i++) {
+          for (let j = n + 1; j > i; j--) {
+            document.write('*');
+          }
+          let sum = 0;
+          for (let z = 1; z <= i; z++) {
+            sum += z;
+          }
+          let z = i;
+          while (z--) {
+            document.write(sum);
+            sum--;
+          }
+          document.write('<br>');
+        }
+      }
+      let n = 5;
+      pattern(n);
+      //
+      //  * * * * 1
+      //  * * * 3 2
+      //  * * 6 5 4
+      //  * 10 9 8 7
+      //
+      //=============================================================================
+      function pattern(n) {
+        let str = '';
+        for (let i = 1; i <= n; i++) {
+          let a = 1;
+          for (let j = 1; j <= n; j++) {
+            //   let a=1;
+            if (j > i) {
+              str += a;
+              a++;
+            } else {
+              str += '*';
+            }
+          }
+          str += '\n';
+        }
+        console.log(str);
+      }
+      let n = 5;
+      pattern(n);
+*1234
+**123
+***12
+****1
+*****
+//=====================================================================================
+
+      function pattern(n) {
+        let str = '';
+        for (let i = 1; i <= n; i++) {
+          let a = 1;
+          for (let j = n; j >= 1; j--) {
+            if (j < i) {
+              str += a;
+              a++;
+            } else {
+              str += '*';
+            }
+            //  a++;
+            //  str+="*";
+          }
+          str += '\n';
+        }
+        console.log(str);
+      }
+
+      let n = 5;
+      pattern(n);
+      Output:
+
+*****
+****1
+***12
+**123
+*1234
+*/
+
+      // A Stack based Javascript program to find next
+      // greater element for all array elements.
+
+      /* prints element and NGE pair for all
+elements of arr[] of size n */
+      function printNGE(arr, n) {
+        var s = [];
+
+        /* push the first element to stack */
+        s.push(arr[0]);
+
+        // iterate for rest of the elements
+        for (var i = 1; i < n; i++) {
+          if (s.length == 0) {
+            s.push(arr[i]);
+          }
+
+          /* if stack is not empty, then
+		pop an element from stack.
+		If the popped element is smaller
+		than next, then
+		a) print the pair
+		b) keep popping while elements are
+		smaller and stack is not empty */
+          while ((s.length == 0) == false && s[s.length - 1] < arr[i]) {
+            document.write(s[s.length - 1] + ' --> ' + arr[i] + '<br>');
+            s.pop();
+          }
+
+          /* push next to stack so that we can find
+		next greater for it */
+          s.push(arr[i]);
+        }
+
+        /* After iterating over the loop, the remaining
+	elements in stack do not have the next greater
+	element, so print -1 for them */
+        while (s.length != 0) {
+          document.write(s[s.length - 1] + ' --> ' + -1 + '<br>');
+          s.pop();
+        }
+      }
+
+      /* Driver code */
+      var arr = [13, 7, 6, 12, 10];
+      var n = arr.length;
+      printNGE(arr, n);
+
+      //=========================================================================
+    </script>
   </head>
   <body></body>
 </html>
