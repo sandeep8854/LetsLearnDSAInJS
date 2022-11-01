@@ -776,27 +776,7 @@ function setBit(n, pos) {
 let n = 5;
 let pos = 1;
 setBit(n, pos);
-//===========================================================
-
-// function findtwoNuBit(arr) {
-//   let xorOff = 0;
-//   let xorOn = 0;
-//   let bitMask = 1 << 1;
-//   console.log(bitMask);
-//   for (let i = 0; i < arr.length; i++) {
-//     if ((bitMask & arr[i]) == 0) {
-//       xorOff = xorOff ^ arr[i];
-//     } else {
-//       xorOn = xorOn ^ arr[i];
-//     }
-//   }
-//   console.log(xorOff, xorOn);
-// }
-// let arr = [4, 3, 4, 3, 6, 7, 5, 6];
-// findtwoNuBit(arr);
-*/
-//================================================================================
-
+//--------------------------------------------------------
 function unsinedRightShiftOperator(a, b) {
   let bin_1 = a.toString(2);
   console.log(bin_1);
@@ -812,3 +792,24 @@ function unsinedRightShiftOperator(a, b) {
 let a = 240;
 let b = 3;
 unsinedRightShiftOperator(a, b);
+*/
+//===========================================================
+
+function findtwoNuBit(arr) {
+  let xorOff = 0;
+  let xorOn = 0;
+  let bitMask = 1 << 1;
+  console.log(bitMask);
+  for (let i = 0; i < arr.length; i++) {
+    if ((bitMask & arr[i]) == 0) {
+      xorOff = xorOff ^ arr[i];
+    } else {
+      xorOn = xorOn ^ arr[i];
+    }
+  }
+  console.log(xorOff, xorOn);
+}
+let arr = [1, 2, 2, 4, 1, 2, 3, 4];
+findtwoNuBit(arr);
+
+//================================================================================
