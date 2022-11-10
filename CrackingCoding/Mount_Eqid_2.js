@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 // Question:-34
 //You and your date are trying to get a table at a restaurant. The parameter "you" is the stylishness of your
 // clothes, in the range 0..10, and "date" is the stylishness of your date's clothes. The result getting the
@@ -1217,7 +1217,8 @@ console.log(delDel(str));
 
 // Question:-85
 // Return true if the givalen string begins with "mix", except the 'm' can be anything, so "pix", "9ix" ..
-// all count.
+// all 
+sum.
 
 //mixStart("mix snacks") → true
 //mixStart("pix snacks") → true
@@ -1509,13 +1510,17 @@ console.log(max1020(a, b));
 //stringE("Heelele") → false
 
 function stringE(str) {
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < str.length; i++) {
     if (str[i] == 'e') {
-      count++;
+     
+      sum++;
     }
   }
-  if (count >= 1 && count <= 3) return true;
+  if  
+  sum >= 1 && 
+  sum <= 3) return true;
   else return false;
 }
 let str = 'helleeeo';
@@ -1625,29 +1630,41 @@ console.log(frontTimes(str, n));
 
 //=========================================================================
 // Question:-102
-// Count the number of "xx" in the givalen string. We'll say that ovalerlapping is allowed,
+// 
+sum the number of "xx" in the givalen string. We'll say that ovalerlapping is allowed,
 //so "xxx" contains 2 "xx".
 
-//countXX("abcxx") → 1
-//countXX("xxx") → 2
-//countXX("xxxx") → 3
+/ 
+sumXX("abcxx") → 1
+/ 
+sumXX("xxx") → 2
+/ 
+sumXX("xxxx") → 3
 
-function countXX(str) {
-  // let count = 0;
+function 
+sumXX(str) {
+  // let 
+  sum = 0;
   // for (let i = 0; i < str.length; i++) {
   //   if (str[i] == 'x') {
-  //     count++;
+  //     
+  sum++;
   //   }
   // }
-  // return count - 1;
-  let count = 0;
+  // return 
+  sum - 1;
+  let 
+  sum = 0;
   for (let i = 0; i < str.length - 1; i++) {
-    if (str.substring(i, i + 2) == 'xx') count++;
+    if (str.substring(i, i + 2) == 'xx') 
+    sum++;
   }
-  return count;
+  return 
+  sum;
 }
 let str = 'abcxx sandeepxx praixx';
-console.log(countXX(str));
+console.log 
+sumXX(str));
 
 //====================================================================================
 // Question:-103
@@ -1733,8 +1750,10 @@ console.log(stringSplosion(str));
 
 //=======================================================================================
 // Question:-106
-// Givalen a string, return the count of the number of times that a substring length 2 appears in the
-// string and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring)
+// Givalen a string, return the 
+sum of the number of times that a substring length 2 appears in the
+// string and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't 
+sum the end substring)
 //.
 
 //last2("hixxhi") → 1
@@ -1742,13 +1761,16 @@ console.log(stringSplosion(str));
 //last2("axxxaaxx") → 2
 
 function last2(str) {
-  let count = 0;
+  let 
+  sum = 0;
   let end = str.substring(str.length - 2);
   for (let i = 0; i < str.length - 2; i++) {
     let sub = str.substring(i, i + 2);
-    if (end == sub) count++;
+    if (end == sub) 
+    sum++;
   }
-  return count;
+  return 
+  sum;
 }
 
 let str = '13121312';
@@ -1758,20 +1780,28 @@ console.log(last2(str));
 // Question:-107
 // Givalen an resultay of ints, return the number of 9's in the resultay.
 
-//resultayCount9([1, 2, 9]) → 1
-//resultayCount9([1, 9, 9]) → 2
-//resultayCount9([1, 9, 9, 3, 9]) → 3
+//resulta 
+sum9([1, 2, 9]) → 1
+//resulta 
+sum9([1, 9, 9]) → 2
+//resulta 
+sum9([1, 9, 9, 3, 9]) → 3
 
-function resultayCount9(result) {
-  let count = 0;
+function resulta 
+sum9(result) {
+  let 
+  sum = 0;
   for (let i = 0; i < result.length; i++) {
-    if (result[i] == 9) count++;
+    if (result[i] == 9) 
+    sum++;
   }
-  return count;
+  return 
+  sum;
 }
 
 let result = [1, 2, 9, 2, 9, 4, 5, 9];
-console.log(resultayCount9(result));
+console.log(resulta 
+  sum9(result));
 
 //========================================================================================
 // Question:-108
@@ -1783,7 +1813,8 @@ console.log(resultayCount9(result));
 //resultayFront9([1, 2, 3, 4, 5]) → false
 
 function resultayFront9(result) {
- // let count = 0;
+ // let 
+ sum = 0;
   let len = result.length;
   if (len > 4) len = 4;
 
@@ -1828,15 +1859,18 @@ console.log(resultay123(result));
 
 function stringMatch(a, b) {
   let len = Math.min(a.length, b.length);
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < len - 1; i++) {
     let a_sub_string = a.substring(i, i + 2);
     let b_sub_string = b.substring(i, i + 2);
     if (a_sub_string == b_sub_string) {
-      count++;
+     
+      sum++;
     }
   }
-  return count;
+  return 
+  sum;
 }
 
 //let a = 'xxcaazz';
@@ -2026,34 +2060,41 @@ console.log(stringYak(str));
 //=================================================================================
 // Question:-114
 // Givalen an resultay of ints, return the number of times that two 6's are next to each other in the resultay.
-// Also count instances where the second "6" is actually a 7.
+// Also 
+sum instances where the second "6" is actually a 7.
 
 //resultay667([6, 6, 2]) → 1
 //resultay667([6, 6, 2, 6]) → 1
 //resultay667([6, 7, 2, 6]) → 1
 
 function resultay667(result) {
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < result.length - 1; i++) {
     if (result[i] == 6) {
       if (result[i + 1] == 6 || result[i + 1] == 7) {
-        count++;
+       
+        sum++;
       }
     }
   }
-  return count;
+  return 
+  sum;
   //---------------------------------------------------
   // for (let i = 0; i < result.length - 1; ) {
   //   if (result[i] == 6 && result[i + 1] == 6) {
-  //     count++;
+  //     
+  sum++;
   //     i += 1;
   //   } else if (result[i] == 6 && result[i + 1] == 7) {
-  //     count++;
+  //     
+  sum++;
   //     i += 1;
   //   }
   //   i++;
   // }
-  // return count;
+  // return 
+  sum;
   //------------------------------------------------------
 }
 
@@ -2087,7 +2128,8 @@ console.log(noTriplet(result));
 //===========================================================================================
 // Question:-116
 //Givalen an resultay of ints, return true if it contains a 2, 7, 1 pattern: a valalue, followed by the valalue plus 5,
-// followed by the valalue minus 1. Additionally the 271 counts evalen if the "1" differs by 2 or less from
+// followed by the valalue minus 1. Additionally the 271 
+sums evalen if the "1" differs by 2 or less from
 //the correct valalue.
 
 //has271([1, 2, 7, 1]) → true
@@ -2453,10 +2495,14 @@ console.log(fix23(result));
 //start1({1, 2}, {}) → 1
 
 function start1(a, b) {
-  let count = 0;
-  if (a.length > 0 && a[0] == 1) count++;
-  if (b.length > 0 && b[0] == 1) count++;
-  return count;
+  let 
+  sum = 0;
+  if (a.length > 0 && a[0] == 1) 
+  sum++;
+  if (b.length > 0 && b[0] == 1) 
+  sum++;
+  return 
+  sum;
 }
 let a = [1, 2, 3];
 let b = [];
@@ -2715,19 +2761,27 @@ console.log(front11(a, b));
 // Return the number of evalen ints in the givalen resultay. Note: the % "mod" operator computes the
 // remainder, e.g. 5 % 2 is 1.
 
-//countEvalens([2, 1, 2, 3, 4]) → 3
-//countEvalens([2, 2, 0]) → 3
-//countEvalens([1, 3, 5]) → 0
+/ 
+sumEvalens([2, 1, 2, 3, 4]) → 3
+/ 
+sumEvalens([2, 2, 0]) → 3
+/ 
+sumEvalens([1, 3, 5]) → 0
 
-function countEvalens(result) {
-  let count = 0;
+function 
+sumEvalens(result) {
+  let 
+  sum = 0;
   for (let i = 0; i < result.length; i++) {
-    if (result[i] % 2 == 0) count++;
+    if (result[i] % 2 == 0) 
+    sum++;
   }
-  return count;
+  return 
+  sum;
 }
 let result = [2, 1, 2, 3, 4];
-console.log(countEvalens(result));
+console.log 
+sumEvalens(result));
 
 //===========================================================================================
 // Question:-145
@@ -2793,7 +2847,9 @@ console.log(centeredAvalerage(result));
 //===============================================================================================
 // Question:-147
 // Return the sum of the numbers in the resultay, returning 0 for an empty resultay. Except the number 13 is
-// valery unlucky, so it does not count and numbers that come immediately after a 13 also do not count.
+// valery unlucky, so it does not 
+sum and numbers that come immediately after a 13 also do not 
+sum.
 
 //sum13([1, 2, 2, 1]) → 6
 //sum13([1, 1]) → 2
@@ -2917,13 +2973,19 @@ console.log(sum28(result));
 //more14([1, 1]) → true
 
 function more14(result) {
-  let oneCount = 0;
-  let fourCount = 0;
+  let on 
+  sum = 0;
+  let fou 
+  sum = 0;
   for (let i = 0; i < result.length; i++) {
-    if (result[i] == 1) oneCount++;
-    else if (result[i] == 4) fourCount++;
+    if (result[i] == 1) on 
+    sum++;
+    else if (result[i] == 4) fou 
+    sum++;
   }
-  if (oneCount > fourCount) return true;
+  if (on 
+    sum > fou 
+    sum) return true;
   else return false;
 }
 
@@ -2963,13 +3025,16 @@ console.log(fizzresultay(n));
 //only14([1, 1]) → true
 
 function only14(result) {
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < result.length; i++) {
     if (result[i] != 1 && result[i] != 4) {
-      count++;
+     
+      sum++;
     }
   }
-  if (count > 0) return false;
+  if  
+  sum > 0) return false;
   else return true;
 }
 
@@ -3010,7 +3075,8 @@ console.log(fizzresultay2(n));
 //no14([2, 3, 4]) → true
 
 function no14(result) {
-  let count = 0;
+  let 
+  sum = 0;
   let oneC = 0;
   let fourC = 0;
   for (let i = 0; i < result.length; i++) {
@@ -3076,7 +3142,8 @@ console.log(either24(result));
 //===============================================================================
 //  Question:-159
 // Givalen resultays nums1 and nums2 of the same length, for evalery element in nums1, consasciiCodeer the corresponding
-//element in nums2 (at the same index). Return the count of the number of times that the two elements
+//element in nums2 (at the same index). Return the 
+sum of the number of times that the two elements
 // differ by 2 or less, but are not equal.
 
 //matchUp([1, 2, 3], [2, 3, 10]) → 2
@@ -3084,12 +3151,15 @@ console.log(either24(result));
 //matchUp([1, 2, 3], [2, 3, 3]) → 2
 
 function matchUp(result1, result2) {
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < result1.length; i++) {
     let temp = Math.abs(result1[i] - result2[i]);
-    if (temp == 1 || temp == 2) count++;
+    if (temp == 1 || temp == 2) 
+    sum++;
   }
-  return count;
+  return 
+  sum;
 }
 
 let result1 = [1, 2, 3];
@@ -3203,7 +3273,8 @@ console.log(modThree(result));
 //havaleThree([3, 4, 3, 3, 4]) → false
 
 function havaleThree(result) {
-  let count = 0;
+  let 
+  sum = 0;
   let found = false;
   //-------------------------------------------------------------------------
   // for (let i = 0; i < result.length - 2; i++) {
@@ -3221,10 +3292,12 @@ function havaleThree(result) {
     }
     if (result[i] == 3 && found == false) {
       found = true;
-      count++;
+     
+      sum++;
     }
   }
-  if (count == 3) return true;
+  if  
+  sum == 3) return true;
   else return false;
 }
 
@@ -3346,7 +3419,8 @@ console.log(shiftLeft(result));
 //=======================================================================================
 // Question:-169
 // For each multiple of 10 in the givalen resultay, change all the valalues following it to be that multiple of 10,
-// until encountering another multiple of 10. So {2, 10, 3, 4, 20, 5} yields {2, 10, 10, 10, 20, 20}.
+// until e 
+sumering another multiple of 10. So {2, 10, 3, 4, 20, 5} yields {2, 10, 10, 10, 20, 20}.
 
 //tenRun([2, 10, 3, 4, 20, 5]) → [2, 10, 10, 10, 20, 20]
 //tenRun([10, 1, 20, 2]) → [10, 10, 20, 20]
@@ -3463,12 +3537,16 @@ function zeroFront(result) {
     resplitresult_[i] = ele;
   }
   //-----------------------------------------------------
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < result.length; i++) {
     if (result[i] == 0) {
-      result[i] = result[count];
-      result[count] = 0;
-      count++;
+      result[i] = result 
+      sum];
+      result 
+      sum] = 0;
+     
+      sum++;
     }
   }
 
@@ -3729,16 +3807,19 @@ console.log(canBalance(result));
 //linearIn([1, 2, 4, 4, 6], [2, 4]) → true
 
 function linearIn(resultA, resultB) {
-  let count = 0;
+  let 
+  sum = 0;
   let i = 0;
   for (let i = 0; i < resultA.length; i++) {
     if (resultA[i] == resultB[i]) {
-      count++;
+     
+      sum++;
       i++;
     } else if (resultA[i] > resultB[i]) {
       return false;
     }
-    if (count == resultB.length) return true;
+    if  
+    sum == resultB.length) return true;
   }
   return false;
 }
@@ -3805,21 +3886,30 @@ console.log(seriesUP(n));
 
 function maxMirror(result) {
   let len = result.length;
-  let count = 0;
+  let 
+  sum = 0;
   let max = 0;
   for (let i = 0; i < len; i++) {
-    count = 0;
-    for (let i = len - 1; i >= 0 && i + count < len; i--) {
-      if (result[i + count] == result[i]) {
-        count++;
+   
+    sum = 0;
+    for (let i = len - 1; i >= 0 && i + 
+      sum < len; i--) {
+      if (result[i + 
+        sum] == result[i]) {
+       
+        sum++;
       } else {
-        if (count > 0) {
-          max = Math.max(count, max);
-          count = 0;
+        if  
+        sum > 0) {
+          max = Math.max 
+          sum, max);
+         
+          sum = 0;
         }
       }
     }
-    max = Math.max(max, count);
+    max = Math.max(max, 
+      sum);
   }
   return max;
 }
@@ -3832,26 +3922,34 @@ console.log(maxMirror(result));
 // Say that a "clump" in an resultay is a series of 2 or more adiacent elements of the same valalue.
 //Return the number of clumps in the givalen resultay.
 
-//countClumps([1, 2, 2, 3, 4, 4]) → 2
-//countClumps([1, 1, 2, 1, 1]) → 2
-//countClumps([1, 1, 1, 1, 1]) → 1
+/ 
+sumClumps([1, 2, 2, 3, 4, 4]) → 2
+/ 
+sumClumps([1, 1, 2, 1, 1]) → 2
+/ 
+sumClumps([1, 1, 1, 1, 1]) → 1
 
-function countClumps(result) {
+function 
+sumClumps(result) {
   let len = result.length;
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < result.length - 1; i++) {
     if (result[i] == result[i + 1]) {
-      count++;
+     
+      sum++;
     }
     while (i < result.length - 1 && result[i] == result[i + 1]) {
       i++;
     }
   }
-  return count;
+  return 
+  sum;
 }
 
 let result = [1, 1, 1, 1, 1];
-console.log(countClumps(result));
+console.log 
+sumClumps(result));
 
 //==============================================================================================
 
@@ -4379,28 +4477,38 @@ console.log(square56(result));
 
 //=============================================================================================
 // Question:-209
-// Givalen a string, count the number of wordss ending in 'y' or 'z' -- so the 'y' in "heavaly" and the 'z'
-//in "fez" count, but not the 'y' in "yellow" (not case sensitivale). We'll say that a y or z is at the
+// Givalen a string, 
+sum the number of wordss ending in 'y' or 'z' -- so the 'y' in "heavaly" and the 'z'
+//in "fez" 
+sum, but not the 'y' in "yellow" (not case sensitivale). We'll say that a y or z is at the
 //end of a words if there is not an alphabetic letter immediately following it. (Note: Character.isLetter(char)
 // tests if a char is an alphabetic letter.)
 
-//countYZ("fez day") → 2
-//countYZ("day fez") → 2
-//countYZ("day fyyyz") → 2
+/ 
+sumYZ("fez day") → 2
+/ 
+sumYZ("day fez") → 2
+/ 
+sumYZ("day fyyyz") → 2
 
-function countYZ(str) {
-  let count = 0;
+function 
+sumYZ(str) {
+  let 
+  sum = 0;
   let s = str.split(' ');
   for (let i = 0; i < s.length; i++) {
     let el = s[i];
     if (el[el.length - 1] == 'y' || el[el.length - 1] == 'z') {
-      count++;
+     
+      sum++;
     }
   }
-  return count;
+  return 
+  sum;
 }
 let str = 'day fyyyz';
-console.log(countYZ(str));
+console.log 
+sumYZ(str));
 
 //=============================================================================================
 // Question:-210
@@ -4472,19 +4580,25 @@ function equalISNot(str) {
   // else return false;
   //---------------------------------------------------------------------
   let len = str.length;
-  let isCount = 0;
-  let notCount = 0;
+  let i 
+  sum = 0;
+  let no 
+  sum = 0;
   for (let i = 0; i < str.length; i++) {
     if (i < len - 2) {
       let temp1 = str.substring(i, i + 3);
-      if (temp1 == 'not') notCount++;
+      if (temp1 == 'not') no 
+      sum++;
     }
     if (i < len - 1) {
       let temp2 = str.substring(i, i + 2);
-      if (temp2 == 'is') isCount++;
+      if (temp2 == 'is') i 
+      sum++;
     }
   }
-  if (isCount == notCount) return true;
+  if (i 
+    sum == no 
+    sum) return true;
   else return false;
 }
 
@@ -4529,34 +4643,45 @@ console.log(gHappy(str));
 // We'll say that a "triple" in a string is a char appearing three times in a row. Return the number of
 // triples in the givalen string. The triples may ovalerlap.
 
-//countTriple("abcXXXabc") → 1
-//countTriple("xxxabyyyycd") → 3
-//countTriple("a") → 0
+/ 
+sumTriple("abcXXXabc") → 1
+/ 
+sumTriple("xxxabyyyycd") → 3
+/ 
+sumTriple("a") → 0
 
-function counttriplet(str) {
+function 
+sumtriplet(str) {
   //-----------------------------------------------------------------------------------------
-  // let count = 0;
+  // let 
+  sum = 0;
   // for (let i = 0; i < str.length - 2; i++) {
   //   for (let i = i + 1; i < str.length - 1; i++) {
   //     for (let k = i + 1; k < str.length; k++) {       //   he will givale wrong answer always.
-  //       // if ((str[i] == str[i]) == str[k]) count++;
+  //       // if ((str[i] == str[i]) == str[k]) 
+  sum++;
   //       console.log(str[i] + ' ' + str[i] + ' ' + str[k]);
   //     }
   //   }
   // }
-  // return count;
+  // return 
+  sum;
   //-----------------------------------------------------------------------------------------
-  let count = 0;
+  let 
+  sum = 0;
   let len = str.length;
   for (let i = 0; i < len - 2; i++) {
     let temp = str[i];
-    if (temp == str[i + 1] && temp == str[i + 2]) count++;
+    if (temp == str[i + 1] && temp == str[i + 2]) 
+    sum++;
   }
-  return count;
+  return 
+  sum;
 }
 
 let str = 'xxxabyyyycd';
-console.log(counttriplet(str));
+console.log 
+sumtriplet(str));
 
 //==========================================================================================
 // Question:-214
@@ -4614,7 +4739,8 @@ console.log(sameEnds(str));
 // Question:-216
 // Givalen a string, return a string where evalery appearance of the lowercase words "is" has been replaced with
 //"is not". The words "is" should not be immediately preceeded or followed by a letter -- so for example the
-//"is" in "this" does not count. (Note: Character.isLetter(char) tests if a char is a letter.)
+//"is" in "this" does not 
+sum. (Note: Character.isLetter(char) tests if a char is a letter.)
 
 //notReplace("is test") → "is not test"
 //notReplace("is-is") → "is not-is not"
@@ -4741,15 +4867,18 @@ console.log(sevalenBoom(result));
 
 function zerostoEnd(result) {
   //--------------------------------------------
-  // let count = 0;
+  // let 
+  sum = 0;
   // result.sort(function (a, b) {
   //   return a - b;
   // });
   // // return result;
   // for (let i = 0; i < result.length; i++) {
-  //   if (result[i] == 0) count++;
+  //   if (result[i] == 0) 
+  sum++;
   // }
-  // for (let i = 0; i < result.length - count; i++) {
+  // for (let i = 0; i < result.length - 
+  sum; i++) {
   //   result[i] = result[i];
   // }
   // return result;
@@ -5054,23 +5183,27 @@ console.log(productExceptSelf(result));
 //resultput: 0
 
 function sumresultayProductLessThanK(result, k) {
-  let count = 0;
+  let 
+  sum = 0;
   let multiplication;
   for (let i = 0; i < result.length; i++) {
     if (result[i] < k) {
-      count++;
+     
+      sum++;
     }
     multiplication = result[i];
     for (let i = i + 1; i < result.length; i++) {
       multiplication = multiplication * result[i];
       if (multiplication < k) {
-        count++;
+       
+        sum++;
       } else {
         break;
       }
     }
   }
-  return count;
+  return 
+  sum;
 }
 
 let result = [10, 5, 2, 6];
@@ -5176,11 +5309,14 @@ function shiftZEro(result) {
     return a - b;
   });
 
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < result.length; i++) {
-    if (result[i] == 0) count++;
+    if (result[i] == 0) 
+    sum++;
   }
-  let len = result.length - count;
+  let len = result.length - 
+  sum;
   let i = len - 1;
   // for (let i = len - 1; i >= 0;) {
   for (let i = 0; i < len; i++) {
@@ -5358,26 +5494,32 @@ console.log(diamondresultays(n));
 // c==2
 // d==1
 
-function repeatedCount(str) {
-  let count = 0;
+function repeate 
+sum(str) {
+  let 
+  sum = 0;
   let result = [];
   for (let i = 0; i < str.length; i++) {
     for (let i = i + 1; i < str.length; i++) {
       if (str[i] == str[i] && !result.includes(str[i])) {
         result.push(str[i]);
-        count++;
+       
+        sum++;
       }
     }
   }
-  return count;
+  return 
+  sum;
 }
 
 let str = 'abccdbccaa';
-console.log(repeatedCount(str));
+console.log(repeate 
+  sum(str));
 
 //==================================================================================================
 
-function repeatedCount(str) {
+function repeate 
+sum(str) {
   let map = new Map();
   let s = str.split(''); 
   console.log(s);
@@ -5391,17 +5533,21 @@ function repeatedCount(str) {
   }
   console.log(map);
 
-  let count = 0;
+  let 
+  sum = 0;
   for (let ell in map) {
     if (map[ell] > 1) {
-      count++;
+     
+      sum++;
     }
   }
-  return count;
+  return 
+  sum;
 }
 
 let str = 'abccdbccaa';
-console.log(repeatedCount(str));
+console.log(repeate 
+  sum(str));
 
 //================================================================================================
 
@@ -5545,13 +5691,16 @@ function minStep(s, t) {
     }
   }
   console.log(map);
-  let count = 0;
+  let 
+  sum = 0;
   for (let el in map) {
     if (map[el] > 1) {
-      count++;
+     
+      sum++;
     }
   }
-  console.log(count);
+  console.log 
+  sum);
 
   let present = 0;
   let nonpresent = 0;
@@ -5629,18 +5778,22 @@ console.log(removaleOccourecence(s, part));
 //===================================================================================
 
 function numOfPair(result, target) {
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < result.length; i++) {
     for (let i = i + 1; i < result.length; i++) {
       if (result[i] + result[i] == target) {
-        count++;
+       
+        sum++;
       }
       if (result[i] + result[i] == target) {
-        count++;
+       
+        sum++;
       }
     }
   }
-  return count;
+  return 
+  sum;
 }
 
 let result = ['777', '7', '77', '77'];
@@ -5666,12 +5819,15 @@ let A = ['sandeep'];
  function serial (A){
     let ans = '';
     let i =0;
-    let count=0;
+    let 
+    sum=0;
     while ( i<A.length){
       ans+=A[i];
-ans+=count
+ans+ 
+sum
       ans+='~';
-      count++;
+     
+      sum++;
       i++
     
     }
@@ -6261,15 +6417,18 @@ console.log(findOne(num));
 //Input: nums = [1,2,3]
 //Output: 0
 function goodPair(result) {
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < result.length; i++) {
     for (let i = i + 1; i < result.length; i++) {
       if (result[i] === result[i]) {
-        count++;
+       
+        sum++;
       }
     }
   }
-  return count;
+  return 
+  sum;
 }
 
 let result = [1, 2, 3];
@@ -6338,30 +6497,39 @@ console.log(mostFrequentEven(result));
 // let result = [0, 1, 2, 3, 4, 5, 7, 8];
 // console.log(sortBasedOnBinary(result));
 
-// function countOne(n) {
+// function 
+sumOne(n) {
 //   if (n == 0) {
 //     return n;
 //   }
-//   let setBitCount = 0;
+//   let setBi 
+sum = 0;
 //   while (n != 0) {
 //     n = n & (n - 1);
-//     setBitCount++;
+//     setBi 
+sum++;
 //   }
-//   return setBitCount;
+//   return setBi 
+sum;
 // }
 // let n = 8;
-// console.log(countOne(n));
+// console.log 
+sumOne(n));
 
 //-----------------------------------------------------------------------------------------------
 
-function countSetBit_Function(n) {
-  let setBitCount = 0;
+function 
+sumSetBit_Function(n) {
+  let setBi 
+  sum = 0;
   if (n == 1) return n;
   while (n != 0) {
     n = n & (n - 1);
-    setBitCount++;
+    setBi 
+    sum++;
   }
-  return setBitCount;
+  return setBi 
+  sum;
 }
 
 function sortBasedOnBinary(result) {
@@ -6371,8 +6539,11 @@ function sortBasedOnBinary(result) {
   console.log(result);
   let resplitresult_ = [];
   for (let i = 0; i < result.length; i++) {
-    let countOneBit = countSetBit_Function(result[i]);
-    resplitresult_.push(countOneBit);
+    let 
+    sumOneBit = 
+    sumSetBit_Function(result[i]);
+    resplitresult_.push 
+    sumOneBit);
     resplitresult_.push(result[i]);
   }
   // return resplitresult_;
@@ -6390,12 +6561,15 @@ function sortBasedOnBinary(result) {
   console.log(matrix);
   let res = [];
   for (let i = 0; i < matrix.length; i++) {
-    res.push({ countOneBIT: matrix[i][0], resultayNumber: matrix[i][1] });
+    res.push({ 
+      sumOneBIT: matrix[i][0], resultayNumber: matrix[i][1] });
   }
   console.log(res);
 
   res.sort(function (a, b) {
-    return a.countOneBIT - b.countOneBIT;
+    return a 
+    sumOneBIT - b 
+    sumOneBIT;
   });
 
   console.log(res);
@@ -6489,7 +6663,8 @@ console.log(kthLargestElement(result));
 //Output: 1
 //Explanation:
 //The first distinct maximum is 3.
-//The second distinct maximum is 2 (both 2's are counted together since they have the same value).
+//The second distinct maximum is 2 (both 2's are 
+sumed together since they have the same value).
 //The third distinct maximum is 1.
 
 function thirdMaximum(result) {
@@ -6590,13 +6765,16 @@ function numOfSubresultay(result) {
     }
     res.push(sum);
   }
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < res.length; i++) {
     if (res[i] % 2 != 0) {
-      count++;
+     
+      sum++;
     }
   }
-  return count;
+  return 
+  sum;
 }
 
 let result = [1, 3, 5];
@@ -6639,17 +6817,20 @@ function numOfSubresultay(result, k) {
       subresultay = [];
     }
   }
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < answer.length; i++) {
     let sum = 0;
     for (let i = 0; i < answer[i].length; i++) {
       sum += answer[i][i];
     }
     if (sum == k) {
-      count++;
+     
+      sum++;
     }
   }
-  return count;
+  return 
+  sum;
 }
 
 let result = [1, 2, 3];
@@ -6887,7 +7068,8 @@ function numSubresultayWithSum(result, goal) {
     }
   }
   console.log(answer);
-  let count = 0;
+  let 
+  sum = 0;
   let str = '';
   for (let i = 0; i < answer.length; i++) {
     for (let i = 0; i < answer[i].length; i++) {
@@ -6896,12 +7078,14 @@ function numSubresultayWithSum(result, goal) {
     str = Number(str);
     let num = parseInt(str, 2);
     if (num == goal) {
-      count++;
+     
+      sum++;
     }
     str = '';
   }
 
-  return count;
+  return 
+  sum;
 }
 
 let result = [1, 0, 1, 0, 1];
@@ -7002,7 +7186,8 @@ function subresultayDivByK(result, k) {
   }
   console.log(answer);
 
-  let count = 0;
+  let 
+  sum = 0;
   let sum = 0;
   for (let i = 0; i < answer.length; i++) {
     sum = 0;
@@ -7010,10 +7195,12 @@ function subresultayDivByK(result, k) {
       sum += answer[i][i];
     }
     if (sum % k == 0) {
-      count++;
+     
+      sum++;
     }
   }
-  return count;
+  return 
+  sum;
 }
 
 let result = [4, 5];
@@ -7065,13 +7252,16 @@ function getCovered(row, col, left, right) {
   return flag;
 
   //------------------------------------------------------
-  // let count = 0;
+  // let 
+  sum = 0;
   // for (let i = 0; i < matrix.length; i++) {
   //   if (matrix[i][0] <= left || matrix[i][1] <= right) {
-  //     count++;
+  //     
+  sum++;
   //   }
   // }
-  // if (count == matrix.length) return true;
+  // if  
+  sum == matrix.length) return true;
   // else {
   //   return false;
   // }
@@ -7100,9 +7290,11 @@ console.log(getCovered(row, col, left, right));
 
 // function reverseBITS(n) {
 //   var result = 0;
-//   var count = 32;
+//   var 
+sum = 32;
 
-//   while (count--) {
+//   while  
+sum--) {
 //     result *= 2;
 //     result += n & 1;
 //     n = n >> 1;
@@ -7369,34 +7561,42 @@ console.log(maximumXOR(result));
 //The answer will be:
 //HammingDistance(4, 14) + HammingDistance(4, 2) + HammingDistance(14, 2) = 2 + 2 + 2 = 6.
 
-function counting_(a, b) {
+function 
+suming_(a, b) {
   //----------------------------------------------------
-  // let count = 0;
+  // let 
+  sum = 0;
   // let xor = a ^ b;
   // let bin = xor.toString(2);
   // for (let i = 0; i < bin.length; i++) {
   //   if (bin[i] == 1) {
-  //     count++;
+  //     
+  sum++;
   //   }
   // }
-  // return count;
+  // return 
+  sum;
 
   //------------------------------------------------------
   let xored = a ^ b;
-  let count = 0;
+  let 
+  sum = 0;
   while (xored > 0) {
     const bit = xored & 1;
-    count += bit;
+   
+    sum += bit;
     xored = xored >> 1;
   }
-  return count;
+  return 
+  sum;
 }
 
 function totalHammingDistance(result) {
   let total = 0;
   for (let i = 0; i < result.length; i++) {
     for (let i = i + 1; i < result.length; i++) {
-      let res = counting_(result[i], result[i]);
+      let res = 
+      suming_(result[i], result[i]);
       total += res;
     }
   }
@@ -7429,15 +7629,19 @@ console.log(totalHammingDistance(result));
 // 15 -> 1111 (4 set bits, 4 is not prime)
 // 5 numbers have a prime number of set bits.
 
-function countSetBit(a) {
+function 
+sumSetBit(a) {
   //----------------------------------------
   // part One:-
-  let count = 0;
+  let 
+  sum = 0;
   let bin = a.toString(2);
   for (let i = 0; i < bin; i++) {
-    if (bin[i] == 1) count++;
+    if (bin[i] == 1) 
+    sum++;
   }
-  return count;
+  return 
+  sum;
   //----------------------------------------
   // Part Two:-
   let res = 0;
@@ -7452,7 +7656,8 @@ function countSetBit(a) {
 
 function isPrime(num) {
   //-----------------------------------------
-  let res = countSetBit(i);
+  let res = 
+  sumSetBit(i);
   if (
     res == 2 ||
     res == 3 ||
@@ -7475,10 +7680,12 @@ function isPrime(num) {
   //------------------------------------------
 }
 
-function countPrimeSetBit(left, right) {
+function 
+sumPrimeSetBit(left, right) {
   let total = 0;
   for (let i = left; i <= right; i++) {
-    let setbit = countSetBit(i);
+    let setbit = 
+    sumSetBit(i);
     let pri = isPrime(setbit);
     if (pri == true) total++;
   }
@@ -7487,7 +7694,8 @@ function countPrimeSetBit(left, right) {
 
 let left = 10,
   right = 15;
-console.log(countPrimeSetBit(left, right));
+console.log 
+sumPrimeSetBit(left, right));
 
 //===========================================================================================
 // Input: nums = [1,3]
@@ -7635,16 +7843,19 @@ console.log(averageWaitTime(customers));
 
 //==============================================================================
 function noOfStep(n) {
-  let count = 0;
+  let 
+  sum = 0;
   while (n) {
     if (n % 2 == 0) {
       n = n >> 1;
     } else {
       n -= 1;
     }
-    count++;
+   
+    sum++;
   }
-  return count;
+  return 
+  sum;
 }
 
 let n = 14;
@@ -7671,7 +7882,8 @@ console.log(noOfStep(n));
 // Now num1 = 0 and num2 = 10. Since num1 == 0, we are done.
 // So the total number of operations required is 1.
 
-function countOperation(num1, num2) {
+function 
+sumOperation(num1, num2) {
   let operation = 0;
   while (num1 != 0 && num2 != 0) {
     if (num1 <= num2) {
@@ -7685,7 +7897,8 @@ function countOperation(num1, num2) {
 }
 let num1 = 2,
   num2 = 3;
-console.log(countOperation(num1, num2));
+console.log 
+sumOperation(num1, num2));
 
 //=====================================================================================
 
@@ -7703,15 +7916,19 @@ function minBitFlip(num, goal) {
     }
     diff--;
   }
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = binNum.length - 1; i >= 0; i--) {
     if (binNum[i] == 0 && BinGoal[i] == 1) {
-      count++;
+     
+      sum++;
     } else if (binNum[i] == 1 && BinGoal[i] == 0) {
-      count++;
+     
+      sum++;
     }
   }
-  return count;
+  return 
+  sum;
 }
 let num = 3;
 let goal = 4;
@@ -7728,13 +7945,16 @@ function divasciiCodeedresultay(result) {
       final.push(result[i]);
     }
   }
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < final.length - 1; i = i + 2) {
     if (final[i] == final[i + 1]) {
-      count++;
+     
+      sum++;
     }
   }
-  if (count >= pair) return true;
+  if  
+  sum >= pair) return true;
   else return false;
 }
 let result = [1, 2, 3, 4];
@@ -8056,17 +8276,21 @@ console.log(equalFrequency(word));
 // Explanation: "abcde" is the longest continuous substring.
 
 function longestContinuousSubString(str) {
-  let count = 1;
+  let 
+  sum = 1;
   let result = 1;
   for (let i = 1; i < str.length; i++) {
     let currentASCII = str.charCodeAt(i);
     let previousASCII = str.charCodeAt(i - 1);
     if (currentASCII - previousASCII == 1) {
-      count++;
+     
+      sum++;
     } else {
-      count = 1;
+     
+      sum = 1;
     }
-    result = Math.max(result, count);
+    result = Math.max(result, 
+      sum);
   }
   return result;
 }
@@ -8413,7 +8637,8 @@ console.log(sansaXor(result));
 //================================================================================================
 
 function secondsToRemoveOccurrences(str) {
-  let count = 0;
+  let 
+  sum = 0;
   let indexx = str.indexOf('01');
   while (indexx != -1) {
     indexx = str.indexOf('01');
@@ -8426,9 +8651,11 @@ function secondsToRemoveOccurrences(str) {
       }
     }
     str = splitresult.join('');
-    count++;
+   
+    sum++;
   }
-  let t = count - 1;
+  let t = 
+  sum - 1;
   if (t == -1) {
     return 0;
   } else {
@@ -8543,17 +8770,20 @@ console.log(smallestNumber(str));
 //====================================================================================
 
 function reresultange(str, k) {
-  let count = 0;
+  let 
+  sum = 0;
   let split_ = str.split('');
   for (let i = 0; i < k; i++) {
     if (split_[i] == 'W') {
       split_[i] = 'B';
       //  split_[i + 1] = 'B';
       //  i++;
-      count++;
+     
+      sum++;
     }
   }
-  return count;
+  return 
+  sum;
 }
 
 let str = 'WBBWWBBWBW';
@@ -8700,32 +8930,44 @@ console.log(checkIfPanagram(sentence));
 
 //==================================================================================
 
-function countAsterisks(str) {
+function 
+sumAsterisks(str) {
   let sp = str.split('');
-  let count = 0;
-  let resultCount = 0;
+  let 
+  sum = 0;
+  let resul 
+  sum = 0;
   for (let i = 0; i < sp.length; i++) {
     if (sp[i] == '|') {
-      count++;
+     
+      sum++;
     }
-    if (sp[i] == '*' && (count & 1) == 0) {
+    if (sp[i] == '*' &&  
+    sum & 1) == 0) {
       // use of little bit , bit manipulaation concept.
-      resultCount++;
+      resul 
+      sum++;
     }
   }
-  return resultCount;
+  return resul 
+  sum;
 }
 
 let str = 'l|*e*et|c**o|*de|';
-console.log(countAsterisks(str));
+console.log 
+sumAsterisks(str));
 
 //====================================================================================
 
 function strongPasswordCheckerII(str) {
-  let upperCount = 0;
-  let lowerCount = 0;
-  let digitCount = 0;
-  let specialCount = 0;
+  let uppe 
+  sum = 0;
+  let lowe 
+  sum = 0;
+  let digi 
+  sum = 0;
+  let specia 
+  sum = 0;
   if (str.length < 8) {
     return false;
   }
@@ -8738,20 +8980,28 @@ function strongPasswordCheckerII(str) {
   for (let i = 0; i < str.length; i++) {
     let ascciCode = str.charCodeAt(i);
     if (ascciCode >= 65 && ascciCode <= 90) {
-      upperCount++;
+      uppe 
+      sum++;
     } else if (ascciCode >= 97 && ascciCode <= 122) {
-      lowerCount++;
+      lowe 
+      sum++;
     } else if (ascciCode >= 48 && ascciCode <= 57) {
-      digitCount++;
+      digi 
+      sum++;
     } else {
-      specialCount++;
+      specia 
+      sum++;
     }
   }
   if (
-    upperCount >= 1 &&
-    lowerCount >= 1 &&
-    digitCount >= 1 &&
-    specialCount >= 1
+    uppe 
+    sum >= 1 &&
+    lowe 
+    sum >= 1 &&
+    digi 
+    sum >= 1 &&
+    specia 
+    sum >= 1
   ) {
     return true;
   } else {
@@ -8764,7 +9014,8 @@ console.log(strongPasswordCheckerII(str));
 
 //====================================================================================
 
-function digitCount(strNum) {
+function digi 
+sum(strNum) {
   let result = new resultay(strNum.length).fill(0);
   for (let i = 0; i < strNum.length; i++) {
     let n = Number(strNum[i]);
@@ -8782,7 +9033,8 @@ function digitCount(strNum) {
   }
 }
 let strNum = '42101000';
-console.log(digitCount(strNum));
+console.log(digi 
+  sum(strNum));
 
 //==================================================================================
 
@@ -8814,11 +9066,16 @@ console.log(selfDividingNumbers(left, right));
 
 //=============================================================================================
 
-function discountPrices(sentence, discount) {}
+function di 
+sumPrices(sentence, di 
+  sum) {}
 
 let sentence = 'there are $1 $2 and 5$ candies in the shop';
-let discount = 50;
-console.log(discountPrices(sentence, discount));
+let di 
+sum = 50;
+console.log(di 
+  sumPrices(sentence, di 
+  sum));
 
 //=================================================================================================
 
@@ -8934,14 +9191,18 @@ function sockMerchant(n, result) {
   for (let i of Object.values(frequency)) {
     res.push(i);
   }
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < res.length; i++) {
     if (res[i] > 1) {
       let r = Math.floor(res[i] / 2);
-      count = count + r;
+     
+      sum = 
+     sum + r;
     }
   }
-  return count;
+  return 
+  sum;
 }
 let n = 7;
 let result = [1, 2, 1, 2, 1, 3, 2];
@@ -8989,7 +9250,8 @@ function howManySubstring(str) {
   }
   return taskresult.length;
 }
-function countAllSubstring(strresult, matrix) {
+function 
+sumAllSubstring(strresult, matrix) {
   let answerr = [];
   for (let i = 0; i < strr.length; i++) {
     let first = matrix[i][0];
@@ -9010,8 +9272,8 @@ let matrix = [
   [1, 1],
   [1, 4],
   [0, 2],
-];
-countAllSubstring(strr, matrix);
+]; 
+sumAllSubstring(strr, matrix);
 
 //========================================================================================
 
@@ -9126,16 +9388,19 @@ function reresultangeCharacters(s, target) {
       freq[el] = 1;
     }
   }
-  let count = 0;
+  let 
+  sum = 0;
   while (true) {
     for (let i = 0; i < target.length; i++) {
       if (freq[target[i]]) {
         freq[target[i]] = freq[target[i]] - 1;
       } else {
-        return count;
+        return 
+        sum;
       }
     }
-    count++;
+   
+    sum++;
   }
 }
 let str = 'ilovecodingonleetcode';
@@ -9146,13 +9411,16 @@ console.log(reresultangeCharacters(str, target));
 //================================================================================
 
 function percentageLetter(s, letter) {
-  let count = 0;
+  let 
+  sum = 0;
   for (let i = 0; i < s.length; i++) {
     if (s[i] == letter) {
-      count++;
+     
+      sum++;
     }
   }
-  let percen = count / s.length;
+  let percen = 
+  sum / s.length;
   return ~~(percen * 100);
 }
 let s = 'foobar';
@@ -9164,17 +9432,22 @@ function digit_Sum(s, k) {
   while (s.length > k) {
     let result = [];
     let sum = 0;
-    let count = 0;
+    let 
+    sum = 0;
     for (let i = 0; i < s.length; i++) {
-      if (i != 0 && count == k) {
+      if (i != 0 && 
+        sum == k) {
         result.push(sum);
         sum = 0;
-        count = 0;
+       
+        sum = 0;
       }
       sum += Number(s[i]);
-      count++;
+     
+      sum++;
     }
-    if (count != 0) {
+    if  
+    sum != 0) {
       result.push(sum);
     }
     s = result.join('');
@@ -9226,13 +9499,16 @@ function minDistance(word1, word2) {
       freq[el] = 1;
     }
   }
-  let count = 1;
+  let 
+  sum = 1;
   for (let i = 0; i < word2.length; i++) {
     if (!freq[word2[i]]) {
-      count++;
+     
+      sum++;
     }
   }
-  return count;
+  return 
+  sum;
 }
 
 let word1 = 'a';
@@ -9450,13 +9726,17 @@ console.log(combineArrr(arr, k));
 
 function makingLines(str) {
   let resStr = '';
-  let count = 1;
+  let 
+  sum = 1;
   for (let i = 0; i < str.length; i++) {
     if (str[i] == str[i + 1]) {
-      count++;
+     
+      sum++;
     } else {
-      resStr = resStr + count + str[i];
-      count = 1;
+      resStr = resStr + 
+      sum + str[i];
+     
+      sum = 1;
     }
   }
   console.log(resStr);
@@ -9578,7 +9858,7 @@ console.log(sortestDistance(str, word1, word2));
 //  1 2 -             1 1 0     6
 //  1 2 3             1 1 1     7
 
-*/
+
 //========================================================================
 // str="gfg":-- there will be 2(pow)str.length==2pow3==8 subset will be generated.
 function subsequence(str) {
@@ -9636,3 +9916,237 @@ function groupSum(arr, target) {
 let arr = [3, 2, 4];
 let target = 6;
 console.log(groupSum(arr, target));
+
+//=================================================================================
+
+function maximumUnitOfTruck(row, col, truckSize) {
+  // let arr = [1, 3, 2, 2, 3, 1];
+  let arr = [5, 10, 2, 5, 4, 7, 3, 9];
+  let matrix = [];
+  for (let i = 0; i < row; i++) {
+    matrix[i] = new Array(col);
+  }
+  let index = 0;
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      matrix[i][j] = arr[index++];
+    }
+  }
+  console.log(matrix);
+
+  matrix.sort(function (a, b) {
+    return b[1] - a[1];
+  });
+
+  // let sum = 0;
+  // let limit = 0;
+  // for (let i = 0; i < matrix.length; i++) {
+  //   limit += matrix[i][0];
+  //   if (limit <= truckSize) {
+  //     sum += matrix[i][0] * matrix[i][1];
+  //   } else {
+  //     if (i < matrix.length) {
+  //       i++;
+  //     }
+  //     limit -= matrix[i][0];
+  //     if (limit <= truckSize) {
+  //       limit += matrix[i][0];
+  //       sum += matrix[i][0] * matrix[i - 1][1];
+  //     } else {
+  //       //limit -= matrix[i][1];
+  //     }
+  //   }
+  // }
+  // return sum;
+  let total = 0;
+  let reminingBox = 0;
+  matrix.sort(function (a, b) {
+    return b[1] - a[1];
+  }); // desending order.
+  for (let i = 0; i < matrix.length; i++) {
+    let reminingTruckSize = truckSize - matrix[i][0];
+    if (reminingTruckSize >= 0) {
+      //Keep taking all the boxes until we can
+      truckSize = truckSize - matrix[i][0];
+      total = total + matrix[i][0] * matrix[i][1];
+    } else {
+      reminingBox = truckSize;
+      truckSize = truckSize - reminingBox;
+      total = total + reminingBox * matrix[i][1];
+      break;
+    }
+  }
+  return total;
+}
+let row = 4;
+let col = 2;
+let truckSize = 10;
+console.log(maximumUnitOfTruck(row, col, truckSize));
+
+//===========================================================================================
+
+function odd_String(strArr) {
+  for (let i = 0; i < strArr.length; i++) {
+    let str = strArr[i];
+    for (let j = 0; j < str.length; j++) {
+      let ascciCode = str.charCodeAt(j) - 97;
+    }
+  }
+}
+
+let strArr = ['adc', 'wzy', 'abc'];
+console.log(odd_String(strArr));
+
+//========================================================================================
+
+function missingNumber(arr, n) {
+  let naturalNumSum = ((n + 1) * n) / 2;
+  console.log(naturalNumSum);
+
+  let array_Sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    array_Sum += arr[i];
+  }
+  return naturalNumSum - array_Sum;
+}
+let n = 10;
+let arr = [6, 1, 2, 8, 3, 4, 7, 10, 5];
+console.log(missingNumber(arr, n));
+
+
+//========================================================================================
+
+function convertTime(current, correct) {
+  let current_hourInMi =
+    Number(current[0] + current[1]) * 60 + Number(current[3] + current[4]);
+  let target_hour_min =
+    Number(correct[0] + correct[1]) * 60 + Number(correct[3] + correct[4]);
+  console.log(target_hour_min);
+  let difference = target_hour_min - current_hourInMi;
+  let 
+  sum_min = 0;
+  while (difference != 0) {
+    if (difference >= 60) {
+      difference = difference - 60;
+     
+      sum_min++;
+      continue;
+    }
+    if (difference >= 15) {
+      difference = difference - 15;
+     
+      sum_min++;
+      continue;
+    }
+    if (difference >= 5) {
+      difference = difference - 5;
+     
+      sum_min++;
+      continue;
+    }
+    if (difference >= 1) {
+      difference = difference - 1;
+     
+      sum_min++;
+      continue;
+    }
+  }
+  return 
+  sum_min;
+}
+let current = '02:30';
+let correct = '04:35';
+console.log(convertTime(current, correct));
+
+// let set = [...new Set(words)];
+  // let pre = [];
+  // pre.push(str);
+  // for (let i = 0; i < str.length - 1; i++) {
+  //   pre.push(str.substring(0, i + 1));
+  // }
+  // console.log(pre);
+  // let 
+  sum = 0;
+  // for (let i = 0; i < pre.length; i++) {
+  //   if (set.includes(pre[i])) {
+  //     
+  sum++;
+  //   }
+  // }
+  // return 
+  sum;
+
+//========================================================================================
+
+function prefix(str, words) {
+  let 
+  sum = 0;
+  for (let i = 0; i < words.length; i++) {
+    if (str.startsWith(words[i])) {
+     
+      sum++;
+    }
+  }
+  return 
+  sum;
+}
+let str = 'aa';
+let words = ['a', 'b', 'c', 'ab', 'bc', 'abc'];
+console.log(prefix(str, words));
+
+//=================================================================================
+
+function substring_(str) {
+  let res = [];
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i; j < str.length; j++) {
+      res.push(str.substring(j, i + 1));
+    }
+  }
+  console.log(res);
+}
+let str = 'abbca';
+console.log(substring_(str));
+
+//================================================================================
+
+function appealSum(str) {
+  let result = [];
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i; j < str.length; j++) {
+      result.push(str.substring(i, j + 1));
+    }
+  }
+  console.log(result);
+  let sum = 0;
+  for (let i = 0; i < result.length; i++) {
+    let res = [...new Set(result[i])];
+    sum += res.length;
+  }
+  return sum;
+}
+
+let str = 'abbca';
+console.log(appealSum(str));
+
+//===============================================================================
+
+function appealSum(s) {
+  let sum = 0;
+  let freq = [];
+  let split_ = s.split('');
+  for (let i = 0; i < split_.length; i++) {
+    let el = split_[i];
+    if (freq[el]) {
+      freq[el] = i + 1;
+    } else {
+      freq[el] = i + 1;
+    }
+    for (let el in freq) {
+      sum = sum + freq[el];
+    }
+  }
+  return sum;
+}
+let str = 'abbca';
+console.log(appealSum(str));
