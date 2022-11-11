@@ -1,6 +1,6 @@
 'use strict';
 //count triplet given bay...
-/*
+
 function triplet(b) {
   let count = 0;
   let N = b.length;
@@ -9987,7 +9987,7 @@ let small = 4,
 console.log(makeChocolate(a, b, c));
 
 //==================================================================================
-*/
+
 // Question:-33
 // When squirrels get together for a party, they like to have cigars. A squirrel party is successful
 // when the number of cigars is between 40 and 60, inclusive. Unless it is the weekend,
